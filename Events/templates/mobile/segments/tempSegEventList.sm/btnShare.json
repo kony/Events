@@ -1,0 +1,62 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s116b7e8d60c47f09cbd9199a43e4b5c",
+    "_text_": "butt",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerId": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s009132d36244a24b91066f74aee0564",
+    "id": "btnShare",
+    "ide_onClick": "AS_Button_f62d301f917e4a19985ea1fced722ff3",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "d3d2d1341f3f4bb19783ecf253b252e8",
+    "name": "kony.ui.Button",
+    "parent": "flexShare",
+    "pf": "tempSegEventList",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

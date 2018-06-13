@@ -1,0 +1,62 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_base64_": null,
+    "_height_": {
+        "type": "string",
+        "value": "200dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s88b56ff724d41ba810874734ecc8df4",
+    "_src_": "splashconcept01.png",
+    "_top_": {
+        "type": "string",
+        "value": "20%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "200dp"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "35%"
+    },
+    "containerId": true,
+    "containerweight": 100,
+    "context": {
+        "channel": "mobile",
+        "platform": "android",
+        "templateType": "segments",
+        "topLevelBox": null
+    },
+    "id": "imgGetStart",
+    "imagescalemode": 1,
+    "info": null,
+    "invokedProperty": "src",
+    "isvisible": true,
+    "kuid": "e269e5170d46451ab1b3b52d03ce23b9",
+    "name": "kony.ui.Image2",
+    "parent": "flxFullSplashScreen",
+    "pf": "segSplash",
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5,
+    "zindex": 1
+}

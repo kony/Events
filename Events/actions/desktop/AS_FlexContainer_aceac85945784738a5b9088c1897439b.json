@@ -1,0 +1,32 @@
+{
+    "AS_FlexContainer_aceac85945784738a5b9088c1897439b": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.removeUser(eventobject,context);",
+                "id": "ADD_SNIPPET__g889d4cb69414b759f3ef2c5edc567c2",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "b96203d67e7f43598c33331e8fdea8a4",
+            "name": "segTempUser",
+            "platform": "",
+            "type": "templates"
+        },
+        "id": "AS_FlexContainer_aceac85945784738a5b9088c1897439b",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "collection",
+                "name": "context"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

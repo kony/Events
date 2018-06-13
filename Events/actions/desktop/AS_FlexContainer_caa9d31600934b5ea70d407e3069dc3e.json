@@ -1,0 +1,32 @@
+{
+    "AS_FlexContainer_caa9d31600934b5ea70d407e3069dc3e": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.executeOnParent(\"onClickAdd\",context);",
+                "id": "ADD_SNIPPET__d63605571c4d46fbb5b53de8f65d4ca2",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "b8af86fa83d84883aee290c418a09686",
+            "name": "tempSpeaker",
+            "platform": "",
+            "type": "templates"
+        },
+        "id": "AS_FlexContainer_caa9d31600934b5ea70d407e3069dc3e",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "collection",
+                "name": "context"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

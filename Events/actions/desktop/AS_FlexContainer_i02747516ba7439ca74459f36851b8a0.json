@@ -1,0 +1,28 @@
+{
+    "AS_FlexContainer_i02747516ba7439ca74459f36851b8a0": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.doTabActions(eventobject.id);",
+                "id": "ADD_SNIPPET__j2c43487e12a4829826ec82e24f0d3f6",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_FlexContainer_i02747516ba7439ca74459f36851b8a0",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

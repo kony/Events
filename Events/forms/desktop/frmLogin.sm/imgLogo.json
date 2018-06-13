@@ -1,0 +1,64 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_base64_": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "15%"
+    },
+    "_height_": {
+        "type": "string",
+        "value": "44.12%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s88b56ff724d41ba810874734ecc8df4",
+    "_src_": "eventstitlw.png",
+    "_width_": {
+        "type": "string",
+        "value": "21.00%"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "context": {
+        "channel": "desktop",
+        "formID": "CopyfrmLogin",
+        "platform": "desktopweb",
+        "templateType": "forms",
+        "topLevelBox": null
+    },
+    "id": "imgLogo",
+    "imagescalemode": 1,
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "ef665d09f27d4c7db772ef6995db61fc",
+    "name": "kony.ui.Image2",
+    "parent": "flexLoginEventLogo",
+    "pf": "frmLogin",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5,
+    "zindex": 1
+}

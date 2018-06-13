@@ -1,0 +1,28 @@
+{
+    "AS_UWI_b2e48b82de6542e9a993c35d16740932": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "kony.application.dismissLoadingScreen();\nthis.boxUploadSuccess(JSON.parse(result),1);\n",
+                "id": "ADD_SNIPPET__cbaade5e325643958be6177b7eb411ac",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_UWI_b2e48b82de6542e9a993c35d16740932",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "result"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

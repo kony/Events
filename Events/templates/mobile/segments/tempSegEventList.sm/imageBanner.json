@@ -1,0 +1,63 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_base64_": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s320f5398c044d7482e42abcaf9d8a97",
+    "_src_": "eventsdef.png",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "canUpdateUI": true,
+    "containerId": true,
+    "containerweight": 100,
+    "context": {
+        "channel": "mobile",
+        "platform": "android",
+        "templateType": "segments",
+        "topLevelBox": null
+    },
+    "id": "imageBanner",
+    "imagescalemode": 0,
+    "imagewhenfailed": "eventsdef.png",
+    "imagewhiledownloading": "eventsdef.png",
+    "info": null,
+    "invokedProperty": "src",
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "g737c4b89050487d8f6eb539fcb62d70",
+    "name": "kony.ui.Image2",
+    "parent": "flexEventBannerRounded",
+    "pf": "tempSegEventList",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5,
+    "zindex": 1
+}

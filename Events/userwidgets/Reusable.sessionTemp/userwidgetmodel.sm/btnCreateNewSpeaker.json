@@ -1,0 +1,63 @@
+{
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "4%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sd1421164da64fc0aea0355e19e3a7a4",
+    "_top_": {
+        "type": "string",
+        "value": "1%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "30%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "imgAddNewSpeaker",
+        "btnAddNewSpeakerIni"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "btnCreateNewSpeaker",
+    "ide_onClick": "AS_FlexContainer_eb09808c6760487f8a96f25b1a582ec5",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "b4007c3b9aed41129ce86fabf32fcc04",
+    "layouttype": 3,
+    "name": "kony.ui.FlexContainer",
+    "onclick": "AS_FlexContainer_eb09808c6760487f8a96f25b1a582ec5",
+    "parent": "flexSessionSpeakerDetails",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}

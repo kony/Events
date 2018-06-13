@@ -1,0 +1,64 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_base64_": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "12dp"
+    },
+    "_height_": {
+        "type": "string",
+        "value": "47px"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "4px"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s88b56ff724d41ba810874734ecc8df4",
+    "_src_": "eventstitlw.png",
+    "_width_": {
+        "type": "string",
+        "value": "169px"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "context": {
+        "channel": "desktop",
+        "formID": "uwbf25d00b55594d17b25183121cce1554",
+        "platform": "desktopweb",
+        "templateType": "userwidgets",
+        "topLevelBox": null
+    },
+    "id": "imgLogo",
+    "imagescalemode": 1,
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "ee0434dd817e4002895e6515c97edffe",
+    "name": "kony.ui.Image2",
+    "parent": "flexEventLogo",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5,
+    "zindex": 1
+}

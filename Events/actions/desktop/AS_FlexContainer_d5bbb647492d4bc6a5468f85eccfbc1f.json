@@ -1,0 +1,28 @@
+{
+    "AS_FlexContainer_d5bbb647492d4bc6a5468f85eccfbc1f": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.setLocationOnMap(this.setLocationDataOnMap);",
+                "id": "ADD_SNIPPET__b3479f919edd4347b9c2bfd8c5ad8bda",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_FlexContainer_d5bbb647492d4bc6a5468f85eccfbc1f",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "AS_UWI_db7f053bc18742f8bae85367f35e975f": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.removeSession(eventobject);",
+                "id": "ADD_SNIPPET__fcb5a5229c3444c5a322b5406ac9be32",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_UWI_db7f053bc18742f8bae85367f35e975f",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

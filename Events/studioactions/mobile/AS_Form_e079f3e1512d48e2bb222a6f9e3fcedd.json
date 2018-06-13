@@ -1,0 +1,24 @@
+{
+    "AS_Form_e079f3e1512d48e2bb222a6f9e3fcedd": {
+        "id": "AS_Form_e079f3e1512d48e2bb222a6f9e3fcedd",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmEventDetails",
+            "type": "forms",
+            "platform": "",
+            "KUID": "c90d6ed19c544f2eb36c6493ec356fd4"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__fa2dacb4d0c44cf398964d8bbfdcb6dd",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.inTransitionConfig={\"transitionDuration\":\"3\",\"transitionEffect\":\"transitionMoveIn\",\"transitionDirection\":\"topCenter\"};",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

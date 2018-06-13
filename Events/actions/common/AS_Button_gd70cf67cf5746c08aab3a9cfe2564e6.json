@@ -1,0 +1,21 @@
+{
+    "AS_Button_gd70cf67cf5746c08aab3a9cfe2564e6": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.selectFile();",
+                "id": "ADD_SNIPPET_ide_onClick_c33c3bb9329d4dc9b19f949cedc5808b",
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "id": "AS_Button_gd70cf67cf5746c08aab3a9cfe2564e6",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

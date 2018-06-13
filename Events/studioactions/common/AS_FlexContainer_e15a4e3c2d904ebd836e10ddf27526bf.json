@@ -1,0 +1,23 @@
+{
+    "AS_FlexContainer_e15a4e3c2d904ebd836e10ddf27526bf": {
+        "id": "AS_FlexContainer_e15a4e3c2d904ebd836e10ddf27526bf",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "KUID": "ub0ab16506e3438094a481b73f74f146",
+            "name": "uwub0ab16506e3438094a481b73f74f146",
+            "type": "userwidgets"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__b6b52d4673cd4750ad036628db662d34",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.setTimePicker();\n",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

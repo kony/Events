@@ -1,0 +1,26 @@
+{
+    "AS_FlexContainer_c632a626434749c1856ceccb1be62f5e": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.getMyCalendar();",
+                "id": "ADD_SNIPPET_ide_onClick_f3692d97957742c5916561a97f22db82",
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "aad0bc341408461a9354bce536384d87",
+            "platform": null,
+            "type": "forms"
+        },
+        "id": "AS_FlexContainer_c632a626434749c1856ceccb1be62f5e",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

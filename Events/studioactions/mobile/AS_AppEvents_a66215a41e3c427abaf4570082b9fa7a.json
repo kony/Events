@@ -1,0 +1,18 @@
+{
+    "AS_AppEvents_a66215a41e3c427abaf4570082b9fa7a": {
+        "id": "AS_AppEvents_a66215a41e3c427abaf4570082b9fa7a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__h8862784a13e43948b959bc42c35cf3c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "loadDeviceConfig();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

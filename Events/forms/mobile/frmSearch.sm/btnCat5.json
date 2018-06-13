@@ -1,0 +1,55 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "33%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "45.54%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        6,
+        0,
+        6,
+        0
+    ],
+    "_skin_": "s8fab6253eaf4d0f8c46911cc464e2b1",
+    "_text_": "Conference",
+    "_top_": {
+        "type": "string",
+        "value": "47.60%"
+    },
+    "_width_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "disabledSkins": {},
+    "displaytext": true,
+    "focusskin": "s8fab6253eaf4d0f8c46911cc464e2b1",
+    "id": "btnCat5",
+    "ide_onClick": "AS_Button_aab5812f1d794254bc93391b2366e9a3",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "i3b1461864da4bd1858180966952f4ee",
+    "name": "kony.ui.Button",
+    "paddinginpixel": false,
+    "parent": "flexCategories",
+    "pf": "frmSearch",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

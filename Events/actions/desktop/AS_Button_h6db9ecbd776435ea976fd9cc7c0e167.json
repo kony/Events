@@ -1,0 +1,28 @@
+{
+    "AS_Button_h6db9ecbd776435ea976fd9cc7c0e167": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.doUserStoreLogin(this.view.txtUser.text,this.view.txtPassWord.text);",
+                "id": "ADD_SNIPPET__df80e766b80a41abb483474a18b105aa",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d53a0c41005b46e9b1d5de20f80e6adb",
+            "name": "frmLogin",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_Button_h6db9ecbd776435ea976fd9cc7c0e167",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

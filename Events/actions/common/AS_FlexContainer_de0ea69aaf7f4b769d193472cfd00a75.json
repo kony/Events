@@ -1,0 +1,26 @@
+{
+    "AS_FlexContainer_de0ea69aaf7f4b769d193472cfd00a75": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.setTimeListUI();",
+                "id": "ADD_SNIPPET_ide_onClick_b9abe048825f45c896dd332ed304936a",
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "ude9e612c38d471d9c64f01244cdf702",
+            "name": "uwude9e612c38d471d9c64f01244cdf702",
+            "type": "userwidgets"
+        },
+        "id": "AS_FlexContainer_de0ea69aaf7f4b769d193472cfd00a75",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

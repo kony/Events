@@ -1,0 +1,27 @@
+{
+    "AS_Button_f62d301f917e4a19985ea1fced722ff3": {
+        "id": "AS_Button_f62d301f917e4a19985ea1fced722ff3",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tempSegEventList",
+            "type": "templates",
+            "platform": "",
+            "KUID": "b324c3a070ea4af18835e4bb969d4533"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__i3376d1032384c1ea4de651a4662fe5a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.shareEvent(eventobject,context);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

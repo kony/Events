@@ -1,0 +1,61 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "20dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "14dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s09e2eeeb4de417592d59d9c2a0c65a0",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "12dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "20dp"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s009132d36244a24b91066f74aee0564",
+    "id": "btnSearchIcon",
+    "ide_onClick": "AS_Button_cce77e8bb0724086908c85450fd24b42",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "e0e3687dee0341969261533f5aad2123",
+    "name": "kony.ui.Button",
+    "parent": "flexCloseIcon",
+    "pf": "frmSchedular",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

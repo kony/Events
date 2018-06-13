@@ -1,0 +1,62 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_render_": true,
+    "_skin_": "sd1421164da64fc0aea0355e19e3a7a4",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "17.50%"
+    },
+    "canUpdateUI": true,
+    "clipbounds": true,
+    "containerweight": 0,
+    "data": {
+        "ide_onAllEventClick": "AS_UWI_f469ac9b9a024db796e076520c5a25cb",
+        "ide_onManageUserClick": "AS_UWI_j20ebb89b6e14c99b335e65b22dbc12f",
+        "onAllEventClick": "AS_UWI_f469ac9b9a024db796e076520c5a25cb",
+        "onManageUserClick": "AS_UWI_j20ebb89b6e14c99b335e65b22dbc12f"
+    },
+    "id": "menuItem",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "e0f520a543c540e687619189269bc8ec",
+    "layouttype": 2,
+    "masterType": 1,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "frmCreateEvent",
+    "pf": "frmCreateEvent",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "snaptogrid": true,
+    "sourceUserWidget": "d80c910350db4674a1e2aa999d4e87b7",
+    "wType": "UserWidgetInstance"
+}

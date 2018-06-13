@@ -1,0 +1,27 @@
+{
+    "AS_Button_ca94ea74b3b34aa3b6319520a23bfc8a": {
+        "id": "AS_Button_ca94ea74b3b34aa3b6319520a23bfc8a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "KUID": "b96203d67e7f43598c33331e8fdea8a4",
+            "name": "segTempUser",
+            "platform": "",
+            "type": "templates"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__h1a715ca30bb422a90c1da85e291b7e2",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.onEditDone(eventobject, context);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

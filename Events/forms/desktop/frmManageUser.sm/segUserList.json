@@ -1,0 +1,253 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_data_": [
+        {
+            "btnDone": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Done"
+            },
+            "btnEdit": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Edit"
+            },
+            "imgRemoveIcon": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete_icon.png"
+            },
+            "lblEmail": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email ID"
+            },
+            "lblIndex": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "1"
+            },
+            "lblUserId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "User Name"
+            },
+            "lblVerticalLine0": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            },
+            "lblVerticalLine1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            },
+            "lblVerticalLine2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            },
+            "lblVerticalLine3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            }
+        },
+        {
+            "btnDone": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Done"
+            },
+            "btnEdit": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Edit"
+            },
+            "imgRemoveIcon": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete_icon.png"
+            },
+            "lblEmail": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email ID"
+            },
+            "lblIndex": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "1"
+            },
+            "lblUserId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "User Name"
+            },
+            "lblVerticalLine0": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            },
+            "lblVerticalLine1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            },
+            "lblVerticalLine2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            },
+            "lblVerticalLine3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            }
+        },
+        {
+            "btnDone": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Done"
+            },
+            "btnEdit": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Edit"
+            },
+            "imgRemoveIcon": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete_icon.png"
+            },
+            "lblEmail": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email ID"
+            },
+            "lblIndex": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "1"
+            },
+            "lblUserId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "User Name"
+            },
+            "lblVerticalLine0": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            },
+            "lblVerticalLine1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            },
+            "lblVerticalLine2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            },
+            "lblVerticalLine3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": ""
+            }
+        }
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "400px"
+    },
+    "_indicator_": "none",
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "counter": "02",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segUserList",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b0a08248748e4b52ae22816430ef2895",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot_1.png",
+    "pageondotimage": "pageondot_1.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flxRegisteredUserList",
+    "pf": "frmManageUser",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "b96203d67e7f43598c33331e8fdea8a4",
+    "rowcounter": 2,
+    "rowfocusskin": "s234679bdd6c4e21aa50fbc817fb0fb4",
+    "rowskin": "s510421f1e3c46d8b70889888f894f08",
+    "rowtemplate": "flxTempUser",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s081a294e53e4f7d91e5a3359d6ba7af",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorcolor": "aaaaaa00",
+    "separatorrequired": true,
+    "separatorthickness": 0,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "btnDone": "btnDone",
+        "btnEdit": "btnEdit",
+        "flxEditNDone": "flxEditNDone",
+        "flxEmailI": "flxEmailI",
+        "flxRegisteredUser": "flxRegisteredUser",
+        "flxRemove": "flxRemove",
+        "flxTempUser": "flxTempUser",
+        "flxUserName": "flxUserName",
+        "imgRemoveIcon": "imgRemoveIcon",
+        "lblEmail": "lblEmail",
+        "lblIndex": "lblIndex",
+        "lblUserId": "lblUserId",
+        "lblUserName": "lblUserName",
+        "lblVerticalLine0": "lblVerticalLine0",
+        "lblVerticalLine1": "lblVerticalLine1",
+        "lblVerticalLine2": "lblVerticalLine2",
+        "lblVerticalLine3": "lblVerticalLine3"
+    },
+    "zindex": 1
+}

@@ -1,0 +1,62 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_base64_": null,
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s88b56ff724d41ba810874734ecc8df4",
+    "_src_": "eventske_1.png",
+    "_width_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "context": {
+        "channel": "mobile",
+        "formID": "uwu8e90fe7252347f3980e301f8d02db49",
+        "platform": "android",
+        "templateType": "userwidgets",
+        "topLevelBox": null
+    },
+    "id": "imgEvent",
+    "imagescalemode": 1,
+    "imagewhenfailed": "eventske_1.png",
+    "imagewhiledownloading": "eventske_1.png",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "g36c3cc260074c0db9c9a0ad28fa7481",
+    "name": "kony.ui.Image2",
+    "parent": "flxImage",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5,
+    "zindex": 1
+}

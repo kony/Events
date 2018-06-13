@@ -1,0 +1,59 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "7%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "60dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s844e38396ee4cdc87c1af6d8b899f11",
+    "_text_": "SKIP",
+    "_top_": {
+        "type": "string",
+        "value": "15%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "30%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerId": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "disabledSkins": {},
+    "displaytext": true,
+    "focusskin": "sc86f539206f495fa5cd8b274512b5a2",
+    "id": "btnSkip",
+    "ide_onClick": "AS_Button_j7b99cd8021441259c1025ed996a2c91",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "ib0e6cd9f5a7410095c37c0d57b056d2",
+    "name": "kony.ui.Button",
+    "parent": "flxFullSplashScreen",
+    "pf": "segSplash",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

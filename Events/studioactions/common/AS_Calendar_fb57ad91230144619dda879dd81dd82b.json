@@ -1,0 +1,26 @@
+{
+    "AS_Calendar_fb57ad91230144619dda879dd81dd82b": {
+        "id": "AS_Calendar_fb57ad91230144619dda879dd81dd82b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "boolean",
+            "name": "isValidDateSelected"
+        }],
+        "contextObj": {
+            "KUID": "ude9e612c38d471d9c64f01244cdf702",
+            "name": "uwude9e612c38d471d9c64f01244cdf702",
+            "type": "userwidgets"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__j3d2ff531e0a47559d3d205ce71f0946",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.calSessionStartDate.skin = \"skncalNormal\";",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

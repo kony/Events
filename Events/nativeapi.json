@@ -1,0 +1,108 @@
+{
+    "NativeFunctionAPI": {
+        "iOS": {
+            "11.0": {
+                "Kony_SyncV2-iOS-11.0": {
+                    "title": "Kony_SyncV2",
+                    "platform": "iOS",
+                    "os": "11.0",
+                    "url": "D:\\KonyVisualizerEnterprise8\\Kony_Visualizer_Enterprise\\configuration\\org.eclipse.osgi\\bundles\\522\\1\\.cp\\resources\\sdk\\nativeBindings\\Kony_SyncV2-iOS-11.0.zip",
+                    "filepath": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\Events\\nativebindings\\iOS\\11.0\\Kony_SyncV2-iOS-11.0.zip",
+                    "enable": true
+                },
+                "Kony_SDKCommons-iOS-11.0": {
+                    "title": "Kony_SDKCommons",
+                    "platform": "iOS",
+                    "os": "11.0",
+                    "url": "D:\\KonyVisualizerEnterprise8.2.0\\Kony_Visualizer_Enterprise\\configuration\\org.eclipse.osgi\\bundles\\459\\1\\.cp\\resources\\sdk\\nativeBindings\\Kony_SDKCommons-iOS-11.0.zip",
+                    "filepath": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\Events\\nativebindings\\iOS\\11.0\\Kony_SDKCommons-iOS-11.0.zip",
+                    "enable": true
+                },
+                "Foundation-iOS-11.0": {
+                    "title": "Foundation",
+                    "platform": "iOS",
+                    "os": "11.0",
+                    "url": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\.imports\\.temp\\import1473238570\\nativebindings\\iOS\\11.0\\Foundation-iOS-11.0.zip",
+                    "filepath": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\Events\\nativebindings\\iOS\\11.0\\Foundation-iOS-11.0.zip",
+                    "enable": true
+                },
+                "UIKit-iOS-11.0": {
+                    "title": "UIKit",
+                    "platform": "iOS",
+                    "os": "11.0",
+                    "url": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\.imports\\.temp\\import1473238570\\nativebindings\\iOS\\11.0\\UIKit-iOS-11.0.zip",
+                    "filepath": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\Events\\nativebindings\\iOS\\11.0\\UIKit-iOS-11.0.zip",
+                    "enable": true
+                }
+            }
+        },
+        "Android": {
+            "4.0": {
+                "Kony_SyncV2-Android-4.0": {
+                    "title": "Kony_SyncV2",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "url": "D:\\KonyVisualizerEnterprise8\\Kony_Visualizer_Enterprise\\configuration\\org.eclipse.osgi\\bundles\\522\\1\\.cp\\resources\\sdk\\nativeBindings\\Kony_SyncV2-Android-4.0.zip",
+                    "filepath": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\Events\\nativebindings\\Android\\4.0\\Kony_SyncV2-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.accounts-Android-4.0": {
+                    "title": "android.accounts",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "url": "D:\\EventsFinal\\featureappevents\\Events\\vizproject\\.imports\\.temp\\import1014708734\\nativebindings\\Android\\4.0\\android.accounts-Android-4.0.zip",
+                    "filepath": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\Events\\nativebindings\\Android\\4.0\\android.accounts-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.webkit-Android-4.0": {
+                    "title": "android.webkit",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "url": "D:\\EventsFinal\\featureappevents\\Events\\vizproject\\.imports\\.temp\\import1014708734\\nativebindings\\Android\\4.0\\android.webkit-Android-4.0.zip",
+                    "filepath": "D:\\EventsFinal\\featureappevents\\Events\\vizproject\\Events\\nativebindings\\Android\\4.0\\android.webkit-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.net-Android-4.0": {
+                    "title": "android.net",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "url": "D:\\EventsFinal\\featureappevents\\Events\\vizproject\\.imports\\.temp\\import1014708734\\nativebindings\\Android\\4.0\\android.net-Android-4.0.zip",
+                    "filepath": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\Events\\nativebindings\\Android\\4.0\\android.net-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.content-Android-4.0": {
+                    "title": "android.content",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "url": "D:\\EventsFinal\\featureappevents\\Events\\vizproject\\.imports\\.temp\\import1014708734\\nativebindings\\Android\\4.0\\android.content-Android-4.0.zip",
+                    "filepath": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\Events\\nativebindings\\Android\\4.0\\android.content-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.os-Android-4.0": {
+                    "title": "android.os",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "url": "D:\\EventsFinal\\featureappevents\\Events\\vizproject\\.imports\\.temp\\import1014708734\\nativebindings\\Android\\4.0\\android.os-Android-4.0.zip",
+                    "filepath": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\Events\\nativebindings\\Android\\4.0\\android.os-Android-4.0.zip",
+                    "enable": true
+                },
+                "java.lang-Android-4.0": {
+                    "title": "java.lang",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "url": "D:\\EventsFinal\\featureappevents\\Events\\vizproject\\.imports\\.temp\\import1014708734\\nativebindings\\Android\\4.0\\java.lang-Android-4.0.zip",
+                    "filepath": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\Events\\nativebindings\\Android\\4.0\\java.lang-Android-4.0.zip",
+                    "enable": true
+                },
+                "Kony_SDKCommons-Android-4.0": {
+                    "title": "Kony_SDKCommons",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "url": "D:\\KonyVisualizerEnterprise8.2.0\\Kony_Visualizer_Enterprise\\configuration\\org.eclipse.osgi\\bundles\\459\\1\\.cp\\resources\\sdk\\nativeBindings\\Kony_SDKCommons-Android-4.0.zip",
+                    "filepath": "D:\\EventsFinal2\\featureappevents\\Events\\vizproject\\Events\\nativebindings\\Android\\4.0\\Kony_SDKCommons-Android-4.0.zip",
+                    "enable": true
+                }
+            }
+        }
+    }
+}

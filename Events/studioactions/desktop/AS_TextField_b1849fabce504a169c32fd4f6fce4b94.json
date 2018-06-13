@@ -1,0 +1,27 @@
+{
+    "AS_TextField_b1849fabce504a169c32fd4f6fce4b94": {
+        "id": "AS_TextField_b1849fabce504a169c32fd4f6fce4b94",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__abcd31e369b2482c9b416ea03c5ecbe2",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flexHover.isVisible = true;",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "AS_UWI_g7ed6ffcd58b4a23a46e9ff739847f89": {
+        "id": "AS_UWI_g7ed6ffcd58b4a23a46e9ff739847f89",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmEventsLanding",
+            "type": "forms",
+            "platform": "",
+            "KUID": "cde1aac14e7a43f2a6901937747f31f0"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__ea1bc125977f42e09fd103f6d27bb779",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.onLogout();\n",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

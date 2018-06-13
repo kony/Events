@@ -1,0 +1,172 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizScrollFlexForm",
+    "DNDConfig": null,
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sde213977ec7422b975ae289b4cbfdbe",
+    "_title_": null,
+    "addWidgetsdone": false,
+    "allboxes": [],
+    "android": {
+        "inTransitionConfig": {
+            "formAnimation": 1
+        },
+        "needAppMenu": false,
+        "outTransitionConfig": {
+            "formAnimation": 1
+        },
+        "psp": {
+            "windowSoftInputMode": 2
+        }
+    },
+    "canUpdateUI": true,
+    "children": [
+        "frmScheduleMain"
+    ],
+    "containerweight": 100,
+    "controllerInfo": {
+        "default": {
+            "channel": "mobile",
+            "name": "frmSchedularController"
+        }
+    },
+    "currentLocale": "default",
+    "desktopweb": {
+        "needAppMenu": false
+    },
+    "device": "iPhoneX",
+    "displayorientation": 1,
+    "enabledforidletimeout": false,
+    "id": "frmSchedular",
+    "ide_postShow": "AS_Form_a7a55be7a12a4084b81764c751cfe7da",
+    "info": null,
+    "initdone": false,
+    "inputaccessoryviewtype": 4,
+    "ipad": {
+        "needAppMenu": false,
+        "psp": {
+            "inputAccessoryViewType": 4
+        },
+        "titleBar": false
+    },
+    "iphone": {
+        "inTransitionConfig": {
+            "transitionDirection": "fromBottom",
+            "transitionDuration": 0.3,
+            "transitionEffect": "transitionMoveIn"
+        },
+        "needAppMenu": false,
+        "outTransitionConfig": {
+            "transitionDirection": "fromTop",
+            "transitionDuration": 0.3,
+            "transitionEffect": "transitionMoveIn"
+        },
+        "psp": {
+            "inputAccessoryViewType": 4,
+            "titleBarAttributes": {
+                "barStyle": 0,
+                "hidesBackButton": false,
+                "kuid": "h0ac09850ccc49fcb275b00e7e71bbe7",
+                "leftBarButtonItems": [],
+                "leftItemsSupplementBackButton": true,
+                "prompt": "",
+                "renderTitleText": true,
+                "rightBarButtonItems": [
+                    {
+                        "enabled": true,
+                        "info": {
+                            "title": "Edit"
+                        },
+                        "kuid": "i06aa11827504ad9af336ddb090adc18",
+                        "style": 0,
+                        "tintColor": "4b88f100",
+                        "type": 1
+                    }
+                ],
+                "tintColor": "4b88f100",
+                "translucent": true
+            }
+        },
+        "titleBar": false
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kiosk": {
+        "needAppMenu": false
+    },
+    "kuid": "c824ec659ccc4095b2d742c9a153f062",
+    "layouttype": 2,
+    "name": "kony.ui.Form2",
+    "needappmenu": false,
+    "paddinginpixel": false,
+    "platform": "iphone",
+    "prevDevice": "iPhoneX",
+    "prevPlatform": "iphone",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainscrollposition": false,
+    "shellCSS": "iOS_iPhoneX",
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "spa": {
+        "inTransitionConfig": {
+            "formTransition": "none"
+        },
+        "outTransitionConfig": {
+            "formTransition": "none"
+        }
+    },
+    "spaan": {
+        "needAppMenu": false
+    },
+    "spaandroidtablet": {
+        "needAppMenu": false
+    },
+    "spabb": {
+        "needAppMenu": false
+    },
+    "spaip": {
+        "needAppMenu": false
+    },
+    "spaipad": {
+        "needAppMenu": false
+    },
+    "spawindowstablet": {
+        "needAppMenu": false
+    },
+    "spawinphone8": {
+        "needAppMenu": false
+    },
+    "titleBarSkin": "s5619dd5f2894f108cdede306d754bc4",
+    "titlebar": true,
+    "type": 3,
+    "wType": "Form",
+    "windows8": {
+        "needAppMenu": false
+    },
+    "winphone8": {
+        "inTransitionConfig": {
+            "inTransition": "none",
+            "transitionMode": "none",
+            "transitionSpeed": 0
+        },
+        "needAppMenu": false,
+        "outTransitionConfig": {
+            "outTransition": "none",
+            "transitionMode": "none",
+            "transitionSpeed": 0
+        }
+    }
+}

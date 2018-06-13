@@ -1,0 +1,21 @@
+{
+    "background_color": "ffffff",
+    "bg_type": "one",
+    "border_color": "ffffffff",
+    "desktopweb": {
+        "bottom_left_border_color": "ffffffff",
+        "bottom_left_border_style": "plain",
+        "bottom_right_border_color": "ffffffff",
+        "bottom_right_border_style": "plain",
+        "customCSS": "background-clip: border-box;\nbackground-color: rgba(201, 201, 201, 0.50);     \nbackground-image: url(\"images/loading.gif\");  \nbackground-origin: padding-box;     \nbackground-repeat: no-repeat;     \nbackground-size: auto; \nmargin-left:00%; \nwidth: 100% !important; \nheight: 100% !important;\ntop: 0% !important;\nz-index: 100 !important;\nborder:0px; \n",
+        "isCustomCSSEnabled": true,
+        "isForked": true,
+        "top_left_border_color": "ffffffff",
+        "top_left_border_style": "plain",
+        "top_right_border_color": "ffffffff",
+        "top_right_border_style": "plain"
+    },
+    "isDefaultSkin": false,
+    "kuid": "s94e2b4e869a4150bead46ca6be7867a",
+    "wType": "Form"
+}

@@ -1,0 +1,61 @@
+{
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "57%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sc8584c7d7bc4bffbd9b56b35efade56",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "95.10%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "mapGoogleMap",
+        "flexHover"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "FlexContainer0e2eaae99897443",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "jf5ed60ccc7e43d7aedef5c3dff7a511",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flexEventAddressInfo",
+    "pf": "frmCreateEvent",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 2
+}

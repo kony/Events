@@ -1,0 +1,135 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "96%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_render_": true,
+    "_skin_": "s38737e95c284fd788e7ce961d2977d7",
+    "_top_": {
+        "type": "string",
+        "value": "4%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "canUpdateUI": true,
+    "clipbounds": true,
+    "containerweight": 0,
+    "data": {
+        "eventTitle": "",
+        "masterdata": {
+            "data": [],
+            "schema": [
+                {
+                    "columnHeaderTemplate": null,
+                    "columnHeaderText": "title",
+                    "columnHeaderType": "text",
+                    "columnID": "name",
+                    "columnOnClick": null,
+                    "columnText": "Not Defined",
+                    "columnType": "text",
+                    "kuid": "ga3ccb3556494d80a8f559671fbdc788"
+                },
+                {
+                    "columnHeaderTemplate": null,
+                    "columnHeaderText": "date",
+                    "columnHeaderType": "text",
+                    "columnID": "date",
+                    "columnOnClick": null,
+                    "columnText": "Not Defined",
+                    "columnType": "text",
+                    "kuid": "b1e4d536e52f4899a56d5ba242da44b7"
+                },
+                {
+                    "columnHeaderTemplate": null,
+                    "columnHeaderText": "subtitle1",
+                    "columnHeaderType": "text",
+                    "columnID": "sub1",
+                    "columnOnClick": null,
+                    "columnText": "Not Defined",
+                    "columnType": "text",
+                    "kuid": "fe47873110fe411ea478c2ddbbe56cff"
+                },
+                {
+                    "columnHeaderTemplate": null,
+                    "columnHeaderText": "subtitle1icon",
+                    "columnHeaderType": "text",
+                    "columnID": "sub1icon",
+                    "columnOnClick": null,
+                    "columnText": "Not Defined",
+                    "columnType": "image",
+                    "kuid": "i197789285694c3ca0552a0cdda0b7d7"
+                },
+                {
+                    "columnHeaderTemplate": null,
+                    "columnHeaderText": "sub2",
+                    "columnHeaderType": "text",
+                    "columnID": "sub2",
+                    "columnOnClick": null,
+                    "columnText": "Not Defined",
+                    "columnType": "text",
+                    "kuid": "bed96f68826d4904a85b686e935af2cb"
+                },
+                {
+                    "columnHeaderTemplate": null,
+                    "columnHeaderText": "subtitle2icon",
+                    "columnHeaderType": "text",
+                    "columnID": "sub2icon",
+                    "columnOnClick": null,
+                    "columnText": "Not Defined",
+                    "columnType": "image",
+                    "kuid": "ja1e321c5f84430caf84d246a14ed7e9"
+                },
+                {
+                    "columnHeaderTemplate": null,
+                    "columnHeaderText": "shortDesc.",
+                    "columnHeaderType": "text",
+                    "columnID": "desc",
+                    "columnOnClick": null,
+                    "columnText": "Not Defined",
+                    "columnType": "text",
+                    "kuid": "ae425b8f6c81486aa0a0f9641180e3e5"
+                }
+            ]
+        }
+    },
+    "id": "timeline",
+    "info": null,
+    "iphone": {},
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "f7cd278c31fb4a10b826f22607ad941d",
+    "layouttype": 2,
+    "masterType": 1,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "frmScheduleMain",
+    "pf": "frmSchedular",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "snaptogrid": true,
+    "sourceUserWidget": "d851588d8f1d4dc4abf157d458976645",
+    "wType": "UserWidgetInstance"
+}

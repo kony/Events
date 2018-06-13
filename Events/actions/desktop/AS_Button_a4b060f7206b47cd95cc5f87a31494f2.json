@@ -1,0 +1,27 @@
+{
+    "AS_Button_a4b060f7206b47cd95cc5f87a31494f2": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.setDataAndShow();",
+                "id": "ADD_SNIPPET__a5b0617290a04d0ead9dc19f95ed6514",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "i6bf7139fc4a4e30921a225a2c4e74d0",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_Button_a4b060f7206b47cd95cc5f87a31494f2",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

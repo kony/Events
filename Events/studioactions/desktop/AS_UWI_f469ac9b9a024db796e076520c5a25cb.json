@@ -1,0 +1,21 @@
+{
+    "AS_UWI_f469ac9b9a024db796e076520c5a25cb": {
+        "id": "AS_UWI_f469ac9b9a024db796e076520c5a25cb",
+        "type": "ACTION_SEQUENCE",
+        "params": [],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__f07c9c918a7f4d8790be61187e7e9253",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.askForConfirmation(\"Your changes will be lost. Do you want to proceed?\",\"Are you Sure?\",this.navigateToAllEventsPage);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

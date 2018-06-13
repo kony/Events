@@ -1,0 +1,66 @@
+{
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "60dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s1ef5fba5ded44cea667c8945524ae83",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "60dp"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "children": [
+        "lblNum"
+    ],
+    "clipbounds": true,
+    "containerId": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "focusskin": "s1ef5fba5ded44cea667c8945524ae83",
+    "id": "flexRoundCorner",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "ha192dfcad544d0b98298aad7b12c38a",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flexTime",
+    "pf": "tmpSegSchedular",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}

@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_aceac85945784738a5b9088c1897439b": {
+        "id": "AS_FlexContainer_aceac85945784738a5b9088c1897439b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "KUID": "b96203d67e7f43598c33331e8fdea8a4",
+            "name": "segTempUser",
+            "platform": "",
+            "type": "templates"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__g889d4cb69414b759f3ef2c5edc567c2",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.removeUser(eventobject,context);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

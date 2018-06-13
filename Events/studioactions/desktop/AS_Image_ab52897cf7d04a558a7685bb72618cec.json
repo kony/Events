@@ -1,0 +1,30 @@
+{
+    "AS_Image_ab52897cf7d04a558a7685bb72618cec": {
+        "id": "AS_Image_ab52897cf7d04a558a7685bb72618cec",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "KUID": "d53a0c41005b46e9b1d5de20f80e6adb",
+            "name": "frmLogin",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__if57e990a8d84dc2aa4f9d0ec4f6cfa8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if(this.view.imageShowPassword.src === \"eyeiconvisible.png\"){\n  this.view.imageShowPassword.src = \"eyeicon.png\"\n  this.view.txtPassWord.isVisible = true;\n  this.view.txtPasswordShow.isVisible = false;\n  this.view.forceLayout();\n}else{\n  this.view.imageShowPassword.src = \"eyeiconvisible.png\";\n  this.view.txtPasswordShow.text = this.view.txtPassWord.text;\n  this.view.txtPassWord.isVisible = false;\n  this.view.txtPasswordShow.isVisible = true;\n  this.view.forceLayout();\n}\n\n",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

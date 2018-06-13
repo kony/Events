@@ -1,0 +1,27 @@
+{
+    "AS_Button_eeefa474171d460089445d6a89a1ea4d": {
+        "id": "AS_Button_eeefa474171d460089445d6a89a1ea4d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLogin",
+            "type": "forms",
+            "platform": "",
+            "KUID": "a9b680dafe114cd69c5ccba46ac3b21c"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_af756b1bc21e4f1ab8ba068bf1edb928",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "linkedLogin",
+            "display": "linkedLogin",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "AS_UWI_c3d1b2515cb24ad7b9e7ecee3f879bce": {
+        "id": "AS_UWI_c3d1b2515cb24ad7b9e7ecee3f879bce",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "currentTime"
+        }, {
+            "datatype": "collection",
+            "name": "nextSlot"
+        }],
+        "contextObj": {
+            "KUID": "i6bf7139fc4a4e30921a225a2c4e74d0",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__db356c8bffe840df911790d7ab9d8641",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// this.view.TimePicker.height = \"30%\";\n// this.view.TimePicker.setTimeListUI();\n// this.view.TimePicker.height = \"5%\";\n",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

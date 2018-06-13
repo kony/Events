@@ -1,0 +1,70 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "10px"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "52%"
+    },
+    "_margin_": [
+        1,
+        1,
+        1,
+        1
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "sfc1312925a84547a6115ba8eaad8fec",
+    "_text_": "Label",
+    "_top_": {
+        "type": "string",
+        "value": "6%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "50%"
+    },
+    "_wrapping_": 2,
+    "android": {
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false
+        }
+    },
+    "canUpdateUI": true,
+    "containerId": true,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "id": "lblhorStr",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iphone": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "jc1ef3b91bce40ad82b1b098ed807967",
+    "name": "kony.ui.Label",
+    "parent": "flexTime",
+    "pf": "tmpSegSchedular",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "textstyle": {},
+    "tooltip": "",
+    "wType": "Label",
+    "zindex": 1
+}

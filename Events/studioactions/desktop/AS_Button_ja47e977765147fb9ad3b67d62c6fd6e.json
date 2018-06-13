@@ -1,0 +1,24 @@
+{
+    "AS_Button_ja47e977765147fb9ad3b67d62c6fd6e": {
+        "id": "AS_Button_ja47e977765147fb9ad3b67d62c6fd6e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__i52f159eb0274830a98264ead9042b23",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.boxUploadGallery.selectFile();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_base64_": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s88b56ff724d41ba810874734ecc8df4",
+    "_src_": "eventsdef.png",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "context": {
+        "channel": "mobile",
+        "formID": "frmEventDetails",
+        "platform": "android",
+        "templateType": "forms",
+        "topLevelBox": null
+    },
+    "id": "imgMain",
+    "imagescalemode": 0,
+    "imagewhenfailed": "eventsdef.png",
+    "imagewhiledownloading": "eventsdef.png",
+    "info": null,
+    "invokedProperty": "imageWhenFailed",
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "hbb8d9d8f66345158fb516d4d016e47c",
+    "name": "kony.ui.Image2",
+    "parent": "flxEventImage",
+    "pf": "frmEventDetails",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5,
+    "zindex": 1
+}

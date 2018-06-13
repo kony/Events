@@ -1,0 +1,36 @@
+{
+    "AS_Image_fcdf4eafcafb4e469e95d04e18692848": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.view.imageShowPassword.src = \"eyeicon.png\"\nthis.view.txtPassWord.isVisible = true;\nthis.view.txtPasswordShow.isVisible = false;",
+                "id": "ADD_SNIPPET__cd98bc7d2d95442891aabed5758b8132",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d53a0c41005b46e9b1d5de20f80e6adb",
+            "name": "frmLogin",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_Image_fcdf4eafcafb4e469e95d04e18692848",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "string",
+                "name": "x"
+            },
+            {
+                "datatype": "string",
+                "name": "y"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "30%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "4dp"
+    },
+    "_margin_": [
+        1,
+        1,
+        1,
+        1
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "sd642514938b4dd1ab1f56bc17049136",
+    "_text_": "10AM - 12PM",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_wrapping_": 2,
+    "android": {
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false
+        }
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "49.83%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "id": "lblTimeSS",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iphone": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "j3dabd02cc8b4472b782e47d7294108b",
+    "name": "kony.ui.Label",
+    "parent": "flexDateAndTimeSS",
+    "pf": "frmEventDetails",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "textstyle": {},
+    "tooltip": "",
+    "wType": "Label",
+    "zindex": 1
+}

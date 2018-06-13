@@ -1,0 +1,54 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s8062b61f23b4ff6bd4d414142fb399c",
+    "_text_": "Remove",
+    "_width_": {
+        "type": "string",
+        "value": "70dp"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 4,
+    "displaytext": true,
+    "focusskin": "s8062b61f23b4ff6bd4d414142fb399c",
+    "id": "btnRemove",
+    "ide_onClick": "AS_Button_e873b0b9e6ee4f2e95d34b1fd1d69980",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "haf8db231380410c8c3c73155c9454f7",
+    "name": "kony.ui.Button",
+    "onclick": "AS_Button_e873b0b9e6ee4f2e95d34b1fd1d69980",
+    "parent": "flxEventEdit",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

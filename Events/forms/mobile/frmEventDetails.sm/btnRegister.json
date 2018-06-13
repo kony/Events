@@ -1,0 +1,61 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "64dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s6aad16900fb43fca1e5c07585ace2a7",
+    "_text_": "REGISTER",
+    "_top_": {
+        "type": "string",
+        "value": "27dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s6aad16900fb43fca1e5c07585ace2a7",
+    "id": "btnRegister",
+    "ide_onClick": "AS_Button_h3a6cfeb91544d68b12dd2e90eebd469",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b1a03d299bbc489db858a6efa17befcd",
+    "name": "kony.ui.Button",
+    "parent": "flxFooter",
+    "pf": "frmEventDetails",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

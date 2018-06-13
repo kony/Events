@@ -1,0 +1,29 @@
+{
+    "AS_Image_b688122ef9884c30934a0e50fdf97045": {
+        "id": "AS_Image_b688122ef9884c30934a0e50fdf97045",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "KUID": "b8af86fa83d84883aee290c418a09686",
+            "name": "tempSpeaker",
+            "type": "templates"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__c92e8f8f0a16402490b29a528393c750",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "alert(JSON.stringify(eventobject));",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

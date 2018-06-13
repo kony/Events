@@ -1,0 +1,21 @@
+{
+    "AS_FlexContainer_a877cfc9b6a54158a36324e0e2e82a7b": {
+        "id": "AS_FlexContainer_a877cfc9b6a54158a36324e0e2e82a7b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "KUID": "b8af86fa83d84883aee290c418a09686",
+            "name": "tempSpeaker",
+            "platform": "",
+            "type": "templates"
+        },
+        "language": "js",
+        "actions": []
+    }
+}

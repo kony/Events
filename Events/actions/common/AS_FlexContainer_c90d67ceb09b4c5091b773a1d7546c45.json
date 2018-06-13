@@ -1,0 +1,22 @@
+{
+    "AS_FlexContainer_c90d67ceb09b4c5091b773a1d7546c45": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.createEvent();",
+                "id": "ADD_SNIPPET__e06060f7e1fa470eb1566edfcf429bd6",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "id": "AS_FlexContainer_c90d67ceb09b4c5091b773a1d7546c45",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

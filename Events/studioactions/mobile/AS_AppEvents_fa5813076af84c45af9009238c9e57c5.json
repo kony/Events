@@ -1,0 +1,22 @@
+{
+    "AS_AppEvents_fa5813076af84c45af9009238c9e57c5": {
+        "id": "AS_AppEvents_fa5813076af84c45af9009238c9e57c5",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___c1054629403249c38f8bcacbd529de0f",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "loadDeviceConfig",
+            "display": "loadDeviceConfig",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "module"
+        }]
+    }
+}

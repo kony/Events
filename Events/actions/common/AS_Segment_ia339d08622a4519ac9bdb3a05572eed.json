@@ -1,0 +1,27 @@
+{
+    "AS_Segment_ia339d08622a4519ac9bdb3a05572eed": {
+        "actions": [],
+        "contextObj": {
+            "KUID": "ub0ab16506e3438094a481b73f74f146",
+            "name": "uwub0ab16506e3438094a481b73f74f146",
+            "type": "userwidgets"
+        },
+        "id": "AS_Segment_ia339d08622a4519ac9bdb3a05572eed",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "number",
+                "name": "sectionNumber"
+            },
+            {
+                "datatype": "number",
+                "name": "rowNumber"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

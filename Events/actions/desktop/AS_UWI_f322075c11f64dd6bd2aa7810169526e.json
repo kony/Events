@@ -1,0 +1,36 @@
+{
+    "AS_UWI_f322075c11f64dd6bd2aa7810169526e": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.view.TimePicker.zIndex = 5;",
+                "id": "ADD_SNIPPET__be29bb155bf846bfac314283f83ed9f1",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_UWI_f322075c11f64dd6bd2aa7810169526e",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "string",
+                "name": "x"
+            },
+            {
+                "datatype": "string",
+                "name": "y"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

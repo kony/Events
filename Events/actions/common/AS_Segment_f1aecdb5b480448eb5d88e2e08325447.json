@@ -1,0 +1,35 @@
+{
+    "AS_Segment_f1aecdb5b480448eb5d88e2e08325447": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.onMenuClick();",
+                "id": "ADD_SNIPPET__g3a1aff72e8f4b8fad9cdd77e6179167",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "u0aa0cc1063444dfbca9e157bda6b643",
+            "name": "uwu0aa0cc1063444dfbca9e157bda6b643",
+            "type": "userwidgets"
+        },
+        "id": "AS_Segment_f1aecdb5b480448eb5d88e2e08325447",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "number",
+                "name": "sectionNumber"
+            },
+            {
+                "datatype": "number",
+                "name": "rowNumber"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

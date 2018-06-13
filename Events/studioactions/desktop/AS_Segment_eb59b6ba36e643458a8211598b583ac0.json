@@ -1,0 +1,23 @@
+{
+    "AS_Segment_eb59b6ba36e643458a8211598b583ac0": {
+        "id": "AS_Segment_eb59b6ba36e643458a8211598b583ac0",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onRowClick_c2b2579000e740659c124ac1a0371307",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var index = this.view.SegOptions.selectedRowIndex[1];\nswitch(index){\n  case 0:\n    break;\n  case 1:\n    var nav = new kony.mvc.Navigation(\"frmCreateEvent\");\n    nav.navigate();\n  default :\n    kony.print(\"Invalid case\");\n}",
+            "callbackType": null
+        }]
+    }
+}

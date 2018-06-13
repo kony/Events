@@ -1,0 +1,64 @@
+{
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0.00%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sef6e244b1cf4b4483d1af87e07092ff",
+    "_top_": {
+        "type": "string",
+        "value": "0.00%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "49%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "flexBasicInfoTitl2",
+        "txtSessionName",
+        "txtSessionSDesc",
+        "txtSesionLDesc",
+        "flexSessionDate"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "flexMainSession",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "f762ec5cf8eb4053833a96ad3913864e",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "sessionTemp",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}

@@ -1,0 +1,17 @@
+{
+    "AS_FlexContainer_f438600b9f654d2c8dec64709b33c05e": {
+        "id": "AS_FlexContainer_f438600b9f654d2c8dec64709b33c05e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_i5b01b5a4ffa494c9fa04efcdd3faa76",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.setTimeListUI();",
+            "callbackType": null
+        }]
+    }
+}

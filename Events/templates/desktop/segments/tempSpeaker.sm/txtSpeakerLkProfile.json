@@ -1,0 +1,82 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "20%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "102dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Speaker Name",
+    "_skin_": "s24d1bd5a1874541a06b53033b6d5a8b",
+    "_text_": "Linked Public Profile Link",
+    "_top_": {
+        "type": "string",
+        "value": "10%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "85%"
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerId": true,
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "focusskin": "sfca12d1c0c2452da323b7df65de839b",
+    "id": "txtSpeakerLkProfile",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardtype": "A",
+    "kiosk": {
+        "render": false
+    },
+    "kuid": "h557499d4fcb47db83ed65416e6329ce",
+    "mode": "A",
+    "name": "kony.ui.TextBox2",
+    "parent": "flexTempSpeakerDetails",
+    "pf": "tempSpeaker",
+    "placeholderskin": "sb8dde3d47e14d2ea48fa74c481ad489",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
+    "watchos": {
+        "render": false
+    },
+    "windows10": {
+        "render": false
+    },
+    "winphone10": {
+        "render": false
+    },
+    "zindex": 1
+}

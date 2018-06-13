@@ -1,0 +1,52 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "30dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "7px"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s31a2367aeee4e7fa3486c87cf5ebee5",
+    "_text_": "3",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "30dp"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s31a2367aeee4e7fa3486c87cf5ebee5",
+    "id": "btnPage3",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "c4e4c72000384d47a829632e868dc404",
+    "name": "kony.ui.Button",
+    "parent": "flxPageNavigation",
+    "pf": "frmManageUser",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

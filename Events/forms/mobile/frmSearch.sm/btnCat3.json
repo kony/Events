@@ -1,0 +1,55 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "33%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "66.47%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        6,
+        0,
+        6,
+        0
+    ],
+    "_skin_": "s8fab6253eaf4d0f8c46911cc464e2b1",
+    "_text_": "Hackathon",
+    "_top_": {
+        "type": "string",
+        "value": "0.01%"
+    },
+    "_width_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "disabledSkins": {},
+    "displaytext": true,
+    "focusskin": "s8fab6253eaf4d0f8c46911cc464e2b1",
+    "id": "btnCat3",
+    "ide_onClick": "AS_Button_aaf4f68b9c604677b1b53086b17ba2e0",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "aafe8c32692b492d8a6940d0d039b2c6",
+    "name": "kony.ui.Button",
+    "paddinginpixel": false,
+    "parent": "flexCategories",
+    "pf": "frmSearch",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

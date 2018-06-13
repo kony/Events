@@ -1,0 +1,32 @@
+{
+    "AS_Button_ca94ea74b3b34aa3b6319520a23bfc8a": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.onEditDone(eventobject, context);",
+                "id": "ADD_SNIPPET__h1a715ca30bb422a90c1da85e291b7e2",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "b96203d67e7f43598c33331e8fdea8a4",
+            "name": "segTempUser",
+            "platform": "",
+            "type": "templates"
+        },
+        "id": "AS_Button_ca94ea74b3b34aa3b6319520a23bfc8a",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "collection",
+                "name": "context"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

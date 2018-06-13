@@ -1,0 +1,27 @@
+{
+    "AS_TextField_g2660a93a12c4cec88fd22d34bb3ff91": {
+        "id": "AS_TextField_g2660a93a12c4cec88fd22d34bb3ff91",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__e9d8a1d5ac994db79ebad12a08ccd21d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.EventsHeader.LblTitle.text = this.view.txtEventName.text;",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

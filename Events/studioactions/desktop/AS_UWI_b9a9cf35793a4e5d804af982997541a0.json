@@ -1,0 +1,27 @@
+{
+    "AS_UWI_b9a9cf35793a4e5d804af982997541a0": {
+        "id": "AS_UWI_b9a9cf35793a4e5d804af982997541a0",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "name": "currentTime",
+            "datatype": "collection"
+        }, {
+            "name": "nextSlot",
+            "datatype": "collection"
+        }],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__f2cb4ca1e0ee49b2a101b6dc003fed34",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.endTimeOnSelection();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s6a7e11f851d42f2a3ff5f1229c8e72f",
+    "_text_": "Done",
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerId": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s6a7e11f851d42f2a3ff5f1229c8e72f",
+    "id": "btnDone",
+    "ide_onClick": "AS_Button_ca94ea74b3b34aa3b6319520a23bfc8a",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "h58a6c329ef740d2a797db1d8f3600e4",
+    "name": "kony.ui.Button",
+    "onclick": "AS_Button_ca94ea74b3b34aa3b6319520a23bfc8a",
+    "parent": "flxEditNDone",
+    "pf": "segTempUser",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

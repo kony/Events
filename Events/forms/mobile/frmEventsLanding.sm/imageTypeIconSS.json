@@ -1,0 +1,65 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_base64_": null,
+    "_height_": {
+        "type": "string",
+        "value": "18dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "4.00%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s320f5398c044d7482e42abcaf9d8a97",
+    "_src_": "onlineicon.png",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "18dp"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50.00%"
+    },
+    "containerweight": 100,
+    "context": {
+        "channel": "mobile",
+        "formID": "frmEventsLanding",
+        "platform": "iphone",
+        "templateType": "forms",
+        "topLevelBox": null
+    },
+    "id": "imageTypeIconSS",
+    "imagescalemode": 1,
+    "info": null,
+    "invokedProperty": "src",
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "a8a147cbda5a4ba18f4f20cec6b49d77",
+    "name": "kony.ui.Image2",
+    "parent": "flexEventTypeSS",
+    "pf": "frmEventsLanding",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5,
+    "zindex": 1
+}

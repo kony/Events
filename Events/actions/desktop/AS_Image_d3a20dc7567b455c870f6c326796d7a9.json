@@ -1,0 +1,28 @@
+{
+    "AS_Image_d3a20dc7567b455c870f6c326796d7a9": {
+        "actions": [],
+        "contextObj": {
+            "KUID": "d53a0c41005b46e9b1d5de20f80e6adb",
+            "name": "frmLogin",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_Image_d3a20dc7567b455c870f6c326796d7a9",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "string",
+                "name": "imagesrc"
+            },
+            {
+                "datatype": "boolean",
+                "name": "issuccess"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

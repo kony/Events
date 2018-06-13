@@ -1,0 +1,24 @@
+{
+    "AS_Button_hceb4c72d31d4993bd19850309b0e575": {
+        "id": "AS_Button_hceb4c72d31d4993bd19850309b0e575",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_aed5d19afc184f078bdcbba18be7cbc2",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "shareEvent",
+            "display": "shareEvent",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

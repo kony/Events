@@ -1,0 +1,23 @@
+{
+    "AS_FlexContainer_jf56ff5781bf453cb8be381e324df6db": {
+        "id": "AS_FlexContainer_jf56ff5781bf453cb8be381e324df6db",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "uwu81dba9b92aa406e95bf50606f2b9d14",
+            "type": "userwidgets",
+            "KUID": "u81dba9b92aa406e95bf50606f2b9d14"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__j5162360099e478898fbcb6d04138100",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// this.view.FlexMainImageSet.addGestureRecognizer(2, {\n//             \"fingers\": 1\n//         }, this.swipeCallback); \n// var data = {};\n// data.title = this._eventTitle;\n// data.timeLineList = this._masterData.data;\n// kony.print(\"in component postshow\"+JSON.stringify(data));\n// this.setData(data);\nthis.setDefault();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

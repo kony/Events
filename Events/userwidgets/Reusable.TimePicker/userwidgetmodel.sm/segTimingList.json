@@ -1,0 +1,157 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_data_": [
+        {},
+        {},
+        {}
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "16.50%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "06",
+    "desktop": {
+        "_data_": [
+            {
+                "lblTime": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "00:30"
+                }
+            },
+            {
+                "lblTime": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "01:00"
+                }
+            },
+            {
+                "lblTime": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "01:00"
+                }
+            },
+            {
+                "lblTime": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "00:30"
+                }
+            },
+            {
+                "lblTime": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "00:30"
+                }
+            },
+            {
+                "lblTime": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "00:30"
+                }
+            },
+            {
+                "lblTime": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "00:30"
+                }
+            }
+        ],
+        "rowTemplateId": "f14ad55ad4d44b1bb922bc03dcaec281",
+        "rowtemplate": "Flex0f0f365ad7e374e",
+        "widgetdatamap": {
+            "Flex0f0f365ad7e374e": "Flex0f0f365ad7e374e",
+            "lblTime": "lblTime"
+        }
+    },
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segTimingList",
+    "ide_onRowClick": "AS_Segment_h12975ebb8e04648afd904a7ab1af93e",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "f8e5199960a042aab88ff790bc99edfc",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "onrowclick": "AS_Segment_h12975ebb8e04648afd904a7ab1af93e",
+    "pageoffdotimage": "pageoffdot_2.png",
+    "pageondotimage": "pageondot_2.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "TimePicker",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowcounter": 6,
+    "rowfocusskin": "s024fa75df834456906e959bf4271745",
+    "rowskin": "s352c80f58864dd6b109d7dea9418660",
+    "rowtemplate": null,
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s081a294e53e4f7d91e5a3359d6ba7af",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorcolor": "aaaaaa00",
+    "separatorrequired": true,
+    "separatorthickness": 0,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "Flex0f0f365ad7e374e": "Flex0f0f365ad7e374e",
+        "lblTime": "lblTime"
+    },
+    "widgetskin": "s943696a529a4ae49e956dc1c14670f4",
+    "zindex": 1
+}

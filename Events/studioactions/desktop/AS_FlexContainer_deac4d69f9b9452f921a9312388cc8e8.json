@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_deac4d69f9b9452f921a9312388cc8e8": {
+        "id": "AS_FlexContainer_deac4d69f9b9452f921a9312388cc8e8",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "KUID": "b8af86fa83d84883aee290c418a09686",
+            "name": "tempSpeaker",
+            "platform": "",
+            "type": "templates"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__c4ddcaf8e72749b2a62539a347636dfb",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "alert(context);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

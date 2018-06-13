@@ -1,0 +1,21 @@
+{
+    "AS_FlexContainer_i63f2df2498847a4af7778c31ab453a8": {
+        "id": "AS_FlexContainer_i63f2df2498847a4af7778c31ab453a8",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_e7072702a1df4b2c9df2df9663f8f2e5",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "navigateBack",
+            "display": "navigateBack",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

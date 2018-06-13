@@ -1,0 +1,27 @@
+{
+    "AS_Calendar_b88938f706094e028817c3de538eb873": {
+        "id": "AS_Calendar_b88938f706094e028817c3de538eb873",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "boolean",
+            "name": "isValidDateSelected"
+        }],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__h6df55b56f604ffb8ed050ac8e6e54e0",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.validateEndDate(this.view.calEventStartDate.formattedDate,this.view.calEventEndDate.formattedDate);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

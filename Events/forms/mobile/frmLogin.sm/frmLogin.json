@@ -1,0 +1,152 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizScrollFlexForm",
+    "DNDConfig": null,
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sad77f5c293a4f648060d15c34e8b015",
+    "_title_": null,
+    "addWidgetsdone": false,
+    "allboxes": [],
+    "android": {
+        "inTransitionConfig": {
+            "formAnimation": 9
+        },
+        "needAppMenu": false,
+        "psp": {
+            "windowSoftInputMode": 2
+        }
+    },
+    "androidwearos": {
+        "needAppMenu": false
+    },
+    "bounces": false,
+    "canUpdateUI": true,
+    "children": [
+        "flxRoot",
+        "flxBrowserContainer",
+        "headerContainer25"
+    ],
+    "containerweight": 100,
+    "controllerInfo": {
+        "default": {
+            "channel": "mobile",
+            "name": "frmLoginController"
+        }
+    },
+    "currentLocale": "default",
+    "desktopweb": {
+        "needAppMenu": false
+    },
+    "device": "iPhoneX",
+    "displayorientation": 1,
+    "enabledforidletimeout": false,
+    "enablescrolling": false,
+    "headeroverlap": false,
+    "id": "frmLogin",
+    "info": null,
+    "initdone": false,
+    "inputaccessoryviewtype": 4,
+    "ipad": {
+        "needAppMenu": false,
+        "psp": {
+            "inputAccessoryViewType": 4
+        },
+        "titleBar": false
+    },
+    "iphone": {
+        "inTransitionConfig": {
+            "transitionDirection": "fromBottom",
+            "transitionDuration": 0.3,
+            "transitionEffect": "transitionMoveIn"
+        },
+        "needAppMenu": false,
+        "psp": {
+            "inputAccessoryViewType": 4,
+            "titleBarAttributes": {
+                "barStyle": 0,
+                "hidesBackButton": false,
+                "kuid": "f8481e107eaa4a4a8d7d3ed88e9494e1",
+                "leftBarButtonItems": [],
+                "leftItemsSupplementBackButton": true,
+                "prompt": "",
+                "renderTitleText": true,
+                "rightBarButtonItems": [],
+                "tintColor": "ffffff00",
+                "translucent": true
+            }
+        },
+        "titleBar": false
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kiosk": {
+        "needAppMenu": false
+    },
+    "kuid": "a9b680dafe114cd69c5ccba46ac3b21c",
+    "layouttype": 2,
+    "name": "kony.ui.Form2",
+    "needappmenu": false,
+    "paddinginpixel": false,
+    "platform": "iphone",
+    "prevDevice": "GalaxyS8",
+    "prevPlatform": "android",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainscrollposition": false,
+    "shellCSS": "iOS_iPhoneX",
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "spa": {
+        "inTransitionConfig": {
+            "formTransition": "none"
+        }
+    },
+    "spaan": {
+        "needAppMenu": false
+    },
+    "spaandroidtablet": {
+        "needAppMenu": false
+    },
+    "spabb": {
+        "needAppMenu": false
+    },
+    "spaip": {
+        "needAppMenu": false
+    },
+    "spaipad": {
+        "needAppMenu": false
+    },
+    "spawindowstablet": {
+        "needAppMenu": false
+    },
+    "spawinphone8": {
+        "needAppMenu": false
+    },
+    "titleBarSkin": "s4d101c02f7446ab92598f4c8346f6c0",
+    "titlebar": true,
+    "type": 3,
+    "wType": "Form",
+    "windows8": {
+        "needAppMenu": false
+    },
+    "winphone8": {
+        "inTransitionConfig": {
+            "inTransition": "none",
+            "transitionMode": "none",
+            "transitionSpeed": 0
+        },
+        "needAppMenu": false
+    }
+}

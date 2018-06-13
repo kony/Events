@@ -1,0 +1,32 @@
+{
+    "AS_TextField_g24adfb38c3b4206b61e623185ae6ca1": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.view.flexHover.isVisible = true;",
+                "id": "ADD_SNIPPET__d2238f78f13e445cbb690a63927a6533",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_TextField_g24adfb38c3b4206b61e623185ae6ca1",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "string",
+                "name": "changedtext"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

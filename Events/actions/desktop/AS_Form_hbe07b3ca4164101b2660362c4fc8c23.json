@@ -1,0 +1,28 @@
+{
+    "AS_Form_hbe07b3ca4164101b2660362c4fc8c23": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.getEventsData();\ntry{\n  kony.application.destroyForm(\"frmCreateEvent\");\n}catch(err){\n  kony.print(err);\n}",
+                "id": "ADD_SNIPPET__f27fc949986c46959854c35e944950a5",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "cf1fac0c5aa548d89c9d119620fa7dcd",
+            "name": "frmAllEvents",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_Form_hbe07b3ca4164101b2660362c4fc8c23",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

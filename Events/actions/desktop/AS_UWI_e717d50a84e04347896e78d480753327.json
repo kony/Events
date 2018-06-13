@@ -1,0 +1,23 @@
+{
+    "AS_UWI_e717d50a84e04347896e78d480753327": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "var nav = new kony.mvc.Navigation(\"frmCreateEvent\");\nnav.navigate();",
+                "id": "ADD_SNIPPET__fd54e9f25f5847f6a33b2ceb7049cc22",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "cf1fac0c5aa548d89c9d119620fa7dcd",
+            "name": "frmAllEvents",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_UWI_e717d50a84e04347896e78d480753327",
+        "language": "js",
+        "params": [],
+        "type": "ACTION_SEQUENCE"
+    }
+}

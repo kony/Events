@@ -1,0 +1,53 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "45dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s1addc41262d47eb8b5362f2d4bfe4db",
+    "_text_": "Sign In with LinkedIn",
+    "_top_": {
+        "type": "string",
+        "value": "120dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "260dp"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s1addc41262d47eb8b5362f2d4bfe4db",
+    "id": "btnLinkedIn",
+    "ide_onClick": "AS_Button_b0d6e32e7bcf41e4b96196c030d114dc",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "ca8ca0884a5b4048a78f48683a99d4e9",
+    "name": "kony.ui.Button",
+    "parent": "flxRoot",
+    "pf": "frmLogin",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

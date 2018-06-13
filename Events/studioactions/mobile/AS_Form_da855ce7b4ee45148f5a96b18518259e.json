@@ -1,0 +1,24 @@
+{
+    "AS_Form_da855ce7b4ee45148f5a96b18518259e": {
+        "id": "AS_Form_da855ce7b4ee45148f5a96b18518259e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmSplash",
+            "type": "forms",
+            "platform": "",
+            "KUID": "a7f7e8d36fa848f6aff2ef4e53c8f35a"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__f057a3121c9a4eab97b732fe0cd07017",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.segSplashEvents.pageSkin = \"sknpaging\";",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

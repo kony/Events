@@ -1,0 +1,214 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_data_": [
+        {},
+        {},
+        {}
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "95%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "00",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segTimeLine",
+    "ide_onRowClick": "AS_Segment_bfd0b9cccb994624beae1bf610275e73",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "bounces": false,
+            "indicator": "none"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "a982dd1a97284a73b2606e72f12f8072",
+    "masterdata": {},
+    "mobile": {
+        "_data_": [
+            {
+                "btnDummy": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "imgSub1": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": ""
+                },
+                "imgSub2": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": ""
+                },
+                "imgthumb1": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": ""
+                },
+                "imgthumb2": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": ""
+                },
+                "lblDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "lblDesc": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "lblDummy": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "lblName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "lblNum": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "lblRem": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "lblSub1": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "lblSub2": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "lblhorStr": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                }
+            }
+        ],
+        "rowTemplateId": "g5bcaeee3c9a41c4ae7388924b3dae42",
+        "rowtemplate": "flxMainSchedular",
+        "widgetdatamap": {
+            "btnDummy": "btnDummy",
+            "flexContents": "flexContents",
+            "flexImage1": "flexImage1",
+            "flexImage2": "flexImage2",
+            "flexMainThumbs": "flexMainThumbs",
+            "flexRoundCorner": "flexRoundCorner",
+            "flexTime": "flexTime",
+            "flxMainSchedular": "flxMainSchedular",
+            "flxSub1": "flxSub1",
+            "flxSub2": "flxSub2",
+            "imgSub1": "imgSub1",
+            "imgSub2": "imgSub2",
+            "imgthumb1": "imgthumb1",
+            "imgthumb2": "imgthumb2",
+            "lblDate": "lblDate",
+            "lblDesc": "lblDesc",
+            "lblDummy": "lblDummy",
+            "lblName": "lblName",
+            "lblNum": "lblNum",
+            "lblRem": "lblRem",
+            "lblSub1": "lblSub1",
+            "lblSub2": "lblSub2",
+            "lblhorStr": "lblhorStr"
+        }
+    },
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flexSegTimeLineMain",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowcounter": 0,
+    "rowfocusskin": "s52322d031a2480babd0f554a79ec05b",
+    "rowskin": "s52322d031a2480babd0f554a79ec05b",
+    "rowtemplate": "flxMainSchedular",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s4dc57acd03546bb96d4903a71eef340",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorcolor": "aaaaaa00",
+    "separatorrequired": false,
+    "separatorthickness": 1,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "btnDummy": "btnDummy",
+        "flexContents": "flexContents",
+        "flexImage1": "flexImage1",
+        "flexImage2": "flexImage2",
+        "flexMainThumbs": "flexMainThumbs",
+        "flexRoundCorner": "flexRoundCorner",
+        "flexTime": "flexTime",
+        "flxMainSchedular": "flxMainSchedular",
+        "flxSub1": "flxSub1",
+        "flxSub2": "flxSub2",
+        "imgSub1": "imgSub1",
+        "imgSub2": "imgSub2",
+        "imgthumb1": "imgthumb1",
+        "imgthumb2": "imgthumb2",
+        "lblDate": "lblDate",
+        "lblDesc": "lblDesc",
+        "lblDummy": "lblDummy",
+        "lblName": "lblName",
+        "lblNum": "lblNum",
+        "lblRem": "lblRem",
+        "lblSub1": "lblSub1",
+        "lblSub2": "lblSub2",
+        "lblhorStr": "lblhorStr"
+    },
+    "zindex": 6
+}

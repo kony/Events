@@ -1,0 +1,28 @@
+{
+    "AS_Form_eddf73d8bb1d4ccf8890e3cb8ae7a59a": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.view.startTime.setTimePicker();\nthis.view.EndTime.setTimePicker();",
+                "id": "ADD_SNIPPET__h207edd5bc464013a57fcb68601deb63",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_Form_eddf73d8bb1d4ccf8890e3cb8ae7a59a",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

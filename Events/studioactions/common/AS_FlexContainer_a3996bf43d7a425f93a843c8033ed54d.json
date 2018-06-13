@@ -1,0 +1,29 @@
+{
+    "AS_FlexContainer_a3996bf43d7a425f93a843c8033ed54d": {
+        "id": "AS_FlexContainer_a3996bf43d7a425f93a843c8033ed54d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "uwu8e90fe7252347f3980e301f8d02db49",
+            "type": "userwidgets",
+            "KUID": "u8e90fe7252347f3980e301f8d02db49"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___aa9ddc9ce96a42598b898b08213b78ad",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "getImages",
+            "display": "getImages",
+            "inputparams": [{
+                "name": "folderID"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

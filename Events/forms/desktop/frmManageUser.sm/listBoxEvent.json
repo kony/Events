@@ -1,0 +1,95 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizListBox",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        1,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Please Select",
+    "_skin_": "s517d6195e86423e8306d85264aa0487",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "474px"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 4,
+    "desktopweb": {
+        "psp": {
+            "hoverSkin": "s754259ac7d74291951375582de98367"
+        }
+    },
+    "disabledSkins": {},
+    "focusskin": "s517d6195e86423e8306d85264aa0487",
+    "groupcells": false,
+    "id": "listBoxEvent",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "a82b3d5d8297479f9aea526569d15e60",
+    "masterdata": [
+        [
+            "lb1",
+            "Placeholder One"
+        ],
+        [
+            "lb2",
+            "Placeholder Two"
+        ],
+        [
+            "lb3",
+            "Placeholder Three"
+        ],
+        [
+            "keyInfo",
+            "Select Event"
+        ]
+    ],
+    "name": "kony.ui.ListBox",
+    "paddinginpixel": false,
+    "parent": "flxEventDropdownContainer",
+    "pf": "frmManageUser",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "selectedkey": "keyInfo",
+    "selectedkeys": null,
+    "selectedkeyvalue": [
+        "keyInfo",
+        "Select Event"
+    ],
+    "selectedkeyvalues": null,
+    "size": 18,
+    "viewconfig": {
+        "toggleViewConfig": {
+            "viewStyle": 0
+        }
+    },
+    "viewtype": 0,
+    "wType": "ListBox",
+    "zindex": 1
+}

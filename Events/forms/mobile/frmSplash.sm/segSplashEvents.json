@@ -1,0 +1,152 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_bounces_": false,
+    "_data_": [
+        {
+            "btnSkip": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "SKIP"
+            },
+            "imgGetStart": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "splashconcept01.png"
+            },
+            "lblSplashDesc": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Explore events"
+            }
+        },
+        {
+            "btnSkip": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "SKIP"
+            },
+            "imgGetStart": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "splashconcept02.png"
+            },
+            "lblSplashDesc": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Browse event details"
+            }
+        },
+        {
+            "btnSkip": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "SKIP"
+            },
+            "imgGetStart": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "splashconcept03.png"
+            },
+            "lblSplashDesc": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Login and register for events"
+            }
+        }
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "-10.00%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "02",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segSplashEvents",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "bounces": false,
+            "indicator": "none",
+            "showProgressIndicator": false
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "efa01746bf74433381ad9a0adb564c67",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom",
+        "vdistance": 1
+    },
+    "parent": "frmSplash",
+    "pf": "frmSplash",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "j528a59024b44810897ebf0f5d33c00d",
+    "rowcounter": 2,
+    "rowfocusskin": "s234679bdd6c4e21aa50fbc817fb0fb4",
+    "rowskin": "s84a95df30f549eebf06f5a6120d8195",
+    "rowtemplate": "flxFullSplashScreen",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s081a294e53e4f7d91e5a3359d6ba7af",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorrequired": false,
+    "showprogressindicator": false,
+    "showscrollbars": false,
+    "swipeContext": {
+        "currentPage": 0,
+        "imageWidth": 1125,
+        "widthRatio": 0
+    },
+    "viewtype": "pageview",
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "btnSkip": "btnSkip",
+        "flxFullSplashScreen": "flxFullSplashScreen",
+        "imgGetStart": "imgGetStart",
+        "lblSplashDesc": "lblSplashDesc"
+    },
+    "zindex": 1
+}

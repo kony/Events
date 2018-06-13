@@ -1,0 +1,73 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "36dp"
+    },
+    "_margin_": [
+        1,
+        1,
+        1,
+        1
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s4f24e7206a14811aace0c718004f0a0",
+    "_text_": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus ante a est scelerisque, pharetra euismod metus interdum. Phasellus mollis elementum purus sit amet viverra. Nulla maximus in sem at eleifend. Aenean leo ipsum, auctor quis tempus a, dapibus eu risus. ",
+    "_top_": {
+        "type": "string",
+        "value": "8dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_wrapping_": 2,
+    "android": {
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false
+        }
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 4,
+    "id": "lblEventDesc2",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iphone": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "ib26e73481f64de8aebaf6fb753bf6ee",
+    "name": "kony.ui.Label",
+    "parent": "flxEventDesc",
+    "pf": "frmEventDetails",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "textstyle": {},
+    "tooltip": "",
+    "wType": "Label",
+    "zindex": 1
+}

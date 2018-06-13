@@ -1,0 +1,102 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizListBox",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        2,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Please Select",
+    "_skin_": "s8667afe0c6d4485b5369a2e7a5d6d3f",
+    "_top_": {
+        "type": "string",
+        "value": "14%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 4,
+    "context": {
+        "channel": "desktop",
+        "formID": "frmCreateEvent",
+        "platform": "desktopweb",
+        "templateType": "forms",
+        "topLevelBox": null
+    },
+    "dropdownimage": "listboxarw_1.png",
+    "focusskin": "s8667afe0c6d4485b5369a2e7a5d6d3f",
+    "groupcells": false,
+    "id": "listCategory",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kiosk": {
+        "psp": {
+            "placeholder": "Category"
+        }
+    },
+    "kuid": "c6cee89487794c0197eddf0dcf728060",
+    "masterdata": [
+        [
+            "1",
+            "Training"
+        ],
+        [
+            "2",
+            "Workshops"
+        ],
+        [
+            "3",
+            "Hackathon"
+        ],
+        [
+            "4",
+            "Speaker Series"
+        ],
+        [
+            "5",
+            "Conference"
+        ]
+    ],
+    "name": "kony.ui.ListBox",
+    "paddinginpixel": false,
+    "parent": "flexEventLeftSide",
+    "pf": "frmCreateEvent",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "selectedkeys": null,
+    "selectedkeyvalue": null,
+    "selectedkeyvalues": null,
+    "size": 18,
+    "viewconfig": {
+        "toggleViewConfig": {
+            "viewStyle": 0
+        }
+    },
+    "viewtype": 0,
+    "wType": "ListBox",
+    "zindex": 2
+}

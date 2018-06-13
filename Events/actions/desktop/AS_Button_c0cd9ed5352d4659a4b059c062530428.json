@@ -1,0 +1,28 @@
+{
+    "AS_Button_c0cd9ed5352d4659a4b059c062530428": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.doTabActions(eventobject.id);",
+                "id": "ADD_SNIPPET__jcf7fc2eb53845b4b3725030e771d69d",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_Button_c0cd9ed5352d4659a4b059c062530428",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

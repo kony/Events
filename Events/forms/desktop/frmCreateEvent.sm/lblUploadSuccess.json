@@ -1,0 +1,69 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "63.46%"
+    },
+    "_margin_": [
+        1,
+        1,
+        1,
+        1
+    ],
+    "_padding_": [
+        2,
+        2,
+        0,
+        0
+    ],
+    "_skin_": "sdb591bf5ad7428ebbdaeb26d94beae5",
+    "_text_": "Upload Successful",
+    "_top_": {
+        "type": "string",
+        "value": "44.96%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "36.09%"
+    },
+    "_wrapping_": 2,
+    "android": {
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false
+        }
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 3,
+    "id": "lblUploadSuccess",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iphone": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "id3ec1f6198044edb19618bd0d6add76",
+    "name": "kony.ui.Label",
+    "paddinginpixel": false,
+    "parent": "flexUploadBannerImageValue",
+    "pf": "frmCreateEvent",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "tooltip": "",
+    "wType": "Label",
+    "zindex": 2
+}

@@ -1,0 +1,27 @@
+{
+    "AS_Map_dc29fc7eec7d4303adf9fbc8adfe586d": {
+        "id": "AS_Map_dc29fc7eec7d4303adf9fbc8adfe586d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "location"
+        }],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__f0979d1d64f744b692e614546450e5b6",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "//this.setLocationOnMap();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextArea2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "11%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "8dp"
+    },
+    "_margin_": [
+        2,
+        2,
+        2,
+        2
+    ],
+    "_padding_": [
+        3,
+        2,
+        2,
+        2
+    ],
+    "_placeholder_": "Long Description about the Event",
+    "_skin_": "s68a291eef8e43ee88004745fa7c9216",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "31%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "android": {
+        "psp": {
+            "placeholderSkin": "sbe7dbc46cc54921b2873745c2c1b4b1"
+        }
+    },
+    "androidwearos": {
+        "psp": {
+            "placeholderSkin": "sbe7dbc46cc54921b2873745c2c1b4b1"
+        }
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "closebuttontext": "",
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 1,
+    "focusskin": "s68a291eef8e43ee88004745fa7c9216",
+    "id": "txtEventLDesc",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardstyle": "A",
+    "keyboardtype": "A",
+    "kuid": "ad0db80674d9406cab597ccaa157979f",
+    "mode": "A",
+    "name": "kony.ui.TextArea2",
+    "numberofvisiblelines": 3,
+    "paddinginpixel": false,
+    "parent": "flexEventLeftSide",
+    "pf": "frmCreateEvent",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "showoprogressindicator": false,
+    "showprogressindicator": false,
+    "tabrcandroid": {
+        "psp": {
+            "placeholderSkin": "sbe7dbc46cc54921b2873745c2c1b4b1"
+        }
+    },
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextArea",
+    "zindex": 1
+}

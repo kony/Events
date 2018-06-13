@@ -1,0 +1,69 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_margin_": [
+        1,
+        1,
+        1,
+        1
+    ],
+    "_padding_": [
+        30,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "sa70304ec05e4a59ae84081bbbe60349",
+    "_text_": "55",
+    "_top_": {
+        "type": "string",
+        "value": "15dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_wrapping_": 2,
+    "android": {
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false
+        }
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 4,
+    "id": "lblSharedEventCount",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iphone": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "d3969aee9d044c309d0d0c9da4ae6394",
+    "name": "kony.ui.Label",
+    "paddinginpixel": false,
+    "parent": "flxEventShared",
+    "pf": "frmManageUser",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "tooltip": "",
+    "wType": "Label",
+    "zindex": 1
+}

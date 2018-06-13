@@ -1,0 +1,24 @@
+{
+    "AS_UWI_f44ee808c39341bd9d75d78f8530eab1": {
+        "id": "AS_UWI_f44ee808c39341bd9d75d78f8530eab1",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "name": "result",
+            "datatype": "collection"
+        }],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__i1a2867cf56f468db44035d85f629852",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "kony.application.dismissLoadingScreen();\nthis.view.lblGallerySuccess.height = \"30%\";\nthis.view.lblGallerySuccess.text = \"Upload Failure\";\nthis.view.forceLayout();\n",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

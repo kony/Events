@@ -1,0 +1,70 @@
+{
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "96px"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sf3cbfe8b33a4ff39f1e216c6f42b717",
+    "_top_": {
+        "type": "string",
+        "value": "10px"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "97%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "children": [
+        "flxRootEventTitle",
+        "lblLine0",
+        "flxRegisteredUser",
+        "lblLine2",
+        "flxEventShared",
+        "lblLine3",
+        "flxMenuIcon"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "flxEventInfoRoot",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "cd8659d867d94d41a8a3564edb3a7334",
+    "layouttype": 3,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxEventDetailContainer",
+    "pf": "frmManageUser",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}

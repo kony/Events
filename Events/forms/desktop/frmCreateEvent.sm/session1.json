@@ -1,0 +1,57 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_render_": true,
+    "_skin_": "sd1421164da64fc0aea0355e19e3a7a4",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "canUpdateUI": true,
+    "clipbounds": true,
+    "containerweight": 0,
+    "data": {},
+    "id": "session1",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "f95741bc98d647ae81c0838c69ddc21f",
+    "layouttype": 3,
+    "masterType": 1,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "FlexScrollSession",
+    "pf": "frmCreateEvent",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "snaptogrid": true,
+    "sourceUserWidget": "e5b91eac6ee942dcbdc65beeaf92bd0e",
+    "wType": "UserWidgetInstance"
+}

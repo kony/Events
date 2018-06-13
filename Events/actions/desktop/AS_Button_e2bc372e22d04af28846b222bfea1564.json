@@ -1,0 +1,21 @@
+{
+    "AS_Button_e2bc372e22d04af28846b222bfea1564": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "isPublish = true;\nthis.onClickProceed();",
+                "id": "ADD_SNIPPET_ide_onClick_eab73dbcb02445b49f2cb8ee3a33dc7e",
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "id": "AS_Button_e2bc372e22d04af28846b222bfea1564",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

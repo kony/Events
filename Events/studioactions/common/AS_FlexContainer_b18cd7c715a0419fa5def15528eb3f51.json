@@ -1,0 +1,18 @@
+{
+    "AS_FlexContainer_b18cd7c715a0419fa5def15528eb3f51": {
+        "id": "AS_FlexContainer_b18cd7c715a0419fa5def15528eb3f51",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__f18443a919da4de8a04e6cccf122a102",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.getMyCalendar();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

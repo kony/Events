@@ -1,0 +1,29 @@
+{
+    "AS_Segment_bfd0b9cccb994624beae1bf610275e73": {
+        "id": "AS_Segment_bfd0b9cccb994624beae1bf610275e73",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "uwu81dba9b92aa406e95bf50606f2b9d14",
+            "type": "userwidgets",
+            "KUID": "u81dba9b92aa406e95bf50606f2b9d14"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__h08df844a8a54737aa13dece3e7a019e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.onClickOfTimeline();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

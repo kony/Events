@@ -1,0 +1,24 @@
+{
+    "AS_Segment_ab181210353b42aa8c165aeb158ed0ec": {
+        "id": "AS_Segment_ab181210353b42aa8c165aeb158ed0ec",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmEventsLanding",
+            "type": "forms",
+            "platform": "",
+            "KUID": "cde1aac14e7a43f2a6901937747f31f0"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__c429f1816ffe4729ac880abba439978a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.reloadFromServer();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

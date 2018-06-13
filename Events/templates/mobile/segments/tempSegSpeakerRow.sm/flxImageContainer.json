@@ -1,0 +1,61 @@
+{
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "80dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s54ddf4367604e6e991b1701a11f600f",
+    "_top_": {
+        "type": "string",
+        "value": "7%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "80dp"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "children": [
+        "imgSpeaker"
+    ],
+    "clipbounds": true,
+    "containerId": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "flxImageContainer",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "h9daa9ba859544ad80cd44f4b7f5d0ad",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxSpeakerImage",
+    "pf": "tempSegSpeakerRow",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}

@@ -1,0 +1,27 @@
+{
+    "AS_Button_e873b0b9e6ee4f2e95d34b1fd1d69980": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.onRemoveHandler();",
+                "id": "ADD_SNIPPET__hd88ef7f47c7408e80cfd1a4c6e3be56",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "icf4f159774f49bc9a547eafaf71ed86",
+            "name": "uwicf4f159774f49bc9a547eafaf71ed86",
+            "type": "userwidgets"
+        },
+        "id": "AS_Button_e873b0b9e6ee4f2e95d34b1fd1d69980",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

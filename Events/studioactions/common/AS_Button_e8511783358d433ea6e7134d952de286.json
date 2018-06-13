@@ -1,0 +1,23 @@
+{
+    "AS_Button_e8511783358d433ea6e7134d952de286": {
+        "id": "AS_Button_e8511783358d433ea6e7134d952de286",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "uwu81dba9b92aa406e95bf50606f2b9d14",
+            "type": "userwidgets",
+            "KUID": "u81dba9b92aa406e95bf50606f2b9d14"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__j74d03222cbe44b0a08cea8cb67d9cf2",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.disableTimeLine();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

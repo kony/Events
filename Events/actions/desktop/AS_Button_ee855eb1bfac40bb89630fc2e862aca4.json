@@ -1,0 +1,28 @@
+{
+    "AS_Button_ee855eb1bfac40bb89630fc2e862aca4": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.view.boxfileupload.selectFile();",
+                "id": "ADD_SNIPPET__edef6b65882d4ec99a6991e24fdb7bb9",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_Button_ee855eb1bfac40bb89630fc2e862aca4",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

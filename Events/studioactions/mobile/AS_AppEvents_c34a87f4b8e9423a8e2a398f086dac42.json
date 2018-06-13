@@ -1,0 +1,19 @@
+{
+    "AS_AppEvents_c34a87f4b8e9423a8e2a398f086dac42": {
+        "id": "AS_AppEvents_c34a87f4b8e9423a8e2a398f086dac42",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__jf4dfa70aa4c4f96a9885fee3f04b050",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if(kony.store.getItem(\"isSplashNeeded\") === undefined || kony.store.getItem(\"isSplashNeeded\") === null || kony.store.getItem(\"isSplashNeeded\") === \"true\" ){\n  return \"frmSplash\";\n}else{\n  return \"frmEventsLanding\";\n}",
+            "parentId": null,
+            "callbackType": null,
+            "disabled": false
+        }]
+    }
+}

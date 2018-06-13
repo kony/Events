@@ -1,0 +1,28 @@
+{
+    "AS_UWI_c585f78eafab45af998bb62366654bf3": {
+        "actions": [
+            {
+                "callbackType": null,
+                "enableMappingEditor": true,
+                "formId": "frmLogin",
+                "formKUID": "d53a0c41005b46e9b1d5de20f80e6adb",
+                "id": "NAVIGATE_TO_FORM___a083353426e44169a12a3102f4346f25",
+                "mappings": {},
+                "mappingsOrder": [],
+                "package": "",
+                "parentId": "",
+                "type": "NAVIGATE_TO_FORM"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_UWI_c585f78eafab45af998bb62366654bf3",
+        "language": "js",
+        "params": [],
+        "type": "ACTION_SEQUENCE"
+    }
+}

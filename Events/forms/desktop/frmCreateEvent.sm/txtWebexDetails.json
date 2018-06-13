@@ -1,0 +1,84 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextArea2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "30%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_margin_": [
+        2,
+        2,
+        2,
+        2
+    ],
+    "_padding_": [
+        2,
+        2,
+        2,
+        2
+    ],
+    "_placeholder_": "Webex details",
+    "_skin_": "s68a291eef8e43ee88004745fa7c9216",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "2%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "95%"
+    },
+    "android": {
+        "psp": {
+            "placeholderSkin": "sbe7dbc46cc54921b2873745c2c1b4b1"
+        }
+    },
+    "androidwearos": {
+        "psp": {
+            "placeholderSkin": "sbe7dbc46cc54921b2873745c2c1b4b1"
+        }
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "closebuttontext": "",
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 1,
+    "focusskin": "s25cd9978a9c439dab59d20716738b58",
+    "id": "txtWebexDetails",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "keyboardstyle": "A",
+    "keyboardtype": "A",
+    "kuid": "cf06e4e7581e4a6f933da665b4bd77b6",
+    "mode": "A",
+    "name": "kony.ui.TextArea2",
+    "numberofvisiblelines": 3,
+    "parent": "flexEventRight",
+    "pf": "frmCreateEvent",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "showoprogressindicator": false,
+    "showprogressindicator": false,
+    "tabrcandroid": {
+        "psp": {
+            "placeholderSkin": "sbe7dbc46cc54921b2873745c2c1b4b1"
+        }
+    },
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextArea",
+    "zindex": 1
+}

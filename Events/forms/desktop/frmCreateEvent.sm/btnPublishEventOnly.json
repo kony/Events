@@ -1,0 +1,54 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "6%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s7626bcae9f642748253e90e1e83e449",
+    "_text_": "PUBLISH EVENT",
+    "_top_": {
+        "type": "string",
+        "value": "0.00%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "40%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s7626bcae9f642748253e90e1e83e449",
+    "id": "btnPublishEventOnly",
+    "ide_onClick": "AS_Button_e2bc372e22d04af28846b222bfea1564",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "i17b712215d9478a8fa5e87f4a26a071",
+    "name": "kony.ui.Button",
+    "onclick": "AS_Button_e2bc372e22d04af28846b222bfea1564",
+    "parent": "flexActions",
+    "pf": "frmCreateEvent",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 2
+}

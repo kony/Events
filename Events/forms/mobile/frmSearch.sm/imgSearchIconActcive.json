@@ -1,0 +1,64 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_base64_": null,
+    "_height_": {
+        "type": "string",
+        "value": "25dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s320f5398c044d7482e42abcaf9d8a97",
+    "_src_": "search_blue.png",
+    "_top_": {
+        "type": "string",
+        "value": "6dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "25dp"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "context": {
+        "channel": "mobile",
+        "formID": "frmSearch",
+        "platform": "iphone",
+        "templateType": "forms",
+        "topLevelBox": null
+    },
+    "id": "imgSearchIconActcive",
+    "imagescalemode": 1,
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "d4c5c34ed90e4b3abf7c146c7ccce83d",
+    "name": "kony.ui.Image2",
+    "parent": "flexSearch",
+    "pf": "frmSearch",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5,
+    "zindex": 1
+}

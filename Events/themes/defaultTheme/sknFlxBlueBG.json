@@ -1,0 +1,90 @@
+{
+    "android": {
+        "font_name": "default"
+    },
+    "background_color": "00a0ddff",
+    "bg_type": "one",
+    "border_color": "000000ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "delinkedPltfrms": {
+        "androidwear": [],
+        "desktop": [],
+        "mobile": [],
+        "tablet": [],
+        "watch": []
+    },
+    "desktopweb": {
+        "customCSS": "border:1px solid #00A0DD;\nborder-top-left-radius:5px;\nborder-top-right-radius:5px;\nbackground-color:#00A0DD;",
+        "font_name": "Helvetica",
+        "isCustomCSSEnabled": true,
+        "isForked": true
+    },
+    "ipad": {
+        "font_name": "Helvetica"
+    },
+    "iphone": {
+        "font_name": "Helvetica"
+    },
+    "isDefaultSkin": false,
+    "kiosk": {
+        "font_name": "None"
+    },
+    "kuid": "s5e5063b09f649ea8ea68b6b1b38174e",
+    "spaan": {
+        "customCSS": "border:1px solid #00A0DD;\nborder-top-left-radius:5px;\nborder-top-right-radius:5px;\nbackground-color:#00A0DD;",
+        "font_name": "Helvetica",
+        "isCustomCSSEnabled": true,
+        "isForked": true
+    },
+    "spaandroidtablet": {
+        "customCSS": "border:1px solid #00A0DD;\nborder-top-left-radius:5px;\nborder-top-right-radius:5px;\nbackground-color:#00A0DD;",
+        "font_name": "Helvetica",
+        "isCustomCSSEnabled": true,
+        "isForked": true
+    },
+    "spabb": {
+        "customCSS": "border:1px solid #00A0DD;\nborder-top-left-radius:5px;\nborder-top-right-radius:5px;\nbackground-color:#00A0DD;",
+        "font_name": "Helvetica",
+        "isCustomCSSEnabled": true,
+        "isForked": true
+    },
+    "spaip": {
+        "customCSS": "border:1px solid #00A0DD;\nborder-top-left-radius:5px;\nborder-top-right-radius:5px;\nbackground-color:#00A0DD;",
+        "font_name": "Helvetica",
+        "isCustomCSSEnabled": true,
+        "isForked": true
+    },
+    "spaipad": {
+        "customCSS": "border:1px solid #00A0DD;\nborder-top-left-radius:5px;\nborder-top-right-radius:5px;\nbackground-color:#00A0DD;",
+        "font_name": "Helvetica",
+        "isCustomCSSEnabled": true,
+        "isForked": true
+    },
+    "spawindowstablet": {
+        "customCSS": "border:1px solid #00A0DD;\nborder-top-left-radius:5px;\nborder-top-right-radius:5px;\nbackground-color:#00A0DD;",
+        "font_name": "Helvetica",
+        "isCustomCSSEnabled": true,
+        "isForked": true
+    },
+    "spawinphone8": {
+        "customCSS": "border:1px solid #00A0DD;\nborder-top-left-radius:5px;\nborder-top-right-radius:5px;\nbackground-color:#00A0DD;",
+        "font_name": "Helvetica",
+        "isCustomCSSEnabled": true,
+        "isForked": true
+    },
+    "tabrcandroid": {
+        "font_name": "default"
+    },
+    "wType": "FlexContainer",
+    "watchos": {
+        "font_name": "System"
+    },
+    "windows8": {
+        "font_name": "None"
+    },
+    "winphone8": {
+        "font_name": "None"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "AS_Calendar_b912a1a0a27a49858faf11595caa1fbe": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.view.calEventEndDate.validStartDate = this.view.calEventStartDate.dateComponents;\nthis.validateStartDate(this.view.calEventStartDate.formattedDate,this.view.calEventEndDate.formattedDate);",
+                "id": "ADD_SNIPPET__j8b34817768945fca6ea67c8f93afd94",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_Calendar_b912a1a0a27a49858faf11595caa1fbe",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "boolean",
+                "name": "isValidDateSelected"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

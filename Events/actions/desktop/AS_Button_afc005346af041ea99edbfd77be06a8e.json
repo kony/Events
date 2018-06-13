@@ -1,0 +1,28 @@
+{
+    "AS_Button_afc005346af041ea99edbfd77be06a8e": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.populateEvent();\n//this.setEvent();",
+                "id": "ADD_SNIPPET__fbf5add662c64caeb73868e31ef337bf",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "c1e4413e0f9f481ca90d135fd73067df",
+            "name": "frmManageUser",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_Button_afc005346af041ea99edbfd77be06a8e",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

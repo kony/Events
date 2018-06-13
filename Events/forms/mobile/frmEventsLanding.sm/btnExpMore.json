@@ -1,0 +1,57 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "14%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "46dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s36c40757b364c0885cccd51e35d1ab3",
+    "_text_": "EXPLORE MORE EVENTS",
+    "_top_": {
+        "type": "string",
+        "value": "12%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "85%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50.35%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s36c40757b364c0885cccd51e35d1ab3",
+    "id": "btnExpMore",
+    "ide_onClick": "AS_Button_j7106d7987854dba8a0d5d50a73eb7c0",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b69966b877f144649419c3b899154256",
+    "name": "kony.ui.Button",
+    "parent": "flexEventConfSub",
+    "pf": "frmEventsLanding",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

@@ -1,0 +1,23 @@
+{
+    "AS_UWI_e40b934c488e4b548933e1a493e4506d": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.navigateToManageUser();",
+                "id": "ADD_SNIPPET__e063a3baf5d249f2b1aeb29da019ff16",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "cf1fac0c5aa548d89c9d119620fa7dcd",
+            "name": "frmAllEvents",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_UWI_e40b934c488e4b548933e1a493e4506d",
+        "language": "js",
+        "params": [],
+        "type": "ACTION_SEQUENCE"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "AS_FlexContainer_deac4d69f9b9452f921a9312388cc8e8": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "alert(context);",
+                "id": "ADD_SNIPPET__c4ddcaf8e72749b2a62539a347636dfb",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "b8af86fa83d84883aee290c418a09686",
+            "name": "tempSpeaker",
+            "platform": "",
+            "type": "templates"
+        },
+        "id": "AS_FlexContainer_deac4d69f9b9452f921a9312388cc8e8",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "collection",
+                "name": "context"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "AS_Button_f0fc76de33c84e839ed74b08ca97a9a7": {
+        "id": "AS_Button_f0fc76de33c84e839ed74b08ca97a9a7",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "KUID": "b96203d67e7f43598c33331e8fdea8a4",
+            "name": "segTempUser",
+            "platform": "",
+            "type": "templates"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__ab9fe87a37674392a8dd6222dc0723c7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.editUser(eventobject, context);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

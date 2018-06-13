@@ -1,0 +1,159 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_data_": [
+        {},
+        {},
+        {}
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "78%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "5.00%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "3%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "95%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "00",
+    "desktop": {
+        "_data_": [
+            {
+                "ImgDel": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "removespeaker.png"
+                },
+                "imgAdd": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "addspeaker.png"
+                },
+                "lblStripSessionSpeaker": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "test"
+                },
+                "txtSpeakerDesg": {
+                    "@class": "com.viz.ide.model.segment.ComplexTextSegmentData",
+                    "placeholder": "Designation",
+                    "text": ""
+                },
+                "txtSpeakerLkProfile": {
+                    "@class": "com.viz.ide.model.segment.ComplexTextSegmentData",
+                    "placeholder": "Linked Public Profile Link",
+                    "text": ""
+                },
+                "txtSpeakerName": {
+                    "@class": "com.viz.ide.model.segment.ComplexTextSegmentData",
+                    "placeholder": "Name",
+                    "text": ""
+                }
+            }
+        ],
+        "rowTemplateId": "b8af86fa83d84883aee290c418a09686",
+        "rowtemplate": "Flex0f59afc4fda7b4c",
+        "widgetdatamap": {
+            "ImgDel": "ImgDel",
+            "flexAdd": "flexAdd",
+            "flexAddAndDel": "flexAddAndDel",
+            "flexDel": "flexDel",
+            "flexTempSessionSpeakerMain": "flexTempSessionSpeakerMain",
+            "flexTempSpeakerDetails": "flexTempSpeakerDetails",
+            "imgAdd": "imgAdd",
+            "lblStripSessionSpeaker": "lblStripSessionSpeaker",
+            "txtSpeakerDesg": "txtSpeakerDesg",
+            "txtSpeakerLkProfile": "txtSpeakerLkProfile",
+            "txtSpeakerName": "txtSpeakerName"
+        }
+    },
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segSessionSpeakerDetails",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "d5a9e5f3d22c4a4c9468eb950f7834d6",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot_2.png",
+    "pageondotimage": "pageondot_2.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flexSessionSpeakerDetails",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowcounter": 0,
+    "rowfocusskin": "s234679bdd6c4e21aa50fbc817fb0fb4",
+    "rowskin": "s3b92e1edac64c55b3962f6b8f464959",
+    "rowtemplate": "Flex0f59afc4fda7b4c",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s081a294e53e4f7d91e5a3359d6ba7af",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorcolor": "f2f1f164",
+    "separatorrequired": true,
+    "separatorthickness": 20,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "ImgDel": "ImgDel",
+        "flexAdd": "flexAdd",
+        "flexAddAndDel": "flexAddAndDel",
+        "flexDel": "flexDel",
+        "flexTempSessionSpeakerMain": "flexTempSessionSpeakerMain",
+        "flexTempSpeakerDetails": "flexTempSpeakerDetails",
+        "imgAdd": "imgAdd",
+        "lblStripSessionSpeaker": "lblStripSessionSpeaker",
+        "txtSpeakerDesg": "txtSpeakerDesg",
+        "txtSpeakerLkProfile": "txtSpeakerLkProfile",
+        "txtSpeakerName": "txtSpeakerName"
+    },
+    "zindex": 2
+}

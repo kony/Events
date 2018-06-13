@@ -1,0 +1,75 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "98%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        5,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Start Time",
+    "_skin_": "s24d1bd5a1874541a06b53033b6d5a8b",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "98%"
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "focusskin": null,
+    "id": "txtSessionStartTime",
+    "ide_onTextChange": "AS_TextField_c7dde1660bab4412aa2e3da97b8cf4e5",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardtype": "A",
+    "kuid": "a343f2d49f414e7bb987be770da2ba9c",
+    "mode": "A",
+    "name": "kony.ui.TextBox2",
+    "ontextchange": "AS_TextField_c7dde1660bab4412aa2e3da97b8cf4e5",
+    "parent": "flexSessionSelectStartTime",
+    "pf": "userwidgetmodel",
+    "placeholderskin": "sb8dde3d47e14d2ea48fa74c481ad489",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
+    "zindex": 1
+}

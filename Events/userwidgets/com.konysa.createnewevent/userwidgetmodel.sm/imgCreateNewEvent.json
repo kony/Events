@@ -1,0 +1,60 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_base64_": null,
+    "_height_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s88b56ff724d41ba810874734ecc8df4",
+    "_src_": "create_new_event_icon_1.png",
+    "_width_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "40%"
+    },
+    "containerweight": 100,
+    "context": {
+        "channel": "desktop",
+        "formID": "uwu7d0fddb23be4c2789a499d5f318801a",
+        "platform": "desktopweb",
+        "templateType": "userwidgets",
+        "topLevelBox": null
+    },
+    "id": "imgCreateNewEvent",
+    "imagescalemode": 1,
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "i65456d7ff1e4feba1dad1fb48c15841",
+    "name": "kony.ui.Image2",
+    "parent": "createnewevent",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5,
+    "zindex": 1
+}

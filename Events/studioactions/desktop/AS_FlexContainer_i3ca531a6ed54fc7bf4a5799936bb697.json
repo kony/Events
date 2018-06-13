@@ -1,0 +1,20 @@
+{
+    "AS_FlexContainer_i3ca531a6ed54fc7bf4a5799936bb697": {
+        "id": "AS_FlexContainer_i3ca531a6ed54fc7bf4a5799936bb697",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_j2ebe64d79934c998b15d43073215814",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.executeOnParent(\"onClickDel\",context);",
+            "callbackType": null
+        }]
+    }
+}

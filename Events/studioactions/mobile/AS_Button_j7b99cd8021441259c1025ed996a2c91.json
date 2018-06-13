@@ -1,0 +1,27 @@
+{
+    "AS_Button_j7b99cd8021441259c1025ed996a2c91": {
+        "id": "AS_Button_j7b99cd8021441259c1025ed996a2c91",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "segSplash",
+            "type": "templates",
+            "platform": "",
+            "KUID": "j528a59024b44810897ebf0f5d33c00d"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__b5f9fc9fcb534ca4963954c25f067045",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "kony.store.setItem(\"isSplashNeeded\",\"false\");\nvar nav = new kony.mvc.Navigation(\"frmEventsLanding\");\nnav.navigate();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "AS_Segment_f68ae74da9f04189acaaff18e285b19f": {
+        "id": "AS_Segment_f68ae74da9f04189acaaff18e285b19f",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "seguiWidget"
+        }, {
+            "datatype": "number",
+            "name": "sectionIndex"
+        }, {
+            "datatype": "number",
+            "name": "rowIndex"
+        }],
+        "contextObj": {
+            "name": "uwu81dba9b92aa406e95bf50606f2b9d14",
+            "type": "userwidgets",
+            "KUID": "u81dba9b92aa406e95bf50606f2b9d14"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__f27798d0f3cd4f9f9ef50117e4e3f000",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.currentRowIndex = rowIndex;\n",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

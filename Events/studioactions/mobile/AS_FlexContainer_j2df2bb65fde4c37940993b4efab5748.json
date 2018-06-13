@@ -1,0 +1,29 @@
+{
+    "AS_FlexContainer_j2df2bb65fde4c37940993b4efab5748": {
+        "id": "AS_FlexContainer_j2df2bb65fde4c37940993b4efab5748",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmImageGallery",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d43699c6beb642c8866b308acf910b88"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "NAVIGATE_TO_FORM___ef651f5a6cc14c70aafc002de85b8997",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmEventDetails",
+            "formKUID": "c90d6ed19c544f2eb36c6493ec356fd4",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": ""
+        }]
+    }
+}

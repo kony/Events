@@ -1,0 +1,27 @@
+{
+    "AS_TextField_b52119833034421cbd2953adf46d4928": {
+        "id": "AS_TextField_b52119833034421cbd2953adf46d4928",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "KUID": "d53a0c41005b46e9b1d5de20f80e6adb",
+            "name": "frmLogin",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__a87e7d4ef0664251bede894a035352dc",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.doUserStoreLogin(this.view.txtUser.text,this.view.txtPassWord.text);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

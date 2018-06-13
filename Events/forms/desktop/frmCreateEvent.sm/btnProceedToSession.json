@@ -1,0 +1,54 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s7626bcae9f642748253e90e1e83e449",
+    "_text_": "PROCEED TO SESSION",
+    "_top_": {
+        "type": "string",
+        "value": "0.00%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "44%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s7626bcae9f642748253e90e1e83e449",
+    "id": "btnProceedToSession",
+    "ide_onClick": "AS_Button_a77c9e4b46584c6a8031b138ae67ca28",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "h5b2b9e6561943178c574b8a24abe024",
+    "name": "kony.ui.Button",
+    "onclick": "AS_Button_a77c9e4b46584c6a8031b138ae67ca28",
+    "parent": "flexActions",
+    "pf": "frmCreateEvent",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 2
+}

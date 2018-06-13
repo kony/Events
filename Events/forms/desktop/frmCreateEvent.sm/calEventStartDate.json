@@ -1,0 +1,121 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizDateField",
+    "DNDConfig": null,
+    "Image": "calender.png",
+    "__id": "frmCreateEvent_calEventStartDate",
+    "__input": "calEventStartDate",
+    "__parentReadjusting__": false,
+    "_data_": null,
+    "_date_": [
+        null,
+        null,
+        null
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        5,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Select Date",
+    "_skin_": "s73a8b6a44c4423d9ac36d4a2da78ae0",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "98%"
+    },
+    "advview": "default",
+    "calendaricon": "calender.png",
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 4,
+    "datecomponents": null,
+    "dateeditable": true,
+    "dateformat": "yyyy/MM/dd",
+    "datesGroup": [],
+    "datesState": 0,
+    "day": null,
+    "daytextalignmentincell": 5,
+    "disabledSkins": {
+        "gridCellTodaySkin": "s93fb3b3f69a4793b20117addbc37880",
+        "gridSkin": "s26db816928f44e6839492bdf8e5ae15"
+    },
+    "displayedMonths": [
+        5,
+        2018
+    ],
+    "entereddate": null,
+    "format": "yyyy/MM/dd",
+    "formatteddate": null,
+    "gridCellInactiveDaysSkin": "s9afc16017dc4087add5f9127ee9ae11",
+    "gridCellSkin": "s99893988593483e8a5a9da90269e530",
+    "gridSkin": "s26db816928f44e6839492bdf8e5ae15",
+    "hidedaysheader": false,
+    "hidemonthsheader": false,
+    "hour": null,
+    "id": "calEventStartDate",
+    "ide_onSelection": "AS_Calendar_b912a1a0a27a49858faf11595caa1fbe",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b9d80d7d8cbd4249ae43add2cd166b2d",
+    "minutes": null,
+    "month": null,
+    "monthsinrow": 3,
+    "name": "kony.ui.Calendar",
+    "navigatorAlert": "Invalid Selection",
+    "noofmonths": 1,
+    "onselection": "AS_Calendar_b912a1a0a27a49858faf11595caa1fbe",
+    "paddinginpixel": false,
+    "pagedate": "/2018",
+    "parent": "flexEventSelectDate",
+    "pf": "frmCreateEvent",
+    "popupHeight": "auto",
+    "popupWidth": "auto",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "seconds": null,
+    "selectdate": "//2018",
+    "startDay": 0,
+    "viewconfig": {
+        "gridConfig": {
+            "gridCellInactiveDaysSkin": "s9afc16017dc4087add5f9127ee9ae11",
+            "gridCellSkin": "s99893988593483e8a5a9da90269e530"
+        }
+    },
+    "viewtype": "default",
+    "wType": "Calendar",
+    "widgetalignment": 5,
+    "widths": [
+        "14.2857%;",
+        "14.2857%;",
+        "14.2857%;",
+        "14.2857%;",
+        "14.2857%;",
+        "14.2857%;",
+        "14.2857%;"
+    ],
+    "year": null,
+    "zindex": 1
+}

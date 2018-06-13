@@ -1,0 +1,27 @@
+{
+    "AS_Button_e9a2aec2b24b4a2f835adc652a1a2d2d": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "isPublish = true;\nthis.onClickProceed();",
+                "id": "ADD_SNIPPET_ide_onClick_a9d4616181dd4a55aa9935f2ed49a473",
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_Button_e9a2aec2b24b4a2f835adc652a1a2d2d",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

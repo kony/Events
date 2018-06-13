@@ -1,0 +1,58 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "50dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "62dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "sbcea8fcc1b04d9ab6603691a36ecd6b",
+    "_text_": "Select file",
+    "_top_": {
+        "type": "string",
+        "value": "88dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "260dp"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s5dc4ef81456456da4e61c0954ed6b08",
+    "id": "btnSelectFile",
+    "ide_onClick": "AS_Button_gd70cf67cf5746c08aab3a9cfe2564e6",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "faf68280560d471289e472103e601992",
+    "name": "kony.ui.Button",
+    "onclick": "AS_Button_gd70cf67cf5746c08aab3a9cfe2564e6",
+    "parent": "boxfileupload",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

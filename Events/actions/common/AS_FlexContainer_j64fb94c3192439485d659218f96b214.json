@@ -1,0 +1,22 @@
+{
+    "AS_FlexContainer_j64fb94c3192439485d659218f96b214": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.getNotification();",
+                "id": "ADD_SNIPPET__b6468cd50a1e403fb8a92af3d430e9ef",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "id": "AS_FlexContainer_j64fb94c3192439485d659218f96b214",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

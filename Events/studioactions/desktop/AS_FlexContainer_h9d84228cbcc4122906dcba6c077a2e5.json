@@ -1,0 +1,20 @@
+{
+    "AS_FlexContainer_h9d84228cbcc4122906dcba6c077a2e5": {
+        "id": "AS_FlexContainer_h9d84228cbcc4122906dcba6c077a2e5",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_e5be355850e44066aa4342495c3a0e74",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.executeOnParent(\"removeGalleryImage\",context);",
+            "callbackType": null
+        }]
+    }
+}

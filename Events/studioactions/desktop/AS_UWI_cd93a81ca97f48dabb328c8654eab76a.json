@@ -1,0 +1,27 @@
+{
+    "AS_UWI_cd93a81ca97f48dabb328c8654eab76a": {
+        "id": "AS_UWI_cd93a81ca97f48dabb328c8654eab76a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "currentTime"
+        }, {
+            "datatype": "collection",
+            "name": "nextSlot"
+        }],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__j8750341aa094f7c91761a8c4031d69a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.timeOnSelectionEvent(currentTime, nextSlot);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

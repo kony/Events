@@ -1,0 +1,64 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "10%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_render_": true,
+    "_skin_": "sd1421164da64fc0aea0355e19e3a7a4",
+    "_top_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "clipbounds": true,
+    "containerweight": 0,
+    "data": {
+        "btnAddOnclick": "AS_UWI_j1f3ad09834e4c508d7e2cf124c1fb8b",
+        "btnDelOnclick": "AS_UWI_db7f053bc18742f8bae85367f35e975f",
+        "ide_btnAddOnclick": "AS_UWI_j1f3ad09834e4c508d7e2cf124c1fb8b",
+        "ide_btnDelOnclick": "AS_UWI_db7f053bc18742f8bae85367f35e975f",
+        "isDelVisible": true
+    },
+    "id": "sessionFooter1",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "i23bfdd4f39941938bdc50392f2dd43d",
+    "layouttype": 2,
+    "masterType": 1,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "FlexScrollSession",
+    "pf": "frmCreateEvent",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "snaptogrid": true,
+    "sourceUserWidget": "h911ab2306834d9091f563a11202bc58",
+    "wType": "UserWidgetInstance"
+}

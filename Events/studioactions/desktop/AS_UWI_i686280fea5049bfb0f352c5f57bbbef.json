@@ -1,0 +1,26 @@
+{
+    "AS_UWI_i686280fea5049bfb0f352c5f57bbbef": {
+        "id": "AS_UWI_i686280fea5049bfb0f352c5f57bbbef",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "currentTime"
+        }, {
+            "datatype": "collection",
+            "name": "nextSlot"
+        }],
+        "contextObj": {
+            "KUID": "i6bf7139fc4a4e30921a225a2c4e74d0",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__c359d008996842e4bf43c6322c2f45e7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.TimePicker.zIndex = 1;",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

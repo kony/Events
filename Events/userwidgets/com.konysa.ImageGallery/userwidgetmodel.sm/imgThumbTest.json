@@ -1,0 +1,62 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_base64_": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s88b56ff724d41ba810874734ecc8df4",
+    "_src_": "philantrophy_1.png",
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "context": {
+        "channel": "mobile",
+        "formID": "uwu8e90fe7252347f3980e301f8d02db49",
+        "platform": "android",
+        "templateType": "userwidgets",
+        "topLevelBox": null
+    },
+    "id": "imgThumbTest",
+    "imagescalemode": 0,
+    "imagewhenfailed": "eventske_1.png",
+    "imagewhiledownloading": "eventske_1.png",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "ffdcae7b8821463fa834bd7ccd249f5f",
+    "name": "kony.ui.Image2",
+    "parent": "flxItemTest",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5,
+    "zindex": 1
+}

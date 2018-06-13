@@ -1,0 +1,23 @@
+{
+    "AS_Button_db489fe3076e48b18181594034fd9a5e": {
+        "id": "AS_Button_db489fe3076e48b18181594034fd9a5e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "KUID": "u854fa649ba341f4b516665e448fa933",
+            "name": "uwu854fa649ba341f4b516665e448fa933",
+            "type": "userwidgets"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__ia849564e5724d16998d0b683b2be4d6",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.uploadFile();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

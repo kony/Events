@@ -1,0 +1,55 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0.00%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s23d184753ec4dfcafb41fad2824853e",
+    "_text_": "Browse",
+    "_top_": {
+        "type": "string",
+        "value": "0.00%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "27.67%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "disabledSkins": {},
+    "displaytext": true,
+    "focusskin": "s23d184753ec4dfcafb41fad2824853e",
+    "id": "BtnBrowseBanner",
+    "ide_onClick": "AS_Button_ee855eb1bfac40bb89630fc2e862aca4",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "dfb5a6fd671249d08c75534cf8638980",
+    "name": "kony.ui.Button",
+    "onclick": "AS_Button_ee855eb1bfac40bb89630fc2e862aca4",
+    "parent": "flexUploadBannerImageMain",
+    "pf": "frmCreateEvent",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 5
+}

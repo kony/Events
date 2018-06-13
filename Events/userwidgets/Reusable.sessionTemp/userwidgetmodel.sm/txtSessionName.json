@@ -1,0 +1,69 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "8%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Session Name",
+    "_skin_": "s24d1bd5a1874541a06b53033b6d5a8b",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "14%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "focusskin": "s24d1bd5a1874541a06b53033b6d5a8b",
+    "id": "txtSessionName",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardtype": "A",
+    "kuid": "d2f2e03c82bc4af892a08de0352e36e5",
+    "mode": "A",
+    "name": "kony.ui.TextBox2",
+    "parent": "flexMainSession",
+    "pf": "userwidgetmodel",
+    "placeholderskin": "sb8dde3d47e14d2ea48fa74c481ad489",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
+    "zindex": 1
+}

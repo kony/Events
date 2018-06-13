@@ -1,0 +1,52 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "115dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s0f608aad6814b0eaf8e71cd3a4ebc8a",
+    "_text_": "Please wait.. we are processing..",
+    "_top_": {
+        "type": "string",
+        "value": "50dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "270dp"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s1addc41262d47eb8b5362f2d4bfe4db",
+    "id": "btnPleaseWait",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "e748f74cd0ae4c6cb5651119dd880157",
+    "name": "kony.ui.Button",
+    "parent": "flxRoot",
+    "pf": "frmLogin",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

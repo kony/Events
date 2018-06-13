@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_gbc0a1a83c6f457498c362d7ecb36483": {
+        "id": "AS_FlexContainer_gbc0a1a83c6f457498c362d7ecb36483",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "KUID": "b8af86fa83d84883aee290c418a09686",
+            "name": "tempSpeaker",
+            "platform": "",
+            "type": "templates"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__ba79b0eb87ab45e684d4021e6a2d0d13",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.executeOnParent(\"onClickDel\",context);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

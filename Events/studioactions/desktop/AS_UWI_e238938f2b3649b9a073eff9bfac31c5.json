@@ -1,0 +1,24 @@
+{
+    "AS_UWI_e238938f2b3649b9a073eff9bfac31c5": {
+        "id": "AS_UWI_e238938f2b3649b9a073eff9bfac31c5",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "name": "images",
+            "datatype": "collection"
+        }],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__f62f9ddbe753451c97f9b195d7941e63",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "kony.application.showLoadingScreen(\"sknloading\",\n                                       \"\",\n                                       constants.LOADING_SCREEN_POSITION_FULL_SCREEN, \n                                       true,\n                                       false,\n                                       {\n                enableMenuKey: false,\n                enableBackKey: false,\n                progressIndicatorColor: \"000000\"\n            });\nthis.view.boxUploadGallery.uploadFile();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

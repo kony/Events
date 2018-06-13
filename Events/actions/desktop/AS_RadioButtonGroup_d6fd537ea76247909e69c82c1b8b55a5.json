@@ -1,0 +1,28 @@
+{
+    "AS_RadioButtonGroup_d6fd537ea76247909e69c82c1b8b55a5": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.onSelectOfLocationType();",
+                "id": "ADD_SNIPPET__e8c8cfa486e046ce938a688174092747",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "d845c9898428449f914fcb72d79e2e42",
+            "name": "frmCreateEvent",
+            "platform": "",
+            "type": "forms"
+        },
+        "id": "AS_RadioButtonGroup_d6fd537ea76247909e69c82c1b8b55a5",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "AS_AppEvents_e95420f6613549fbaefee271e344d7cf": {
+        "id": "AS_AppEvents_e95420f6613549fbaefee271e344d7cf",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___f6a6ceb8895143558018444b1b0cacb1",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "setDeepLink",
+            "display": "setDeepLink",
+            "inputparams": [{
+                "name": "params",
+                "value": " eventobject"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "module"
+        }]
+    }
+}

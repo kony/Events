@@ -1,0 +1,21 @@
+{
+    "AS_UWI_adeed8e1d39b4373a27b49bf6b80f3ac": {
+        "id": "AS_UWI_adeed8e1d39b4373a27b49bf6b80f3ac",
+        "type": "ACTION_SEQUENCE",
+        "params": [],
+        "contextObj": {
+            "KUID": "cf1fac0c5aa548d89c9d119620fa7dcd",
+            "name": "frmAllEvents",
+            "platform": "",
+            "type": "forms"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__af94a9b85b1e48c9a4e45f8823584891",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.navigateToFormCreateNewEvent();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "AS_FlexContainer_f39f3886172f45abbc2c94b1f5b58cb7": {
+        "id": "AS_FlexContainer_f39f3886172f45abbc2c94b1f5b58cb7",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__c090fabf49fd457c82081a4768218582",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": " this.animateBrowserFlex(100);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

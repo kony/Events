@@ -1,0 +1,115 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_data_": [
+        {
+            "lblHorDivider": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Label"
+            },
+            "lblResult": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Mobile "
+            }
+        }
+    ],
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "2%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "autogrowmode": 1,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "counter": "00",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segSearchResult",
+    "ide_onRowClick": "AS_Segment_f95f8e10bc5b4b9ba646159507c5da98",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "none"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "fe830567308042a2968a3858bafa6bec",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flexScrollSearchMain",
+    "pf": "frmSearch",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "a606a07baa774f979cb2f429874a4c0a",
+    "rowcounter": 0,
+    "rowfocusskin": "s234679bdd6c4e21aa50fbc817fb0fb4",
+    "rowskin": "s2f0e22fe4de4e259158850d8ccc1018",
+    "rowtemplate": "flexMainSearchTemp",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s4dc57acd03546bb96d4903a71eef340",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorrequired": false,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flexMainSearchTemp": "flexMainSearchTemp",
+        "lblHorDivider": "lblHorDivider",
+        "lblResult": "lblResult"
+    },
+    "widgetskin": "s8bcfffb74ae40cb9758ba0358cb7f89",
+    "zindex": 1
+}

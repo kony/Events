@@ -1,0 +1,32 @@
+{
+    "AS_FlexContainer_dce67b8139034b20824788b92855f1b7": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "alert(context);",
+                "id": "ADD_SNIPPET__g09bfba07c244a1ba968925012cc0e6a",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "e50f018973474a5b99fa96678b0ae6ec",
+            "name": "TempeventImages",
+            "platform": "",
+            "type": "templates"
+        },
+        "id": "AS_FlexContainer_dce67b8139034b20824788b92855f1b7",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "collection",
+                "name": "context"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

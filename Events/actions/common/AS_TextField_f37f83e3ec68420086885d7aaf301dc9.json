@@ -1,0 +1,31 @@
+{
+    "AS_TextField_f37f83e3ec68420086885d7aaf301dc9": {
+        "actions": [
+            {
+                "callbackType": null,
+                "codeSnippet": "this.validateEndTime(this.view.txtSessionEndTime.text);",
+                "id": "ADD_SNIPPET__bd563a6c6deb44b89b9e2a29d02d62d8",
+                "parentId": null,
+                "type": "ADD_SNIPPET"
+            }
+        ],
+        "contextObj": {
+            "KUID": "ude9e612c38d471d9c64f01244cdf702",
+            "name": "uwude9e612c38d471d9c64f01244cdf702",
+            "type": "userwidgets"
+        },
+        "id": "AS_TextField_f37f83e3ec68420086885d7aaf301dc9",
+        "language": "js",
+        "params": [
+            {
+                "datatype": "collection",
+                "name": "eventobject"
+            },
+            {
+                "datatype": "string",
+                "name": "changedtext"
+            }
+        ],
+        "type": "ACTION_SEQUENCE"
+    }
+}

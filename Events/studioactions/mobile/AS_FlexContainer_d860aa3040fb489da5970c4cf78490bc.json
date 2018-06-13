@@ -1,0 +1,28 @@
+{
+    "AS_FlexContainer_d860aa3040fb489da5970c4cf78490bc": {
+        "id": "AS_FlexContainer_d860aa3040fb489da5970c4cf78490bc",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmEventDetails",
+            "type": "forms",
+            "platform": "",
+            "KUID": "c90d6ed19c544f2eb36c6493ec356fd4"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___a582246c85054377aecea02e82dc67df",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "showSpeakersProfile",
+            "display": "showSpeakersProfile",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "AS_Button_g3d9f51e16f4455e8961f39d233ce4a2": {
+        "id": "AS_Button_g3d9f51e16f4455e8961f39d233ce4a2",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "uwu4aefd4ccd4f43c288e73b769abc427f",
+            "type": "userwidgets",
+            "KUID": "u4aefd4ccd4f43c288e73b769abc427f"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__e7e879e985c04fa4895ae8b446b95e10",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var client = kony.sdk.getCurrentInstance();\nvar auth_client=client.getIdentityService(\"likedInIdentityService\");\nauth_client.logout(function(res){\n  alert(\"success\"+JSON.stringify(res));\n},function(err){\n  alert(\"failure\"+JSON.stringify(err));\n})",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

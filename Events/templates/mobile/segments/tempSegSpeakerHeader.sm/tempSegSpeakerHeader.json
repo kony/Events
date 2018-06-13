@@ -1,0 +1,58 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizScrollFlexForm",
+    "DNDConfig": null,
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sbf824fcb05c46b89e5e40ca8cb6187f",
+    "_title_": null,
+    "addWidgetsdone": false,
+    "allboxes": [],
+    "canUpdateUI": true,
+    "children": [
+        "flxSegSpeakerRoot"
+    ],
+    "containerId": true,
+    "containerweight": 100,
+    "currentLocale": "default",
+    "device": "GalaxyS8",
+    "displayorientation": 3,
+    "enabledforidletimeout": false,
+    "id": "tempSegSpeakerHeader",
+    "info": null,
+    "initdone": false,
+    "inputaccessoryviewtype": 4,
+    "intransitionconfig": {
+        "formTransition": "None"
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "fa7f4c077dd44bbda1a80cadbe319f33",
+    "name": "kony.ui.Form2",
+    "needappmenu": true,
+    "outtransitionconfig": {
+        "formTransition": "None"
+    },
+    "paddinginpixel": false,
+    "platform": "android",
+    "prevDevice": "iPhoneX",
+    "prevPlatform": "iphone",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainscrollposition": false,
+    "shellCSS": "and_GalaxyS8",
+    "titlebar": true,
+    "type": 3,
+    "wType": "Form"
+}
