@@ -20,7 +20,7 @@
         0
     ],
     "_skin_": "s88b56ff724d41ba810874734ecc8df4",
-    "_src_": "event06.jpg",
+    "_src_": "eventske.png",
     "_width_": {
         "type": "string",
         "value": "100%"
@@ -28,11 +28,11 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "50.00%"
     },
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "50.19%"
     },
     "containerweight": 100,
     "context": {
@@ -44,8 +44,10 @@
     },
     "id": "imgItem0",
     "imagescalemode": 0,
+    "imagewhenfailed": "eventske.png",
+    "imagewhiledownloading": "eventske.png",
     "info": null,
-    "invokedProperty": "src",
+    "invokedProperty": "imageWhileDownloading",
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "baa12d180b524dc5b68fe9d58d5c2a15",

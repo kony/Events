@@ -53,7 +53,7 @@
     "id": "flexScrollEvent",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "addff00edaa6489b8caed83877a75a1c",
     "layouttype": 2,
     "name": "kony.ui.FlexScrollContainer",

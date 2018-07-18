@@ -1,0 +1,251 @@
+{
+    "classname": "socialSharing",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "f5b4d8e6bf214142a1c383e0981e3f4c",
+                    "paramList": [
+                        {
+                            "name": "base64"
+                        }
+                    ],
+                    "propertyKey": "setContent",
+                    "pw": {
+                        "displayName": "setContent",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "cecfed985bc64fe7a81bf7c0bf3f8230",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "ddb2296c99ee4b8fb9867976903acfa5",
+                    "paramList": [],
+                    "propertyKey": "checkDeviceInfo",
+                    "pw": {
+                        "displayName": "checkDeviceInfo",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "cecfed985bc64fe7a81bf7c0bf3f8230",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "PDF",
+                    "group": "General",
+                    "kuid": "c5e646ec475e4d409a467e820bec5435",
+                    "originalPropertyKey": "MimeType",
+                    "propertyIndex": 5,
+                    "propertyKey": "MimeType",
+                    "pw": {
+                        "displayName": "Content Type",
+                        "uiRepresentation": "Label-Combobox"
+                    },
+                    "srcWgtKUID": "cecfed985bc64fe7a81bf7c0bf3f8230",
+                    "type": "list selector",
+                    "value": [
+                        "Choose One",
+                        "Image/PNG",
+                        "Image/JPG",
+                        "PDF",
+                        "Plain-Text"
+                    ]
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "Travel Itinerary",
+                    "group": "General",
+                    "kuid": "a85cabf2f96444bd959315120441879f",
+                    "originalPropertyKey": "Subject",
+                    "propertyIndex": 6,
+                    "propertyKey": "Subject",
+                    "pw": {
+                        "displayName": "Title",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "cecfed985bc64fe7a81bf7c0bf3f8230",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "TravelItinerary",
+                    "group": "General",
+                    "kuid": "e54400b09e644f9c89e45040e38f558a",
+                    "originalPropertyKey": "FileName",
+                    "propertyIndex": 7,
+                    "propertyKey": "FileName",
+                    "pw": {
+                        "displayName": "File Name",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "cecfed985bc64fe7a81bf7c0bf3f8230",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "hd3a2f35ddba4f83b4dba8b98eb3691a",
+                    "originalPropertyKey": "src",
+                    "propertyIndex": 1,
+                    "propertyKey": "shareSrc",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "displayName": "Share Icon",
+                        "srcWidget": "imgShare",
+                        "type": "string",
+                        "uiConfig": {
+                            "Button": {
+                                "dataRetrieverId": "Imagelist",
+                                "dataUpdaterId": "Imagelist",
+                                "popupId": "Imagelist",
+                                "type": "ImageEditBtn"
+                            },
+                            "Label": {}
+                        },
+                        "uiRepresentation": "Label-Label-Button",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "a30d5351d1d243e6be352fdbc6a74403"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "ee37ff3774814615be393c4150a583c9",
+                    "originalPropertyKey": "height",
+                    "propertyIndex": 2,
+                    "propertyKey": "imgHeight",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "imgShareheight",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "kiosk",
+                                "desktopweb"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "imgShare",
+                        "type": "object",
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "a30d5351d1d243e6be352fdbc6a74403"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "ffa3ff3a95824d6da9921490f7d03480",
+                    "originalPropertyKey": "width",
+                    "propertyIndex": 3,
+                    "propertyKey": "imgWidth",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "imgShareWidth",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "kiosk",
+                                "desktopweb"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "imgShare",
+                        "type": "object",
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "a30d5351d1d243e6be352fdbc6a74403"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "eadfe3f429f74a62abf4e577b6552041",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 4,
+                    "propertyKey": "imgVisibility",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "displayName": "imgShareVisibility",
+                        "srcWidget": "imgShare",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "a30d5351d1d243e6be352fdbc6a74403"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konyenb",
+    "version": "1.0.0"
+}

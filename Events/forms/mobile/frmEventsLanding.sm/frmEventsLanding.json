@@ -20,6 +20,7 @@
     "addWidgetsdone": false,
     "allboxes": [],
     "android": {
+        "ide_onDeviceBack": "AS_Form_bd078a97234543e8816cbf33c574ba0b",
         "needAppMenu": false,
         "psp": {
             "windowSoftInputMode": 2

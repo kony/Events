@@ -11,7 +11,9 @@ define({
     AS_FlexContainer_fd26169aa27a4ee4a8aae7a4d9b1800b: function AS_FlexContainer_fd26169aa27a4ee4a8aae7a4d9b1800b(eventobject) {
         var self = this;
         var ntf = new kony.mvc.Navigation("frmEventsLanding");
-        ntf.navigate();
+        ntf.navigate({
+            "origin": "searchback"
+        });
     },
     /** onTextChange defined for txtSearch **/
     AS_TextField_f32a139024244acabf5ab1bcd58134d5: function AS_TextField_f32a139024244acabf5ab1bcd58134d5(eventobject, changedtext) {
@@ -52,5 +54,10 @@ define({
     AS_Button_aab5812f1d794254bc93391b2366e9a3: function AS_Button_aab5812f1d794254bc93391b2366e9a3(eventobject) {
         var self = this;
         this.getSelectedCatagories(eventobject.skin, eventobject.text, eventobject.id);
+    },
+    /** onClick defined for btnCross **/
+    AS_Button_dd3f28cf76c144eebe912d9b12af17a7: function AS_Button_dd3f28cf76c144eebe912d9b12af17a7(eventobject) {
+        var self = this;
+        this.clearTextBox();
     }
 });

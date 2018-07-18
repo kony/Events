@@ -1,0 +1,72 @@
+{
+    "classname": "sessionTemp",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "bdb2b254267e43dfb835e2c08d414122",
+                    "paramList": [],
+                    "propertyKey": "getData",
+                    "pw": {
+                        "displayName": "getData",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "e5b91eac6ee942dcbdc65beeaf92bd0e",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "ee45bf6c04454efa98654ea10d7f1a17",
+                    "paramList": [
+                        {
+                            "name": "session"
+                        }
+                    ],
+                    "propertyKey": "setSessionData",
+                    "pw": {
+                        "displayName": "setSessionData",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "e5b91eac6ee942dcbdc65beeaf92bd0e",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "id123f7ce001442b86e0bf17ff70ba5f",
+                    "paramList": [],
+                    "propertyKey": "setDateRange",
+                    "pw": {
+                        "displayName": "setDateRange",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "e5b91eac6ee942dcbdc65beeaf92bd0e",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konyenb",
+    "version": "1.0.0"
+}

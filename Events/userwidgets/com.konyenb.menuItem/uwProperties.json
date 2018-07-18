@@ -1,0 +1,143 @@
+{
+    "classname": "menuItem",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "aa5acb2385a64003b7496197657fcb39",
+                    "paramList": [],
+                    "propertyKey": "setSelectedFlex",
+                    "pw": {
+                        "displayName": "setSelectedFlex",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d80c910350db4674a1e2aa999d4e87b7",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "cb6b6a61905348859cfde59e2094047e",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onAllEventClick",
+                    "pw": {
+                        "displayName": "onAllEventClick",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d80c910350db4674a1e2aa999d4e87b7",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "ce8ce8e669524f3389ea693fde144eea",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "onCreateEventClick",
+                    "pw": {
+                        "displayName": "onCreateEventClick",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d80c910350db4674a1e2aa999d4e87b7",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "ace5207ac6e948a6815613b4ee0ba48b",
+                    "paramList": [],
+                    "propertyIndex": 3,
+                    "propertyKey": "onManageUserClick",
+                    "pw": {
+                        "displayName": "onManageUserClick",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d80c910350db4674a1e2aa999d4e87b7",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "a7d1384b8c8f4dab88ea5415f155eac6",
+                    "paramList": [],
+                    "propertyIndex": 4,
+                    "propertyKey": "onGetNotificationClick",
+                    "pw": {
+                        "displayName": "onGetNotificationClick",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d80c910350db4674a1e2aa999d4e87b7",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "hba7bfed4cdd4868a74e7b53a93851d2",
+                    "paramList": [],
+                    "propertyIndex": 5,
+                    "propertyKey": "onGetMyCalendar",
+                    "pw": {
+                        "displayName": "onGetMyCalendar",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d80c910350db4674a1e2aa999d4e87b7",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "g5c05b12c89248048e17ccab49c1b38d",
+                    "paramList": [],
+                    "propertyIndex": 6,
+                    "propertyKey": "onGetSetting",
+                    "pw": {
+                        "displayName": "onGetSetting",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d80c910350db4674a1e2aa999d4e87b7",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "he1cd1011d4840e18ddbb8f6ae32736c",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 1,
+                    "propertyKey": "username",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "User Name",
+                        "srcWidget": "lblUserName",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "d4c5dca667fd43fdb1e0789e7ec77d2d"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konyenb",
+    "version": "1.0.0"
+}

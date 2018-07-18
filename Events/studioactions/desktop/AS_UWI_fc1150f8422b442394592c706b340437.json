@@ -1,0 +1,17 @@
+{
+    "AS_UWI_fc1150f8422b442394592c706b340437": {
+        "id": "AS_UWI_fc1150f8422b442394592c706b340437",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_onManageUserClick_a4ae145f32c84582b1316fbd3c9e92ca",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.navigateToManageUser();",
+            "callbackType": null
+        }]
+    }
+}

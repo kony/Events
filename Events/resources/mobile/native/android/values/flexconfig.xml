@@ -1,0 +1,46 @@
+<resources>
+	<string name="SegUIWidth">"100%"</string>
+	<string name="SegUIHeight">"120dp"</string>
+	
+	<string name="SegUITemplateHeight">"100dp"</string>
+	
+	<string name="TabWidth">"100%"</string>
+	<string name="TabHeight">"220dp"</string>
+	
+	<string name="HImageStripWidth">"100%"</string>
+	<string name="HImageStripHeight">"220dp"</string>
+	
+	<string name="ImageGalleryWidth">"100%"</string>
+	<string name="ImageGalleryHeight">"220dp"</string>
+	
+	<string name="DataGridWidth">"100%"</string>
+	<string name="DataGridHeight">"120dp"</string>
+	
+	<string name="FlexContainerWidth">"100%"</string>
+	<string name="FlexContainerHeight">"220dp"</string>
+	
+	<string name="BrowserWidth">"100%"</string>
+	<string name="BrowserHeight">"220dp"</string>
+	
+	<string name="MapWidth">"100%"</string>
+	<string name="MapHeight">"75%"</string>
+	
+	<string name="ChartWidth">"100%"</string>
+	<string name="ChartHeight">"75%"</string>
+	
+	<string name="LineWidth">"50dp"</string>
+	<string name="LineHeight">"2dp"</string>
+	
+	<string name="SliderWidth">"260dp"</string>
+	<string name="SliderHeight">"34dp"</string>
+	
+	<string name="TextAreaWidth">"260dp"</string>
+	<string name="TextAreaHeight">"120dp"</string>
+	
+	<string name="TextBoxWidth">"260dp"</string>
+	<string name="TextBoxHeight">"40dp"</string>
+	
+	<string name="NativeContainerWidth">"100%"</string>
+	<string name="NativeContainerHeight">"220dp"</string>
+	
+</resources> 

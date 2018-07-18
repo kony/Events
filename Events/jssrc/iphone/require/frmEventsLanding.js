@@ -1035,6 +1035,7 @@ define("frmEventsLanding", function() {
                 "skin": "CopyslFbox0bc28f0666f0c46",
                 "width": "50dp"
             }, {}, {});
+            socialSharing.imgVisibility = true;
             socialSharing.MimeType = "Image/PNG";
             socialSharing.Subject = "Event";
             socialSharing.FileName = "EventCard";

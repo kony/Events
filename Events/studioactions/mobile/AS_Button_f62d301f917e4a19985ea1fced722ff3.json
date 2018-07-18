@@ -19,7 +19,7 @@
         "actions": [{
             "id": "ADD_SNIPPET__i3376d1032384c1ea4de651a4662fe5a",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.shareEvent(eventobject,context);",
+            "codeSnippet": "this.shareEvent(eventobject,context)\n",
             "parentId": null,
             "callbackType": null
         }]

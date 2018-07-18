@@ -1,8 +1,11 @@
 {
   "android": {
-    "font_name": "default",
+    "font_name": "Avenir-Medium",
     "font_size": 128,
     "isForked": false
+  },
+  "androidwearos": {
+    "font_name": "Helvetica"
   },
   "background_color": "00000000",
   "bg_type": "one",
@@ -27,7 +30,7 @@
     "isForked": false
   },
   "iphone": {
-    "font_name": "Helvetica",
+    "font_name": "Avenir-Medium",
     "font_size": 128,
     "isForked": false
   },

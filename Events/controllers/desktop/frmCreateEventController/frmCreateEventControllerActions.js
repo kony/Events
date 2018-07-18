@@ -2,21 +2,6 @@ define({
     /*
       This is an auto generated file and any modifications to it may result in corruption of the action sequence.
     */
-    /** onRowClick defined for SegOptions **/
-    AS_Segment_ce41c2fee51e4f46b28a78478ab9bda0: function AS_Segment_ce41c2fee51e4f46b28a78478ab9bda0(eventobject, sectionNumber, rowNumber) {
-        var self = this;
-        var index = this.view.SegOptions.selectedRowIndex[1];
-        switch (index) {
-        case 0:
-            var nav = new kony.mvc.Navigation("frmAllEvents");
-            nav.navigate();
-            break;
-        case 1:
-            break;
-        default:
-            kony.print("Invalid case");
-        }
-    },
     /** onTextChange defined for txtEventName **/
     AS_TextField_g2660a93a12c4cec88fd22d34bb3ff91: function AS_TextField_g2660a93a12c4cec88fd22d34bb3ff91(eventobject, changedtext) {
         var self = this;
@@ -88,12 +73,6 @@ define({
         var self = this;
         this.doTabActions("btnSessions");
         //this.onClickProceed();
-    },
-    /** onClick defined for btnPublishEventOnly **/
-    AS_Button_e2bc372e22d04af28846b222bfea1564: function AS_Button_e2bc372e22d04af28846b222bfea1564(eventobject) {
-        var self = this;
-        isPublish = true;
-        this.onClickProceed();
     },
     /** btnAddOnclick defined for sessionFooter1 **/
     AS_UWI_j1f3ad09834e4c508d7e2cf124c1fb8b: function AS_UWI_j1f3ad09834e4c508d7e2cf124c1fb8b(eventobject) {
@@ -167,16 +146,6 @@ define({
     AS_UWI_j20ebb89b6e14c99b335e65b22dbc12f: function AS_UWI_j20ebb89b6e14c99b335e65b22dbc12f() {
         var self = this;
         this.navigateToManageUser();
-    },
-    /** onClick defined for btnBasic **/
-    AS_Button_c0cd9ed5352d4659a4b059c062530428: function AS_Button_c0cd9ed5352d4659a4b059c062530428(eventobject) {
-        var self = this;
-        this.doTabActions(eventobject.id);
-    },
-    /** onClick defined for btnSessions **/
-    AS_Button_dc3930617aa641548cf32930c175433b: function AS_Button_dc3930617aa641548cf32930c175433b(eventobject) {
-        var self = this;
-        this.doTabActions(eventobject.id);
     },
     /** postShow defined for frmCreateEvent **/
     AS_Form_ca376d275d4044acb27f9df6b4bc063b: function AS_Form_ca376d275d4044acb27f9df6b4bc063b(eventobject) {

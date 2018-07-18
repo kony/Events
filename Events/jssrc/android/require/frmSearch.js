@@ -189,7 +189,7 @@ define("frmSearch", function() {
                 "keyBoardStyle": constants.TEXTBOX_KEY_BOARD_STYLE_DEFAULT,
                 "left": "3.00%",
                 "onTextChange": controller.AS_TextField_f32a139024244acabf5ab1bcd58134d5,
-                "placeholder": "Mobile Application Development",
+                "placeholder": "Event name..",
                 "secureTextEntry": false,
                 "skin": "CopydefTextBoxNormal0d904edf9311143",
                 "textInputMode": constants.TEXTBOX_INPUT_MODE_ANY,
@@ -207,7 +207,24 @@ define("frmSearch", function() {
                 "placeholderSkin": "CopydefTextBoxPlaceholder0c4cc23bc296e4b",
                 "viewType": constants.TEXTBOX_VIEW_TYPE_DEFAULT
             });
-            flexSearch.add(imgSearchIconActcive, lblStrip, txtSearch);
+            var btnCross = new kony.ui.Button({
+                "centerY": "50%",
+                "focusSkin": "sknbtncrossicon",
+                "height": "20dp",
+                "id": "btnCross",
+                "isVisible": true,
+                "left": "-5%",
+                "onClick": controller.AS_Button_dd3f28cf76c144eebe912d9b12af17a7,
+                "skin": "sknbtncrossicon",
+                "width": "20dp",
+                "zIndex": 1
+            }, {
+                "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+                "displayText": true,
+                "padding": [0, 0, 0, 0],
+                "paddingInPixel": false
+            }, {});
+            flexSearch.add(imgSearchIconActcive, lblStrip, txtSearch, btnCross);
             var segSearchResult = new kony.ui.SegmentedUI2({
                 "autogrowMode": kony.flex.AUTOGROW_HEIGHT,
                 "centerX": "50%",

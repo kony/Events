@@ -1,0 +1,20 @@
+{
+    "AS_Map_c52e4489801f421c90700870837a512a": {
+        "id": "AS_Map_c52e4489801f421c90700870837a512a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "location"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_b7a3fe0ba4854b11b00b1304b648822b",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "//this.setLocationOnMap();",
+            "callbackType": null
+        }]
+    }
+}

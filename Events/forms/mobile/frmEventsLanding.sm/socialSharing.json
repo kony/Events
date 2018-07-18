@@ -42,7 +42,8 @@
     "data": {
         "FileName": "EventCard",
         "MimeType": "Image/PNG",
-        "Subject": "Event"
+        "Subject": "Event",
+        "imgVisibility": true
     },
     "id": "socialSharing",
     "info": null,

@@ -127,7 +127,7 @@ define("frmLogin", function() {
                 "keyBoardStyle": constants.TEXTBOX_KEY_BOARD_STYLE_DEFAULT,
                 "left": "0%",
                 "maxTextLength": null,
-                "onDone": controller.AS_TextField_f38a41c004c54a74a9ab7cbda138505c,
+                "onDone": controller.AS_TextField_e9a76156f7f1447e9dc2972f0c5aee44,
                 "placeholder": "Password",
                 "secureTextEntry": true,
                 "skin": "CopysknTexBoxCommonSpeaker0b7b7824af0b848",
@@ -174,7 +174,7 @@ define("frmLogin", function() {
                 "id": "FlexContainer0hd0cb1df7f1b45",
                 "isVisible": true,
                 "layoutType": kony.flex.FREE_FORM,
-                "onClick": controller.AS_FlexContainer_f242b9953b724996baa03da20fbb176e,
+                "onClick": controller.AS_FlexContainer_b1960b9eb1c24435ab192c6a8fc70925,
                 "right": "2.50%",
                 "skin": "slFbox",
                 "top": "8dp",
@@ -206,7 +206,7 @@ define("frmLogin", function() {
                 "id": "btnSubmit",
                 "isVisible": true,
                 "left": "5%",
-                "onClick": controller.AS_Button_h6db9ecbd776435ea976fd9cc7c0e167,
+                "onClick": controller.AS_Button_gd61d69e5d5942138d6f15e55f2ce490,
                 "skin": "CopydefBtnNormal0ed0a68b2c3ae44",
                 "text": "SUBMIT",
                 "top": "12%",
@@ -236,23 +236,7 @@ define("frmLogin", function() {
             }, {});
             flexLoginCred.add(lbklSignInTitle, txtUser, flexPass, btnSubmit, lblError);
             flexLoginMain.add(flexLoginEventLogo, flexLoginCred);
-            var Label0i622b0ec21994c = new kony.ui.Label({
-                "centerX": "50%",
-                "height": "10%",
-                "id": "Label0i622b0ec21994c",
-                "isVisible": true,
-                "left": "0%",
-                "skin": "CopydefLabel0b65169b227aa40",
-                "text": "© Copyright 2018 Kony, Inc. All Rights Reserved.",
-                "top": "90%",
-                "width": "100%",
-                "zIndex": 1
-            }, {
-                "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-                "padding": [0, 0, 0, 0],
-                "paddingInPixel": false
-            }, {});
-            this.add(flexLoginMain, Label0i622b0ec21994c);
+            this.add(flexLoginMain);
         };
         return [{
             "addWidgets": addWidgetsfrmLogin,

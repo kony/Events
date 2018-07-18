@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Boolean flag to enable/disable new local message notifications. 
+	If disabled, new local messages are not informed to app during offline -->
+    <string name="notify_local_msg">true</string>
+    
+    <!-- By Default, only latest local message notification is shown.
+    'notify_local_msg_notifications_count' can be used to display different 
+     notification for each local message. The maxmum limit allowed in Android is 50.
+     After exceeding the below specified number of statusbar notifications,
+     older notifications are replaced with newer local notifications but sometimes older 
+     notifications are replaced with new messages even before it reaches specified 
+     count(this happens for new message arrival when app is not running) -->
+    <string name="notify_local_msg_notifications_count">1</string>
+	
+	<!-- specify icon resource without extension. Ex, logo for logo.png -->
+    <string name="notify_local_msg_icon">icon</string>
+    
+    <!-- Boolean flag to enable/disable sound for local message notification -->
+    <string name="notify_local_msg_sound">true</string>
+    
+    <!-- Boolean flag to enable/disable vibrate for local message notification -->
+    <string name="notify_local_msg_vibrate">true</string>
+    
+    <!-- Boolean flag to enable/disable lights for local message notification -->
+    <string name="notify_local_msg_lights">true</string>
+    
+    <!-- Boolean flag to indicate weather unread local message notification can be cleared or not -->
+    <string name="notify_local_msg_clear">true</string>
+
+    <!-- Title to be used for Local notification channel ,Note: Title can't be empty if used-->
+    <string name="notify_local_msg_channel_title">Local Notifications</string>
+
+    <!-- Description to be used for Local notification channel,Note: can't be empty if used-->
+    <string name="notify_local_msg_channel_desc">All local notifications will be displayed under this category</string>
+    
+     <!-- priority value of local notification-->
+     <!-- PRIORITY_DEFAULT = 0,PRIORITY_HIGH = 1,PRIORITY_LOW = -1,PRIORITY_MAX = 2,PRIORITY_MIN = -2 -->
+    <string name="notify_local_msg_priority"></string>
+    
+     <!-- visibility value of local notification-->
+     <!-- VISIBILITY_PUBLIC=1,VISIBILITY_SECRET=-1,VISIBILITY_PRIVATE=0 -->
+    <string name="notify_local_msg_visibility"></string>
+    
+     <!-- backgroundColor value of local notification ex:ffffff-->
+    <string name="notify_local_msg_background_color"></string>
+</resources>

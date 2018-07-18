@@ -12,8 +12,8 @@ var appConfig = {
     middlewareContext: "Events",
     isturlbase: "http://sawin1.konylabs.net:9090/services",
     isMFApp: true,
-    appKey: "fb951cb7bed9bcc851248e08804f8268",
-    appSecret: "c07a4cb503f46a2707bffe9f19d6d5e9",
+    appKey: "e8d9b55f376dac46aed193668da7765f",
+    appSecret: "5881335e142f488cec08ba2319a56ee8",
     serviceUrl: "http://sawin1.konylabs.net:9090/authService/100000002/appconfig",
     svcDoc: {
         "selflink": "http://sawin1.konylabs.net:9090/authService/100000002/appconfig",
@@ -22,12 +22,18 @@ var appConfig = {
                 "success_url": "allow_any"
             }
         },
+        "messagingsvc": {
+            "appId": "a92d5080-735c-42c8-8587-9af024074296",
+            "url": "http://sawin1.konylabs.net:9090/kpns/api/v1"
+        },
         "integsvc": {
+            "KMSService": "http://sawin1.konylabs.net:9090/services/KMSService",
             "EventsOrchService": "http://sawin1.konylabs.net:9090/services/EventsOrchService",
             "getLatLang": "http://sawin1.konylabs.net:9090/services/getLatLang",
-            "BoxService": "http://sawin1.konylabs.net:9090/services/BoxService"
+            "BoxService": "http://sawin1.konylabs.net:9090/services/BoxService",
+            "accountlogin": "http://sawin1.konylabs.net:9090/services/accountlogin"
         },
-        "appId": "a76ee372-dac2-4871-b8e6-6edfdf831f43",
+        "appId": "a92d5080-735c-42c8-8587-9af024074296",
         "identity_features": {
             "reporting_params_header_allowed": true
         },
@@ -36,7 +42,7 @@ var appConfig = {
             "session": "http://sawin1.konylabs.net:9090/services/IST",
             "custom": "http://sawin1.konylabs.net:9090/services/CMS"
         },
-        "baseId": "8507599f-1e77-4ee1-a628-03453a0e132d",
+        "baseId": "81ec5886-f0e5-47f5-9ce2-58a939a5d1f6",
         "login": [{
             "alias": "linkedIdentityLogin",
             "type": "oauth2",
@@ -46,6 +52,17 @@ var appConfig = {
             "alias": "userstore",
             "type": "basic",
             "prov": "userstore",
+            "url": "http://sawin1.konylabs.net:9090/authService/100000002"
+        }, {
+            "alias": "testProvider",
+            "type": "basic",
+            "prov": "testProvider",
+            "url": "http://sawin1.konylabs.net:9090/authService/100000002"
+        }, {
+            "mandatory_fields": [],
+            "alias": "customAccountLogin",
+            "type": "basic",
+            "prov": "customAccountLogin",
             "url": "http://sawin1.konylabs.net:9090/authService/100000002"
         }],
         "services_meta": {
@@ -63,6 +80,11 @@ var appConfig = {
                 "version": "1.0",
                 "url": "http://sawin1.konylabs.net:9090/services/data/v1/EventOrchSDO"
             },
+            "KMSService": {
+                "type": "integsvc",
+                "version": "1.0",
+                "url": "http://sawin1.konylabs.net:9090/services/KMSService"
+            },
             "EventsOrchService": {
                 "type": "integsvc",
                 "version": "1.0",
@@ -77,7 +99,15 @@ var appConfig = {
                 "type": "integsvc",
                 "version": "1.0",
                 "url": "http://sawin1.konylabs.net:9090/services/BoxService"
+            },
+            "accountlogin": {
+                "type": "integsvc",
+                "version": "1.0",
+                "url": "http://sawin1.konylabs.net:9090/services/accountlogin"
             }
+        },
+        "Webapp": {
+            "url": "http://sawin1.konylabs.net:9090/Events"
         }
     },
     runtimeAppVersion: "Default",
@@ -108,6 +138,7 @@ function themeCallBack() {
     applicationController = require("applicationController");
     callAppMenu();
     kony.application.setApplicationInitializationEvents({
+        preappinit: applicationController.AS_AppEvents_idf0829f55594ed2be1b3d9985ec14a4,
         init: applicationController.appInit,
         postappinit: applicationController.AS_AppEvents_fa5813076af84c45af9009238c9e57c5,
         appservice: applicationController.AS_AppEvents_c34a87f4b8e9423a8e2a398f086dac42,

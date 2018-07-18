@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DeviceDefaultDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
+    </style>
+    <style name="DeviceDefaultDialogAlert" parent="@android:style/Theme.DeviceDefault.Dialog.Alert">
+    </style>
+</resources>

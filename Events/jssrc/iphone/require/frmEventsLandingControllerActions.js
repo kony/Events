@@ -28,7 +28,8 @@ define({
     AS_Segment_e830efe839f74c9da915e9007dfe130e: function AS_Segment_e830efe839f74c9da915e9007dfe130e(eventobject, sectionNumber, rowNumber) {
         var self = this;
         // this.onSegRowClick();
-        this.getEventImages();
+        var event_id = this.view.segEventList.selectedItems[0].event_id;
+        this.getEventImages(this.onSegRowClick, event_id);
     },
     /** onPull defined for segEventList **/
     AS_Segment_ab181210353b42aa8c165aeb158ed0ec: function AS_Segment_ab181210353b42aa8c165aeb158ed0ec(eventobject) {
@@ -76,5 +77,7 @@ define({
         //this.flxCoverOnClick();
         this.skeletonScreenAnimation();
         this.logoutVisiblity();
+        registerKMS();
+        //createLocalNotification();
     }
 });

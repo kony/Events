@@ -1,0 +1,25 @@
+{
+    "AS_Form_d77964d4e4e14051b4eac7b31626bdc5": {
+        "id": "AS_Form_d77964d4e4e14051b4eac7b31626bdc5",
+        "type": "ACTION_SEQUENCE",
+        "name": "AS_Form_ia2c52b4e06c49a7a489faa63f003241",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLogin",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d53a0c41005b46e9b1d5de20f80e6adb"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__c3c25a1676ce43fd9665b5a93cf21ca8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "doCustomLogin();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

@@ -1,5 +1,4 @@
 define({
-    //Type your controller code here
     eventList: null,
     /**
      * @function onNavigate
@@ -7,10 +6,14 @@ define({
      * @private
      */
     onNavigate: function() {
-        this.view.menuItem.setSelectedFlex(1);
-        this.view.flxScEventList.removeAll();
-        if (userAttributes !== undefined && userAttributes !== null && userAttributes !== {}) {
-            this.view.dashboard.text = userAttributes.firstname;
+        try {
+            this.view.menuItem.setSelectedFlex(1);
+            this.view.flxScEventList.removeAll();
+            if (glbUserAttributes !== undefined && glbUserAttributes !== null && glbUserAttributes !== {}) {
+                this.view.dashboard.text = glbUserAttributes.firstname;
+            }
+        } catch (error) {
+            kony.print("FrmAllEvents Controller" + JSON.stringify(error));
         }
     },
     /**
@@ -44,17 +47,9 @@ define({
                         "banner_url": "event01.jpg"
                     }];
                 }
-                /* if (records[i]["banner_url"] === null || records[i]["banner_url"] === "" || records[i]["banner_url"] === undefined) {
-                  event["event_banner"] = "event01.jpg";
-                } else {
-                  event["event_banner"] = records[i]["banner_url"];
-                }*/
                 if (records[i]["name"] === null || records[i]["name"] === undefined) {
                     records[i]["name"] = "Name not available";
                 }
-                /* else {
-                          event["event_title"] = records[i]["name"];
-                        }*/
                 if (records[i]["event_category"] === null || records[i]["event_category"] === undefined) {
                     records[i]["event_category"] = "NA";
                 } else {
@@ -75,25 +70,12 @@ define({
      * @private
      */
     getEventsData: function() {
-        debugger;
-        this.startLoadingScreen();
+        showLoading(this);
         try {
             var client = kony.sdk.getCurrentInstance();
             var intgService;
             intgService = client.getIntegrationService("EventsOrchService");
             intgService.invokeOperation("getAllEventDetail", {}, {}, this.eventFetchSuccessCallback.bind(this), this.eventFetchFailureCallback.bind(this));
-            /* var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSDO", {
-               "access": "online"
-             });
-             var dataObject = new kony.sdk.dto.DataObject("Eventsandimages");
-             // 			var odataUrl = "$filter=isdisabled eq '0'";
-             // 			dataObject.odataUrl = odataUrl;
-             var options = {
-               "dataObject": dataObject
-             };
-             objSvc.fetch(options,
-                          this.eventFetchSuccessCallback.bind(this),
-                          this.eventFetchFailureCallback.bind(this));*/
         } catch (excp) {
             this.stopLoadingScreen();
             alert(excp.message);
@@ -106,14 +88,13 @@ define({
      * @param {JSONArray} result
      */
     eventFetchSuccessCallback: function(result) {
-        var eventDetail = parseEventData(result);
-        this.stopLoadingScreen();
-        /*if (response.records[0].events_view.length > 0) {
-          this.processEventGalleryImages(response.records[0]);
-        } else {
-          alert("No events!");
-        }*/
-        this.ProcessEventData(eventDetail);
+        try {
+            var eventDetail = parseEventData(result);
+            this.stopLoadingScreen();
+            this.ProcessEventData(eventDetail);
+        } catch (error) {
+            kony.print("FrmAllEvents Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @function eventFetchFailureCallback
@@ -125,34 +106,8 @@ define({
         this.stopLoadingScreen();
         alert("something went wrong.Please try later");
     },
-    /* processEventGalleryImages : function(records){
-       alert("in processEventGalleryImages");
-       return;
-       for(var i=0; i<records.events_view.length; i++){
-         records.events_view[i].event_images = [];
-         if(records.event_images.length>0){
-           for(var j=0;j<records.event_images.length; j++){
-             if(records.event_images[j].event_id===records.events_view[i].event_id)
-               records.events_view[i].event_images.push(records.event_images[j].image_url);
-           }
-         }
-       }
-       this.ProcessEventData(records.events_view);
-     },*/
     /**
-     * @function startLoadingScreen
-     * @description This function is used to show the loading screen.
-     * @private
-     */
-    startLoadingScreen: function() {
-        kony.application.showLoadingScreen("sknloading", "", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, false, {
-            enableMenuKey: false,
-            enableBackKey: false,
-            progressIndicatorColor: "000000"
-        });
-    },
-    /**
-     * @function startLoadingScreen
+     * @function stopLoadingScreen
      * @description This function is used to dismiss the loading screen.
      * @private
      */
@@ -179,38 +134,48 @@ define({
      * @param {JSONArray} eventList
      */
     displayEvents: function(eventList) {
-        //return;
-        var eventListLength = eventList.length;
-        var flexContainer;
-        var eventComp;
-        var left = 2;
-        var top = -340;
-        var i;
-        for (i = 0; i < eventListLength; i++) {
-            if (i % 3 === 0) {
-                left = 2;
-                top = top + 370;
+        try {
+            var eventListLength = eventList.length;
+            var flexContainer;
+            var eventComp;
+            var left = 2;
+            var top = -340;
+            var i;
+            for (i = 0; i < eventListLength; i++) {
+                if (i % 3 === 0) {
+                    left = 2;
+                    top = top + 370;
+                }
+                eventComp = getEventDescComp(i, left, top, eventList[i], this);
+                this.view.flxScEventList.add(eventComp);
+                left = left + 354;
             }
-            eventComp = getEventDescComp(i, left, top, eventList[i], this);
-            this.view.flxScEventList.add(eventComp);
-            left = left + 354;
+            if (i % 3 === 0) {
+                left = 0;
+                top = top + 370;
+                //getCreateNewEventComp
+                this.view.flxScEventList.add(getCreateNewEventComp(left, top, this));
+            } else {
+                this.view.flxScEventList.add(getCreateNewEventComp(left, top, this));
+            }
+            if (top < 500) {
+                top = 430;
+            }
+            var footer = getFooter(0, top + 350);
+            this.view.flxScEventList.add(footer);
+            this.view.forceLayout();
+        } catch (error) {
+            kony.print("FrmAllEvents Controller" + JSON.stringify(error));
         }
-        if (i % 3 === 0) {
-            left = 0;
-            top = top + 370;
-            //getCreateNewEventComp
-            // this.view.flxScEventList.add(getAddEventFlex(left, top));
-            this.view.flxScEventList.add(getCreateNewEventComp(left, top, this));
-        } else {
-            this.view.flxScEventList.add(getCreateNewEventComp(left, top, this));
-            // this.view.flxScEventList.add(getAddEventFlex(left, top));
-        }
-        if (top < 500) {
-            top = 430;
-        }
-        var footer = getFooter(0, top + 350);
-        this.view.flxScEventList.add(footer);
-        this.view.forceLayout();
+    },
+    /**
+     * @function onViewEvent
+     * @description This function is used to view the eventdetails
+     * @param {JSON} event
+     */
+    onViewEvent: function(event) {
+        alert(JSON.stringify(event));
+        this.view.eventpreview.isVisible = true;
     },
     /**
      * @function onEventEdit
@@ -219,11 +184,15 @@ define({
      * @param {JSON} event
      */
     onEventEdit: function(event) {
-        var navObj = new kony.mvc.Navigation("frmCreateEvent");
-        var param = {};
-        param.editMode = true;
-        param.eventData = event;
-        navObj.navigate(param);
+        try {
+            var navObj = new kony.mvc.Navigation("frmCreateEvent");
+            var param = {};
+            param.editMode = true;
+            param.eventData = event;
+            navObj.navigate(param);
+        } catch (error) {
+            kony.print("FrmAllEvents Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @function onEventRemove
@@ -232,36 +201,44 @@ define({
      * @param {JSON} event
      */
     onEventRemove: function(event) {
-        this.eventsToDel = [];
-        this.eventsToDel.push({
-            "event_id": event.event_id
-        });
-        var pspConfig = {
-            "iconPosition": constants.ALERT_CONTENT_ALIGN_CENTER,
-            "contentAlignment": constants.ALERT_ICON_POSITION_LEFT
-        };
-        var alert = kony.ui.Alert({
-            "message": "Are you sure you want to delete this event?",
-            "alertType": constants.ALERT_TYPE_CONFIRMATION,
-            "alertTitle": "Delete",
-            "yesLabel": "Yes",
-            "noLabel": "No",
-            "alertIcon": "",
-            "alertHandler": handleAlert.bind(this)
-        }, pspConfig);
+        try {
+            this.eventsToDel = [];
+            this.eventsToDel.push({
+                "event_id": event.event_id
+            });
+            var pspConfig = {
+                "iconPosition": constants.ALERT_CONTENT_ALIGN_CENTER,
+                "contentAlignment": constants.ALERT_ICON_POSITION_LEFT
+            };
+            var alert = kony.ui.Alert({
+                "message": "Are you sure you want to delete this event?",
+                "alertType": constants.ALERT_TYPE_CONFIRMATION,
+                "alertTitle": "Delete",
+                "yesLabel": "Yes",
+                "noLabel": "No",
+                "alertIcon": "",
+                "alertHandler": handleAlert.bind(this)
+            }, pspConfig);
 
-        function handleAlert(response) {
-            if (response) this.delete("event", this.getEventsData, this.eventsToDel);
+            function handleAlert(response) {
+                if (response) this.delete("event", this.getEventsData, this.eventsToDel);
+            }
+        } catch (error) {
+            kony.print("FrmAllEvents Controller" + JSON.stringify(error));
         }
     },
     onMenuItemClick: function() {},
     delete: function(object, callback, data) {
-        this.startLoadingScreen();
-        this.delCount = 0;
-        this.delObjectName = object;
-        this.delCallBack = callback;
-        this.dataToDelete = data;
-        this.deleteRecursiveCommon();
+        try {
+            showLoading(this);
+            this.delCount = 0;
+            this.delObjectName = object;
+            this.delCallBack = callback;
+            this.dataToDelete = data;
+            this.deleteRecursiveCommon();
+        } catch (error) {
+            kony.print("FrmAllEvents Controller" + JSON.stringify(error));
+        }
     },
     //Delete Recursive call
     deleteRecursiveCommon: function() {
@@ -285,11 +262,15 @@ define({
         }
     },
     deleteRecursiveCommonSuccessCallback: function(success) {
-        this.delCount++;
-        if (this.delCount < this.dataToDelete.length) {
-            this.deleteRecursiveCommon();
-        } else {
-            this.delCallBack();
+        try {
+            this.delCount++;
+            if (this.delCount < this.dataToDelete.length) {
+                this.deleteRecursiveCommon();
+            } else {
+                this.delCallBack();
+            }
+        } catch (error) {
+            kony.print("FrmAllEvents Controller" + JSON.stringify(error));
         }
     },
     deleteRecursiveCommonFailureCallback: function(error) {

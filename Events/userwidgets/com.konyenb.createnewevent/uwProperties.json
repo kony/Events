@@ -1,0 +1,47 @@
+{
+    "classname": "createnewevent",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "Events",
+                    "kuid": "gdd876203c8244cfa0ec61892a75aebc",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onCreateEventClick",
+                    "pw": {
+                        "displayName": "onCreateEventClick",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "e8805861e0f342fd9640971826ebf716",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [
+                "Events"
+            ],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konyenb",
+    "version": "1.0.0"
+}

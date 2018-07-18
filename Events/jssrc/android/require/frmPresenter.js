@@ -270,7 +270,29 @@ define("frmPresenter", function() {
                 "paddingInPixel": false
             }, {});
             flxPresenterRoot.add(flxHeader, flxTitle, segSpeaker);
-            this.add(flxPresenterRoot);
+            var lblNoEvents = new kony.ui.Label({
+                "centerX": "50%",
+                "centerY": "50%",
+                "id": "lblNoEvents",
+                "isVisible": false,
+                "left": "65dp",
+                "skin": "sknlblNoevents",
+                "text": "You Don't have any Events Registered..",
+                "textStyle": {
+                    "letterSpacing": 0,
+                    "strikeThrough": false
+                },
+                "top": "40dp",
+                "width": "80%",
+                "zIndex": 5
+            }, {
+                "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+                "padding": [0, 0, 0, 0],
+                "paddingInPixel": false
+            }, {
+                "textCopyable": false
+            });
+            this.add(flxPresenterRoot, lblNoEvents);
         };
         return [{
             "addWidgets": addWidgetsfrmPresenter,

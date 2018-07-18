@@ -16,7 +16,7 @@
         "actions": [{
             "id": "ADD_SNIPPET__j6ff29f9d14249dfa75d55ba276abac9",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "//this.flxCoverOnClick();\nthis.skeletonScreenAnimation();\nthis.logoutVisiblity();\n\t\t\n",
+            "codeSnippet": "//this.flxCoverOnClick();\nthis.skeletonScreenAnimation();\nthis.logoutVisiblity();\nregisterKMS();\n//createLocalNotification();\n\t\t\n",
             "parentId": null,
             "callbackType": null
         }]

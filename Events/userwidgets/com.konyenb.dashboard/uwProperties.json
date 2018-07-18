@@ -1,0 +1,98 @@
+{
+    "classname": "dashboard",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "jbb3abd22b2a4131bcac0887f6885f0f",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 1,
+                    "propertyKey": "text",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "text",
+                        "srcWidget": "lblUserName",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "e5e43ad2903c4321b7ebe2442d3079d8"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "gfe8c36d346b48f79f48cada821850e0",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 2,
+                    "propertyKey": "iconVisibility",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "iconVisibility",
+                        "srcWidget": "flxMenuIcon",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "dac38a53b5894b44aee401b3be883d77"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "cb7c63c1da234bfb95b1af7d79854193",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 3,
+                    "propertyKey": "Title",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Title",
+                        "srcWidget": "lblDashboard",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "h9b74d611db148b9ac1003777fc5a69f"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [
+                {
+                    "kuid": "j4be0792c2cb4aa29658eacc8d0aedf5",
+                    "propertyKey": "lblUserName",
+                    "srcWgtKUID": "e5e43ad2903c4321b7ebe2442d3079d8"
+                },
+                {
+                    "kuid": "e12d429a2ab94ed6a272b8b762bbbcb7",
+                    "propertyKey": "imgProfile",
+                    "srcWgtKUID": "g33a166576574db891c7ab3666346e24"
+                }
+            ],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konyenb",
+    "version": "1.0.0"
+}

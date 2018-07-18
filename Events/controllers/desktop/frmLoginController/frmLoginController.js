@@ -4,7 +4,12 @@ define({
 	 * @description - This function will call disable error function to disable the error label visibility
 	 **/
   onNavigate : function(){
-    this.disableError();
+    try{
+      this.disableError();
+    }catch(error){
+      kony.print("FormLogin Controller"+JSON.stringify(error));
+    }
+    
   },
   
   /**
@@ -18,15 +23,15 @@ define({
         this.enableError("Username or Password should not be Empty");
         return;
       }
-      this.showLoading();
+      showLoading(this);
   	  var sdkInstance = new kony.sdk.getCurrentInstance();
      try{
-       userStoreAuth = sdkInstance.getIdentityService("userstore");
+       this.userStoreAuth = sdkInstance.getIdentityService("userstore");
        var userCred = {
          "userid" : username,
          "password" : password
        };
-       userStoreAuth.login(userCred,
+       this.userStoreAuth.login(userCred,
                            this.userStoreLoginSuccss.bind(this),
                            this.userStoreLoginFailure.bind(this)
                           );
@@ -41,14 +46,19 @@ define({
      * @param {JSON - response} - success response from the back end
 	 **/
   userStoreLoginSuccss : function(response){
-    this.disableError();
-     userStoreAuth.getProfile(false,function(result) {
+    try{
+      this.disableError();
+     this.userStoreAuth.getProfile(false,function(result) {
        kony.application.dismissLoadingScreen();
-      userAttributes = result.profile_attributes;
+      glbUserAttributes = result.profile_attributes;
       var navToCreateEvent = new kony.mvc.Navigation("frmAllEvents");
     navToCreateEvent.navigate();
      }, function(error){
        this.enableError("something went wrong please try later");});
+    }catch(error){
+      kony.print("FormLogin Controller"+JSON.stringify(error));
+    }
+    
   },
   
    /**
@@ -58,7 +68,12 @@ define({
      * @param {JSON - error} - error response from the back end
 	 **/
   userStoreLoginFailure : function(error){
-   this.enableError("The email and password combination you entered is not valid. Please tyr again.");
+    try{
+      this.enableError("The email and password combination you entered is not valid. Please tyr again.");
+    }catch(err){
+      kony.print("FormLogin Controller"+JSON.stringify(err));
+    }
+   
   },
   
    /**
@@ -67,10 +82,15 @@ define({
      * @param {String - msg} - Message to be displayed
 	 **/
   enableError : function(msg){
-     kony.application.dismissLoadingScreen();
+    try{
+        kony.application.dismissLoadingScreen();
       this.view.lblError.text = msg;
       this.view.lblError.isVisible = true;
       this.view.forceLayout();
+    }catch(error){
+      kony.print("FormLogin Controller"+JSON.stringify(error));
+    }
+   
   },
   
      /**
@@ -78,25 +98,32 @@ define({
 	 * @description - This function will make the error label invisible
 	 **/
   disableError : function(){
-  this.view.lblError.isVisible = false;
+   try{
+      this.view.lblError.isVisible = false;
   this.view.forceLayout();
+   }catch(error){
+      kony.print("FormLogin Controller"+JSON.stringify(error));
+    }
+ 
   },
    
-    /**
-	 * @function showLoading
-	 * @description - This function will show loading screen
-	 **/
-   showLoading : function(){
-    kony.application.showLoadingScreen("sknloading",
-                                       "",
-                                       constants.LOADING_SCREEN_POSITION_FULL_SCREEN, 
-                                       true,
-                                       false,
-                                       {
-      enableMenuKey: false,
-      enableBackKey: false,
-      progressIndicatorColor: "000000"
-    });
-    this.view.forceLayout();
-  },
+  /**
+  * @function showPassword
+  */
+  showPassword : function(){
+    try{
+      if (this.view.imageShowPassword.src === "eyeiconvisible.png") {
+            this.view.imageShowPassword.src = "eyeicon.png";
+            this.view.txtPassWord.isVisible = true;
+            this.view.txtPasswordShow.isVisible = false;
+        } else {
+            this.view.imageShowPassword.src = "eyeiconvisible.png";
+            this.view.txtPasswordShow.text = this.view.txtPassWord.text;
+            this.view.txtPassWord.isVisible = false;
+            this.view.txtPasswordShow.isVisible = true;
+     }
+    }catch(err){
+      kony.print("frmLogin Controller"+JSON.stringify(err));
+    }
+  }
  });

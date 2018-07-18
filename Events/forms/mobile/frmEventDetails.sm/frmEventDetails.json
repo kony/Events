@@ -49,6 +49,7 @@
     "enabledforidletimeout": false,
     "enablescrolling": true,
     "id": "frmEventDetails",
+    "ide_postShow": "AS_Form_g3e541c7a3fa403592d6d2969f0ced88",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,

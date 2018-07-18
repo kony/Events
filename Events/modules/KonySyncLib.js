@@ -1,5 +1,5 @@
 // -- SDK File : KonySyncLib.js 
-//  --Generated On Thu Apr 26 19:33:21 IST 2018******************* 
+//  --Generated On Thu Jun 21 18:41:55 IST 2018******************* 
 //  **************** Start jsonWriter.js*******************
 //#ifdef iphone
 	//#define KONYSYNC_IOS
@@ -1217,11 +1217,13 @@ kony.sync.getBinary = function(dbname, tableName, binaryColumnName, primaryKeyTa
     }
 
     function getBinaryFileFailure(error) {
-        sync.log.trace("kony.sync.getBinary - error received from getFilePath ", error);
         if(!kony.sync.isNullOrUndefined(error)) {
             if(error.errorCode == 5001) {
                 kony.sync.createDownloadTask(dbname, tableName, binaryColumnName, primaryKeyTable, config,
                     createTaskSuccess, createTaskFailure);
+            }else{
+                sync.log.error("kony.sync.getBinary - error received from getFilePath ", error);
+                kony.sync.verifyAndCallClosure(errorCallback, error);
             }
         } else {
             kony.sync.verifyAndCallClosure(errorCallback, error);
@@ -7493,20 +7495,20 @@ kony.sync.syncDownloadchangesGetLastSynctime = function(rowItem) {
 			kony.sync.onDownloadCompletion(true, kony.sync.getServerError(serverChanges.d, "download"));
 		}
 	}
-    function applyDownloadBatchChangesToDBonError()	{
-        var dbname = kony.sync.currentScope[kony.sync.scopeDataSource];
+    function applyDownloadBatchChangesToDBonError()	{
+        var dbname = kony.sync.currentScope[kony.sync.scopeDataSource];
 		var dbconnection = kony.sync.getConnectionOnly(dbname, dbname, kony.sync.syncFailed);
 		if(dbconnection===null){
 			return;
 		}
-    	if(kony.sync.globalIsDownloadStarted)	{
+    	if(kony.sync.globalIsDownloadStarted)	{
 			if(kony.sync.isApplyChangesSync()) {
-            	kony.db.transaction(dbconnection, downloadNextBatch, currentBatchDownloadError, ondownloadComplete);
-            } else {
-            	kony.db.transaction(dbconnection, downloadNextBatch, currentBatchDownloadError, ondownloadComplete,{isCommitTransaction:false});
-            	}
-            }
-        }
+            	kony.db.transaction(dbconnection, downloadNextBatch, currentBatchDownloadError, ondownloadComplete);
+            } else {
+            	kony.db.transaction(dbconnection, downloadNextBatch, currentBatchDownloadError, ondownloadComplete,{isCommitTransaction:false});
+            	}
+            }
+        }
     
     function currentBatchDownloadError()	{
 		sync.log.trace("Entering currentBatchDownloadError");
@@ -11470,17 +11472,17 @@ kony.sync.queryTable = function(tx, tablename, selectClause, whereClause, limitO
 
 kony.sync.isEmpty = function(obj) {
 		sync.log.trace("Entering kony.sync.isEmpty ");
-    // null and undefined are "empty"
-    if (obj == null) return true;
-    // Assume if it has a length property with a non-zero value
-    // that that property is correct.
-    if (obj.length > 0)    return false;
-    if (obj.length === 0)  return true;
+    // null and undefined are "empty"
+    if (obj == null) return true;
+    // Assume if it has a length property with a non-zero value
+    // that that property is correct.
+    if (obj.length > 0)    return false;
+    if (obj.length === 0)  return true;
 
-    for (var key in obj) {
-        if (hasOwnProperty.call(obj, key)) return false;
-    }
-    return true;
+    for (var key in obj) {
+        if (hasOwnProperty.call(obj, key)) return false;
+    }
+    return true;
 }
 
 kony.sync.getSyncTracking = function(options) {

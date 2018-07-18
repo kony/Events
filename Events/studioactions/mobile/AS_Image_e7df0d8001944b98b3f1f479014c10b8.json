@@ -1,0 +1,30 @@
+{
+    "AS_Image_e7df0d8001944b98b3f1f479014c10b8": {
+        "id": "AS_Image_e7df0d8001944b98b3f1f479014c10b8",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "imagesrc"
+        }, {
+            "datatype": "boolean",
+            "name": "issuccess"
+        }],
+        "contextObj": {
+            "name": "frmEventDetails",
+            "type": "forms",
+            "platform": "",
+            "KUID": "c90d6ed19c544f2eb36c6493ec356fd4"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__f6a483d8206e4ddaaf631ac49e465a1d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.sendSnapshot();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

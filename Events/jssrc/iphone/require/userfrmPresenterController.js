@@ -38,7 +38,7 @@ define({
                 "dataObject": dataObject,
                 "headers": {},
                 "queryParams": {
-                    "$filter": "event_id eq " + "'" + eventID + "'"
+                    "$filter": "event_id eq " + "'" + eventID + "' and ((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))"
                 }
             };
             kony.application.showLoadingScreen("", "", constants.LOADING_SCREEN_POSITION_ONLY_CENTER, true, true, {});
@@ -61,12 +61,11 @@ define({
      * @param {JSON} response
      */
     presenterFetchSuccess: function(response) {
-        debugger;
         kony.application.dismissLoadingScreen();
         kony.print("Presnters: " + JSON.stringify(response));
         //alert("Presnters: "+JSON.stringify(response.records));
         if ((response.records[0].event_sessions).length === 0) {
-            alert("No session available!");
+            this.setNoSessionLabel(false);
             return;
         }
         var procesedRecords = groupRecord(processSessionAndPresenters(response));
@@ -146,6 +145,14 @@ define({
         } catch (e) {
             alert(e.message);
             kony.print(e.message);
+        }
+    },
+    setNoSessionLabel: function(isSessionAvailable) {
+        if (isSessionAvailable) {
+            this.view.lblNoEvents.isVisible = false;
+        } else {
+            this.view.lblNoEvents.text = "There are no presenter(s) available for this Event..";
+            this.view.lblNoEvents.isVisible = true;
         }
     }
 });

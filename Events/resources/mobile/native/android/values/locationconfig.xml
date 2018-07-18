@@ -1,0 +1,11 @@
+<resources>
+	<!-- Minimum time interval(in seconds) for location updates --> 
+	<item type="string" name="min_time">60</item>
+	<!-- Minimum distance interval(in meters) for location updates --> 
+	<item type="string" name="min_distance">1</item>
+	<!-- This is used to get the last best known location. 
+		 This parameter decides the accuracy Vs latest(in time) known location. 
+		 phone.mylocation() returns the accurate among all the known locations within the time(in minutes) given.
+		 If no location found within time given, latest (in time) among is returned -->
+	<item type="string" name="accuracy_within_time">15</item>
+</resources>

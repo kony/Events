@@ -1,0 +1,17 @@
+{
+    "AS_FlexContainer_f0499494f9ec4cfe8d44fb4cf8fc0e17": {
+        "id": "AS_FlexContainer_f0499494f9ec4cfe8d44fb4cf8fc0e17",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_c1400d1b5072461787cbe7ed7b6a9812",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.setLocationOnMap(this.setLocationDataOnMap);",
+            "callbackType": null
+        }]
+    }
+}

@@ -350,7 +350,10 @@ define(function() {
          * return {String} -formatted date (yyyy-mm-ddTHH:MM:SS)
          **/
         formatDate: function(date, time) {
-            return date.replace(/\//g, "-") + "T" + time + ":00.0";
+            date = date.replace(/\//g, "-") + "T" + time + ":00.0";
+            date = new Date(date).toISOString();
+            date = date.split('.')[0];
+            return date;
         },
     };
 });

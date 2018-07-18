@@ -8,16 +8,11 @@
         }],
         "language": "js",
         "actions": [{
-            "id": "NAVIGATE_TO_FORM___d97db5bfe4864c98a510c06807ef3d02",
-            "type": "NAVIGATE_TO_FORM",
-            "formId": "frmEventsLanding",
-            "formKUID": "cde1aac14e7a43f2a6901937747f31f0",
-            "mappings": {},
-            "mappingsOrder": [],
-            "parentId": "",
-            "callbackType": null,
-            "enableMappingEditor": true,
-            "package": ""
+            "id": "ADD_SNIPPET__d728352e07534d22a3c8166cd2d1da5b",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var ntf = new kony.mvc.Navigation(\"frmEventsLanding\");\nntf.navigate({\"origin\" : \"searchback\"});",
+            "parentId": null,
+            "callbackType": null
         }]
     }
 }

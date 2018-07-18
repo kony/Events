@@ -30,7 +30,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "29%"
+        "value": "16.55%"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -45,7 +45,7 @@
     "id": "flxEventShared",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "e3a8089f3ada4438ac23ffa38329fbac",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",

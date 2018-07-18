@@ -122,7 +122,6 @@
 	        var d;
 	        var monthArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 	        d = localDate = new Date(date);
-	        localDate = new Date(d.getTime() + d.getTimezoneOffset() * 60 * 1000);
 	        return monthArray[localDate.getMonth()];
 	    },
 	    /**
@@ -135,7 +134,6 @@
 	        var localDate;
 	        var d;
 	        d = localDate = new Date(date);
-	        localDate = new Date(d.getTime() + d.getTimezoneOffset() * 60 * 1000);
 	        return localDate.getDate();
 	    },
 	    /**
@@ -148,7 +146,6 @@
 	        var localDate;
 	        var d;
 	        d = localDate = new Date(date);
-	        localDate = new Date(d.getTime() + d.getTimezoneOffset() * 60 * 1000);
 	        return localDate.getFullYear();
 	    },
 	    /**
@@ -162,7 +159,6 @@
 	        var localDate;
 	        var date;
 	        date = localDate = new Date(ufdate)
-	        localDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
 	        var hours = localDate.getHours();
 	        var minutes = localDate.getMinutes();
 	        var ampm = hours >= 12 ? 'PM' : 'AM';
@@ -183,8 +179,6 @@
 	        var firstDate, secondDate, localFirstDate, localSecondDate;
 	        firstDate = localFirstDate = new Date(end_date);
 	        secondDate = localSecondDate = new Date(start_date);
-	        localFirstDate = new Date(firstDate.getTime() + firstDate.getTimezoneOffset() * 60 * 1000);
-	        localSecondDate = new Date(secondDate.getTime() + secondDate.getTimezoneOffset() * 60 * 1000);
 	        var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
 	        return (Math.round(Math.abs((localFirstDate.getTime() - localSecondDate.getTime()) / (oneDay)))) + 1;
 	    }

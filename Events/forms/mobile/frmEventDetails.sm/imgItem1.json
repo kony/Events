@@ -28,11 +28,11 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "49.81%"
     },
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "50.00%"
     },
     "containerweight": 100,
     "context": {
@@ -44,8 +44,10 @@
     },
     "id": "imgItem1",
     "imagescalemode": 2,
+    "imagewhenfailed": "eventske.png",
+    "imagewhiledownloading": "eventske.png",
     "info": null,
-    "invokedProperty": "src",
+    "invokedProperty": "imageWhenFailed",
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "f93d783b4fb64807b0014ee56f5252eb",

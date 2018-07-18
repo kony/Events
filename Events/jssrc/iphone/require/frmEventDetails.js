@@ -163,7 +163,7 @@ define("frmEventDetails", function() {
                 "imageWhileDownloading": "eventsdef.png",
                 "isVisible": true,
                 "skin": "slImage",
-                "src": "eventsdef.png",
+                "src": "https://app.box.com/shared/static/dlckxc9fxe2nit9e7iuv46oog8xblh6o.jpg",
                 "top": "0dp",
                 "width": "100%",
                 "zIndex": 1
@@ -727,13 +727,15 @@ define("frmEventDetails", function() {
             }, {}, {});
             flexItem0.setDefaultUnit(kony.flex.DP);
             var imgItem0 = new kony.ui.Image2({
-                "centerX": "50%",
-                "centerY": "50%",
+                "centerX": "50.00%",
+                "centerY": "50.19%",
                 "height": "100%",
                 "id": "imgItem0",
+                "imageWhenFailed": "eventske.png",
+                "imageWhileDownloading": "eventske.png",
                 "isVisible": true,
                 "skin": "slImage",
-                "src": "event06.jpg",
+                "src": "eventske.png",
                 "width": "100%",
                 "zIndex": 1
             }, {
@@ -757,10 +759,12 @@ define("frmEventDetails", function() {
             }, {}, {});
             flexItem1.setDefaultUnit(kony.flex.DP);
             var imgItem1 = new kony.ui.Image2({
-                "centerX": "50%",
-                "centerY": "50%",
+                "centerX": "49.81%",
+                "centerY": "50.00%",
                 "height": "100%",
                 "id": "imgItem1",
+                "imageWhenFailed": "eventske.png",
+                "imageWhileDownloading": "eventske.png",
                 "isVisible": true,
                 "skin": "slImage",
                 "src": "event01.jpg",
@@ -791,6 +795,8 @@ define("frmEventDetails", function() {
                 "centerY": "50%",
                 "height": "100%",
                 "id": "imgItem2",
+                "imageWhenFailed": "eventske.png",
+                "imageWhileDownloading": "eventske.png",
                 "isVisible": true,
                 "skin": "slImage",
                 "src": "event02.jpg",
@@ -821,6 +827,8 @@ define("frmEventDetails", function() {
                 "centerY": "50%",
                 "height": "100%",
                 "id": "imgItem3",
+                "imageWhenFailed": "eventske.png",
+                "imageWhileDownloading": "eventske.png",
                 "isVisible": true,
                 "skin": "slImage",
                 "src": "event03.jpg",
@@ -851,6 +859,8 @@ define("frmEventDetails", function() {
                 "centerY": "50%",
                 "height": "100%",
                 "id": "imgItem4",
+                "imageWhenFailed": "eventske.png",
+                "imageWhileDownloading": "eventske.png",
                 "isVisible": true,
                 "skin": "slImage",
                 "src": "event04.jpeg",
@@ -1284,6 +1294,7 @@ define("frmEventDetails", function() {
             "id": "frmEventDetails",
             "layoutType": kony.flex.FREE_FORM,
             "needAppMenu": false,
+            "postShow": controller.AS_Form_g3e541c7a3fa403592d6d2969f0ced88,
             "skin": "sknFrmBGGradient"
         }, {
             "displayOrientation": constants.FORM_DISPLAY_ORIENTATION_PORTRAIT,

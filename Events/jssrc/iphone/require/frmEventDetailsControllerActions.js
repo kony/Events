@@ -6,7 +6,8 @@ define({
     AS_FlexContainer_h19bae8ee8c5441697b4ceed80101951: function AS_FlexContainer_h19bae8ee8c5441697b4ceed80101951(eventobject) {
         var self = this;
         var params = {};
-        params.origin = "details";
+        if (this.fromPush !== undefined && this.fromPush) params.origin = "push";
+        else params.origin = "details";
         var navObj = new kony.mvc.Navigation("frmEventsLanding");
         navObj.navigate(params);
     },
@@ -39,5 +40,10 @@ define({
     AS_Button_h3a6cfeb91544d68b12dd2e90eebd469: function AS_Button_h3a6cfeb91544d68b12dd2e90eebd469(eventobject) {
         var self = this;
         return self.login.call(this);
+    },
+    /** postShow defined for frmEventDetails **/
+    AS_Form_g3e541c7a3fa403592d6d2969f0ced88: function AS_Form_g3e541c7a3fa403592d6d2969f0ced88(eventobject) {
+        var self = this;
+        sendMetric(this.event.event_id, "view");
     }
 });

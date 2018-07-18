@@ -1,0 +1,141 @@
+{
+    "classname": "boxfileupload",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "f858128a943d40aca42538a6c4ba5e61",
+                    "paramList": [],
+                    "propertyKey": "selectFile",
+                    "pw": {
+                        "displayName": "selectFile",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "c689432f429c4eedb892f31f3f04d27d",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "fd2b15a3bd9b4a00bf8f3d7a6c35ff09",
+                    "paramList": [],
+                    "propertyKey": "uploadFile",
+                    "pw": {
+                        "displayName": "uploadFile",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "c689432f429c4eedb892f31f3f04d27d",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "d0d67ccd17d24754b36ce9069c940a45",
+                    "paramList": [
+                        {
+                            "name": "result"
+                        }
+                    ],
+                    "propertyIndex": 1,
+                    "propertyKey": "onUploadSuccess",
+                    "pw": {
+                        "displayName": "onUploadSuccess",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "c689432f429c4eedb892f31f3f04d27d",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "bbd646c5a8e640c0af22cec62b3c41ea",
+                    "paramList": [
+                        {
+                            "name": "result"
+                        }
+                    ],
+                    "propertyIndex": 1,
+                    "propertyKey": "onUploadFailure",
+                    "pw": {
+                        "displayName": "onUploadFailure",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "c689432f429c4eedb892f31f3f04d27d",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "dc265dd49cbc4eaf8d53c07fbae368a6",
+                    "paramList": [
+                        {
+                            "name": "images"
+                        }
+                    ],
+                    "propertyIndex": 1,
+                    "propertyKey": "onImageSelection",
+                    "pw": {
+                        "displayName": "onImageSelection",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "c689432f429c4eedb892f31f3f04d27d",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "null",
+                    "group": "General",
+                    "kuid": "j0e1c5d92f5840b28ac015fe21a52da5",
+                    "originalPropertyKey": "appUserID",
+                    "propertyIndex": 1,
+                    "propertyKey": "appUserID",
+                    "pw": {
+                        "displayName": "App user ID",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "c689432f429c4eedb892f31f3f04d27d",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "0",
+                    "group": "General",
+                    "kuid": "d821fbba10054252899be02a31405dc8",
+                    "originalPropertyKey": "folderID",
+                    "propertyIndex": 2,
+                    "propertyKey": "folderID",
+                    "pw": {
+                        "displayName": "Folder ID",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "c689432f429c4eedb892f31f3f04d27d",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konyenb",
+    "version": "1.0.0"
+}

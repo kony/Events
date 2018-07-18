@@ -87,11 +87,11 @@ define("frmEventsLanding", function() {
                 "paddingInPixel": false
             }, {});
             flexSearch.add(btnSearchIcon);
-            var CopyflexSearch0ee7683a6a43f44 = new kony.ui.FlexContainer({
+            var flexHamburger = new kony.ui.FlexContainer({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
                 "height": "100%",
-                "id": "CopyflexSearch0ee7683a6a43f44",
+                "id": "flexHamburger",
                 "isVisible": true,
                 "layoutType": kony.flex.FREE_FORM,
                 "left": "0.00%",
@@ -101,12 +101,12 @@ define("frmEventsLanding", function() {
                 "width": "17%",
                 "zIndex": 1
             }, {}, {});
-            CopyflexSearch0ee7683a6a43f44.setDefaultUnit(kony.flex.DP);
-            var CopybtnSearchIcon0e6471c268b334a = new kony.ui.Button({
+            flexHamburger.setDefaultUnit(kony.flex.DP);
+            var btnHamburger = new kony.ui.Button({
                 "centerX": "50%",
                 "centerY": "50%",
                 "height": "20dp",
-                "id": "CopybtnSearchIcon0e6471c268b334a",
+                "id": "btnHamburger",
                 "isVisible": true,
                 "left": "14dp",
                 "onClick": controller.AS_Button_b39de52ebe92497694847007cb32fb7c,
@@ -120,8 +120,8 @@ define("frmEventsLanding", function() {
                 "padding": [0, 0, 0, 0],
                 "paddingInPixel": false
             }, {});
-            CopyflexSearch0ee7683a6a43f44.add(CopybtnSearchIcon0e6471c268b334a);
-            flexEventHeader.add(lblHeaderTitle, flexSearch, CopyflexSearch0ee7683a6a43f44);
+            flexHamburger.add(btnHamburger);
+            flexEventHeader.add(lblHeaderTitle, flexSearch, flexHamburger);
             var segEventList = new kony.ui.SegmentedUI2({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "data": [{
@@ -590,7 +590,7 @@ define("frmEventsLanding", function() {
             flexSk2.add(flex2, flxSkeleton2);
             flexSkeMain.add(flexSk1, flexSk2);
             flexEventMainLanding.add(flexEventHeader, segEventList, lblNoEvents, flexEventRegConformation, flexSkeMain);
-            var hamburger = new com.konymp.slidingmenu({
+            var hamburger = new com.konyenb.slidingmenu({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
                 "height": "100%",
@@ -701,6 +701,7 @@ define("frmEventsLanding", function() {
                 "id": "imageBannerSS",
                 "isVisible": true,
                 "left": "0%",
+                "onDownloadComplete": controller.AS_Image_bb62642c99cc4e90b241d694efaece22,
                 "src": "event01.jpg",
                 "top": "0%",
                 "width": "100%",
@@ -1023,7 +1024,7 @@ define("frmEventsLanding", function() {
                 "zIndex": 20
             }, {}, {});
             flxSharing.setDefaultUnit(kony.flex.DP);
-            var socialSharing = new com.konysa.socialSharing({
+            var socialSharing = new com.konyenb.socialSharing({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "bottom": 0,
                 "clipBounds": true,
@@ -1036,6 +1037,7 @@ define("frmEventsLanding", function() {
                 "skin": "CopyslFbox0bc28f0666f0c46",
                 "width": "50dp"
             }, {}, {});
+            socialSharing.imgVisibility = true;
             socialSharing.MimeType = "Image/PNG";
             socialSharing.Subject = "Event";
             socialSharing.FileName = "EventCard";

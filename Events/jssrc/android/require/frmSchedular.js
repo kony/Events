@@ -16,7 +16,7 @@ define("frmSchedular", function() {
                 "zIndex": 1
             }, {}, {});
             frmScheduleMain.setDefaultUnit(kony.flex.DP);
-            var timeline = new Reusable.timeline({
+            var timeline = new com.konyenb.timeline({
                 "clipBounds": true,
                 "height": "96%",
                 "id": "timeline",

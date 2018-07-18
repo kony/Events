@@ -53,6 +53,15 @@ function AS_FlexContainer_a4789d0f1afd4db3b78ca5700f95f4aa(eventobject, x, y) {
     var self = this;
 }
 
+function AS_FlexContainer_b3cec970c40b4c9ca1ebe3173cf80490(eventobject) {
+    var self = this;
+    this.onViewHandler();
+}
+
+function AS_FlexContainer_bb11ab78a646477da8e50ddc9bd5c520(eventobject) {
+    var self = this;
+}
+
 function AS_FlexContainer_c051a9d2c48e4ca28722835199deec66(eventobject) {
     var t = '';
 }
@@ -60,6 +69,11 @@ function AS_FlexContainer_c051a9d2c48e4ca28722835199deec66(eventobject) {
 function AS_FlexContainer_caed9c9f6e1d43409b7073edd5fa9c90(eventobject) {
     //this.view.FlexMainImageSet.isVisible = false;
     this.onClickChange();
+}
+
+function AS_FlexContainer_da8b622bc77544e6868db44d5528a8c2(eventobject) {
+    var self = this;
+    this.createSegment();
 }
 
 function AS_FlexContainer_da9694a4fc4140489bc01ce66b63d941(eventobject, x, y) {
@@ -70,12 +84,24 @@ function AS_FlexContainer_fada2523119d4d58afc350b2b6806b09(eventobject, x, y) {
     this.onClickOfUp();
 }
 
+function AS_FlexContainer_gcc56184a8e64b6db39e4d165184c87c(eventobject) {
+    var self = this;
+    this.view.Segment0h79ffc45921049.doLayout = function() {
+        alert(this.view.Segment0h79ffc45921049.frame["height"]);
+    }.bind(this)
+}
+
 function AS_FlexContainer_h200f6358f0b4a24b3527f2591da77fb(eventobject, x, y) {
     this.onClickOfDown();
 }
 
 function AS_FlexContainer_ibbcc442aaa54ccab12d0a2fbba26387(eventobject) {
     var self = this;
+}
+
+function AS_FlexContainer_j3afb4a96be34388abbb05a4015dcfe8(eventobject) {
+    var self = this;
+    this.view.Segment0h79ffc45921049.doLayout = this.checkLayoutAndChange;
 }
 
 function AS_FlexContainer_jf56ff5781bf453cb8be381e324df6db(eventobject) {

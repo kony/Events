@@ -11,7 +11,7 @@ define(function() {
          * @param {Object} pspConfig
          */
         constructor: function(baseConfig, layoutConfig, pspConfig) {
-            //debugger;
+            // 
             /** Global variables for custom properties */
             this._appUserID = null;
             this._rootFolderID = "0";
@@ -21,7 +21,7 @@ define(function() {
          * @description contains getters/setters for custom properties
          */
         initGettersSetters: function() {
-            // debugger;
+            //  
             defineGetter(this, "appUserID", function() {
                 return this._appUserID;
             });

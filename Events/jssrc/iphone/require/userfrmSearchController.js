@@ -1,4 +1,7 @@
 define({
+    onNavigate: function() {
+        this.clearTextBox();
+    },
     /**
      * @function searchByEventName
      * @description function to search the event by name.
@@ -113,5 +116,9 @@ define({
         var suggestedItem = this.view.segSearchResult.selectedRowItems[0];
         this.view.txtSearch.text = suggestedItem.text;
         this.view.segSearchResult.isVisible = false;
+    },
+    clearTextBox: function() {
+        this.view.txtSearch.text = "";
+        this.searchByEventName("");
     }
 });

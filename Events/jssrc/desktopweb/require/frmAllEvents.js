@@ -2,7 +2,7 @@ define("frmAllEvents", function() {
     return function(controller) {
         function addWidgetsfrmAllEvents() {
             this.setDefaultUnit(kony.flex.DP);
-            var menuItem0 = new com.konysa.menuItem({
+            var menuItem0 = new com.konyenb.menuItem({
                 "clipBounds": true,
                 "height": "100%",
                 "id": "menuItem0",
@@ -28,10 +28,10 @@ define("frmAllEvents", function() {
                 "skin": "slFbox",
                 "top": "0dp",
                 "width": "100%",
-                "zIndex": 20
+                "zIndex": 1
             }, {}, {});
             flxRoot.setDefaultUnit(kony.flex.DP);
-            var dashboard = new com.konysa.dashboard({
+            var dashboard = new com.konyenb.dashboard({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
                 "height": "75px",
@@ -125,7 +125,7 @@ define("frmAllEvents", function() {
             flxScEventList.setDefaultUnit(kony.flex.DP);
             flxScEventList.add();
             flxEventLIstContainer.add(flxScEventList);
-            var menuItem = new com.konysa.menuItem2({
+            var menuItem = new com.konyenb.menuItem2({
                 "clipBounds": true,
                 "height": "100%",
                 "id": "menuItem",
@@ -140,11 +140,23 @@ define("frmAllEvents", function() {
             menuItem.onCreateEventClick = controller.AS_UWI_adeed8e1d39b4373a27b49bf6b80f3ac;
             menuItem.onManageUserClick = controller.AS_UWI_e40b934c488e4b548933e1a493e4506d;
             flxRoot.add(dashboard, flexHeader, flxEventLIstContainer, menuItem);
-            this.add(menuItem0, flxRoot);
+            var eventpreview = new com.konyenb.eventpreview({
+                "clipBounds": true,
+                "height": "90%",
+                "id": "eventpreview",
+                "isVisible": false,
+                "layoutType": kony.flex.FREE_FORM,
+                "left": "19%",
+                "masterType": constants.MASTER_TYPE_USERWIDGET,
+                "skin": "CopysknFlxScroll",
+                "top": "10%",
+                "width": "81%"
+            }, {}, {});
+            this.add(menuItem0, flxRoot, eventpreview);
         };
         return [{
             "addWidgets": addWidgetsfrmAllEvents,
-            "enabledForIdleTimeout": false,
+            "enabledForIdleTimeout": true,
             "id": "frmAllEvents",
             "layoutType": kony.flex.FREE_FORM,
             "needAppMenu": false,

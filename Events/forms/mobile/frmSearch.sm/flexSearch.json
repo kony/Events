@@ -42,7 +42,8 @@
     "children": [
         "imgSearchIconActcive",
         "lblStrip",
-        "txtSearch"
+        "txtSearch",
+        "btnCross"
     ],
     "clipbounds": true,
     "containerweight": 100,

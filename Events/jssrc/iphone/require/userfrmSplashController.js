@@ -7,21 +7,21 @@ define({
     onNavigate: function() {
         var data = [{
             "splashImage": "splashconcept01.png",
-            "desc": "Explore Events <br> and Place holder content",
+            "desc": "Explore events",
             "skipSkin": {
                 "text": "SKIP",
                 "skin": "sknbtnSkipNormal"
             }
         }, {
             "splashImage": "splashconcept02.png",
-            "desc": "Create and host your events <br> and Place holder content",
+            "desc": "Browse event details",
             "skipSkin": {
                 "text": "SKIP",
                 "skin": "sknbtnSkipNormal"
             }
         }, {
-            "splashImage": "splashconcept02.png",
-            "desc": "Manage Events <br> and Place holder content",
+            "splashImage": "splashconcept03.png",
+            "desc": "Login and register for events",
             "skipSkin": {
                 "text": "SKIP",
                 "skin": "sknbtnSkipFocus"

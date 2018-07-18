@@ -11,7 +11,6 @@ define(function() {
          * @param {Object} pspConfig
          */
         constructor: function(baseConfig, layoutConfig, pspConfig) {
-            debugger;
             this._selectedFiles = [];
             this._appUserID = null;
             this._folderID = null;
@@ -22,7 +21,6 @@ define(function() {
          * @private
          */
         initGettersSetters: function() {
-            debugger;
             konysa.logger.trace("----------Entering initGettersSetters Function---------", konysa.logger.FUNCTION_ENTRY);
             defineGetter(this, "appUserID", function() {
                 konysa.logger.trace("----------Entering appUserID getter---------", konysa.logger.FUNCTION_ENTRY);
@@ -142,8 +140,8 @@ define(function() {
                         }
                     }
                 };
-                var mfURL = KNYMobileFabric.integsvc.BoxService.url;
-                //var mfURL="https://prodsanity-82.konycloud.com:443/services/BoxService";
+                //var mfURL = KNYMobileFabric.integsvc.BoxService.url;
+                var mfURL = "https://prodsanity-82.konycloud.com:443/services/BoxService";
                 var uploadURL = mfURL + "/UploadFilesInFolder";
                 xhr.open("POST", uploadURL, true);
                 xhr.send(params);

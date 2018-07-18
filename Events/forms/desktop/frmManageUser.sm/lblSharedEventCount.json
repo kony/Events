@@ -13,7 +13,7 @@
         1
     ],
     "_padding_": [
-        30,
+        0,
         0,
         0,
         0
@@ -41,7 +41,7 @@
         "value": "50%"
     },
     "containerweight": 100,
-    "contentalignment": 4,
+    "contentalignment": 5,
     "id": "lblSharedEventCount",
     "info": null,
     "ipad": {

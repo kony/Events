@@ -59,7 +59,7 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "i90f3780bfca4c1aac8f47b862db617f",
     "name": "kony.ui.Label",
     "parent": "flxEventInfoRoot",

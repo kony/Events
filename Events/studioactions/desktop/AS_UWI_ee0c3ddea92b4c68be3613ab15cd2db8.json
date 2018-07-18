@@ -1,0 +1,17 @@
+{
+    "AS_UWI_ee0c3ddea92b4c68be3613ab15cd2db8": {
+        "id": "AS_UWI_ee0c3ddea92b4c68be3613ab15cd2db8",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_btnDelOnclick_c21ad4d6ed8f482fae295a43b27fc81a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.removeSession(eventobject);",
+            "callbackType": null
+        }]
+    }
+}

@@ -1,4 +1,12 @@
 define({
+    onNavigate: function() {
+        try {
+            this.clearTextBox();
+            this.view.btnCross.isVisible = false;
+        } catch (err) {
+            kony.print("Frm Search Controller" + JSON.stringify(err));
+        }
+    },
     /**
      * @function searchByEventName
      * @description function to search the event by name.
@@ -6,33 +14,42 @@ define({
      * @param {string} srchText
      */
     searchByEventName: function(srchText) {
-        var suggestions = [];
-        if (srchText !== "") {
-            suggestions = typeAhead(srchText.toLowerCase());
-        }
-        var dataToSet = [];
-        if (suggestions.length > 0) {
-            for (var i = 0; i < suggestions.length; i++) {
-                var data = {};
-                if (suggestions.length == 1 || i == suggestions.length - 1) {
-                    data.dummy = {
-                        "isVisible": true,
-                        "text": "Dummy",
-                        "skin": "lblskndummytransparent"
-                    };
-                } else {
-                    data.dummy = {
-                        "isVisible": true,
-                        "text": "Dummy",
-                        "skin": "sknlblDivf2f2f1"
-                    };
-                }
-                data.text = suggestions[i];
-                dataToSet.push(data);
+        try {
+            if (srchText !== "") {
+                this.view.btnCross.isVisible = true;
+            } else {
+                this.view.btnCross.isVisible = false;
             }
-            this.setSuggestedData(dataToSet);
-        } else {
-            this.view.segSearchResult.isVisible = false;
+            var suggestions = [];
+            if (srchText !== "") {
+                suggestions = typeAhead(srchText.toLowerCase());
+            }
+            var dataToSet = [];
+            if (suggestions.length > 0) {
+                for (var i = 0; i < suggestions.length; i++) {
+                    var data = {};
+                    if (suggestions.length == 1 || i == suggestions.length - 1) {
+                        data.dummy = {
+                            "isVisible": true,
+                            "text": "Dummy",
+                            "skin": "lblskndummytransparent"
+                        };
+                    } else {
+                        data.dummy = {
+                            "isVisible": true,
+                            "text": "Dummy",
+                            "skin": "sknlblDivf2f2f1"
+                        };
+                    }
+                    data.text = suggestions[i];
+                    dataToSet.push(data);
+                }
+                this.setSuggestedData(dataToSet);
+            } else {
+                this.view.segSearchResult.isVisible = false;
+            }
+        } catch (err) {
+            kony.print("Frm Search Controller" + JSON.stringify(err));
         }
     },
     /**
@@ -42,13 +59,17 @@ define({
      * @param {string} srchText
      */
     setSuggestedData: function(data) {
-        this.view.segSearchResult.removeAll();
-        this.view.segSearchResult.widgetDataMap = {
-            "lblResult": "text",
-            "lblHorDivider": "dummy"
-        };
-        this.view.segSearchResult.setData(data);
-        this.view.segSearchResult.isVisible = true;
+        try {
+            this.view.segSearchResult.removeAll();
+            this.view.segSearchResult.widgetDataMap = {
+                "lblResult": "text",
+                "lblHorDivider": "dummy"
+            };
+            this.view.segSearchResult.setData(data);
+            this.view.segSearchResult.isVisible = true;
+        } catch (err) {
+            kony.print("Frm Search Controller" + JSON.stringify(err));
+        }
     },
     selectedCatagories: ["training", "workshops", "hackathon", "speaker series", "conference"],
     /**
@@ -60,21 +81,25 @@ define({
      * @param {string} id
      */
     getSelectedCatagories: function(skin, text, id) {
-        if (skin === "sknCategorySel") {
-            this.view[id].skin = "btnSknCategoryNor";
-            this.view[id].focusSkin = "btnSknCategoryNor";
-            this.selectedCatagories = this.selectedCatagories.filter(function(e) {
-                return e !== text.toLowerCase();
-            });
-        } else if (skin === "btnSknCategoryNor") {
-            this.view[id].skin = "sknCategorySel";
-            this.view[id].focusSkin = "sknCategorySel";
-            this.selectedCatagories.push(text.toLowerCase());
-        }
-        if (this.selectedCatagories.length < 5) {
-            this.view.btnSelectAll.isVisible = true;
-        } else {
-            this.view.btnSelectAll.isVisible = false;
+        try {
+            if (skin === "sknCategorySel") {
+                this.view[id].skin = "btnSknCategoryNor";
+                this.view[id].focusSkin = "btnSknCategoryNor";
+                this.selectedCatagories = this.selectedCatagories.filter(function(e) {
+                    return e !== text.toLowerCase();
+                });
+            } else if (skin === "btnSknCategoryNor") {
+                this.view[id].skin = "sknCategorySel";
+                this.view[id].focusSkin = "sknCategorySel";
+                this.selectedCatagories.push(text.toLowerCase());
+            }
+            if (this.selectedCatagories.length < 5) {
+                this.view.btnSelectAll.isVisible = true;
+            } else {
+                this.view.btnSelectAll.isVisible = false;
+            }
+        } catch (err) {
+            kony.print("Frm Search Controller" + JSON.stringify(err));
         }
     },
     /**
@@ -83,13 +108,17 @@ define({
      * @private
      */
     onClickSelectAll: function() {
-        var catagories = ["training", "workshops", "hackathon", "speaker series", "conference"];
-        for (var i = 0; i < catagories.length; i++) {
-            this.view["btnCat" + (i + 1)].skin = "sknCategorySel";
-            this.view["btnCat" + (i + 1)].focusSkin = "sknCategorySel";
+        try {
+            var catagories = ["training", "workshops", "hackathon", "speaker series", "conference"];
+            for (var i = 0; i < catagories.length; i++) {
+                this.view["btnCat" + (i + 1)].skin = "sknCategorySel";
+                this.view["btnCat" + (i + 1)].focusSkin = "sknCategorySel";
+            }
+            this.selectedCatagories = catagories;
+            this.view.btnSelectAll.isVisible = false;
+        } catch (err) {
+            kony.print("Frm Search Controller" + JSON.stringify(err));
         }
-        this.selectedCatagories = catagories;
-        this.view.btnSelectAll.isVisible = false;
     },
     /**
      * @function navigateAndSearch
@@ -97,12 +126,16 @@ define({
      * @private
      */
     navigateAndSearch: function() {
-        var searchData = {};
-        searchData.searchText = this.view.txtSearch.text;
-        searchData.selectedCat = this.selectedCatagories;
-        searchData.origin = "search";
-        var navToEventLanding = new kony.mvc.Navigation("frmEventsLanding");
-        navToEventLanding.navigate(searchData);
+        try {
+            var searchData = {};
+            searchData.searchText = this.view.txtSearch.text;
+            searchData.selectedCat = this.selectedCatagories;
+            searchData.origin = "search";
+            var navToEventLanding = new kony.mvc.Navigation("frmEventsLanding");
+            navToEventLanding.navigate(searchData);
+        } catch (err) {
+            kony.print("Frm Search Controller" + JSON.stringify(err));
+        }
     },
     /**
      * @function onSuggestionRowClick
@@ -110,8 +143,25 @@ define({
      * @private
      */
     onSuggestionRowClick: function() {
-        var suggestedItem = this.view.segSearchResult.selectedRowItems[0];
-        this.view.txtSearch.text = suggestedItem.text;
-        this.view.segSearchResult.isVisible = false;
+        try {
+            var suggestedItem = this.view.segSearchResult.selectedRowItems[0];
+            this.view.txtSearch.text = suggestedItem.text;
+            this.view.segSearchResult.isVisible = false;
+        } catch (err) {
+            kony.print("Frm Search Controller" + JSON.stringify(err));
+        }
+    },
+    /**
+     * @function clearTextBox
+     * @description function to set the clear button functionality on android
+     * @private
+     */
+    clearTextBox: function() {
+        try {
+            this.view.txtSearch.text = "";
+            this.searchByEventName("");
+        } catch (err) {
+            kony.print("Frm Search Controller" + JSON.stringify(err));
+        }
     }
 });

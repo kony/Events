@@ -14,12 +14,12 @@ define({
         var ntf = new kony.mvc.Navigation("frmSearch");
         ntf.navigate();
     },
-    /** onClick defined for CopybtnSearchIcon0e6471c268b334a **/
+    /** onClick defined for btnHamburger **/
     AS_Button_b39de52ebe92497694847007cb32fb7c: function AS_Button_b39de52ebe92497694847007cb32fb7c(eventobject) {
         var self = this;
         this.listMenuClick();
     },
-    /** onClick defined for CopyflexSearch0ee7683a6a43f44 **/
+    /** onClick defined for flexHamburger **/
     AS_FlexContainer_i287c93385dc4ed89ebd0efef9e5bc92: function AS_FlexContainer_i287c93385dc4ed89ebd0efef9e5bc92(eventobject) {
         var self = this;
         this.listMenuClick();
@@ -28,7 +28,8 @@ define({
     AS_Segment_e830efe839f74c9da915e9007dfe130e: function AS_Segment_e830efe839f74c9da915e9007dfe130e(eventobject, sectionNumber, rowNumber) {
         var self = this;
         // this.onSegRowClick();
-        this.getEventImages();
+        var event_id = this.view.segEventList.selectedItems[0].event_id;
+        this.getEventImages(this.onSegRowClick, event_id);
     },
     /** onPull defined for segEventList **/
     AS_Segment_ab181210353b42aa8c165aeb158ed0ec: function AS_Segment_ab181210353b42aa8c165aeb158ed0ec(eventobject) {
@@ -70,11 +71,23 @@ define({
         var self = this;
         this.flxCoverOnClick();
     },
+    /** onDownloadComplete defined for imageBannerSS **/
+    AS_Image_bb62642c99cc4e90b241d694efaece22: function AS_Image_bb62642c99cc4e90b241d694efaece22(eventobject, imagesrc, issuccess) {
+        var self = this;
+        this.sendSnapshot();
+    },
     /** postShow defined for frmEventsLanding **/
     AS_Form_jb7bf8cc66fe417e98b1afc97f19676f: function AS_Form_jb7bf8cc66fe417e98b1afc97f19676f(eventobject) {
         var self = this;
         //this.flxCoverOnClick();
         this.skeletonScreenAnimation();
         this.logoutVisiblity();
+        registerKMS();
+        //createLocalNotification();
+    },
+    /** onDeviceBack defined for frmEventsLanding **/
+    AS_Form_bd078a97234543e8816cbf33c574ba0b: function AS_Form_bd078a97234543e8816cbf33c574ba0b(eventobject) {
+        var self = this;
+        kony.print("device back clicked");
     }
 });

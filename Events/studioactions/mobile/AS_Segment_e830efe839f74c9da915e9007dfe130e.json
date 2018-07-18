@@ -22,7 +22,7 @@
         "actions": [{
             "id": "ADD_SNIPPET__gc192f5c9fa0424c8aa6f74295313272",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// this.onSegRowClick();\nthis.getEventImages();",
+            "codeSnippet": "// this.onSegRowClick();\nvar event_id = this.view.segEventList.selectedItems[0].event_id;\nthis.getEventImages(this.onSegRowClick,event_id);",
             "parentId": null,
             "callbackType": null
         }]

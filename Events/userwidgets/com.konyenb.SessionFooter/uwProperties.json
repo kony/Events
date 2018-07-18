@@ -1,0 +1,163 @@
+{
+    "classname": "SessionFooter",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "f1ba9edba0e043098e584338637f3680",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 1,
+                    "propertyKey": "btnAddOnclick",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "btnAddOnclick",
+                        "srcWidget": "btnAddSession",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "j98c6a298dc7431394e0173fec192309"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "hcce1ad4a5244e49bce1bc338f625924",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 2,
+                    "propertyKey": "btnEditOnclick",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "btnEditOnclick",
+                        "srcWidget": "btnEditSEssion",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "ifa87cc38e9f47f994889f841a3fa585"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "b2d237684dfc4a4a861b665768f9588e",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 3,
+                    "propertyKey": "btnDelOnclick",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "btnDelOnclick",
+                        "srcWidget": "btnDelSession",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "eb88280b121a4376ae1b36c24ab9afd1"
+                }
+            ]
+        },
+        "groups": {
+            "apis": [],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "b7eec941cf704ab689450c0a6aabd89a",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 1,
+                    "propertyKey": "isEditVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "isEditVisible",
+                        "srcWidget": "btnEditSEssion",
+                        "toolTip": "Hides/shows the widget in the screen",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "ifa87cc38e9f47f994889f841a3fa585"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "e508bcef66e945b08c08c4ecb80587ba",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 2,
+                    "propertyKey": "isAddVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "isAddVisible",
+                        "srcWidget": "btnAddSession",
+                        "toolTip": "Hides/shows the widget in the screen",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "j98c6a298dc7431394e0173fec192309"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "ec457985b56b4833872c3114e47b4568",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 3,
+                    "propertyKey": "isDelVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "isDelVisible",
+                        "srcWidget": "btnDelSession",
+                        "toolTip": "Hides/shows the widget in the screen",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "eb88280b121a4376ae1b36c24ab9afd1"
+                },
+                {
+                    "access": "Enable",
+                    "defaultSkinKUID": "sbbac9a645564ef9b95f2ac262f15fb4",
+                    "group": "General",
+                    "kuid": "a6d72d79d2564169b1ea3cd9afe9832e",
+                    "originalPropertyKey": "skin",
+                    "propertyIndex": 4,
+                    "propertyKey": "skin1",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "skin",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Normal",
+                        "srcWidget": "flexFooter",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g19ff81f5cd34021860366eef6ab6c0c"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konyenb",
+    "version": "1.0.0"
+}

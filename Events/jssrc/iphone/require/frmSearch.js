@@ -187,7 +187,7 @@ define("frmSearch", function() {
                 "keyBoardStyle": constants.TEXTBOX_KEY_BOARD_STYLE_DEFAULT,
                 "left": "3.00%",
                 "onTextChange": controller.AS_TextField_f32a139024244acabf5ab1bcd58134d5,
-                "placeholder": "Mobile Application Development",
+                "placeholder": "Event name..",
                 "secureTextEntry": false,
                 "skin": "CopydefTextBoxNormal0d904edf9311143",
                 "textInputMode": constants.TEXTBOX_INPUT_MODE_ANY,

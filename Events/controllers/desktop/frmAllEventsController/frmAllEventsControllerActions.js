@@ -37,5 +37,10 @@ define({
         } catch (err) {
             kony.print(err);
         }
+    },
+    /** onDeviceBack defined for frmAllEvents **/
+    AS_Form_f4846a2d4d6342d5b65a424619ff391d: function AS_Form_f4846a2d4d6342d5b65a424619ff391d(eventobject) {
+        var self = this;
+        kony.print("device back clicked");
     }
 });

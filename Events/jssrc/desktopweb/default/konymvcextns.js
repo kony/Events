@@ -1,7 +1,7 @@
 //release/tool
-//ver 1.3.9.5
+//ver 1.5.2
 ;(function() {
-var BusinessController_Command, BusinessController_CommandResponse, BusinessController_CommandHandler, commonUtils_ExtensibilityApi, BusinessController_CommandExecutionEngine, BusinessController_BusinessController, BusinessController_BusinessDelegator, DataModel_QueryBuilder, DataModel_constants, DataModel_Error, DataModel_DBAssembler, DataModel_DataSource, DataModel_BaseRepository, DataModel_RepositoryManager, PresentationController_MDABasePresenter, BaseNavigator_MDABaseNavigator, ModuleManager_MDAModule, ModuleManager_MDAModuleManager, UIBinder_UIBinder, UIBinder_PropertyDataMapper_GenericProperties, UIBinder_WidgetDataMapper_WidgetDataMapper, commonUtils_inheritsFrom, UIBinder_PropertyDataMapper_ImageProperties, UIBinder_WidgetDataMapper_ImageWidgetDataMapper, UIBinder_PropertyDataMapper_TextboxProperties, UIBinder_WidgetDataMapper_TextboxWidgetDataMapper, UIBinder_PropertyDataMapper_LabelProperties, UIBinder_WidgetDataMapper_LabelWidgetDataMapper, UIBinder_PropertyDataMapper_TextAreaProperties, UIBinder_WidgetDataMapper_TextAreaWidgetDataMapper, UIBinder_PropertyDataMapper_SwitchProperties, UIBinder_WidgetDataMapper_SwitchWidgetDataMapper, UIBinder_PropertyDataMapper_SliderProperties, UIBinder_WidgetDataMapper_SliderWidgetDataMapper, UIBinder_PropertyDataMapper_RichTextProperties, UIBinder_WidgetDataMapper_RichTextWidgetDataMapper, UIBinder_PropertyDataMapper_ButtonProperties, UIBinder_WidgetDataMapper_ButtonWidgetDataMapper, UIBinder_WidgetDataMapper_SegmentWidgetDataMapper, UIBinder_PropertyDataMapper_ListboxProperties, UIBinder_WidgetDataMapper_ListboxWidgetDataMapper, UIBinder_WidgetDataMapper_FlexContainerWidgetDataMapper, UIBinder_PropertyDataMapper_CalendarProperties, UIBinder_WidgetDataMapper_CalendarWidgetDataMapper, UIBinder_UIBinderBuilder, commonUtils_MDAApplication, ParallelCommandExecuter_ParallelCommandExecuter, DataModel_ModelRelation, DataModel_BaseModel, DataModel_ORMSession, DataModel_Expression, FormController_MDAFormController, commonUtils_ControllerGetterAPI, main, konymvcMDAFormController, kony_mvc_MDAFormController, MDAFormController;
+var BusinessController_Command, BusinessController_CommandResponse, BusinessController_CommandHandler, commonUtils_ExtensibilityApi, BusinessController_CommandExecutionEngine, BusinessController_BusinessController, BusinessController_BusinessDelegator, DataModel_QueryBuilder, DataModel_constants, DataModel_Error, DataModel_DBAssembler, DataModel_DataSource, DataModel_BaseRepository, DataModel_RepositoryManager, PresentationController_MDABasePresenter, BaseNavigator_MDABaseNavigator, ModuleManager_MDAModule, ModuleManager_MDAModuleManager, UIBinder_UIBinder, UIBinder_PropertyDataMapper_GenericProperties, UIBinder_WidgetDataMapper_WidgetDataMapper, commonUtils_inheritsFrom, UIBinder_PropertyDataMapper_ImageProperties, UIBinder_WidgetDataMapper_ImageWidgetDataMapper, UIBinder_PropertyDataMapper_TextboxProperties, UIBinder_WidgetDataMapper_TextboxWidgetDataMapper, UIBinder_PropertyDataMapper_LabelProperties, UIBinder_WidgetDataMapper_LabelWidgetDataMapper, UIBinder_PropertyDataMapper_TextAreaProperties, UIBinder_WidgetDataMapper_TextAreaWidgetDataMapper, UIBinder_PropertyDataMapper_SwitchProperties, UIBinder_WidgetDataMapper_SwitchWidgetDataMapper, UIBinder_PropertyDataMapper_SliderProperties, UIBinder_WidgetDataMapper_SliderWidgetDataMapper, UIBinder_PropertyDataMapper_RichTextProperties, UIBinder_WidgetDataMapper_RichTextWidgetDataMapper, UIBinder_PropertyDataMapper_ButtonProperties, UIBinder_WidgetDataMapper_ButtonWidgetDataMapper, UIBinder_WidgetDataMapper_SegmentWidgetDataMapper, UIBinder_PropertyDataMapper_ListboxProperties, UIBinder_WidgetDataMapper_ListboxWidgetDataMapper, UIBinder_WidgetDataMapper_FlexContainerWidgetDataMapper, UIBinder_PropertyDataMapper_CalendarProperties, UIBinder_WidgetDataMapper_CalendarWidgetDataMapper, UIBinder_UIBinderBuilder, commonUtils_MDAApplication, commonUtils_Logger, ParallelCommandExecuter_ParallelCommandExecuter, DataModel_ModelRelation, DataModel_BaseModel, DataModel_ORMSession, DataModel_Expression, FormController_MDAFormController, commonUtils_ControllerGetterAPI, main, konymvcMDAFormController, kony_mvc_MDAFormController, MDAFormController;
 BusinessController_Command = function () {
   function Command(id, context, completionCallback, alias) {
     //kony.print("In Command: " + id + "  callback is: " + completionCallback);
@@ -98,7 +98,9 @@ commonUtils_ExtensibilityApi = function () {
         diy: function () {
           return function () {
             var retX = newMeth.apply(this, arguments);
-            retX = invoke.apply(this, arguments);
+            if (retX !== false) {
+              retX = invoke.apply(this, arguments);
+            }
             return retX;
           };
         }
@@ -182,7 +184,7 @@ commonUtils_ExtensibilityApi = function () {
         eval(key + '=methObj.diy();');
       }
     }, /**
-    * This Api calls the method which constructs the body for class in the scenario  of addAfter or addBefore of a member		
+    * This Api calls the method which constructs the body for class in the scenario  of addAfter or addBefore of a member   
     *
     * @param {class} refClass             - The copy of the original class
     * @param {string} key                 - The existing original function.
@@ -229,7 +231,7 @@ commonUtils_ExtensibilityApi = function () {
       }
       refClass[key] = methObj.diy();
     }, /**
-    * This Api calls the method which constructs the body for class in the scenario  of deRegistering a method	
+    * This Api calls the method which constructs the body for class in the scenario  of deRegistering a method  
     *
     * @param {class} refClass             - The copy of the original class
     * @param {string} key                 - The existing original function.
@@ -710,7 +712,11 @@ BusinessController_CommandExecutionEngine = function (Command, CommandHandler, C
           commandHandler = commandHandlerArray[1];
           commandHandlerExtension = commandHandlerArray[2];
           if (commandHandlerExtension != null && commandHandlerExtension.execute) {
-            commandHandlerExtension.execute(command);
+            commandHandlerExtension.super = commandHandler.execute;
+            var returnVal = commandHandlerExtension.execute(command);
+            if (returnVal === false) {
+              commandHandler.sendResponse(command, kony.mvc.constants.STATUS_ABORT, null);
+            }
           } else {
             commandHandler.execute(command);
           }
@@ -774,7 +780,51 @@ BusinessController_BusinessController = function (CommandExecutionEngine, Comman
 }(BusinessController_CommandExecutionEngine, BusinessController_CommandHandler, BusinessController_Command);
 BusinessController_BusinessDelegator = function () {
   function BusinessDelegator() {
+    this.superParams = {
+      counter: 0,
+      level: null,
+      refStack: []
+    };
   }
+  BusinessDelegator.prototype.super = function (methodName, argList) {
+    var scope = this;
+    var returnValue = null;
+    if (this.superParams.level === null) {
+      this.superParams.level = 0;
+      while (scope['extensionLevel' + this.superParams.level.toString()]) {
+        this.superParams.level++;
+      }
+    }
+    var prototypeScope = Object.getPrototypeOf(scope);
+    if (prototypeScope[methodName] && this.superParams.refStack.length === 0) {
+      this.superParams.refStack.push(0);
+    }
+    if (this.superParams.counter === 0) {
+      for (var i = 0; i < this.superParams.level; i++) {
+        if (scope['extensionLevel' + i.toString()][methodName]) {
+          this.superParams.refStack.push(i + 1);
+        }
+      }
+    }
+    this.superParams.refStack.pop();
+    if (this.superParams.refStack.length !== 0) {
+      var callLvl = this.superParams.refStack[this.superParams.refStack.length - 1];
+      this.superParams.counter++;
+      if (callLvl === 0) {
+        returnValue = prototypeScope[methodName].apply(this, argList);
+      } else {
+        returnValue = scope['extensionLevel' + (callLvl - 1).toString()][methodName].apply(this, argList);
+      }
+      this.superParams.counter--;
+    } else {
+      kony.print('#MDA2 : Can\'t find any super for the ' + methodName + ' Method.');
+    }
+    if (this.superParams.counter === 0) {
+      this.superParams.refStack = [];
+      this.superParams.level = null;
+    }
+    return returnValue;
+  };
   return BusinessDelegator;
 }();
 DataModel_QueryBuilder = function () {
@@ -907,9 +957,9 @@ DataModel_constants = {
 DataModel_Error = function () {
   //error object
   var Error = function () {
-    this.code = null;
-    this.message = null;
-    this.response = {};
+    this.errcode = null;
+    this.errmsg = null;
+    this.opstatus = null;
   };
   return Error;
 }();
@@ -933,16 +983,17 @@ DataModel_DBAssembler = function (Error) {
     var err = new Error();
     if (error.opstatus == 0) {
       if (config.mappings.text == undefined) {
-        err.code = 300;
-        err.message = 'Invalid Params';
+        err.errcode = 300;
+        err.errmsg = 'Invalid Params';
+        err.opstatus = error.opstatus;
       } else {
         for (key in error) {
-          err.response[key] = error[key];
+          err[key] = error[key];
         }
       }
     } else {
       for (key in error) {
-        err.response[key] = error[key];
+        err[key] = error[key];
       }
     }
     return err;
@@ -1307,27 +1358,29 @@ DataModel_DataSource = function (QueryBuilder, constants, DBAssembler) {
       }
     }
     var baseMap = BaseModel.attributeMap;
-    var attributeMap = JSON.parse(JSON.stringify(baseMap));
-    for (var attribute in attributeMap) {
-      var model = attributeMap[attribute].model;
-      var attributeValue = attributeMap[attribute].value;
-      if (model) {
-        var modelArray = [];
-        var modelConfig = kony.mvc.MDAApplication.getSharedInstance().modelStore.getConfig(model);
-        if (Array.isArray(attributeValue)) {
-          for (var eachRecord in attributeValue) {
-            var dbobject = DBAssembler.toDBJson(attributeValue[eachRecord], modelConfig);
+    if (baseMap) {
+      var attributeMap = JSON.parse(JSON.stringify(baseMap));
+      for (var attribute in attributeMap) {
+        var model = attributeMap[attribute].model;
+        var attributeValue = attributeMap[attribute].value;
+        if (model) {
+          var modelArray = [];
+          var modelConfig = kony.mvc.MDAApplication.getSharedInstance().modelStore.getConfig(model);
+          if (Array.isArray(attributeValue)) {
+            for (var eachRecord in attributeValue) {
+              var dbobject = DBAssembler.toDBJson(attributeValue[eachRecord], modelConfig);
+              modelArray.push(dbobject);
+            }
+          } else {
+            var dbobject = DBAssembler.toDBJson(attributeValue, modelConfig);
             modelArray.push(dbobject);
           }
+          dataObject.addField(attribute, modelArray);
         } else {
-          var dbobject = DBAssembler.toDBJson(attributeValue, modelConfig);
-          modelArray.push(dbobject);
+          dataObject.addField(attribute, attributeValue);
         }
-        dataObject.addField(attribute, modelArray);
-      } else {
-        dataObject.addField(attribute, attributeValue);
+        delete BaseModel.attributeMap[attribute];
       }
-      delete BaseModel.attributeMap[attribute];
     }
     var options = {};
     options[constants.DATA_OBJECT] = dataObject;
@@ -1382,27 +1435,29 @@ DataModel_DataSource = function (QueryBuilder, constants, DBAssembler) {
       }
     }
     var baseMap = BaseModel.attributeMap;
-    var attributeMap = JSON.parse(JSON.stringify(baseMap));
-    for (var attribute in attributeMap) {
-      var model = attributeMap[attribute].model;
-      var attributeValue = attributeMap[attribute].value;
-      if (model) {
-        var modelArray = [];
-        var modelConfig = kony.mvc.MDAApplication.getSharedInstance().modelStore.getConfig(model);
-        if (Array.isArray(attributeValue)) {
-          for (var eachRecord in attributeValue) {
-            var dbobject = DBAssembler.toDBJson(attributeValue[eachRecord], modelConfig);
+    if (baseMap) {
+      var attributeMap = JSON.parse(JSON.stringify(baseMap));
+      for (var attribute in attributeMap) {
+        var model = attributeMap[attribute].model;
+        var attributeValue = attributeMap[attribute].value;
+        if (model) {
+          var modelArray = [];
+          var modelConfig = kony.mvc.MDAApplication.getSharedInstance().modelStore.getConfig(model);
+          if (Array.isArray(attributeValue)) {
+            for (var eachRecord in attributeValue) {
+              var dbobject = DBAssembler.toDBJson(attributeValue[eachRecord], modelConfig);
+              modelArray.push(dbobject);
+            }
+          } else {
+            var dbobject = DBAssembler.toDBJson(attributeValue, modelConfig);
             modelArray.push(dbobject);
           }
+          dataObject.addField(attribute, modelArray);
         } else {
-          var dbobject = DBAssembler.toDBJson(attributeValue, modelConfig);
-          modelArray.push(dbobject);
+          dataObject.addField(attribute, attributeValue);
         }
-        dataObject.addField(attribute, modelArray);
-      } else {
-        dataObject.addField(attribute, attributeValue);
+        delete BaseModel.attributeMap[attribute];
       }
-      delete BaseModel.attributeMap[attribute];
     }
     var options = {};
     options[constants.DATA_OBJECT] = dataObject;
@@ -1507,27 +1562,29 @@ DataModel_DataSource = function (QueryBuilder, constants, DBAssembler) {
       }
     }
     var baseMap = BaseModel.attributeMap;
-    var attributeMap = JSON.parse(JSON.stringify(baseMap));
-    for (var attribute in attributeMap) {
-      var model = attributeMap[attribute].model;
-      var attributeValue = attributeMap[attribute].value;
-      if (model) {
-        var modelArray = [];
-        var modelConfig = kony.mvc.MDAApplication.getSharedInstance().modelStore.getConfig(model);
-        if (Array.isArray(attributeValue)) {
-          for (var eachRecord in attributeValue) {
-            var dbobject = DBAssembler.toDBJson(attributeValue[eachRecord], modelConfig);
+    if (baseMap) {
+      var attributeMap = JSON.parse(JSON.stringify(baseMap));
+      for (var attribute in attributeMap) {
+        var model = attributeMap[attribute].model;
+        var attributeValue = attributeMap[attribute].value;
+        if (model) {
+          var modelArray = [];
+          var modelConfig = kony.mvc.MDAApplication.getSharedInstance().modelStore.getConfig(model);
+          if (Array.isArray(attributeValue)) {
+            for (var eachRecord in attributeValue) {
+              var dbobject = DBAssembler.toDBJson(attributeValue[eachRecord], modelConfig);
+              modelArray.push(dbobject);
+            }
+          } else {
+            var dbobject = DBAssembler.toDBJson(attributeValue, modelConfig);
             modelArray.push(dbobject);
           }
+          dataObject.addField(attribute, modelArray);
         } else {
-          var dbobject = DBAssembler.toDBJson(attributeValue, modelConfig);
-          modelArray.push(dbobject);
+          dataObject.addField(attribute, attributeValue);
         }
-        dataObject.addField(attribute, modelArray);
-      } else {
-        dataObject.addField(attribute, attributeValue);
+        delete BaseModel.attributeMap[attribute];
       }
-      delete BaseModel.attributeMap[attribute];
     }
     var options = {};
     options[constants.DATA_OBJECT] = dataObject;
@@ -1856,6 +1913,11 @@ PresentationController_MDABasePresenter = function () {
   function MDABasePresenter() {
     this.navigator = null;
     this.businessController = null;
+    this.superParams = {
+      counter: 0,
+      level: null,
+      refStack: []
+    };
     this.initialize();
   }
   MDABasePresenter.prototype.initialize = function () {
@@ -1963,6 +2025,45 @@ PresentationController_MDABasePresenter = function () {
     var topStackObj = this._presentationStack[top];
     return topStackObj.formName;
   };
+  MDABasePresenter.prototype.super = function (methodName, argList) {
+    var scope = this;
+    var returnValue = null;
+    if (this.superParams.level === null) {
+      this.superParams.level = 0;
+      while (scope['extensionLevel' + this.superParams.level.toString()]) {
+        this.superParams.level++;
+      }
+    }
+    var prototypeScope = Object.getPrototypeOf(scope);
+    if (prototypeScope[methodName] && this.superParams.refStack.length === 0) {
+      this.superParams.refStack.push(0);
+    }
+    if (this.superParams.counter === 0) {
+      for (var i = 0; i < this.superParams.level; i++) {
+        if (scope['extensionLevel' + i.toString()][methodName]) {
+          this.superParams.refStack.push(i + 1);
+        }
+      }
+    }
+    this.superParams.refStack.pop();
+    if (this.superParams.refStack.length !== 0) {
+      var callLvl = this.superParams.refStack[this.superParams.refStack.length - 1];
+      this.superParams.counter++;
+      if (callLvl === 0) {
+        returnValue = prototypeScope[methodName].apply(this, argList);
+      } else {
+        returnValue = scope['extensionLevel' + (callLvl - 1).toString()][methodName].apply(this, argList);
+      }
+      this.superParams.counter--;
+    } else {
+      kony.print('#MDA2 : Can\'t find any super for the ' + methodName + ' Method.');
+    }
+    if (this.superParams.counter === 0) {
+      this.superParams.refStack = [];
+      this.superParams.level = null;
+    }
+    return returnValue;
+  };
   return MDABasePresenter;
 }();
 BaseNavigator_MDABaseNavigator = function () {
@@ -2023,17 +2124,13 @@ ModuleManager_MDAModule = function (MDABasePresenter, MDABaseNavigator, Business
   }
   MDAModule.prototype.setupModule = function () {
     kony.print('MDA2*** Setup module');
-    try {
-      this.setUpForms();
-      this.setUpBusinessController();
-      this.setUpPresentationController();
-      this.setUpNavigator();
-      this.presentationController.navigator = this.navigator;
-      this.presentationController.businessController = this.businessController;
-      this.navigator.presentationController = this.presentationController;
-    } catch (err) {
-      kony.print(err);
-    }
+    this.setUpForms();
+    this.setUpBusinessController();
+    this.setUpPresentationController();
+    this.setUpNavigator();
+    this.presentationController.navigator = this.navigator;
+    this.presentationController.businessController = this.businessController;
+    this.navigator.presentationController = this.presentationController;
   };
   MDAModule.prototype.setUpBusinessController = function () {
     if (this.moduleConfig === undefined) {
@@ -2043,7 +2140,9 @@ ModuleManager_MDAModule = function (MDABasePresenter, MDABaseNavigator, Business
         this.businessController = this.createDefaultBusinessController();
       }
     } else {
-      var businessControllerClass = this.moduleConfig.BusinessControllerConfig.BusinessControllerClass;
+      var businessControllerClass;
+      if (this.moduleConfig.BusinessControllerConfig)
+        businessControllerClass = this.moduleConfig.BusinessControllerConfig.BusinessControllerClass;
       //If buisnessController class is not supplied in config file, 
       //create from derived module else default Buisness controller
       if (businessControllerClass === undefined || businessControllerClass === '') {
@@ -2065,6 +2164,8 @@ ModuleManager_MDAModule = function (MDABasePresenter, MDABaseNavigator, Business
     }
     if (BusinessController.prototype.isPrototypeOf(this.businessController)) {
       this.createCommandHandlers();
+    } else {
+      this.createBusinessExtensions();
     }
   };
   MDAModule.prototype.setUpPresentationController = function () {
@@ -2077,9 +2178,15 @@ ModuleManager_MDAModule = function (MDABasePresenter, MDABaseNavigator, Business
     } else {
       var presentationControllerClass;
       if (this.channel === undefined) {
-        presentationControllerClass = this.moduleConfig.PresentationControllerConfig['Default'].PresentationControllerClass;
+        if (this.moduleConfig.PresentationControllerConfig && this.moduleConfig.PresentationControllerConfig['Default'])
+          presentationControllerClass = this.moduleConfig.PresentationControllerConfig['Default'].PresentationControllerClass;
+        else
+          presentationControllerClass = undefined;
       } else {
-        presentationControllerClass = this.moduleConfig.PresentationControllerConfig[this.channel].PresentationControllerClass;
+        if (this.moduleConfig.PresentationControllerConfig && this.moduleConfig.PresentationControllerConfig[this.channel])
+          presentationControllerClass = this.moduleConfig.PresentationControllerConfig[this.channel].PresentationControllerClass;
+        else
+          presentationControllerClass = undefined;
       }
       if (presentationControllerClass === undefined || presentationControllerClass === '') {
         kony.print('MDA2*** Config does not provide a Presentation controller');
@@ -2121,7 +2228,7 @@ ModuleManager_MDAModule = function (MDABasePresenter, MDABaseNavigator, Business
             var controller = forms[channel][formNameKey].Controller;
             var formController = forms[channel][formNameKey].FormController;
             var controllerExtensions = forms[channel][formNameKey].ControllerExtensions;
-            var controllerExtName = [controller];
+            var controllerExtName = [];
             Array.prototype.push.apply(controllerExtName, controllerExtensions);
             kony.mvc.registry.remove(friendlyName);
             kony.mvc.registry.add(friendlyName, formPath, {
@@ -2155,7 +2262,7 @@ ModuleManager_MDAModule = function (MDABasePresenter, MDABaseNavigator, Business
     return presentationController;
   };
   MDAModule.prototype.createCommandHandlers = function () {
-    if (this.moduleConfig !== undefined) {
+    if (this.moduleConfig !== undefined && this.moduleConfig.BusinessControllerConfig) {
       var commandHandlers = this.moduleConfig.BusinessControllerConfig.CommandHandler;
       kony.print(commandHandlers);
       this.businessController.registerCommandHandlers(commandHandlers);
@@ -2167,15 +2274,42 @@ ModuleManager_MDAModule = function (MDABasePresenter, MDABaseNavigator, Business
       if (this.channel === undefined) {
         this.channel = 'Default';
       }
-      presentationExtensions = this.moduleConfig.PresentationControllerConfig[this.channel].PresentationExtensions;
-      for (var i = 0; i < presentationExtensions.length; i++) {
-        try {
-          var extNModule = require(presentationExtensions[i]);
-        } catch (err) {
-          throw new Exception('ERROR_CODE_300', 'Presentation Controller Extension invalid ' + err);
+      if (this.moduleConfig.PresentationControllerConfig && this.moduleConfig.PresentationControllerConfig[this.channel])
+        presentationExtensions = this.moduleConfig.PresentationControllerConfig[this.channel].PresentationExtensions;
+      if (presentationExtensions !== undefined) {
+        var extNModule = [];
+        for (var i = 0; i < presentationExtensions.length; i++) {
+          try {
+            extNModule.push(require(presentationExtensions[i]));
+          } catch (err) {
+            throw new Exception('ERROR_CODE_300', 'Presentation Controller Extension invalid ' + err);
+          }
+          kony.print('MDA2**** extNModule : ' + extNModule);
         }
-        kony.print('MDA2**** extNModule : ' + extNModule);
-        _kony.mvc.assignFunctions2Controller(this.presentationController, [extNModule]);
+        _kony.mvc.assignFunctions2Controller(this.presentationController, extNModule);
+      } else {
+        kony.print('MDA2**** invalid presentationExtensions: ' + presentationExtensions);
+      }
+    }
+  };
+  MDAModule.prototype.createBusinessExtensions = function () {
+    if (this.moduleConfig !== undefined) {
+      var businessExtensions;
+      if (this.moduleConfig.BusinessControllerConfig.BusinessExtensions)
+        businessExtensions = this.moduleConfig.BusinessControllerConfig.BusinessExtensions;
+      if (businessExtensions !== undefined) {
+        var extNModule = [];
+        for (var i = 0; i < businessExtensions.length; i++) {
+          try {
+            extNModule.push(require(businessExtensions[i]));
+          } catch (err) {
+            throw new Exception('ERROR_CODE_300', 'Business Controller Extension invalid ' + err);
+          }
+          kony.print('MDA2**** extNModule : ' + extNModule);
+        }
+        _kony.mvc.assignFunctions2Controller(this.businessController, extNModule);
+      } else {
+        kony.print('MDA2**** invalid businessExtensions: ' + businessExtensions);
       }
     }
   };
@@ -3492,6 +3626,63 @@ commonUtils_MDAApplication = function (RepositoryManager, MDAModuleManager, UIBi
   };
   return MDAApplication;
 }(DataModel_RepositoryManager, ModuleManager_MDAModuleManager, UIBinder_UIBinderBuilder);
+commonUtils_Logger = function () {
+  function Logger() {
+  }
+  Logger.logExecutionTimes = function (targetObject, targetMethod, args) {
+    function callbackTimeStamping(callback) {
+      return function () {
+        var startTime = Date.now();
+        kony.print('MDA PERF :: Start Time executing callback ' + callback.name + '() : ' + startTime);
+        callback.apply(null, arguments);
+        var endTime = Date.now();
+        kony.print('MDA PERF :: End Time executing callback ' + callback.name + '() : ' + endTime);
+        kony.print('MDA PERF :: Total time executing callback ' + callback.name + '() : ' + (endTime - startTime) + 'ms');
+      };
+    }
+    var argArr = [];
+    for (var i = 0; i < args.length; i++) {
+      if (typeof args[i] === 'function') {
+        argArr.push(callbackTimeStamping(args[i]));
+      } else if (args[i] instanceof kony.mvc.Business.Command) {
+        var target = {};
+        for (var key in args[i]) {
+          if (args[i].hasOwnProperty(key)) {
+            target[key] = args[i][key];
+          }
+        }
+        target.completionCallback = callbackTimeStamping(args[i].completionCallback);
+        argArr.push(target);
+      } else {
+        argArr.push(args[i]);
+      }
+    }
+    var targetFunction = null;
+    var _targetObject = targetObject == null ? this : targetObject;
+    var targetFunctionName = '';
+    if (typeof targetMethod === 'function') {
+      targetFunction = targetMethod;
+      targetFunctionName = targetFunction.name;
+    } else if (typeof targetMethod === 'string') {
+      targetFunction = _targetObject[targetMethod];
+      targetFunctionName = targetMethod;
+    }
+    if (targetFunctionName == null || targetFunctionName.trim() === '') {
+      targetFunctionName = '<anonymous>';
+    }
+    var startTimeLogPrefix = 'MDA PERF :: Start Time executing ' + _targetObject.constructor.name + '.' + targetFunctionName + '() : ';
+    var endTimeLogPrefix = 'MDA PERF :: End Time executing ' + _targetObject.constructor.name + '.' + targetFunctionName + '() : ';
+    var totalTimeLogPrefix = 'MDA PERF :: Total Time executing ' + _targetObject.constructor.name + '.' + targetFunctionName + '() : ';
+    var startTime = Date.now();
+    kony.print(startTimeLogPrefix + startTime);
+    var returnVal = targetFunction.apply(_targetObject, argArr);
+    var endTime = Date.now();
+    kony.print(endTimeLogPrefix + endTime);
+    kony.print(totalTimeLogPrefix + (endTime - startTime) + 'ms');
+    return returnVal;
+  };
+  return Logger;
+}();
 ParallelCommandExecuter_ParallelCommandExecuter = function () {
   function ParallelCommandExecuter() {
   }
@@ -3559,6 +3750,7 @@ DataModel_BaseModel = function (ModelRelation) {
     var _this = this;
     child.prototype = Object.create(this.prototype);
     child.prototype.constructor = child;
+    child.prototype.attributeMap = {};
     Object.keys(this).forEach(function (key) {
       child[key] = _this[key];
     });
@@ -3592,7 +3784,8 @@ DataModel_BaseModel = function (ModelRelation) {
       }
     }
   };
-  BaseModel.prototype.attributeMap = {};
+  //Making attribute map part of Child model so depricating this
+  //BaseModel.prototype.attributeMap={};
   /**
    * @function prototype function add Attribute adds new attribute and value to existing model instance
    * @param  {attributeKey} attribute key
@@ -3882,6 +4075,11 @@ FormController_MDAFormController = function (inheritsFrom) {
     this.eventDelegate = null;
     this.presenter = null;
     this.config = null;
+    this.superParams = {
+      counter: 0,
+      level: null,
+      refStack: []
+    };
     kony.mvc.FormController.call(this, viewId1);
   }
   inheritsFrom(MDAFormController, kony.mvc.FormController);
@@ -3922,6 +4120,37 @@ FormController_MDAFormController = function (inheritsFrom) {
   MDAFormController.prototype.attachToModule = function (module) {
     this.presenter = module.presentationController;
     this.presenter._pushToPresentationStack(this.presenter, this.view.id, null);
+  };
+  MDAFormController.prototype.super = function (methodName, argList) {
+    var scope = this;
+    var returnValue = null;
+    if (this.superParams.level === null) {
+      this.superParams.level = 0;
+      while (scope['extensionLevel' + this.superParams.level.toString()]) {
+        this.superParams.level++;
+      }
+    }
+    if (this.superParams.counter === 0) {
+      for (var i = 0; i < this.superParams.level; i++) {
+        if (scope['extensionLevel' + i.toString()][methodName]) {
+          this.superParams.refStack.push(i);
+        }
+      }
+    }
+    this.superParams.refStack.pop();
+    if (this.superParams.refStack.length !== 0) {
+      var callLvl = this.superParams.refStack[this.superParams.refStack.length - 1];
+      this.superParams.counter++;
+      returnValue = scope['extensionLevel' + callLvl.toString()][methodName].apply(this, argList);
+      this.superParams.counter--;
+    } else {
+      kony.print('#MDA2 : Can\'t find any super for the ' + methodName + ' Method.');
+    }
+    if (this.superParams.counter === 0) {
+      this.superParams.refStack = [];
+      this.superParams.level = null;
+    }
+    return returnValue;
   };
   return MDAFormController;
 }(commonUtils_inheritsFrom);
@@ -3968,6 +4197,7 @@ main = function (require) {
   mda.util = mda.util ? mda.util : {};
   mda.MDAApplication = commonUtils_MDAApplication;
   mda.util.ClassExtensionUtility = commonUtils_ExtensibilityApi;
+  mda.util.Logger = commonUtils_Logger;
   //mda.util.sync = mda.util.sync ? mda.util.sync : {};
   //mda.util.sync.Sync_Initialize_CommandHandler = require('commonUtils/syncController/Sync_Initialize_CommandHandler');
   //mda.util.sync.Sync_PresentationController = require('commonUtils/syncController/Sync_PresentationController');
@@ -4023,6 +4253,7 @@ main = function (require) {
   mda.constants = mda.constants ? mda.constants : {};
   mda.constants.STATUS_SUCCESS = 100;
   mda.constants.STATUS_FAILURE = 200;
+  mda.constants.STATUS_ABORT = 99;
   define('kony.mvc.MDAFormController', kony.mvc.MDAFormController);
   define('kony/mvc/MDAFormController', kony.mvc.MDAFormController);
   define('MDAFormController', kony.mvc.MDAFormController);

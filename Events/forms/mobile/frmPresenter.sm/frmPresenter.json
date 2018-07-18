@@ -30,7 +30,8 @@
     },
     "canUpdateUI": true,
     "children": [
-        "flxPresenterRoot"
+        "flxPresenterRoot",
+        "lblNoEvents"
     ],
     "containerweight": 100,
     "controllerInfo": {

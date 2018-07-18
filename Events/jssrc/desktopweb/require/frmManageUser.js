@@ -31,7 +31,7 @@ define("frmManageUser", function() {
                 "zIndex": 1
             }, {}, {});
             flxMenuItem.setDefaultUnit(kony.flex.DP);
-            var menuItem = new com.konysa.menuItem2({
+            var menuItem = new com.konyenb.menuItem2({
                 "clipBounds": true,
                 "height": "1100%",
                 "id": "menuItem",
@@ -61,7 +61,7 @@ define("frmManageUser", function() {
                 "zIndex": 1
             }, {}, {});
             flxInfoItem.setDefaultUnit(kony.flex.DP);
-            var dashboard = new com.konysa.dashboard({
+            var dashboard = new com.konyenb.dashboard({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
                 "height": "75px",
@@ -533,7 +533,7 @@ define("frmManageUser", function() {
                 "left": "0dp",
                 "skin": "CopysknFlxTransparent",
                 "top": "0dp",
-                "width": "20%",
+                "width": "16.50%",
                 "zIndex": 1
             }, {}, {});
             flxRegisteredUser.setDefaultUnit(kony.flex.DP);
@@ -570,7 +570,7 @@ define("frmManageUser", function() {
                 "centerY": "50%",
                 "height": "80%",
                 "id": "lblLine2",
-                "isVisible": false,
+                "isVisible": true,
                 "left": "0dp",
                 "skin": "sknLblLineUltraLightGrey",
                 "width": "1px",
@@ -585,12 +585,12 @@ define("frmManageUser", function() {
                 "clipBounds": true,
                 "height": "100%",
                 "id": "flxEventShared",
-                "isVisible": false,
+                "isVisible": true,
                 "layoutType": kony.flex.FLOW_VERTICAL,
                 "left": "0dp",
                 "skin": "CopysknFlxTransparent",
                 "top": "0dp",
-                "width": "29%",
+                "width": "16.55%",
                 "zIndex": 1
             }, {}, {});
             flxEventShared.setDefaultUnit(kony.flex.DP);
@@ -604,8 +604,8 @@ define("frmManageUser", function() {
                 "width": "100%",
                 "zIndex": 1
             }, {
-                "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-                "padding": [30, 0, 0, 0],
+                "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+                "padding": [0, 0, 0, 0],
                 "paddingInPixel": false
             }, {});
             var lblSharedEvent = new kony.ui.Label({
@@ -627,7 +627,7 @@ define("frmManageUser", function() {
                 "centerY": "50%",
                 "height": "80%",
                 "id": "lblLine3",
-                "isVisible": false,
+                "isVisible": true,
                 "left": "0dp",
                 "skin": "CopysknLblLine",
                 "top": "24dp",
@@ -638,6 +638,49 @@ define("frmManageUser", function() {
                 "padding": [0, 0, 0, 0],
                 "paddingInPixel": false
             }, {});
+            var flxEventView = new kony.ui.FlexContainer({
+                "autogrowMode": kony.flex.AUTOGROW_NONE,
+                "clipBounds": true,
+                "height": "100%",
+                "id": "flxEventView",
+                "isVisible": true,
+                "layoutType": kony.flex.FLOW_VERTICAL,
+                "left": "0dp",
+                "skin": "CopysknFlxTransparent",
+                "top": "0dp",
+                "width": "14.55%",
+                "zIndex": 1
+            }, {}, {});
+            flxEventView.setDefaultUnit(kony.flex.DP);
+            var lblViewedEventCount = new kony.ui.Label({
+                "centerX": "50%",
+                "id": "lblViewedEventCount",
+                "isVisible": true,
+                "skin": "sknLblCount",
+                "text": "55",
+                "top": "15dp",
+                "width": "100%",
+                "zIndex": 1
+            }, {
+                "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+                "padding": [0, 0, 0, 0],
+                "paddingInPixel": false
+            }, {});
+            var CopylblSharedEvent0i77bbd31420541 = new kony.ui.Label({
+                "centerX": "50%",
+                "id": "CopylblSharedEvent0i77bbd31420541",
+                "isVisible": true,
+                "skin": "CopysknLblEventDesc",
+                "text": "Events View",
+                "top": "5dp",
+                "width": "100%",
+                "zIndex": 1
+            }, {
+                "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+                "padding": [25, 0, 0, 0],
+                "paddingInPixel": false
+            }, {});
+            flxEventView.add(lblViewedEventCount, CopylblSharedEvent0i77bbd31420541);
             var flxMenuIcon = new kony.ui.FlexContainer({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
@@ -653,7 +696,7 @@ define("frmManageUser", function() {
             }, {}, {});
             flxMenuIcon.setDefaultUnit(kony.flex.DP);
             flxMenuIcon.add();
-            flxEventInfoRoot.add(flxRootEventTitle, lblLine0, flxRegisteredUser, lblLine2, flxEventShared, lblLine3, flxMenuIcon);
+            flxEventInfoRoot.add(flxRootEventTitle, lblLine0, flxRegisteredUser, lblLine2, flxEventShared, lblLine3, flxEventView, flxMenuIcon);
             var flxRegisteredUserContainer = new kony.ui.FlexContainer({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "centerX": "50%",

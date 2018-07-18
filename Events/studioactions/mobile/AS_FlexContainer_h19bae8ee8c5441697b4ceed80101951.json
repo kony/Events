@@ -16,7 +16,7 @@
         "actions": [{
             "id": "ADD_SNIPPET__ie8292c0bf7b4d9ca1ed99b823ad3d3d",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "var params = {};\nparams.origin = \"details\";\nvar navObj = new kony.mvc.Navigation(\"frmEventsLanding\");\nnavObj.navigate(params);",
+            "codeSnippet": "var params = {};\nif(this.fromPush!==undefined && this.fromPush)\n  params.origin = \"push\";\nelse\n  params.origin = \"details\";\nvar navObj = new kony.mvc.Navigation(\"frmEventsLanding\");\nnavObj.navigate(params);",
             "parentId": null,
             "callbackType": null
         }]

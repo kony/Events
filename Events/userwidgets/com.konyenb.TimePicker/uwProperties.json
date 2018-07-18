@@ -1,0 +1,179 @@
+{
+    "classname": "TimePicker",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "g5ace80a73c9482194f9cd3a93878743",
+                    "paramList": [],
+                    "propertyKey": "getSelectedTime",
+                    "pw": {
+                        "displayName": "getSelectedTime",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j00665b9cc9240c09eff8dd6a6a2b42d",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "eb2a45684b834ac1878b58648961eeeb",
+                    "paramList": [],
+                    "propertyKey": "getNextSlot",
+                    "pw": {
+                        "displayName": "getNextSlot",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j00665b9cc9240c09eff8dd6a6a2b42d",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "b0bf5d6338e04995bef7a0b019151fbb",
+                    "paramList": [],
+                    "propertyKey": "setTimePicker",
+                    "pw": {
+                        "displayName": "setTimePicker",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j00665b9cc9240c09eff8dd6a6a2b42d",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "ef67235e4b0f4823991d1b9d9251ee16",
+                    "paramList": [],
+                    "propertyKey": "setStartTime",
+                    "pw": {
+                        "displayName": "setStartTime",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j00665b9cc9240c09eff8dd6a6a2b42d",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "d0f4eee55bdc4913bc91d6f488ac1009",
+                    "paramList": [],
+                    "propertyKey": "setTimeListUI",
+                    "pw": {
+                        "displayName": "setTimeListUI",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j00665b9cc9240c09eff8dd6a6a2b42d",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "e34806f685ad45f6a0b3f4418f9d345b",
+                    "paramList": [
+                        {
+                            "name": "currentTime"
+                        },
+                        {
+                            "name": "nextSlot"
+                        }
+                    ],
+                    "propertyIndex": 1,
+                    "propertyKey": "onSelection",
+                    "pw": {
+                        "displayName": "onSelection",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j00665b9cc9240c09eff8dd6a6a2b42d",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "bb939d2b8abf4c2281466d59e84f4d72",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "onTimeListShow",
+                    "pw": {
+                        "displayName": "onTimeListShow",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j00665b9cc9240c09eff8dd6a6a2b42d",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "da242836ef27425f844c03fedf9ceae7",
+                    "paramList": [],
+                    "propertyIndex": 3,
+                    "propertyKey": "onTimeListHide",
+                    "pw": {
+                        "displayName": "onTimeListHide",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j00665b9cc9240c09eff8dd6a6a2b42d",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "30 Minutes",
+                    "group": "General",
+                    "kuid": "dc7b5eb556ab4bafa4542ba81b3b011f",
+                    "originalPropertyKey": "timeInterval",
+                    "propertyIndex": 1,
+                    "propertyKey": "timeInterval",
+                    "pw": {
+                        "displayName": "Time Interval",
+                        "uiRepresentation": "Label-Combobox"
+                    },
+                    "srcWgtKUID": "j00665b9cc9240c09eff8dd6a6a2b42d",
+                    "type": "list selector",
+                    "value": [
+                        "30 Minutes",
+                        "15 Minutes"
+                    ]
+                }
+            ],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "c8d0689b237b4dd9b6a436bed9e767cf",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 2,
+                    "propertyKey": "TimeValue",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Time",
+                        "srcWidget": "lblTime",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "b05c14fa3534474b80d3c5bc448459f2"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konyenb",
+    "version": "1.0.0"
+}

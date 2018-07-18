@@ -40,7 +40,8 @@
     "canvasWidth": 1400,
     "children": [
         "menuItem0",
-        "flxRoot"
+        "flxRoot",
+        "eventpreview"
     ],
     "containerweight": 100,
     "controllerInfo": {
@@ -55,8 +56,9 @@
     },
     "device": "desktopweb",
     "displayorientation": 1,
-    "enabledforidletimeout": false,
+    "enabledforidletimeout": true,
     "id": "frmAllEvents",
+    "ide_onDeviceBack": "AS_Form_f4846a2d4d6342d5b65a424619ff391d",
     "ide_postShow": "AS_Form_hbe07b3ca4164101b2660362c4fc8c23",
     "info": null,
     "initdone": false,

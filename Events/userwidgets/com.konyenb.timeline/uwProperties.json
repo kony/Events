@@ -1,0 +1,211 @@
+{
+    "classname": "timeline",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "f566218c86de40ea8f01bbe2ce40e676",
+                    "paramList": [
+                        {
+                            "name": "data"
+                        }
+                    ],
+                    "propertyKey": "setData",
+                    "pw": {
+                        "displayName": "setData",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d851588d8f1d4dc4abf157d458976645",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "j69a750847d24df48d3af2ce238bd3cc",
+                    "paramList": [],
+                    "propertyKey": "onDeviceClickFormForm",
+                    "pw": {
+                        "displayName": "onDeviceClickFormForm",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d851588d8f1d4dc4abf157d458976645",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "bccd2b9a9e2242d8aa309de85b85534e",
+                    "paramList": [],
+                    "propertyKey": "setDefault",
+                    "pw": {
+                        "displayName": "setDefault",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d851588d8f1d4dc4abf157d458976645",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [
+                "name",
+                "sub1",
+                "sub2"
+            ],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": {
+                        "data": [
+                            {
+                                "date": "",
+                                "desc": "",
+                                "name": "",
+                                "sub1": "",
+                                "sub1icon": "",
+                                "sub2": "",
+                                "sub2icon": ""
+                            },
+                            {
+                                "date": "",
+                                "desc": "",
+                                "name": "",
+                                "sub1": "",
+                                "sub1icon": "",
+                                "sub2": "",
+                                "sub2icon": ""
+                            },
+                            {
+                                "date": "",
+                                "desc": "",
+                                "name": "",
+                                "sub1": "",
+                                "sub1icon": "",
+                                "sub2": "",
+                                "sub2icon": ""
+                            }
+                        ],
+                        "schema": [
+                            {
+                                "columnHeaderTemplate": null,
+                                "columnHeaderText": "title",
+                                "columnHeaderType": "text",
+                                "columnID": "name",
+                                "columnOnClick": null,
+                                "columnText": "Not Defined",
+                                "columnType": "text",
+                                "kuid": "ga3ccb3556494d80a8f559671fbdc788"
+                            },
+                            {
+                                "columnHeaderTemplate": null,
+                                "columnHeaderText": "date",
+                                "columnHeaderType": "text",
+                                "columnID": "date",
+                                "columnOnClick": null,
+                                "columnText": "Not Defined",
+                                "columnType": "text",
+                                "kuid": "b1e4d536e52f4899a56d5ba242da44b7"
+                            },
+                            {
+                                "columnHeaderTemplate": null,
+                                "columnHeaderText": "subtitle1",
+                                "columnHeaderType": "text",
+                                "columnID": "sub1",
+                                "columnOnClick": null,
+                                "columnText": "Not Defined",
+                                "columnType": "text",
+                                "kuid": "fe47873110fe411ea478c2ddbbe56cff"
+                            },
+                            {
+                                "columnHeaderTemplate": null,
+                                "columnHeaderText": "subtitle1icon",
+                                "columnHeaderType": "text",
+                                "columnID": "sub1icon",
+                                "columnOnClick": null,
+                                "columnText": "Not Defined",
+                                "columnType": "image",
+                                "kuid": "i197789285694c3ca0552a0cdda0b7d7"
+                            },
+                            {
+                                "columnHeaderTemplate": null,
+                                "columnHeaderText": "sub2",
+                                "columnHeaderType": "text",
+                                "columnID": "sub2",
+                                "columnOnClick": null,
+                                "columnText": "Not Defined",
+                                "columnType": "text",
+                                "kuid": "bed96f68826d4904a85b686e935af2cb"
+                            },
+                            {
+                                "columnHeaderTemplate": null,
+                                "columnHeaderText": "subtitle2icon",
+                                "columnHeaderType": "text",
+                                "columnID": "sub2icon",
+                                "columnOnClick": null,
+                                "columnText": "Not Defined",
+                                "columnType": "image",
+                                "kuid": "ja1e321c5f84430caf84d246a14ed7e9"
+                            },
+                            {
+                                "columnHeaderTemplate": null,
+                                "columnHeaderText": "shortDesc.",
+                                "columnHeaderType": "text",
+                                "columnID": "desc",
+                                "columnOnClick": null,
+                                "columnText": "Not Defined",
+                                "columnType": "text",
+                                "kuid": "ae425b8f6c81486aa0a0f9641180e3e5"
+                            }
+                        ]
+                    },
+                    "group": "General",
+                    "kuid": "h3fd5043145547558371ffbdf6f526fd",
+                    "originalPropertyKey": "masterdata",
+                    "propertyIndex": 2,
+                    "propertyKey": "masterdata",
+                    "pw": {
+                        "displayName": "masterdata",
+                        "uiRepresentation": "Label-DataGrid"
+                    },
+                    "srcWgtKUID": "d851588d8f1d4dc4abf157d458976645",
+                    "type": "data grid",
+                    "value": 7
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "",
+                    "group": "General",
+                    "kuid": "e6d804cd80e84737a1e62516ef585180",
+                    "originalPropertyKey": "eventTitle",
+                    "propertyIndex": 3,
+                    "propertyKey": "eventTitle",
+                    "pw": {
+                        "displayName": "EventTitle",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "d851588d8f1d4dc4abf157d458976645",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konyenb",
+    "version": "1.0.0"
+}

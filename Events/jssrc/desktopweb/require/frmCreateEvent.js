@@ -2,189 +2,6 @@ define("frmCreateEvent", function() {
     return function(controller) {
         function addWidgetsfrmCreateEvent() {
             this.setDefaultUnit(kony.flex.DP);
-            var flexCreateEventMain = new kony.ui.FlexContainer({
-                "autogrowMode": kony.flex.AUTOGROW_NONE,
-                "clipBounds": true,
-                "height": "100%",
-                "id": "flexCreateEventMain",
-                "isVisible": false,
-                "layoutType": kony.flex.FLOW_VERTICAL,
-                "left": "0%",
-                "skin": "FlexsknGradient",
-                "top": "0%",
-                "width": "20%",
-                "zIndex": 1
-            }, {}, {});
-            flexCreateEventMain.setDefaultUnit(kony.flex.DP);
-            var flexEventLogo = new kony.ui.FlexContainer({
-                "autogrowMode": kony.flex.AUTOGROW_NONE,
-                "centerX": "50%",
-                "clipBounds": true,
-                "height": "10%",
-                "id": "flexEventLogo",
-                "isVisible": true,
-                "layoutType": kony.flex.FLOW_VERTICAL,
-                "left": "17dp",
-                "skin": "slFbox",
-                "top": "1%",
-                "width": "90%",
-                "zIndex": 5
-            }, {}, {});
-            flexEventLogo.setDefaultUnit(kony.flex.DP);
-            var imgLogo = new kony.ui.Image2({
-                "centerX": "43%",
-                "height": "55%",
-                "id": "imgLogo",
-                "isVisible": true,
-                "left": "4%",
-                "skin": "slImage",
-                "src": "eventstitlw.png",
-                "top": "0%",
-                "width": "65%",
-                "zIndex": 1
-            }, {
-                "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
-                "padding": [0, 0, 0, 0],
-                "paddingInPixel": false
-            }, {});
-            var lblUnderLineLogo = new kony.ui.Label({
-                "centerX": "50.00%",
-                "height": "1px",
-                "id": "lblUnderLineLogo",
-                "isVisible": true,
-                "skin": "sknheaderlblLine",
-                "top": "38%",
-                "width": "95%",
-                "zIndex": 5
-            }, {
-                "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-                "padding": [0, 0, 0, 0],
-                "paddingInPixel": false
-            }, {});
-            flexEventLogo.add(imgLogo, lblUnderLineLogo);
-            var flexProfile = new kony.ui.FlexContainer({
-                "autogrowMode": kony.flex.AUTOGROW_NONE,
-                "clipBounds": true,
-                "height": "12%",
-                "id": "flexProfile",
-                "isVisible": true,
-                "layoutType": kony.flex.FLOW_VERTICAL,
-                "left": "0%",
-                "skin": "slFbox",
-                "top": "2%",
-                "width": "100%",
-                "zIndex": 5
-            }, {}, {});
-            flexProfile.setDefaultUnit(kony.flex.DP);
-            var flexProfilePhotoANdTitle = new kony.ui.FlexContainer({
-                "autogrowMode": kony.flex.AUTOGROW_NONE,
-                "clipBounds": true,
-                "height": "75%",
-                "id": "flexProfilePhotoANdTitle",
-                "isVisible": true,
-                "layoutType": kony.flex.FLOW_HORIZONTAL,
-                "left": "3dp",
-                "skin": "slFbox",
-                "top": "0dp",
-                "width": "100%",
-                "zIndex": 5
-            }, {}, {});
-            flexProfilePhotoANdTitle.setDefaultUnit(kony.flex.DP);
-            var imgProfile = new kony.ui.Image2({
-                "centerY": "50%",
-                "height": "50dp",
-                "id": "imgProfile",
-                "isVisible": true,
-                "left": "5%",
-                "skin": "slImage",
-                "src": "profile_1.png",
-                "top": "0%",
-                "width": "50dp",
-                "zIndex": 1
-            }, {
-                "imageScaleMode": constants.IMAGE_SCALE_MODE_FIT_TO_DIMENSIONS,
-                "padding": [0, 0, 0, 0],
-                "paddingInPixel": false
-            }, {});
-            var lblUserName = new kony.ui.Label({
-                "centerY": "50%",
-                "height": "50%",
-                "id": "lblUserName",
-                "isVisible": true,
-                "left": "5%",
-                "skin": "lblUserName",
-                "text": "Vigneshwaran Karunanthi",
-                "top": "1dp",
-                "width": "70%",
-                "zIndex": 1
-            }, {
-                "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-                "padding": [0, 0, 0, 0],
-                "paddingInPixel": false
-            }, {});
-            flexProfilePhotoANdTitle.add(imgProfile, lblUserName);
-            var lblUnderLineProfile = new kony.ui.Label({
-                "height": "1px",
-                "id": "lblUnderLineProfile",
-                "isVisible": true,
-                "left": "0%",
-                "skin": "sknheaderlblLine",
-                "top": "18%",
-                "width": "100%",
-                "zIndex": 5
-            }, {
-                "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-                "padding": [0, 0, 0, 0],
-                "paddingInPixel": false
-            }, {});
-            flexProfile.add(flexProfilePhotoANdTitle, lblUnderLineProfile);
-            var SegOptions = new kony.ui.SegmentedUI2({
-                "autogrowMode": kony.flex.AUTOGROW_NONE,
-                "data": [{
-                    "imgIcon": "alleventsicon.png",
-                    "lblText": "All Events",
-                    "lblUnderLineHam": "test"
-                }, {
-                    "imgIcon": "neweventicon.png",
-                    "lblText": "Create New Events",
-                    "lblUnderLineHam": "test"
-                }],
-                "groupCells": false,
-                "height": "80%",
-                "id": "SegOptions",
-                "isVisible": true,
-                "left": "5%",
-                "needPageIndicator": true,
-                "onRowClick": controller.AS_Segment_ce41c2fee51e4f46b28a78478ab9bda0,
-                "pageOffDotImage": "pageoffdot_2.png",
-                "pageOnDotImage": "pageondot_2.png",
-                "retainSelection": true,
-                "rowFocusSkin": "Copyseg0e11ad42646774a",
-                "rowSkin": "Copyseg0ac11cef0a7d248",
-                "rowTemplate": "flexHamManuMain",
-                "sectionHeaderSkin": "sliPhoneSegmentHeader",
-                "selectionBehavior": constants.SEGUI_DEFAULT_BEHAVIOR,
-                "separatorColor": "aaaaaa00",
-                "separatorRequired": true,
-                "separatorThickness": 0,
-                "showScrollbars": false,
-                "top": "0%",
-                "viewType": constants.SEGUI_VIEW_TYPE_TABLEVIEW,
-                "widgetDataMap": {
-                    "flexHamImgLable": "flexHamImgLable",
-                    "flexHamManuMain": "flexHamManuMain",
-                    "flexHamMenu": "flexHamMenu",
-                    "imgIcon": "imgIcon",
-                    "lblText": "lblText",
-                    "lblUnderLineHam": "lblUnderLineHam"
-                },
-                "width": "90%",
-                "zIndex": 5
-            }, {
-                "padding": [0, 0, 0, 0],
-                "paddingInPixel": false
-            }, {});
-            flexCreateEventMain.add(flexEventLogo, flexProfile, SegOptions);
             var flexScrollEvent = new kony.ui.FlexScrollContainer({
                 "allowHorizontalBounce": false,
                 "allowVerticalBounce": true,
@@ -194,7 +11,7 @@ define("frmCreateEvent", function() {
                 "height": "77%",
                 "horizontalScrollIndicator": true,
                 "id": "flexScrollEvent",
-                "isVisible": true,
+                "isVisible": false,
                 "layoutType": kony.flex.FREE_FORM,
                 "left": "17.50%",
                 "pagingEnabled": false,
@@ -828,7 +645,7 @@ define("frmCreateEvent", function() {
                 "paddingInPixel": false
             }, {});
             flexUploadBannerImageValue.add(flexUploadBannerImageMain, lblImageTypes, lblUploadSuccess);
-            var startTime = new Reusable.TimePicker({
+            var startTime = new com.konyenb.TimePicker({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
                 "height": "30%",
@@ -844,7 +661,7 @@ define("frmCreateEvent", function() {
             }, {}, {});
             startTime.timeInterval = "30 Minutes";
             startTime.onSelection = controller.AS_UWI_bd773e53e62d41508bbab68423560c48;
-            var EndTime = new Reusable.TimePicker({
+            var EndTime = new com.konyenb.TimePicker({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
                 "height": "30%",
@@ -1366,25 +1183,7 @@ define("frmCreateEvent", function() {
                 "padding": [0, 0, 0, 0],
                 "paddingInPixel": false
             }, {});
-            var btnPublishEventOnly = new kony.ui.Button({
-                "focusSkin": "CopydefBtnNormal0ed0a68b2c3ae44",
-                "height": "100%",
-                "id": "btnPublishEventOnly",
-                "isVisible": false,
-                "left": "6%",
-                "onClick": controller.AS_Button_e2bc372e22d04af28846b222bfea1564,
-                "skin": "CopydefBtnNormal0ed0a68b2c3ae44",
-                "text": "PUBLISH EVENT",
-                "top": "0.00%",
-                "width": "40%",
-                "zIndex": 2
-            }, {
-                "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-                "displayText": true,
-                "padding": [0, 0, 0, 0],
-                "paddingInPixel": false
-            }, {});
-            flexActions.add(btnProceedToSession, btnPublishEventOnly);
+            flexActions.add(btnProceedToSession);
             var flexCopyRight = new kony.ui.FlexContainer({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
@@ -1438,7 +1237,7 @@ define("frmCreateEvent", function() {
                 "zIndex": 1
             }, {}, {});
             FlexScrollSession.setDefaultUnit(kony.flex.DP);
-            var session1 = new Reusable.sessionTemp({
+            var session1 = new com.konyenb.sessionTemp({
                 "clipBounds": true,
                 "height": "100%",
                 "id": "session1",
@@ -1450,7 +1249,7 @@ define("frmCreateEvent", function() {
                 "top": "0dp",
                 "width": "100%"
             }, {}, {});
-            var Copysession0e89e7350f7224b = new Reusable.sessionTemp({
+            var Copysession0e89e7350f7224b = new com.konyenb.sessionTemp({
                 "clipBounds": true,
                 "height": "100%",
                 "id": "Copysession0e89e7350f7224b",
@@ -1462,7 +1261,7 @@ define("frmCreateEvent", function() {
                 "top": "100%",
                 "width": "100%"
             }, {}, {});
-            var sessionFooter1 = new Reusable.SessionFooter({
+            var sessionFooter1 = new com.konyenb.SessionFooter({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
                 "height": "10%",
@@ -1529,39 +1328,7 @@ define("frmCreateEvent", function() {
                 "paddingInPixel": false
             }, {});
             FlexScrollSession.add(session1, Copysession0e89e7350f7224b, sessionFooter1, flexPublishEvent, btnAddNewSessionDefault);
-            var flexDummy = new kony.ui.FlexContainer({
-                "autogrowMode": kony.flex.AUTOGROW_NONE,
-                "clipBounds": true,
-                "height": "89%",
-                "id": "flexDummy",
-                "isVisible": false,
-                "layoutType": kony.flex.FREE_FORM,
-                "left": "20%",
-                "skin": "slFbox",
-                "top": "11%",
-                "width": "80%",
-                "zIndex": 5
-            }, {}, {});
-            flexDummy.setDefaultUnit(kony.flex.DP);
-            var Label0aeb6ff5fc91b45 = new kony.ui.Label({
-                "centerX": "50%",
-                "centerY": "50%",
-                "height": "20%",
-                "id": "Label0aeb6ff5fc91b45",
-                "isVisible": true,
-                "left": "201dp",
-                "skin": "CopydefLabel0ed14e90c91b343",
-                "text": "Please wait we are processing..",
-                "top": "134dp",
-                "width": "30%",
-                "zIndex": 1
-            }, {
-                "contentAlignment": constants.CONTENT_ALIGN_CENTER,
-                "padding": [0, 0, 0, 0],
-                "paddingInPixel": false
-            }, {});
-            flexDummy.add(Label0aeb6ff5fc91b45);
-            var boxfileupload = new com.konysa.boxfileupload({
+            var boxfileupload = new com.konyenb.boxfileupload({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
                 "height": "0%",
@@ -1574,12 +1341,12 @@ define("frmCreateEvent", function() {
                 "top": "0dp",
                 "width": "0%"
             }, {}, {});
-            boxfileupload.appUserID = "";
-            boxfileupload.folderID = "";
+            boxfileupload.appUserID = "3424236194";
+            boxfileupload.folderID = "47419362009";
             boxfileupload.onUploadSuccess = controller.AS_UWI_b2e48b82de6542e9a993c35d16740932;
             boxfileupload.onUploadFailure = controller.AS_UWI_b698b758da5246cca68a1611f293c6d7;
             boxfileupload.onImageSelection = controller.AS_UWI_i739fc8ec8a64b7da8fbb577507689c3;
-            var boxUploadGallery = new com.konysa.boxfileupload({
+            var boxUploadGallery = new com.konyenb.boxfileupload({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
                 "height": "0%",
@@ -1592,12 +1359,12 @@ define("frmCreateEvent", function() {
                 "top": "10dp",
                 "width": "0%"
             }, {}, {});
-            boxUploadGallery.appUserID = "";
-            boxUploadGallery.folderID = "";
+            boxUploadGallery.appUserID = "3424236194";
+            boxUploadGallery.folderID = "47419362009";
             boxUploadGallery.onUploadSuccess = controller.AS_UWI_f9d79019ba8b4613a3aee9c0be3d2dae;
             boxUploadGallery.onUploadFailure = controller.AS_UWI_f44ee808c39341bd9d75d78f8530eab1;
             boxUploadGallery.onImageSelection = controller.AS_UWI_e238938f2b3649b9a073eff9bfac31c5;
-            var menuItem = new com.konysa.menuItem({
+            var menuItem = new com.konyenb.menuItem({
                 "clipBounds": true,
                 "height": "100%",
                 "id": "menuItem",
@@ -1611,7 +1378,7 @@ define("frmCreateEvent", function() {
             }, {}, {});
             menuItem.onAllEventClick = controller.AS_UWI_f469ac9b9a024db796e076520c5a25cb;
             menuItem.onManageUserClick = controller.AS_UWI_j20ebb89b6e14c99b335e65b22dbc12f;
-            var dashboard = new com.konysa.dashboard({
+            var dashboard = new com.konyenb.dashboard({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
                 "height": "10%",
@@ -1625,7 +1392,7 @@ define("frmCreateEvent", function() {
                 "width": "82.50%"
             }, {}, {});
             dashboard.iconVisibility = false;
-            var EventsHeader = new Reusable.EventsHeader({
+            var EventsHeader = new com.konyenb.EventsHeader({
                 "clipBounds": true,
                 "height": "11.10%",
                 "id": "EventsHeader",
@@ -1639,19 +1406,18 @@ define("frmCreateEvent", function() {
             }, {}, {});
             EventsHeader.FlexContainer0b6eb885d5c014c.right = "-2.10%";
             EventsHeader.LblTitle.left = "2.50%";
-            EventsHeader.btnBasic.onClick = controller.AS_Button_c0cd9ed5352d4659a4b059c062530428;
-            EventsHeader.btnSessions.onClick = controller.AS_Button_dc3930617aa641548cf32930c175433b;
+            EventsHeader.btnSessions.onClick = controller.AS_Button_ab525dabde4e4a9f84f28a47cfaa9de4;
             EventsHeader.flexBasic.top = "0%";
             EventsHeader.flexHeader.width = "98%";
             EventsHeader.flxSessions.top = "0%";
             EventsHeader.flxSessions.width = "35%";
             EventsHeader.lblUnderLineEventMain.top = "85%";
             EventsHeader.lblUnderLineEventMain.width = "95%";
-            this.add(flexCreateEventMain, flexScrollEvent, FlexScrollSession, flexDummy, boxfileupload, boxUploadGallery, menuItem, dashboard, EventsHeader);
+            this.add(flexScrollEvent, FlexScrollSession, boxfileupload, boxUploadGallery, menuItem, dashboard, EventsHeader);
         };
         return [{
             "addWidgets": addWidgetsfrmCreateEvent,
-            "enabledForIdleTimeout": false,
+            "enabledForIdleTimeout": true,
             "id": "frmCreateEvent",
             "layoutType": kony.flex.FREE_FORM,
             "needAppMenu": false,

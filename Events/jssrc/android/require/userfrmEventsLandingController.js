@@ -16,45 +16,48 @@ define({
      * This method checks the origin and loads the event list accordingly
      **/
     onNavigate: function(params) {
-        currentController = "frmEventsLandingController";
-        if (params !== undefined) {
-            switch (params.origin) {
-                case "search":
-                    this.search(params);
-                    this.view.flexEventRegConformation.isVisible = false;
-                    break;
-                case "login":
-                    this.getUserAndEventData();
-                    this.view.flexEventRegConformation.isVisible = false;
-                    break;
-                case "register":
-                    this.view.flexEventRegConformation.isVisible = true;
-                    break;
-                case "alreadyregistered":
-                    this.getUserAndEventData();
-                    break;
-                case "details":
-                    break;
-                case "myevents":
-                    this.getMyEvents();
-                    break;
-                case "pastevents":
-                    this.getMyPastEvents();
-                    break;
-                case "profile":
-                    break;
-                case "loginBack":
-                    break;
-                default:
-                    this.view.flexEventRegConformation.isVisible = false;
-                    this.checkIsLogin();
+        try {
+            if (params !== undefined) {
+                switch (params.origin) {
+                    case EVENT_CONSTANS.MODE.SEARCH:
+                        this.search(params);
+                        this.view.flexEventRegConformation.isVisible = false;
+                        break;
+                    case EVENT_CONSTANS.MODE.SEARCHBACK:
+                        break;
+                    case EVENT_CONSTANS.MODE.LOGIN:
+                        this.getUserAndEventData();
+                        this.view.flexEventRegConformation.isVisible = false;
+                        break;
+                    case EVENT_CONSTANS.MODE.REGISTER:
+                        this.view.flexEventRegConformation.isVisible = true;
+                        break;
+                    case EVENT_CONSTANS.MODE.ALREADYREGISTERED:
+                        this.getUserAndEventData();
+                        break;
+                    case EVENT_CONSTANS.MODE.DETAILS:
+                        break;
+                    case EVENT_CONSTANS.MODE.MYEVENTS:
+                        this.getMyEvents();
+                        break;
+                    case EVENT_CONSTANS.MODE.PROFILE:
+                        break;
+                    case EVENT_CONSTANS.MODE.LOGINBACK:
+                        this.currentMode = "allevents";
+                        break;
+                    default:
+                        this.view.flexEventRegConformation.isVisible = false;
+                        this.checkIsLogin();
+                }
+            } else {
+                this.view.flexEventRegConformation.isVisible = false;
+                this.checkIsLogin();
             }
-        } else {
-            this.view.flexEventRegConformation.isVisible = false;
-            this.checkIsLogin();
+            this.setProfileData();
+            this.activityName = null;
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
-        this.setProfileData();
-        this.activityName = null;
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -63,24 +66,28 @@ define({
      * set the profile data
      **/
     setProfileData: function() {
-        if (kony.store.getItem("isLoggedIn") === "true") {
-            this.view.hamburger.btnClickIsVisible = false;
-            var profileData = JSON.parse(kony.store.getItem("profile"));
-            this.view.hamburger.headingText = profileData.first_name;
-            this.view.hamburger.headingTextIsVisible = true;
-            this.view.hamburger.subHeadingText = profileData.mail;
-            this.view.hamburger.subHeadingTextIsVisible = true;
-            if (profileData.profile !== undefined) {
-                this.view.hamburger.profileImageSrc = profileData.profile;
+        try {
+            if (kony.store.getItem("isLoggedIn") === "true") {
+                this.view.hamburger.btnClickIsVisible = false;
+                var profileData = JSON.parse(kony.store.getItem("profile"));
+                this.view.hamburger.headingText = profileData.first_name;
+                this.view.hamburger.headingTextIsVisible = true;
+                this.view.hamburger.subHeadingText = profileData.mail;
+                this.view.hamburger.subHeadingTextIsVisible = true;
+                if (profileData.profile !== undefined) {
+                    this.view.hamburger.profileImageSrc = profileData.profile;
+                } else {
+                    this.view.hamburger.profileImageSrc = "profile.png";
+                }
+                this.view.hamburger.profileImageIsVisible = true;
             } else {
-                this.view.hamburger.profileImageSrc = "profile.png";
+                this.view.hamburger.btnClickIsVisible = true;
+                this.view.hamburger.headingTextIsVisible = false;
+                this.view.hamburger.subHeadingTextIsVisible = false;
+                this.view.hamburger.profileImageIsVisible = false;
             }
-            this.view.hamburger.profileImageIsVisible = true;
-        } else {
-            this.view.hamburger.btnClickIsVisible = true;
-            this.view.hamburger.headingTextIsVisible = false;
-            this.view.hamburger.subHeadingTextIsVisible = false;
-            this.view.hamburger.profileImageIsVisible = false;
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     /**
@@ -108,11 +115,15 @@ define({
      * fetch the event list accordingly
      **/
     checkIsLogin: function() {
-        this.currentMode = "allevents";
-        if (kony.store.getItem("isLoggedIn") === "true") {
-            this.getUserAndEventData();
-        } else {
-            this.getEventsData();
+        try {
+            this.currentMode = EVENT_CONSTANS.MODE.UPCOMMINGEVENTS;
+            if (kony.store.getItem("isLoggedIn") === "true") {
+                this.getUserAndEventData();
+            } else {
+                this.getEventsData();
+            }
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     /**
@@ -121,20 +132,18 @@ define({
      * @description - This function will check the login status and
      * fetch the past events by user_id
      **/
-    getMyPastEvents: function() {
-        this.view.lblNoEvents.isVisible = false;
-        this.currentMode = "pastevents";
-        if (kony.store.getItem("isLoggedIn") === "true") {
-            this.view.lblHeaderTitle.text = "My Past Events";
-            // 			var data = {
-            // 				"userid": kony.store.getItem("userId"),
-            // 				"event_type": "past",
-            // 				"ev_date": this.getDate(0)
-            // 			};
-            // 			this.getRegisteredByUserId(data); // calls the service to fetch the event_list
-            this.getUserAndEventData();
-        } else {
-            this.navigateToLoginWithParams("pastevents"); // navigate the login
+    getUpcommingEvents: function() {
+        try {
+            this.setLblNoevents(false);
+            this.setEventtitle(EVENT_CONSTANS.TITLE.UPCOMMINGEVENTS);
+            this.currentMode = EVENT_CONSTANS.MODE.UPCOMMINGEVENTS;
+            if (kony.store.getItem("isLoggedIn") === "true") {
+                this.getUserAndEventData();
+            } else {
+                this.getEventsData(); // fetches the event list
+            }
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     /**
@@ -144,13 +153,17 @@ define({
      * fetch the all events
      **/
     getAllEvents: function() {
-        this.view.lblNoEvents.isVisible = false;
-        this.currentMode = "allevents";
-        if (kony.store.getItem("isLoggedIn") === "true") {
-            this.view.lblHeaderTitle.text = "Upcoming Events";
-            this.getUserAndEventData(); // call the service to fetch the user register status and eventsList
-        } else {
-            this.getEventsData(); // fetches the event list
+        try {
+            this.setLblNoevents(false);
+            this.setEventtitle(EVENT_CONSTANS.TITLE.ALLEVENTS);
+            this.currentMode = EVENT_CONSTANS.MODE.ALLEVENTS;
+            if (kony.store.getItem("isLoggedIn") === "true") {
+                this.getUserAndEventData(); // call the service to fetch the user register status and eventsList
+            } else {
+                this.getEventsData(); // fetches the event list
+            }
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     /**
@@ -160,19 +173,17 @@ define({
      * fetch the  events  registered by user_id
      **/
     getMyEvents: function() {
-        this.view.lblNoEvents.isVisible = false;
-        this.currentMode = "myevents";
-        if (kony.store.getItem("isLoggedIn") === "true") {
-            this.view.lblHeaderTitle.text = "My Events";
-            // 			var data = {
-            // 				"userid": kony.store.getItem("userId"),
-            // 				"event_type": "current",
-            // 				"ev_date": this.getDate(0)
-            // 			};
-            // 			this.getRegisteredByUserId(data); // call the service to fetch the events registered by user_id
-            this.getUserAndEventData();
-        } else {
-            this.navigateToLoginWithParams("myevents"); // navigate the login
+        try {
+            this.setLblNoevents(false);
+            this.currentMode = EVENT_CONSTANS.MODE.MYEVENTS;
+            if (kony.store.getItem("isLoggedIn") === "true") {
+                this.setEventtitle(EVENT_CONSTANS.TITLE.MYEVENTS);
+                this.getUserAndEventData();
+            } else {
+                this.navigateToLoginWithParams("myevents"); // navigate the login
+            }
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     /******Start Service Calls********/
@@ -183,20 +194,24 @@ define({
      * user of all events
      **/
     getUserAndEventData: function() {
-        this.startLoadingScreen();
         try {
-            var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSOS", {
-                "access": "online"
-            });
-            var dataObject = new kony.sdk.dto.DataObject("event_registration");
-            var odataUrl = "$filter=user_id eq '" + kony.store.getItem("userId") + "' and ((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))";
-            dataObject.odataUrl = odataUrl;
-            var options = {
-                "dataObject": dataObject
-            };
-            objSvc.fetch(options, this.eventUserSuccessCallback.bind(this), this.eventUserFailureCallback.bind(this));
-        } catch (err) {
-            this.stopLoadingScreen();
+            this.startLoadingScreen();
+            try {
+                var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSOS", {
+                    "access": "online"
+                });
+                var dataObject = new kony.sdk.dto.DataObject("event_registration");
+                var odataUrl = "$filter=user_id eq '" + kony.store.getItem("userId") + "' and ((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))";
+                dataObject.odataUrl = odataUrl;
+                var options = {
+                    "dataObject": dataObject
+                };
+                objSvc.fetch(options, this.eventUserSuccessCallback.bind(this), this.eventUserFailureCallback.bind(this));
+            } catch (err) {
+                this.stopLoadingScreen();
+            }
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     /**
@@ -206,8 +221,12 @@ define({
      * this function will assign the response to controller variable and calls getEventdata()
      **/
     eventUserSuccessCallback: function(response) {
-        this.user_event_data = response.records;
-        this.getEventsData(); //Fetches all event data
+        try {
+            this.user_event_data = response.records;
+            this.getEventsData(); //Fetches all event data
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -220,50 +239,24 @@ define({
     },
     /**
      * @member of  frmEventsLandingController.js
-     * @function getRegisteredByUserId
-     * @description - This function will fetch the event list from the backend by user_id
-     * @param {JSON} - data
-     * data = {
-    "userid" : <user_id>
-    "event_type" : <"past"/"current">
-    "ev_date" : <date>
-    }
-     **/
-    getRegisteredByUserId: function(data) {
-        this.startLoadingScreen();
-        var intObj = kony.sdk.getCurrentInstance().getIntegrationService("EventsProcedureService");
-        intObj.invokeOperation("events_events_reg", {}, data, this.successGetRegisteredEvents.bind(this), this.failureGetRegisteredEvents);
-    },
-    successGetRegisteredEvents: function(response) {
-        this.stopLoadingScreen();
-        if (response.records.length > 0) {
-            this.view.lblNoEvents.isVisible = false;
-            this.ProcessEventData(response.records); // process the event and set the data
-        } else {
-            this.setEmptySegment();
-        }
-    },
-    failureGetRegisteredEvents: function(response) {
-        alert("failure" + JSON.stringify(response));
-    },
-    /**
-     * @member of  frmEventsLandingController.js
      * @function getEventsData
      * @description - This function fetches the events between today and six months from today
      **/
     getEventsData: function() {
-        this.view.lblNoEvents.isVisible = false;
-        this.startLoadingScreen();
-        var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventOrchSDO", {
-            "access": "online"
-        });
-        var dataObject = new kony.sdk.dto.DataObject("events_view");
-        // 		var odataUrl = "$filter=start_date ge '" + this.getDate(0) + "' and start_date le '" + this.getDate(6) + "' and isdisabled eq '0'";
-        // 		dataObject.odataUrl = odataUrl;
-        var options = {
-            "dataObject": dataObject
-        };
-        objSvc.fetch(options, this.eventFetchSuccessCallback.bind(this), this.eventFetchFailureCallback.bind(this));
+        try {
+            this.view.lblNoEvents.isVisible = false;
+            this.startLoadingScreen();
+            var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventOrchSDO", {
+                "access": "online"
+            });
+            var dataObject = new kony.sdk.dto.DataObject("events_view");
+            var options = {
+                "dataObject": dataObject
+            };
+            objSvc.fetch(options, this.eventFetchSuccessCallback.bind(this), this.eventFetchFailureCallback.bind(this));
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -271,31 +264,34 @@ define({
      * @description - success call back of getEventdata.
      **/
     eventFetchSuccessCallback: function(response) {
-        this.stopLoadingScreen();
-        if (response.records[0].event.length > 0) {
-            var eventList = processEventsOrchResponse(response);
-            //Checks the login status and merge the registered events
-            if (kony.store.getItem("isLoggedIn") === "true") {
+        try {
+            this.stopLoadingScreen();
+            if (response.records[0].event.length > 0) {
+                var eventList = processEventsOrchResponse(response);
                 switch (this.currentMode) {
-                    case "myevents":
-                        eventList = this.getEventsBetweenTwoDates(eventList, this.getDate(0), this.getDate(6));
+                    case EVENT_CONSTANS.MODE.MYEVENTS:
+                        eventList = this.getEventsBetweenTwoDates(eventList, this.getDate(0), this.getDate(6), true);
                         break;
-                    case "allevents":
-                        eventList = this.getEventsBetweenTwoDates(eventList, this.getDate(0), this.getDate(6));
+                    case EVENT_CONSTANS.MODE.ALLEVENTS:
+                        eventList = this.getEventsBetweenTwoDates(eventList, this.getDate(0), this.getDate(6), true);
                         break;
-                    case "pastevents":
-                        eventList = this.getEventsLessThanToday(eventList, this.getDate(0));
+                    case EVENT_CONSTANS.MODE.UPCOMMINGEVENTS:
+                        eventList = this.getEventsBetweenTwoDates(eventList, this.getDate(0), this.getDate(6), false);
                         break;
                     default:
                         kony.print("Invalid Case");
                 }
-                this.mergeUserEvents(eventList);
+                //Checks the login status and merge the registered events
+                if (kony.store.getItem("isLoggedIn") === "true") {
+                    this.mergeUserEvents(eventList);
+                } else {
+                    this.ProcessData(eventList);
+                }
             } else {
-                eventList = this.getEventsBetweenTwoDates(eventList, this.getDate(0), this.getDate(6));
-                this.ProcessEventData(eventList);
+                this.setEmptySegment();
             }
-        } else {
-            this.setEmptySegment();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     /**
@@ -312,10 +308,9 @@ define({
      * @function getEventImages
      * @description - This call the bakend service to fetch the gallery images of the selected event.
      **/
-    getEventImages: function() {
+    getEventImages: function(callback, event_id) {
         this.event_images = [];
-        var event_id = this.view.segEventList.selectedItems[0].event_id;
-        showLaoding();
+        showLoading(this);
         try {
             var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSOS", {
                 "access": "online"
@@ -327,50 +322,60 @@ define({
                 "dataObject": dataObject
             };
             objSvc.fetch(options, function(response) {
-                dismissLoading();
+                kony.application.dismissLoadingScreen();
                 if (response.records.length > 0) {
                     this.event_images = response.records;
                 }
-                this.onSegRowClick(); // navigates to event details screen
+                if (callback !== undefined) {
+                    callback();
+                }
             }.bind(this), function(error) {
-                dismissLoading();
+                kony.application.dismissLoadingScreen();
                 alert("something went wrong");
             }.bind(this));
         } catch (excp) {
-            dismissLoading();
+            kony.application.dismissLoadingScreen();
             alert(excp.message);
         }
     },
     /******End Service Calls********/
     mergeUserEvents: function(eventList) {
-        var tempEventList = [];
-        if (eventList.length > 0) {
-            for (var i = 0; i < eventList.length; i++) {
-                if (this.currentMode == "myevents" || this.currentMode == "pastevents") {
-                    if (this.isEventPresent(eventList[i].event_id)) {
+        try {
+            var tempEventList = [];
+            if (eventList.length > 0) {
+                for (var i = 0; i < eventList.length; i++) {
+                    if (this.currentMode == EVENT_CONSTANS.MODE.MYEVENTS) {
+                        if (this.isEventPresent(eventList[i].event_id)) {
+                            eventList[i].isRegister = this.isEventPresent(eventList[i].event_id);
+                            tempEventList.push(eventList[i]);
+                        }
+                    } else {
                         eventList[i].isRegister = this.isEventPresent(eventList[i].event_id);
                         tempEventList.push(eventList[i]);
                     }
-                } else {
-                    eventList[i].isRegister = this.isEventPresent(eventList[i].event_id);
-                    tempEventList.push(eventList[i]);
                 }
+                this.ProcessData(tempEventList);
+            } else {
+                this.setEmptySegment();
             }
-            this.ProcessEventData(tempEventList);
-        } else {
-            this.setEmptySegment();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     isEventPresent: function(eventid) {
-        if (this.user_event_data.length > 0) {
-            for (var i = 0; i < this.user_event_data.length; i++) {
-                if (eventid === this.user_event_data[i].event_id) {
-                    return true;
+        try {
+            if (this.user_event_data.length > 0) {
+                for (var i = 0; i < this.user_event_data.length; i++) {
+                    if (eventid === this.user_event_data[i].event_id) {
+                        return true;
+                    }
                 }
+                return false;
+            } else {
+                return false;
             }
-            return false;
-        } else {
-            return false;
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     /**
@@ -379,28 +384,49 @@ define({
      * @description - This wil return the event list between two given dates
      * @param {array of JSON} - eventList
      **/
-    getEventsBetweenTwoDates: function(eventlist, startDate, endData) {
-        var eventsBetweenTwoDates = [];
-        for (var i = 0; i < eventlist.length; i++) {
-            if (eventlist[i].start_date >= startDate && eventlist[i].start_date <= endData) {
-                eventsBetweenTwoDates.push(eventlist[i]);
+    getEventsBetweenTwoDates: function(eventlist, startDate, endData, isIncludePastEvents) {
+        try {
+            var eventsBetweenTwoDates = [];
+            for (var i = 0; i < eventlist.length; i++) {
+                if (eventlist[i].start_date >= startDate && eventlist[i].start_date <= endData) {
+                    eventsBetweenTwoDates.push(eventlist[i]);
+                } else if (isIncludePastEvents) {
+                    eventlist[i].isPast = true;
+                    eventsBetweenTwoDates.push(eventlist[i]);
+                }
             }
+            return eventsBetweenTwoDates;
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
-        return eventsBetweenTwoDates;
     },
     /* * @member of  frmEventsLandingController.js
      * @function getEventsLessThanToday
      * @description - This wil return the event list less than today
-     * @param {array of JSON} - eventList 
+     * @param {array of JSON} - eventList
      **/
     getEventsLessThanToday: function(eventlist, today) {
-        var eventsBetweenTwoDates = [];
-        for (var i = 0; i < eventlist.length; i++) {
-            if (eventlist[i].start_date < today) {
-                eventsBetweenTwoDates.push(eventlist[i]);
+        try {
+            var eventsBetweenTwoDates = [];
+            for (var i = 0; i < eventlist.length; i++) {
+                if (eventlist[i].start_date < today) {
+                    eventsBetweenTwoDates.push(eventlist[i]);
+                }
             }
+            return eventsBetweenTwoDates;
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
-        return eventsBetweenTwoDates;
+    },
+    ProcessData: function(eventData) {
+        try {
+            var eventList = this.ProcessEventData(eventData);
+            setUp(eventList);
+            this.segmentData = eventList;
+            this.setDataToEvent(eventList);
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /******Start Data Processing********/
     /**
@@ -410,73 +436,74 @@ define({
      * @param {array of JSON} - eventList response from the backend
      **/
     ProcessEventData: function(eventList) {
-        var tag = "ProcessEventData";
-        for (var i = 0; i < eventList.length; i++) {
-            //Procesing Banner URL
-            if (!checkJSON(eventList[i], "banner_url")) {
-                eventList[i].banner_url = "eventsdef.png";
-            } else {
-                eventList[i].banner_url = eventList[i].banner_url;
-            }
-            //Procesing Location based on Event Type
-            printLog(tag, "Processing Location Details");
-            if (checkJSON(eventList[i], "typename")) {
-                if (eventList[i].typename == "offline") {
-                    if (checkJSON(eventList[i], "cityname")) {
-                        printLog(tag, "Location Found");
+        try {
+            for (var i = 0; i < eventList.length; i++) {
+                //Procesing Banner URL
+                if (!checkJSON(eventList[i], "banner_url")) {
+                    eventList[i].banner_url = EVENT_CONSTANS.IMAGES.EVENTPLACEHOLDERIMAGE;
+                } else {
+                    eventList[i].banner_url = eventList[i].banner_url;
+                }
+                //Procesing Location based on Event Type
+                kony.print("Processing Location Details");
+                if (checkJSON(eventList[i], "typename")) {
+                    if (eventList[i].typename == "offline") {
+                        if (checkJSON(eventList[i], "cityname")) {
+                            kony.print("Location Found");
+                            eventList[i].flexEventType = {
+                                "isVisible": true
+                            };
+                            eventList[i].eventType = eventList[i].cityname;
+                            eventList[i].imageTypeIcon = EVENT_CONSTANS.IMAGES.MAPICONSMALL;
+                        } else {
+                            kony.print("Location is null");
+                            eventList[i].flexEventType = {
+                                "isVisible": false
+                            };
+                        }
+                    } else {
                         eventList[i].flexEventType = {
                             "isVisible": true
                         };
-                        eventList[i].eventType = eventList[i].cityname;
-                        eventList[i].imageTypeIcon = "mapsmallicon.png";
+                        eventList[i].imageTypeIcon = EVENT_CONSTANS.IMAGES.ONLINEIMAGE;
+                        eventList[i].eventType = "Online";
+                    }
+                }
+                //Processing Date
+                kony.print("Processing Date");
+                if (checkJSON(eventList[i], "noofdays")) {
+                    if (eventList[i].noofdays > 1) {
+                        eventList[i].time = eventList[i].noofdays + " Days";
+                        eventList[i].date = checkJSON(eventList[i], "start_date_mon") && checkJSON(eventList[i], "end_date_mon") ? eventList[i].start_date_mon.split(" ")[0] + " - " + eventList[i].end_date_mon.split(" ")[0] : "";
                     } else {
-                        printLog(tag, "Location is null");
-                        eventList[i].flexEventType = {
-                            "isVisible": false
-                        };
+                        eventList[i].date = checkJSON(eventList[i], "start_date_mon") ? eventList[i].start_date_mon.split(" ")[0] : "";
+                        eventList[i].time = checkJSON(eventList[i], "start_time") && checkJSON(eventList[i], "end_time") ? eventList[i].start_time + "-" + eventList[i].end_time : "";
                     }
                 } else {
-                    eventList[i].flexEventType = {
-                        "isVisible": true
-                    };
-                    eventList[i].imageTypeIcon = "onlineicon.png";
-                    eventList[i].eventType = "Online";
+                    kony.print("No of days not foud");
                 }
-            }
-            //Processing Date
-            printLog(tag, "Processing Date");
-            if (checkJSON(eventList[i], "noofdays")) {
-                if (eventList[i].noofdays > 1) {
-                    eventList[i].time = eventList[i].noofdays + " Days";
-                    eventList[i].date = checkJSON(eventList[i], "start_date_mon") && checkJSON(eventList[i], "end_date_mon") ? eventList[i].start_date_mon.split(" ")[0] + " - " + eventList[i].end_date_mon.split(" ")[0] : "";
-                } else {
-                    eventList[i].date = checkJSON(eventList[i], "start_date_mon") ? eventList[i].start_date_mon.split(" ")[0] : "";
-                    eventList[i].time = checkJSON(eventList[i], "start_time") && checkJSON(eventList[i], "end_time") ? eventList[i].start_time + "-" + eventList[i].end_time : "";
-                }
-            } else {
-                printLog(tag, "No of days not foud");
-            }
-            eventList[i].month = checkJSON(eventList[i], "start_date_mon") ? eventList[i].start_date_mon.split(" ")[1] : "";
-            //setting isregisterLabel
-            if (checkJSON(eventList[i], "isRegister")) {
-                if (eventList[i].isRegister) {
-                    eventList[i].imageRegister = {
-                        "isVisible": true,
-                    };
+                eventList[i].month = checkJSON(eventList[i], "start_date_mon") ? eventList[i].start_date_mon.split(" ")[1] : "";
+                //setting isregisterLabel
+                if (checkJSON(eventList[i], "isRegister")) {
+                    if (eventList[i].isRegister) {
+                        eventList[i].imageRegister = {
+                            "isVisible": true,
+                        };
+                    } else {
+                        eventList[i].imageRegister = {
+                            "isVisible": false,
+                        };
+                    }
                 } else {
                     eventList[i].imageRegister = {
                         "isVisible": false,
                     };
                 }
-            } else {
-                eventList[i].imageRegister = {
-                    "isVisible": false,
-                };
             }
+            return eventList;
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
-        setUp(eventList);
-        this.segmentData = eventList;
-        this.setDataToEvent(eventList);
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -485,23 +512,27 @@ define({
      * @param {array of JSON} - eventList response from the backend
      **/
     setDataToEvent: function(eventList) {
-        if (eventList.length) {
-            this.view.segEventList.removeAll();
-            this.view.segEventList.widgetDataMap = {
-                "imageBanner": "banner_url",
-                "rchTextDate": "date",
-                "rchtxtMonth": "month",
-                "lblTime": "time",
-                "lblEventTitle": "name",
-                "lblCategory": "categoryname",
-                "lblEventType": "eventType",
-                "flexEventType": "flexEventType",
-                "imageTypeIcon": "imageTypeIcon",
-                "imageRegister": "imageRegister"
-            };
-            this.view.segEventList.setData(eventList);
-        } else {
-            this.setEmptySegment();
+        try {
+            if (eventList.length) {
+                this.view.segEventList.removeAll();
+                this.view.segEventList.widgetDataMap = {
+                    "imageBanner": "banner_url",
+                    "rchTextDate": "date",
+                    "rchtxtMonth": "month",
+                    "lblTime": "time",
+                    "lblEventTitle": "name",
+                    "lblCategory": "categoryname",
+                    "lblEventType": "eventType",
+                    "flexEventType": "flexEventType",
+                    "imageTypeIcon": "imageTypeIcon",
+                    "imageRegister": "imageRegister"
+                };
+                this.view.segEventList.setData(eventList);
+            } else {
+                this.setEmptySegment();
+            }
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     /**
@@ -512,23 +543,26 @@ define({
      * @param {array of JSON} - eventList response from the backend
      **/
     setEmptySegment: function() {
-        this.view.segEventList.removeAll();
-        var lblValue = "";
-        switch (this.view.lblHeaderTitle.text) {
-            case "My Events":
-                lblValue = "You Don't have any Events Registered..";
-                break;
-            case "Upcoming Events":
-                lblValue = "There are no Upcoming Events. Please Try Later..";
-                break;
-            case "My Past Events":
-                lblValue = "You Don't have any Past Events Registered..";
-                break;
-            default:
-                kony.print("Invalid Case Value");
+        try {
+            this.view.segEventList.removeAll();
+            var lblValue = "";
+            switch (this.view.lblHeaderTitle.text) {
+                case EVENT_CONSTANS.TITLE.MYEVENTS:
+                    lblValue = "You Don't have any Events Registered..";
+                    break;
+                case EVENT_CONSTANS.TITLE.UPCOMMINGEVENTS:
+                    lblValue = "There are no Upcoming Events. Please Try Later..";
+                    break;
+                case EVENT_CONSTANS.TITLE.ALLEVENTS:
+                    lblValue = "There are no Events. Please Try Later..";
+                    break;
+                default:
+                    kony.print("Invalid Case Value");
+            }
+            this.setLblNoevents(true, lblValue);
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
-        this.view.lblNoEvents.isVisible = true;
-        this.view.lblNoEvents.text = lblValue;
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -536,8 +570,12 @@ define({
      * @description - This will start animating the skeleton screen and set visibility true to flexSkeMain
      **/
     startLoadingScreen: function() {
-        this.view.flexSkeMain.isVisible = true;
-        this.skeletonScreenAnimation();
+        try {
+            this.view.flexSkeMain.isVisible = true;
+            this.skeletonScreenAnimation();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -545,8 +583,12 @@ define({
      * @description - This will stops animating the skeleton screen and set visibility false to flexSkeMain
      **/
     stopLoadingScreen: function() {
-        this.view.flexSkeMain.isVisible = false;
-        this.stopAnimation();
+        try {
+            this.view.flexSkeMain.isVisible = false;
+            this.stopAnimation();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -554,16 +596,20 @@ define({
      * @description - This will animate all the flexes present in flexSkeMain one by one
      **/
     skeletonScreenAnimation: function() {
-        this.animateSkeleton(this.view.flex1);
-        this.animateSkeleton(this.view.flex2);
-        this.animateSkeleton(this.view.flxImage);
-        this.animateSkeleton(this.view.flxImage1);
-        this.animateSkeleton(this.view.flxHeading);
-        this.animateSkeleton(this.view.flxHeading1);
-        this.animateSkeleton(this.view.flxContent1);
-        this.animateSkeleton(this.view.flxContent2);
-        this.animateSkeleton(this.view.flxContent3);
-        this.animateSkeleton(this.view.flxContent4);
+        try {
+            this.animateSkeleton(this.view.flex1);
+            this.animateSkeleton(this.view.flex2);
+            this.animateSkeleton(this.view.flxImage);
+            this.animateSkeleton(this.view.flxImage1);
+            this.animateSkeleton(this.view.flxHeading);
+            this.animateSkeleton(this.view.flxHeading1);
+            this.animateSkeleton(this.view.flxContent1);
+            this.animateSkeleton(this.view.flxContent2);
+            this.animateSkeleton(this.view.flxContent3);
+            this.animateSkeleton(this.view.flxContent4);
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -571,16 +617,20 @@ define({
      * @description - This will stop animation all the flexes present in flexSkeMain one by one
      **/
     stopAnimation: function() {
-        this.animateSkeletonStop(this.view.flex1);
-        this.animateSkeletonStop(this.view.flex2);
-        this.animateSkeletonStop(this.view.flxImage);
-        this.animateSkeletonStop(this.view.flxImage1);
-        this.animateSkeletonStop(this.view.flxHeading);
-        this.animateSkeletonStop(this.view.flxHeading1);
-        this.animateSkeletonStop(this.view.flxContent1);
-        this.animateSkeletonStop(this.view.flxContent2);
-        this.animateSkeletonStop(this.view.flxContent3);
-        this.animateSkeletonStop(this.view.flxContent4);
+        try {
+            this.animateSkeletonStop(this.view.flex1);
+            this.animateSkeletonStop(this.view.flex2);
+            this.animateSkeletonStop(this.view.flxImage);
+            this.animateSkeletonStop(this.view.flxImage1);
+            this.animateSkeletonStop(this.view.flxHeading);
+            this.animateSkeletonStop(this.view.flxHeading1);
+            this.animateSkeletonStop(this.view.flxContent1);
+            this.animateSkeletonStop(this.view.flxContent2);
+            this.animateSkeletonStop(this.view.flxContent3);
+            this.animateSkeletonStop(this.view.flxContent4);
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -589,44 +639,48 @@ define({
      * @param {Object} - The Widget reference to animate
      **/
     animateSkeleton: function(widget) {
-        var animDefinition = {
-            "0": {
-                "stepConfig": {
-                    "timingFunction": kony.anim.EASE
+        try {
+            var animDefinition = {
+                "0": {
+                    "stepConfig": {
+                        "timingFunction": kony.anim.EASE
+                    },
+                    "backgroundColor": "f0f1f3",
+                    "opacity": 0.4
                 },
-                "backgroundColor": "f0f1f3",
-                "opacity": 0.4
-            },
-            "50": {
-                "stepConfig": {
-                    "timingFunction": kony.anim.EASE
+                "50": {
+                    "stepConfig": {
+                        "timingFunction": kony.anim.EASE
+                    },
+                    "backgroundColor": "f0f1f3",
+                    "opacity": 0.5
                 },
-                "backgroundColor": "f0f1f3",
-                "opacity": 0.5
-            },
-            "75": {
-                "stepConfig": {
-                    "timingFunction": kony.anim.EASE
+                "75": {
+                    "stepConfig": {
+                        "timingFunction": kony.anim.EASE
+                    },
+                    "backgroundColor": "f0f1f3",
+                    "opacity": 0.9
                 },
-                "backgroundColor": "f0f1f3",
-                "opacity": 0.9
-            },
-            "100": {
-                "stepConfig": {
-                    "timingFunction": kony.anim.EASE
-                },
-                "backgroundColor": "f0f1f3",
-                "opacity": 1.0
-            }
-        };
-        var timingConfig = {
-            "delay": 0,
-            "iterationCount": 0,
-            "fillMode": kony.anim.FILL_MODE_NONE,
-            "duration": 1.0,
-            "direction": kony.anim.DIRECTION_ALTERNATE
-        };
-        widget.animate(kony.ui.createAnimation(animDefinition), timingConfig);
+                "100": {
+                    "stepConfig": {
+                        "timingFunction": kony.anim.EASE
+                    },
+                    "backgroundColor": "f0f1f3",
+                    "opacity": 1.0
+                }
+            };
+            var timingConfig = {
+                "delay": 0,
+                "iterationCount": 0,
+                "fillMode": kony.anim.FILL_MODE_NONE,
+                "duration": 1.0,
+                "direction": kony.anim.DIRECTION_ALTERNATE
+            };
+            widget.animate(kony.ui.createAnimation(animDefinition), timingConfig);
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -635,23 +689,27 @@ define({
      * @param {Object} - The Widget reference to animate
      **/
     animateSkeletonStop: function(widget) {
-        var animDefinition = {
-            "100": {
-                "stepConfig": {
-                    "timingFunction": kony.anim.EASE
-                },
-                "backgroundColor": "f0f1f3",
-                "opacity": 1.0
-            }
-        };
-        var timingConfig = {
-            "delay": 0,
-            "iterationCount": 1,
-            "fillMode": kony.anim.FILL_MODE_NONE,
-            "duration": 1.0,
-            "direction": kony.anim.DIRECTION_NONE
-        };
-        widget.animate(kony.ui.createAnimation(animDefinition), timingConfig);
+        try {
+            var animDefinition = {
+                "100": {
+                    "stepConfig": {
+                        "timingFunction": kony.anim.EASE
+                    },
+                    "backgroundColor": "f0f1f3",
+                    "opacity": 1.0
+                }
+            };
+            var timingConfig = {
+                "delay": 0,
+                "iterationCount": 1,
+                "fillMode": kony.anim.FILL_MODE_NONE,
+                "duration": 1.0,
+                "direction": kony.anim.DIRECTION_NONE
+            };
+            widget.animate(kony.ui.createAnimation(animDefinition), timingConfig);
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     //Hamburger opertations starts
     /**
@@ -665,28 +723,32 @@ define({
      * @param {function} - callback - callback function to be executed at animation end
      **/
     animation: function(object, scaleX, scaleY, left, flag, callback) {
-        var defaultImage = kony.ui.makeAffineTransform();
-        defaultImage.scale(scaleX, scaleY);
-        var duration = 0.5;
-        object.animate(kony.ui.createAnimation({
-            100: {
-                "left": left,
-                "stepConfig": {
-                    "timingFunction": kony.anim.EASE
-                },
-                "transform": defaultImage
-            }
-        }), {
-            delay: 0,
-            fillMode: kony.anim.FILL_MODE_FORWARDS,
-            duration: duration
-        }, {
-            animationEnd: function() {
-                if (callback !== undefined) {
-                    callback();
+        try {
+            var defaultImage = kony.ui.makeAffineTransform();
+            defaultImage.scale(scaleX, scaleY);
+            var duration = 0.5;
+            object.animate(kony.ui.createAnimation({
+                100: {
+                    "left": left,
+                    "stepConfig": {
+                        "timingFunction": kony.anim.EASE
+                    },
+                    "transform": defaultImage
                 }
-            }.bind(this)
-        });
+            }), {
+                delay: 0,
+                fillMode: kony.anim.FILL_MODE_FORWARDS,
+                duration: duration
+            }, {
+                animationEnd: function() {
+                    if (callback !== undefined) {
+                        callback();
+                    }
+                }.bind(this)
+            });
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -694,26 +756,30 @@ define({
      * @description - This will call the navigation function of respective menu clicks after animation
      **/
     inAnimationEnd: function() {
-        switch (this.activityName) {
-            case "login":
-                this.logIn();
-                break;
-            case "profile":
-                this.goToProfile();
-                break;
-            case "myevents":
-                this.getMyEvents();
-                break;
-            case "pastevents":
-                this.getMyPastEvents();
-                break;
-            case "allevents":
-                this.getAllEvents();
-                break;
-            default:
-                kony.print("Invalid Case");
+        try {
+            switch (this.activityName) {
+                case EVENT_CONSTANS.MODE.LOGIN:
+                    this.logIn();
+                    break;
+                case EVENT_CONSTANS.MODE.PROFILE:
+                    this.goToProfile();
+                    break;
+                case EVENT_CONSTANS.MODE.MYEVENTS:
+                    this.getMyEvents();
+                    break;
+                case EVENT_CONSTANS.MODE.UPCOMMINGEVENTS:
+                    this.getUpcommingEvents();
+                    break;
+                case EVENT_CONSTANS.MODE.ALLEVENTS:
+                    this.getAllEvents();
+                    break;
+                default:
+                    kony.print("Invalid Case");
+            }
+            this.activityName = null;
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
-        this.activityName = null;
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -721,10 +787,14 @@ define({
      * @description - This will call the animation function to show the hamburger component
      **/
     menuClick: function() {
-        this.animation(this.view.flexEventMainLanding, 0.7, 0.7, "60%", true);
-        this.animation(this.view.flxShadow, 0.7, 0.7, "60%", true);
-        this.view.hamburger.left = "0%";
-        this.view.forceLayout();
+        try {
+            this.animation(this.view.flexEventMainLanding, 0.7, 0.7, "60%", true);
+            this.animation(this.view.flxShadow, 0.7, 0.7, "60%", true);
+            this.view.hamburger.left = "0%";
+            this.view.forceLayout();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -733,28 +803,32 @@ define({
     shows the hamburger menu
      **/
     listMenuClick: function() {
-        this.view.flxCover.zIndex = 10;
-        this.view.flxCover.isVisible = true;
-        this.view.flxCover.left = "70%";
-        this.view.flxCover.width = "30%";
-        this.view.flxCover.height = "100%";
-        this.view.flxShadow.isVisible = true;
-        this.view.forceLayout();
-        var loginMenuData = [{
-            text: "Profile",
-            callback: this.profileOnClick
-        }, {
-            text: "My Events",
-            callback: this.myEventsOnClick
-        }, {
-            text: "My Past Events",
-            callback: this.pastEventsOnclick
-        }, {
-            text: "All Events",
-            callback: this.allEventsOnClick
-        }];
-        this.view.hamburger.addMenuItems(loginMenuData);
-        this.menuClick();
+        try {
+            this.view.flxCover.zIndex = 10;
+            this.view.flxCover.isVisible = true;
+            this.view.flxCover.left = "70%";
+            this.view.flxCover.width = "30%";
+            this.view.flxCover.height = "100%";
+            this.view.flxShadow.isVisible = true;
+            this.view.forceLayout();
+            var loginMenuData = [{
+                text: EVENT_CONSTANS.TITLE.PROFILE,
+                callback: this.profileOnClick
+            }, {
+                text: EVENT_CONSTANS.TITLE.MYEVENTS,
+                callback: this.myEventsOnClick
+            }, {
+                text: EVENT_CONSTANS.TITLE.UPCOMMINGEVENTS,
+                callback: this.upcommingEventsOnclick
+            }, {
+                text: EVENT_CONSTANS.TITLE.ALLEVENTS,
+                callback: this.allEventsOnClick
+            }];
+            this.view.hamburger.addMenuItems(loginMenuData);
+            this.menuClick();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -764,8 +838,12 @@ define({
      * this function will set the activity name to profile
      **/
     profileOnClick: function() {
-        this.activityName = "profile";
-        this.flxCoverOnClick();
+        try {
+            this.activityName = EVENT_CONSTANS.MODE.PROFILE;
+            this.flxCoverOnClick();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -775,8 +853,12 @@ define({
      * this function will set the activity name to myevents
      **/
     myEventsOnClick: function() {
-        this.activityName = "myevents";
-        this.flxCoverOnClick();
+        try {
+            this.activityName = EVENT_CONSTANS.MODE.MYEVENTS;
+            this.flxCoverOnClick();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -785,9 +867,13 @@ define({
     position on click of My Past Events menu
      * this function will set the activity name to pastevents
      **/
-    pastEventsOnclick: function() {
-        this.activityName = "pastevents";
-        this.flxCoverOnClick();
+    upcommingEventsOnclick: function() {
+        try {
+            this.activityName = EVENT_CONSTANS.MODE.UPCOMMINGEVENTS;
+            this.flxCoverOnClick();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -797,8 +883,12 @@ define({
      * this function will set the activity name to Allevents
      **/
     allEventsOnClick: function() {
-        this.activityName = "allevents";
-        this.flxCoverOnClick();
+        try {
+            this.activityName = EVENT_CONSTANS.MODE.ALLEVENTS;
+            this.flxCoverOnClick();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -808,8 +898,12 @@ define({
      * this function will set the activity name to login
      **/
     onClickLogin: function() {
-        this.activityName = "login";
-        this.flxCoverOnClick();
+        try {
+            this.activityName = EVENT_CONSTANS.MODE.LOGIN;
+            this.flxCoverOnClick();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -818,14 +912,18 @@ define({
     position on click of any menu item
      **/
     flxCoverOnClick: function() {
-        this.view.flxShadow.isVisible = false;
-        this.view.hamburger.left = "-100%";
-        this.animation(this.view.flxShadow, 1, 1, "0%", true);
-        this.animation(this.view.flexEventMainLanding, 1, 1, "0%", true, this.inAnimationEnd);
-        this.view.forceLayout();
-        this.view.flxCover.isVisible = false;
-        this.view.flxShadow.isVisible = false;
-        this.view.forceLayout();
+        try {
+            this.view.flxShadow.isVisible = false;
+            this.view.hamburger.left = "-100%";
+            this.animation(this.view.flxShadow, 1, 1, "0%", true);
+            this.animation(this.view.flexEventMainLanding, 1, 1, "0%", true, this.inAnimationEnd);
+            this.view.forceLayout();
+            this.view.flxCover.isVisible = false;
+            this.view.flxShadow.isVisible = false;
+            this.view.forceLayout();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -833,10 +931,14 @@ define({
      * @description - This function will check the login status and navigate to profile or login
      **/
     goToProfile: function() {
-        if (kony.store.getItem("isLoggedIn") === "true") {
-            this.navToProfile();
-        } else {
-            this.navigateToLoginWithParams("profile");
+        try {
+            if (kony.store.getItem("isLoggedIn") === "true") {
+                this.navToProfile();
+            } else {
+                this.navigateToLoginWithParams("profile");
+            }
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     /**
@@ -845,8 +947,12 @@ define({
      * @description - navigation function profile
      **/
     navToProfile: function() {
-        var navObj = new kony.mvc.Navigation("frmProfile");
-        navObj.navigate();
+        try {
+            var navObj = new kony.mvc.Navigation("frmProfile");
+            navObj.navigate();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**** search operation starts********/
     /**
@@ -859,25 +965,31 @@ define({
      *							    }
      **/
     search: function(params) {
-        var searchResult = [];
-        for (var i = 0; i < this.segmentData.length; i++) {
-            if (params.searchText !== "" && params.searchText !== null) {
-                if (this.isSearchTextPresent(this.segmentData[i].name.toLowerCase(), params.searchText.toLowerCase())) {
+        try {
+            this.view.lblNoEvents.isVisible = false;
+            var searchResult = [];
+            for (var i = 0; i < this.segmentData.length; i++) {
+                if (params.searchText !== "" && params.searchText !== null) {
+                    if (this.isSearchTextPresent(this.segmentData[i].name.toLowerCase(), params.searchText.toLowerCase())) {
+                        if (params.selectedCat.length > 0 && this.isSelectedCatPresent(this.segmentData[i].categoryname.toLowerCase(), params.selectedCat)) {
+                            searchResult.push(this.segmentData[i]);
+                        }
+                    }
+                } else {
                     if (params.selectedCat.length > 0 && this.isSelectedCatPresent(this.segmentData[i].categoryname.toLowerCase(), params.selectedCat)) {
                         searchResult.push(this.segmentData[i]);
                     }
                 }
-            } else {
-                if (params.selectedCat.length > 0 && this.isSelectedCatPresent(this.segmentData[i].categoryname.toLowerCase(), params.selectedCat)) {
-                    searchResult.push(this.segmentData[i]);
-                }
             }
-        }
-        if (searchResult.length > 0) {
-            this.setDataToEvent(searchResult);
-        } else {
-            this.view.segEventList.removeAll();
-            alert("No Event Found For your Search..Please pull to refresh");
+            if (searchResult.length > 0) {
+                this.setDataToEvent(searchResult);
+            } else {
+                this.view.segEventList.removeAll();
+                this.view.lblNoEvents.isVisible = true;
+                this.view.lblNoEvents.text = "No Event Found For your Search..";
+            }
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     /**
@@ -888,11 +1000,15 @@ define({
      * @param - {searchText} - given search text
      **/
     isSearchTextPresent: function(value, searchText) {
-        var result = value.indexOf(searchText, 0);
-        if (result !== -1) {
-            return true;
-        } else {
-            return false;
+        try {
+            var result = value.indexOf(searchText, 0);
+            if (result !== -1) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
     },
     /**
@@ -903,14 +1019,18 @@ define({
      * @param - {categoryList} - given category list
      **/
     isSelectedCatPresent: function(value, categoryList) {
-        var isCategory = false;
-        for (var i = 0; i < categoryList.length; i++) {
-            if (value === categoryList[i]) {
-                isCategory = true;
-                break;
+        try {
+            var isCategory = false;
+            for (var i = 0; i < categoryList.length; i++) {
+                if (value === categoryList[i]) {
+                    isCategory = true;
+                    break;
+                }
             }
+            return isCategory;
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
         }
-        return isCategory;
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -918,12 +1038,15 @@ define({
      * @description - this function will navigate to event details with selected event_images and event_data
      **/
     onSegRowClick: function() {
-        var params = {};
-        var navToEventDetail = new kony.mvc.Navigation("frmEventDetails");
-        params["sharingData"] = this.view.segEventList.selectedRowItems;
-        params["event_data"] = this.view.segEventList.selectedItems[0];
-        params["imageData"] = this.event_images;
-        navToEventDetail.navigate(params);
+        try {
+            var params = {};
+            var navToEventDetail = new kony.mvc.Navigation("frmEventDetails");
+            params.event_data = this.view.segEventList.selectedItems[0];
+            params.imageData = this.event_images;
+            navToEventDetail.navigate(params);
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -933,10 +1056,14 @@ define({
      * the possible values are "myevents","pastevents","profile"
      **/
     navigateToLoginWithParams: function(data) {
-        var paramData = {};
-        paramData.origin = data;
-        var navToEventDetail = new kony.mvc.Navigation("frmLogin");
-        navToEventDetail.navigate(paramData);
+        try {
+            var paramData = {};
+            paramData.origin = data;
+            var navToEventDetail = new kony.mvc.Navigation("frmLogin");
+            navToEventDetail.navigate(paramData);
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -944,10 +1071,14 @@ define({
      * @description - this function will navigate to login onClick of login button on hamburger
      **/
     logIn: function() {
-        var paramData = {};
-        paramData.origin = "login";
-        var navToEventDetail = new kony.mvc.Navigation("frmLogin");
-        navToEventDetail.navigate(paramData);
+        try {
+            var paramData = {};
+            paramData.origin = "login";
+            var navToEventDetail = new kony.mvc.Navigation("frmLogin");
+            navToEventDetail.navigate(paramData);
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -956,13 +1087,17 @@ define({
      * set the profile data to pre-login, get the all events data
      **/
     onLogout: function() {
-        this.flxCoverOnClick();
-        kony.store.removeItem("profile");
-        kony.store.removeItem("isLoggedIn");
-        kony.store.removeItem("userId");
-        this.setProfileData();
-        this.getEventsData();
-        this.logoutVisiblity();
+        try {
+            this.flxCoverOnClick();
+            kony.store.removeItem("profile");
+            kony.store.removeItem("isLoggedIn");
+            kony.store.removeItem("userId");
+            this.setProfileData();
+            this.getEventsData();
+            this.logoutVisiblity();
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -972,28 +1107,32 @@ define({
      * @return {String} - return a <date>T<time> String after specfied months
      **/
     getDate: function(noOfMonths) {
-        var month = {
-            "jan": "01",
-            "feb": "02",
-            "mar": "03",
-            "apr": "04",
-            "may": "05",
-            "jun": "06",
-            "jul": "07",
-            "aug": "08",
-            "sep": "09",
-            "oct": "10",
-            "nov": "11",
-            "dec": "12",
-        };
-        var d = new Date();
-        d.setMonth(d.getMonth() + noOfMonths);
-        var dateString = d.toDateString().split(" ");
-        var formattedDateString = dateString[3] + "-";
-        formattedDateString = formattedDateString + month[dateString[1].toLowerCase()] + "-";
-        formattedDateString = formattedDateString + dateString[2] + "T";
-        formattedDateString = formattedDateString + this.getTimeInAMPMFormat(d);
-        return formattedDateString;
+        try {
+            var month = {
+                "jan": "01",
+                "feb": "02",
+                "mar": "03",
+                "apr": "04",
+                "may": "05",
+                "jun": "06",
+                "jul": "07",
+                "aug": "08",
+                "sep": "09",
+                "oct": "10",
+                "nov": "11",
+                "dec": "12",
+            };
+            var d = new Date();
+            d.setMonth(d.getMonth() + noOfMonths);
+            var dateString = d.toDateString().split(" ");
+            var formattedDateString = dateString[3] + "-";
+            formattedDateString = formattedDateString + month[dateString[1].toLowerCase()] + "-";
+            formattedDateString = formattedDateString + dateString[2] + "T";
+            formattedDateString = formattedDateString + this.getTimeInAMPMFormat(d);
+            return formattedDateString;
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -1003,41 +1142,58 @@ define({
      * @return {String} - return a T<time>AM|PM String
      **/
     getTimeInAMPMFormat: function(date) {
-        var hours = date.getHours();
-        var minutes = date.getMinutes();
-        // 		var ampm = hours >= 12 ? 'PM' : 'AM';
-        // 		hours = hours % 12;
-        // 		hours = hours ? hours : 12; // the hour '0' should be '12'
-        // 		hours = hours < 10 ? '0' + hours : hours;
-        // 		minutes = minutes < 10 ? '0' + minutes : minutes;
-        var strTime = hours + ':' + minutes + ":00";
-        return strTime;
+        try {
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var strTime = hours + ':' + minutes + ":00";
+            return strTime;
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
      * @function shareEvent
-     * @description - this functionwill take screen shot of the selected event list flex and
-     * calls sharing component to share the event
+     * @description - this function will assign the date from the selected row to the template for sharing
      * @param {Object} - widget - Widget reference
      * @param {selectedItem} - slected Event data
      **/
     shareEvent: function(widget, selectedItem) {
-        this.view.rchTextDateSS.text = selectedItem.date;
-        this.view.rchtxtMonthSS.text = selectedItem.month;
-        this.view.lblTimeSS.text = selectedItem.time;
-        this.view.lblEventTitleSS.text = selectedItem.name;
-        this.view.lblCategorySS.text = selectedItem.categoryname;
-        this.view.imageTypeIconSS.src = selectedItem.imageTypeIcon;
-        this.view.lblEventTypeSS.text = selectedItem.addressLine1;
-        this.view.flexEventSS.forceLayout();
-        kony.image.createImageFromSnapShot(this.view.flexEventSS);
-        var img = kony.image.createImageFromSnapShot(this.view.flexEventSS);
-        var imageRawBytes = img.getImageAsRawBytes();
-        var base64 = kony.convertToBase64(imageRawBytes);
-        this.view.img2.base64 = base64;
-        this.view.socialSharing.setContent("iVBOR");
-        this.view.socialSharing.setContent(base64);
-        this.view.socialSharing.checkDeviceInfo();
+        try {
+            this.view.imageBannerSS.src = "";
+            this.view.rchTextDateSS.text = selectedItem.date;
+            this.view.rchtxtMonthSS.text = selectedItem.month;
+            this.view.lblTimeSS.text = selectedItem.time;
+            this.view.lblEventTitleSS.text = selectedItem.name;
+            this.view.lblCategorySS.text = selectedItem.categoryname;
+            this.view.imageTypeIconSS.src = selectedItem.imageTypeIcon;
+            this.view.lblEventTypeSS.text = selectedItem.addressLine1;
+            this.view.imageBannerSS.src = selectedItem.banner_url
+            this.view.flexEventSS.forceLayout();
+            if (selectedItem.banner_url == EVENT_CONSTANS.IMAGES.EVENTPLACEHOLDERIMAGE) {
+                this.sendSnapshot();
+            }
+            sendMetric(selectedItem.event_id, "share");
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
+    },
+    /**
+     * @member of  frmEventsLandingController.js
+     * @function sendSnapshot
+     * @description - this function will take snap shot of the selected event list flex and
+     * call the setContent function of socil sharing component on image download
+     **/
+    sendSnapshot: function() {
+        try {
+            var img = kony.image.createImageFromSnapShot(this.view.flexEventSS);
+            var imageRawBytes = img.getImageAsRawBytes();
+            var base64 = kony.convertToBase64(imageRawBytes);
+            this.view.socialSharing.setContent(base64);
+            this.view.socialSharing.checkDeviceInfo();
+        } catch (err) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(err));
+        }
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -1046,18 +1202,71 @@ define({
      * This will refresh the segment date based the current mode
      **/
     reloadFromServer: function() {
-        switch (this.currentMode) {
-            case "myevents":
-                this.getMyEvents();
-                break;
-            case "allevents":
-                this.checkIsLogin();
-                break;
-            case "pastevents":
-                this.getMyPastEvents();
-                break;
-            default:
-                kony.print("Invalid Case");
+        try {
+            switch (this.currentMode) {
+                case EVENT_CONSTANS.MODE.MYEVENTS:
+                    this.getMyEvents();
+                    break;
+                case EVENT_CONSTANS.MODE.ALLEVENTS:
+                    this.getAllEvents();
+                    break;
+                case EVENT_CONSTANS.MODE.UPCOMMINGEVENTS:
+                    this.getUpcommingEvents();
+                    break;
+                default:
+                    kony.print("Invalid Case");
+            }
+        } catch (error) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(error));
+        }
+    },
+    /**
+     * @member of  frmEventsLandingController.js
+     * @function setEventRegistrationConfirmation
+     * @description - this function will set the visibility of flexEventRegConformation
+     * @param {Boolen - isVisible} - Boolean value to be set for flexEventRegConformation
+     **/
+    setEventRegistrationConfirmation: function(isVisible) {
+        try {
+            if (isVisible) {
+                this.view.flexEventRegConformation.isVisible = true;
+            } else {
+                this.view.flexEventRegConformation.isVisible = false;
+            }
+        } catch (err) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(err));
+        }
+    },
+    /**
+     * @member of  frmEventsLandingController.js
+     * @function setLblNoevents
+     * @description - this function will set the visibility and text of lblNoEvents
+     * @param {Boolen - isVisible} - Boolean value to be set for lblNoEvents
+     * @param {String - text} - Text value to be set for lblNoEvents
+     **/
+    setLblNoevents: function(isVisible, text) {
+        try {
+            if (isVisible) {
+                this.view.lblNoEvents.isVisible = true;
+                this.view.lblNoEvents.text = text;
+            } else {
+                this.view.lblNoEvents.isVisible = false;
+            }
+        } catch (err) {
+            kony.print("frm Event Landing Controller" + JSON.stringify(err));
+        }
+    },
+    /**
+     * @member of  frmEventsLandingController.js
+     * @function setEventtitle
+     * @description - this function will set the text of lblEventTitleSS
+     * @param {String - text} - Text value to be set for lblEventTitleSS
+     **/
+    setEventtitle: function(title) {
+        try {
+            this.view.lblHeaderTitle.text = title;
+        } catch (err) {
+            kony.print("Frm Event Landing Controller" + JSON.stringify(err));
         }
     }
 });

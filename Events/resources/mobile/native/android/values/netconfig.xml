@@ -1,0 +1,23 @@
+<resources>
+	<!-- Enable/Disable connection pooling feature. Supported values are true and false --> 
+	<item type="string" name="enable_conn_pool">true</item>
+	<!-- Total number of connections in pool --> 
+	<item type="string" name="conn_total">20</item>
+	<!-- Connection per route in pool --> 
+	<item type="string" name="conn_per_route">10</item>
+	<item type="string" name="enable_gzip">true</item>
+	<item type="string" name="expect_100_continue">true</item>
+	<!-- URL Connection HTTP Response cache size in MB can be controlled using this flag--> 
+	<item type="string" name="urlconn_response_cache_size">50</item>
+	<!-- browser_to_urlconn_cookie_sync_version property is used to control the cookie version that needs to be set for synced cookies from browser to urlconnection requests.
+	Allowed values for setVersion() are 0 and 1 only,based on the android documentation link below
+	https://developer.android.com/reference/java/net/HttpCookie.html#setVersion(int)
+	We are setting default value as 0 to retain  compatability with most of the servers
+	App developer can switch to Version 1 if required-->
+	<item type="string" name="browser_to_httpconn_cookie_sync_version">0</item>
+	<!--
+	Currently connection attribute is set to keepAlive by default.
+	Uncomment below flag to set connection attribute to "close" for all network connections happening through HttpRequest & ServiceInvoker API's
+	-->
+	<!--item type="string" name="keepAlive">false</item-->
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>  
+    <style name="WatchNoActionBarTheme" parent="@style/Theme.AppCompat.NoActionBar">
+    	<item name="android:windowSwipeToDismiss">false</item>
+   	</style> 
+    
+    <style name="DropDownLeftUp">
+        <item name="android:windowEnterAnimation">@anim/grow_fade_from_bottomleft</item>
+        <item name="android:windowExitAnimation">@anim/shrink_fade_out_from_bottom</item>
+    </style>
+     <style name="DropDownRightUp">
+        <item name="android:windowEnterAnimation">@anim/grow_fade_from_bottomright</item>
+        <item name="android:windowExitAnimation">@anim/shrink_fade_out_from_bottom</item>
+    </style>
+    <style name="DropUpDown">
+        <item name="android:windowEnterAnimation">@anim/grow_fade_from_topright</item>
+        <item name="android:windowExitAnimation">@anim/shrink_fade_out_from_bottom</item>
+    </style>
+    <style name="SlideInUp">
+        <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:windowExitAnimation">@anim/shrink_fade_out_from_bottom</item>
+    </style>
+    <style name="SlideInDown">
+        <item name="android:windowEnterAnimation">@anim/slide_in_down</item>
+        <item name="android:windowExitAnimation">@anim/shrink_fade_out_from_bottom</item>
+    </style>
+    <style name="Center">
+        <item name="android:windowEnterAnimation">@anim/grow_fade_from_center</item>
+        <item name="android:windowExitAnimation">@anim/shrink_fade_out_from_bottom</item>
+    </style>
+    <style name="SlideInLeft">
+        <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@anim/shrink_fade_out_from_bottom</item>
+    </style>
+    <style name="SlideInRight">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/shrink_fade_out_from_bottom</item>
+    </style>
+</resources>

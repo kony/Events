@@ -1,0 +1,47 @@
+{
+    "classname": "sessionpreview",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "h00d581f04114e01a3b0aa746e02ef97",
+                    "paramList": [
+                        {
+                            "name": "height"
+                        }
+                    ],
+                    "propertyIndex": 1,
+                    "propertyKey": "dolayoutCb",
+                    "pw": {
+                        "displayName": "dolayoutCb",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "dfc34fb39fa54874a47d24756a51831e",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konyenb",
+    "version": "1.0.0"
+}

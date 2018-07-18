@@ -5,6 +5,7 @@ define({
   * @private
   */
   onNavigate : function(){
+    try{
     var profileData = JSON.parse(kony.store.getItem("profile"));
     this.view.lblFName.text = profileData.first_name;
     this.view.lblLName.text  = profileData.last_name;
@@ -14,6 +15,9 @@ define({
       this.view.imgProfile.src = profileData.profile;
     }else{
       this.view.imgProfile.src = "profile.png";
+    }
+    }catch(err){
+      kony.print("Frm Profile Controller"+JSON.stringify(err));
     }
   }
 

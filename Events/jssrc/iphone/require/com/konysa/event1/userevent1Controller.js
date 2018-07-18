@@ -38,7 +38,6 @@ define(function() {
          * @param{JSON} event
          */
         setEvent: function(event) {
-            debugger;
             konysa.logger.trace("----------Entering setEvent function---------", konysa.logger.FUNCTION_ENTRY);
             if (event === null || event === undefined) {
                 alert("please provide event detail!");

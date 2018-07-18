@@ -148,8 +148,10 @@ function getDateRange(startDateString, endDateString) {
         dateText = "Dates not available."
         return dateText;
     }
-    var startDate = new Date(startDateString);
-    var endDate = new Date(endDateString);
+    dateFromServer = new Date(startDateString);
+    var startDate = new Date(dateFromServer.getTime() - dateFromServer.getTimezoneOffset() * 60 * 1000);
+    dateFromServer = new Date(startDateString);
+    var endDate = new Date(dateFromServer.getTime() - dateFromServer.getTimezoneOffset() * 60 * 1000);
     if ((startDate instanceof Date) && (endDate instanceof Date)) {
         var sDate = startDate.getDate();
         var sMonth = getMonthString(startDate.getMonth());

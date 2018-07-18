@@ -1,3 +1,6 @@
+//#ifdef desktopweb
+
+//#else
 var trie, timer, oAhead, oBox,
         lapse = 0,
         log   = null;
@@ -238,3 +241,4 @@ var Trie = (function() {
     function addToLog(s) {
        kony.print("***********************************************************"+s);
     }
+//#endif

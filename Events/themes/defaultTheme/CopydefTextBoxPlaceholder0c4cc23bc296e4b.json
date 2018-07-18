@@ -1,6 +1,9 @@
 {
   "android": {
-    "font_name": "default"
+    "font_name": "Avenir-Light"
+  },
+  "androidwearos": {
+    "font_name": "Helvetica"
   },
   "background_color": "ffffff00",
   "bg_type": "one",
@@ -11,7 +14,7 @@
   "desktopweb": {
     "font_name": "Helvetica"
   },
-  "font_color": "3f51b5ff",
+  "font_color": "969696ff",
   "font_name": "Helvetica",
   "font_size": 107,
   "font_style": "normal",
@@ -20,7 +23,7 @@
     "font_name": "Helvetica"
   },
   "iphone": {
-    "font_name": "Helvetica"
+    "font_name": "Avenir-Light"
   },
   "isDefaultSkin": false,
   "kiosk": {

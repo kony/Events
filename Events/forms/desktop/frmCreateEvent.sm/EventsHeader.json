@@ -79,7 +79,6 @@
         },
         "btnBasic": {
             "__events__": {
-                "ide_onClick": "AS_Button_c0cd9ed5352d4659a4b059c062530428",
                 "onClick": "AS_Button_c0cd9ed5352d4659a4b059c062530428"
             },
             "__info__": {
@@ -90,7 +89,7 @@
         },
         "btnSessions": {
             "__events__": {
-                "ide_onClick": "AS_Button_dc3930617aa641548cf32930c175433b",
+                "ide_onClick": "AS_Button_ab525dabde4e4a9f84f28a47cfaa9de4",
                 "onClick": "AS_Button_dc3930617aa641548cf32930c175433b"
             },
             "__info__": {

@@ -37,7 +37,7 @@
         }
     },
     "canUpdateUI": true,
-    "canvasWidth": 1400,
+    "canvasWidth": 1200,
     "children": [
         "flxRoot"
     ],

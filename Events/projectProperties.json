@@ -8,10 +8,10 @@
     "defaultlocalekey": "en_US",
     "apppackagekey": "",
     "nativeContainerProperties": {
-        "isModified": false,
-        "isEnableJSContainer": true,
         "isEnableJSContainerAndroid": true,
-        "isEnableJSContaineriOS": true
+        "isModified": true,
+        "isEnableJSContaineriOS": true,
+        "isEnableJSContainer": true
     },
     "wap_android400_fontsize": "14",
     "wap_spaandroidtabhdpi_fontsize": "18",
@@ -35,8 +35,8 @@
             "version": "1.0"
         },
         "d4fe4750-d157-422d-9238-fcd0a737bb73": {
-            "id": "8507599f-1e77-4ee1-a628-03453a0e132d",
-            "baseId": "8507599f-1e77-4ee1-a628-03453a0e132d",
+            "id": "81ec5886-f0e5-47f5-9ce2-58a939a5d1f6",
+            "baseId": "81ec5886-f0e5-47f5-9ce2-58a939a5d1f6",
             "version": "1.0"
         }
     },
@@ -235,7 +235,7 @@
     "currentgaversion": "8.2.0",
     "enableCordova": false,
     "wap_bb320_fontsize": "15",
-    "enableIdForAutomation": false,
+    "enableIdForAutomation": true,
     "wap_bb240_fontsize": "12",
     "desktopwebbasefontsize": "16",
     "wap_android240_fontsize": "10",
@@ -256,8 +256,10 @@
     "winmobileguidkey": "",
     "APPLICATION_THEME": "default",
     "ide_appEvents": {
+        "desktop": {},
         "mobile": {
             "postappinit": "AS_AppEvents_fa5813076af84c45af9009238c9e57c5",
+            "preappinit": "AS_AppEvents_idf0829f55594ed2be1b3d9985ec14a4",
             "appservice": "AS_AppEvents_c34a87f4b8e9423a8e2a398f086dac42"
         }
     },

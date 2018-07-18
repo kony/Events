@@ -1,0 +1,17 @@
+{
+    "AS_UWI_e0aa3142428f4908a19e5f6b14522f24": {
+        "id": "AS_UWI_e0aa3142428f4908a19e5f6b14522f24",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_onAllEventClick_af6f7d37c9d847b584282096359c74ae",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.askForConfirmation(\"Your changes will be lost. Do you want to proceed?\",\"Are you Sure?\",this.navigateToAllEventsPage);",
+            "callbackType": null
+        }]
+    }
+}

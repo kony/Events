@@ -13,7 +13,6 @@ define({
         alert("Edit done!");
     },
     askForConfirmation: function(message, title, selectedItem) {
-        debugger;
         var pspConfig = {
             "iconPosition": constants.ALERT_CONTENT_ALIGN_CENTER,
             "contentAlignment": constants.ALERT_ICON_POSITION_LEFT

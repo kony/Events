@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 
+    	Cache size in percentage. Cache size should not exceed 20% otherwise it is capped to 20%.
+    -->
+    <item type="string" name="remote_images_lru_cache_size">12.5</item>
+    <item name="TITLE_LAYOUT" type="id"/>
+    <item name="SCROLL_LAYOUT" type="id"/>
+    <item name="LOADING_SCREEN" type="id"/>
+    <item name="GRID_VIEW" type="id"/>
+    <item name="ACTIONBAR_LAYOUT" type="id"/>
+</resources>

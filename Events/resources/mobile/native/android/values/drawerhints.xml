@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- A String resource to describe the "open drawer" action for accessibility -->
+    <string name="open_drawer_hint">Open Drawer Layout</string>
+
+    <!-- A String resource to describe the "close drawer" action for accessibility -->
+    <string name="close_drawer_hint">Close Drawer Layout</string>
+</resources>

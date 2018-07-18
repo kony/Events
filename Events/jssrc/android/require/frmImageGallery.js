@@ -113,7 +113,7 @@ define("frmImageGallery", function() {
                 "textCopyable": false
             });
             flxHeader.add(flxBack, flxClose, lblHeader);
-            var ImageGallery = new com.konysa.ImageGallery({
+            var ImageGallery = new com.konyenb.ImageGallery({
                 "clipBounds": true,
                 "height": "91%",
                 "id": "ImageGallery",

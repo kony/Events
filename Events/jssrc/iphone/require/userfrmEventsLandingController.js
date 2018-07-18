@@ -23,6 +23,8 @@ define({
                     this.search(params);
                     this.view.flexEventRegConformation.isVisible = false;
                     break;
+                case "searchback":
+                    break;
                 case "login":
                     this.getUserAndEventData();
                     this.view.flexEventRegConformation.isVisible = false;
@@ -44,6 +46,7 @@ define({
                 case "profile":
                     break;
                 case "loginBack":
+                    this.currentMode = "allevents";
                     break;
                 default:
                     this.view.flexEventRegConformation.isVisible = false;
@@ -126,12 +129,6 @@ define({
         this.currentMode = "pastevents";
         if (kony.store.getItem("isLoggedIn") === "true") {
             this.view.lblHeaderTitle.text = "My Past Events";
-            // 			var data = {
-            // 				"userid": kony.store.getItem("userId"),
-            // 				"event_type": "past",
-            // 				"ev_date": this.getDate(0)
-            // 			};
-            // 			this.getRegisteredByUserId(data); // calls the service to fetch the event_list
             this.getUserAndEventData();
         } else {
             this.navigateToLoginWithParams("pastevents"); // navigate the login
@@ -164,12 +161,6 @@ define({
         this.currentMode = "myevents";
         if (kony.store.getItem("isLoggedIn") === "true") {
             this.view.lblHeaderTitle.text = "My Events";
-            // 			var data = {
-            // 				"userid": kony.store.getItem("userId"),
-            // 				"event_type": "current",
-            // 				"ev_date": this.getDate(0)
-            // 			};
-            // 			this.getRegisteredByUserId(data); // call the service to fetch the events registered by user_id
             this.getUserAndEventData();
         } else {
             this.navigateToLoginWithParams("myevents"); // navigate the login
@@ -220,34 +211,6 @@ define({
     },
     /**
      * @member of  frmEventsLandingController.js
-     * @function getRegisteredByUserId
-     * @description - This function will fetch the event list from the backend by user_id
-     * @param {JSON} - data
-     * data = {
-    "userid" : <user_id>
-    "event_type" : <"past"/"current">
-    "ev_date" : <date>
-    }
-     **/
-    getRegisteredByUserId: function(data) {
-        this.startLoadingScreen();
-        var intObj = kony.sdk.getCurrentInstance().getIntegrationService("EventsProcedureService");
-        intObj.invokeOperation("events_events_reg", {}, data, this.successGetRegisteredEvents.bind(this), this.failureGetRegisteredEvents);
-    },
-    successGetRegisteredEvents: function(response) {
-        this.stopLoadingScreen();
-        if (response.records.length > 0) {
-            this.view.lblNoEvents.isVisible = false;
-            this.ProcessEventData(response.records); // process the event and set the data
-        } else {
-            this.setEmptySegment();
-        }
-    },
-    failureGetRegisteredEvents: function(response) {
-        alert("failure" + JSON.stringify(response));
-    },
-    /**
-     * @member of  frmEventsLandingController.js
      * @function getEventsData
      * @description - This function fetches the events between today and six months from today
      **/
@@ -258,8 +221,6 @@ define({
             "access": "online"
         });
         var dataObject = new kony.sdk.dto.DataObject("events_view");
-        // 		var odataUrl = "$filter=start_date ge '" + this.getDate(0) + "' and start_date le '" + this.getDate(6) + "' and isdisabled eq '0'";
-        // 		dataObject.odataUrl = odataUrl;
         var options = {
             "dataObject": dataObject
         };
@@ -292,7 +253,7 @@ define({
                 this.mergeUserEvents(eventList);
             } else {
                 eventList = this.getEventsBetweenTwoDates(eventList, this.getDate(0), this.getDate(6));
-                this.ProcessEventData(eventList);
+                this.ProcessData(eventList);
             }
         } else {
             this.setEmptySegment();
@@ -312,9 +273,8 @@ define({
      * @function getEventImages
      * @description - This call the bakend service to fetch the gallery images of the selected event.
      **/
-    getEventImages: function() {
+    getEventImages: function(callback, event_id) {
         this.event_images = [];
-        var event_id = this.view.segEventList.selectedItems[0].event_id;
         showLaoding();
         try {
             var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSOS", {
@@ -331,7 +291,9 @@ define({
                 if (response.records.length > 0) {
                     this.event_images = response.records;
                 }
-                this.onSegRowClick(); // navigates to event details screen
+                if (callback !== undefined) {
+                    callback();
+                }
             }.bind(this), function(error) {
                 dismissLoading();
                 alert("something went wrong");
@@ -356,7 +318,7 @@ define({
                     tempEventList.push(eventList[i]);
                 }
             }
-            this.ProcessEventData(tempEventList);
+            this.ProcessData(tempEventList);
         } else {
             this.setEmptySegment();
         }
@@ -401,6 +363,12 @@ define({
             }
         }
         return eventsBetweenTwoDates;
+    },
+    ProcessData: function(eventData) {
+        var eventList = this.ProcessEventData(eventData);
+        setUp(eventList);
+        this.segmentData = eventList;
+        this.setDataToEvent(eventList);
     },
     /******Start Data Processing********/
     /**
@@ -474,9 +442,7 @@ define({
                 };
             }
         }
-        setUp(eventList);
-        this.segmentData = eventList;
-        this.setDataToEvent(eventList);
+        return eventList;
     },
     /**
      * @member of  frmEventsLandingController.js
@@ -859,6 +825,7 @@ define({
      *							    }
      **/
     search: function(params) {
+        this.view.lblNoEvents.isVisible = false;
         var searchResult = [];
         for (var i = 0; i < this.segmentData.length; i++) {
             if (params.searchText !== "" && params.searchText !== null) {
@@ -877,7 +844,8 @@ define({
             this.setDataToEvent(searchResult);
         } else {
             this.view.segEventList.removeAll();
-            alert("No Event Found For your Search..Please pull to refresh");
+            this.view.lblNoEvents.isVisible = true;
+            this.view.lblNoEvents.text = "No Event Found For your Search..";
         }
     },
     /**
@@ -1005,11 +973,6 @@ define({
     getTimeInAMPMFormat: function(date) {
         var hours = date.getHours();
         var minutes = date.getMinutes();
-        // 		var ampm = hours >= 12 ? 'PM' : 'AM';
-        // 		hours = hours % 12;
-        // 		hours = hours ? hours : 12; // the hour '0' should be '12'
-        // 		hours = hours < 10 ? '0' + hours : hours;
-        // 		minutes = minutes < 10 ? '0' + minutes : minutes;
         var strTime = hours + ':' + minutes + ":00";
         return strTime;
     },
@@ -1029,15 +992,14 @@ define({
         this.view.lblCategorySS.text = selectedItem.categoryname;
         this.view.imageTypeIconSS.src = selectedItem.imageTypeIcon;
         this.view.lblEventTypeSS.text = selectedItem.addressLine1;
+        this.view.imageBannerSS.src = selectedItem.banner_url
         this.view.flexEventSS.forceLayout();
-        kony.image.createImageFromSnapShot(this.view.flexEventSS);
         var img = kony.image.createImageFromSnapShot(this.view.flexEventSS);
         var imageRawBytes = img.getImageAsRawBytes();
         var base64 = kony.convertToBase64(imageRawBytes);
-        this.view.img2.base64 = base64;
-        this.view.socialSharing.setContent("iVBOR");
         this.view.socialSharing.setContent(base64);
         this.view.socialSharing.checkDeviceInfo();
+        sendMetric(selectedItem.event_id, "share");
     },
     /**
      * @member of  frmEventsLandingController.js

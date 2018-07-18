@@ -21,7 +21,8 @@ define({
 	 * if edit button is clicked from event list
 	 **/
 	onNavigate: function (param) {
-		this.event_id = "";
+        try{
+          this.event_id = "";
 		this.eventImages = [];
 		this.bannerImage = {};
 		this.view.segGallery.removeAll();
@@ -31,6 +32,9 @@ define({
 		this.setProfile(); //set the profile data
 		this.setScrollContainers(); //set the scroll flexes to default
 		this.doTabActions("btnBasic"); //set the tabs to highlight basic info
+        this.view.EventsHeader.btnBasic.onClick = function(eventobject){
+          this.doTabActions(eventobject.id);
+        }.bind(this);
 		if (param !== undefined && param.editMode !== undefined && param.editMode === true) {
 			this.isEditMode = true;
 			this.isLoadedFromServer = false;
@@ -41,21 +45,29 @@ define({
 			this.event_id = param.eventData.event_id;
             if(param.eventData.event_images!==undefined)
 			this.setGalleryDataForEdit(param.eventData.event_images); // set the gallery data for edit
-			this.view.txtEventName.setFocus(true);
 		} else {
 			this.isEditMode = false;
-			this.view.EventsHeader.LblTitle.text = "Create New Event";
+			this.view.EventsHeader.LblTitle.text = EVENT_CONSTANS.TITLE.CREATENEWEVENT;
 			this.setDefaultForEvent();
 			this.setDefaultForSession();
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
+		
 	},
 	/**
 	 * @function setScrollContainers
 	 * @description - This function will set the scroll flexes to default
 	 **/
 	setScrollContainers: function () {
-		this.view.flexScrollEvent.isVisible = true;
+        try{
+          this.view.flexScrollEvent.isVisible = true;
 		this.view.FlexScrollSession.isVisible = false;
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
+		
 	},
 
 	/**
@@ -63,6 +75,7 @@ define({
 	 * @description - This function will reset the event data to default values
 	 **/
 	setDefaultForEvent: function () {
+        try{
 		this.view.txtAddressLine1.text = "";
 		this.view.txtAddressLine2.text = "";
 		this.view.txtCity.text = "";
@@ -74,7 +87,7 @@ define({
 		this.view.txtWebexDetails.text = "";
 		this.view.calEventStartDate.dateComponents = [];
 		this.view.calEventEndDate.dateComponents = [];
-		this.view.lblBrowseFiles.text = "Browse Banner Image";
+		this.view.lblBrowseFiles.text = EVENT_CONSTANS.TITLE.BROWSEBANNERIMAGE;
 		this.view.lblUploadSuccess.text = "";
 		this.view.lblGallerySuccess.text = "";
 		this.view.startTime.TimeValue = "00:00";
@@ -95,6 +108,9 @@ define({
 		} else {
 			this.view.btnProceedToSession.onClick = this.getImageToCreate;
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 
 	},
 
@@ -103,12 +119,16 @@ define({
 	 * @description - This function will reset the session data to default values
 	 **/
 	setDefaultForSession: function () {
+        try{
 		this.view.FlexScrollSession.removeAll();
 		this.sessionCount = 0;
 		this.speakerCount = 0;
 		this.uniqueId = 1;
 		this.lastTop = 110;
 		this.createFirstSession();
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -116,7 +136,8 @@ define({
 	 * @description - This function will create the default session
 	 **/
 	createFirstSession: function () {
-		var session = new Reusable.sessionTemp({
+       try{
+		var session = new com.konyenb.sessionTemp({
 				"clipBounds": true,
 				"height": "100%",
 				"id": "session1",
@@ -130,7 +151,7 @@ define({
 			}, {}, {});
 		this.view.FlexScrollSession.add(session);
 
-		var sessionFooter = new Reusable.SessionFooter({
+		var sessionFooter = new com.konyenb.SessionFooter({
 				"autogrowMode": kony.flex.AUTOGROW_NONE,
 				"clipBounds": true,
 				"height": "10%",
@@ -150,6 +171,9 @@ define({
 		this.view["sessionFooter1"].isDelVisible = true;
 		this.view["sessionFooter1"].isEditVisible = false;
 		this.createPublisHButtonOnSessionScreen(110);
+       }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -158,6 +182,7 @@ define({
 	 * @oaram {Number} - top - top of the publish button
 	 **/
 	createPublisHButtonOnSessionScreen: function (top) {
+       try{
 		var flexPublishEvent = new kony.ui.FlexContainer({
 				"autogrowMode": kony.flex.AUTOGROW_NONE,
 				"clipBounds": true,
@@ -192,6 +217,9 @@ define({
 			}, {});
 		flexPublishEvent.add(btnPublish);
 		this.view.FlexScrollSession.add(flexPublishEvent);
+       }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -199,10 +227,14 @@ define({
 	 * @description - This function will set the profile data
 	 **/
 	setProfile: function () {
-		if (userAttributes !== undefined && userAttributes !== null && userAttributes !== {}) {
-			this.view.dashboard.text = userAttributes.firstname;
+      try{
+		if (glbUserAttributes !== undefined && glbUserAttributes !== null && glbUserAttributes !== {}) {
+			this.view.dashboard.text = glbUserAttributes.firstname;
 			this.view.dashboard.Title = "";
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 	/**
 	 * @function getLocation
@@ -210,6 +242,7 @@ define({
 	 * This function will set the fetched location to map
 	 **/
 	getLocation: function () {
+      try{
 		kony.location.getCurrentPosition(function (position) {
 			var geoPosition = "Latitude: " + position.coords.latitude;
 			geoPosition = geoPosition + " Longitude: " + position.coords.longitude;
@@ -222,6 +255,9 @@ define({
 			.bind(this), function (error) {
 			kony.print("Error in getting Location" + JSON.stringify(error));
 		});
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	//getters for event
@@ -231,12 +267,16 @@ define({
 	 * @description - This function will get the event title
 	 **/
 	getEventTitle: function () {
+      try{
 		var title = this.view.txtEventName.text.replace('&','and');
 		if (title !== null && title !== "") {
 			return title;
 		}
 		alert("Please Fill EventTitle");
 		return;
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -244,20 +284,28 @@ define({
 	 * @description - This function will get the event category
 	 **/
 	getEventCatagory: function () {
+        try{
 		var category = this.view.listCategory.selectedKey;
 		if (category !== undefined && category !== null && category !== "") {
 			return Number(category);
 		} else {
 			alert("Please Fill Event Category");
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
 	 * @function getEventType
 	 * @description - This function will get the event type
 	 **/
-	getEventType: function () {
+	getEventType: function (){
+        try{
 		return this.eventType;
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -265,7 +313,11 @@ define({
 	 * @description - This function will get the eventLong Desc
 	 **/
 	getLongDesc: function () {
+        try{
 		return this.view.txtEventLDesc.text.replace('&','and');
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -273,7 +325,11 @@ define({
 	 * @description - This function will get the event Short Desc
 	 **/
 	getShortDesc: function () {
+        try{
 		return (this.view.txtShort.text).replace('&','and');
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -281,19 +337,28 @@ define({
 	 * @description - This function will get the selected startdate with time
 	 **/
 	getStartDate: function () {
+        try{
 		var startDate = this.view.calEventStartDate.formattedDate;
 		var startTime = this.view.startTime.getSelectedTime();
 		if (this.startTimeOnSelection === undefined)
 			return;
 		if (startDate !== undefined && startDate !== null && startDate !== "") {
-			if (this.validateStartDate(startDate, this.view.calEventEndDate.formattedDate))
-				return startDate.replace(/\//g, "-") + "T" + startTime + ":00";
-			else
-				return;
+			if (this.validateStartDate(startDate, this.view.calEventEndDate.formattedDate)){
+                startDate = startDate.replace(/\//g, "-") + "T" + startTime + ":00";
+                startDate = new Date(startDate).toISOString();
+                startDate = startDate.split('.')[0];
+				return startDate;
+            }
+			else{
+				return;              
+            }
 		} else {
 			alert("Please Select Start Date");
 			return;
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -301,19 +366,28 @@ define({
 	 * @description - This function will get the selected endDate with time
 	 **/
 	getEndDate: function () {
+        try{
 		var endDate = this.view.calEventEndDate.formattedDate;
 		var endTime = this.view.EndTime.getSelectedTime();
 		if (this.endTimeOnSelection === undefined)
 			return;
 		if (endDate !== undefined && endDate !== null && endDate !== "") {
-			if (this.validateEndDate(this.view.calEventEndDate.formattedDate, endDate))
-				return endDate.replace(/\//g, "-") + "T" + endTime + ":00";
-			else
-				return;
+			if (this.validateEndDate(this.view.calEventEndDate.formattedDate, endDate)){
+              endDate = endDate.replace(/\//g, "-") + "T" + endTime + ":00";
+              endDate = new Date(endDate).toISOString();
+              endDate = endDate.split('.')[0];
+              return endDate
+            }
+			else{
+              return;
+            }
 		} else {
 			alert("Please Select Start Date");
 			return;
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -321,6 +395,7 @@ define({
 	 * @description - This function will validate start time
 	 **/
 	startTimeOnSelection: function () {
+        try{
 		var startDate = this.view.calEventStartDate.formattedDate;
 		var endDate = this.view.calEventEndDate.formattedDate;
 		var startTime = this.view.startTime.getSelectedTime();
@@ -332,6 +407,9 @@ define({
 			}
 		}
 		return true;
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -339,6 +417,7 @@ define({
 	 * @description - This function will validate end time
 	 **/
 	endTimeOnSelection: function () {
+        try{
 		var startDate = this.view.calEventStartDate.formattedDate;
 		var endDate = this.view.calEventEndDate.formattedDate;
 		var startTime = this.view.startTime.getSelectedTime();
@@ -350,6 +429,9 @@ define({
 			}
 		}
 		return true;
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -357,8 +439,7 @@ define({
 	 * @description - This function will validate start date
 	 **/
 	validateStartDate: function (startDate, endDate) {
-		var nextSlot,
-		endTime;
+        try{
 		if (endDate !== undefined && endDate !== null && endDate !== "") {
 			if (startDate > endDate) {
 				this.view.calEventStartDate.skin = "skncalError";
@@ -370,6 +451,9 @@ define({
 				return true;
 			}
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -377,8 +461,7 @@ define({
 	 * @description - This function will validate end date
 	 **/
 	validateEndDate: function (startDate, endDate) {
-		var nextSlot,
-		endTime;
+        try{
 		if (endDate !== undefined && endDate !== null && endDate !== "") {
 			if (endDate < startDate) {
 				this.view.calEventEndDate.skin = "skncalError";
@@ -390,6 +473,9 @@ define({
 				return true;
 			}
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 
 	},
 	/**
@@ -398,7 +484,12 @@ define({
 	 * @return {Number} - selected key, the type of location either online or offline
 	 **/
 	getSelectedLocationType: function () {
+       try{
 		return Number(this.view.radioLocation.selectedKey);
+       }
+      catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 	/**
 	 * @function getAddressData
@@ -406,6 +497,7 @@ define({
 	 * @return {Object} - Address Data fetched from UI as JSON
 	 **/
 	getAddressData: function () {
+        try{
 		var addressData = {};
 		addressData.location = this.view.txtAddressLine1.text;
 		addressData.addressLine1 = this.view.txtAddressLine2.text;
@@ -425,6 +517,9 @@ define({
 			this.doTabActions("btnBasic");
 			return;
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -432,6 +527,7 @@ define({
 	 * @description - This function will get the webex details if entered
 	 **/
 	getWebexDetails: function () {
+      try{
 		var webexDetails = this.view.txtWebexDetails.text;
 		if (webexDetails !== null && webexDetails !== "") {
 			this.locationData = {};
@@ -441,7 +537,10 @@ define({
 			alert("Webex Details should not be empty");
 			this.doTabActions("btnBasic");
 			return;
-		}
+        }
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -449,6 +548,7 @@ define({
 	 * @description - This function will set the event category
 	 **/
 	setEventCategory: function (type) {
+        try{
 		var key = 2;
 		if (type !== undefined && type !== null) {
 			switch (type) {
@@ -472,6 +572,9 @@ define({
 			}
 			this.view.listCategory.selectedKey = key;
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -479,6 +582,7 @@ define({
 	 * @description - This function will set the event type
 	 **/
 	setEventType: function (type) {
+      try{
 		var key = 2;
 		if (type !== undefined) {
 			switch (type) {
@@ -494,6 +598,9 @@ define({
 		}
 		this.view.radioLocation.selectedKey = key;
 		this.onSelectOfLocationType();
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -503,12 +610,17 @@ define({
 	 * @param {function} - callback function to be executed after fetching the location
 	 **/
 	setLocationOnMap: function (callback) {
+       try{
 		var addData = this.getAddressData();
 		var addressData = {};
 		if (addData !== undefined) {
 			addressData.address = addData.location + addData.addressLine1 + addData.cityname;
 			this.addressToLatLon(addressData, callback);
 		} else {}
+       }
+      catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -517,6 +629,7 @@ define({
 	 * @param {Object} - lat lon reponse based on the location data
 	 **/
 	setLocationDataOnMap: function (response) {
+       try{
 		this.view.mapGoogleMap.locationData = [{
 				"lat": response.loc_lat,
 				"lon": response.loc_lng,
@@ -525,6 +638,9 @@ define({
 			}
 		];
 		this.view.flexHover.isVisible = false;
+       }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -533,9 +649,13 @@ define({
 	 * @param {Object} - lat lon reponse based on the location data
 	 **/
 	setMapDataForInsert: function (response) {
+       try{
 		this.locationData.latitude = response.loc_lat;
 		this.locationData.longitude = response.loc_lng;
 		this.getEventDataForCreateEvent();
+       }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -544,6 +664,7 @@ define({
 	 * this function will set the event type(online(2) or offline(1)) based the slected key
 	 **/
 	onSelectOfLocationType: function () {
+       try{
 		var selectedKey = Number(this.view.radioLocation.selectedKey);
 		if (selectedKey == 2) {
 			this.eventType = 2;
@@ -554,6 +675,9 @@ define({
 			this.view.flexEventAddressInfo.isVisible = false;
 			this.view.txtWebexDetails.isVisible = true;
 		}
+       }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 	/**
 	 * @function getEventData
@@ -561,6 +685,7 @@ define({
 	 * @return {Object} - returns a JSON object with event data
 	 **/
 	getEventData: function () {
+        try{
 		var eventData = {};
 		eventData.name = this.getEventTitle();
 		if (eventData.name !== undefined) {
@@ -580,6 +705,9 @@ define({
 		}
 		this.doTabActions("btnBasic");
 		return;
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -588,7 +716,12 @@ define({
 	to create the event on back end
 	 **/
 	getEventDataForCreateEvent: function () {
+        try{
 		this.createEvent(this.getEventData());
+        }
+        catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 	/**
 	 * @function addressToLatLon
@@ -596,6 +729,7 @@ define({
 	 * @param {Object} -
 	 **/
 	addressToLatLon: function (addressData, successCallback) {
+        try{
 		var intObj = kony.sdk.getCurrentInstance().getIntegrationService("getLatLang");
 		intObj.invokeOperation("getBounds", {},
 			addressData,
@@ -603,6 +737,9 @@ define({
 			function (error) {
 			kony.print("Something Went Wrong " + JSON.stringify(error));
 		});
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -613,6 +750,7 @@ define({
 	 * if location type is offline calls setLocationOnMap to fetch the lat lon for the location
 	 **/
 	onClickProceed: function () {
+        try{
 		if (this.getSelectedLocationType() === 2) {
 			this.setLocationOnMap(this.setMapDataForInsert);
 		} else {
@@ -620,7 +758,9 @@ define({
 				this.getEventDataForCreateEvent();
 			}
 		}
-
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/*** Start Service calls For Creating Event ****/
@@ -631,7 +771,8 @@ define({
 	 * @params {Object JSON } - eventData required to create an event
 	 **/
 	createEvent: function (eventData) {
-		this.showLoading();
+        try{
+		showLoading(this);
 		var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSOS", {
 				"access": "online"
 			});
@@ -643,6 +784,9 @@ define({
 		objSvc.create(options,
 			this.createEventSuccessCallback.bind(this),
 			this.createEventFailureCallback.bind(this));
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -652,9 +796,13 @@ define({
 	 * @params {Object JSON } -success response from the back end
 	 **/
 	createEventSuccessCallback: function (response) {
+        try{
 		this.event_id = response.event_id;
 		this.locationData.event_id = this.event_id;
 		this.createEventLocation();
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -663,8 +811,12 @@ define({
 	 * @params {Object JSON } -Error response from the back end
 	 **/
 	createEventFailureCallback: function (error) {
+        try{
 		kony.application.dismissLoadingScreen();
 		alert("Something went wrong. Please try later.");
+        }catch(err){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -672,6 +824,7 @@ define({
 	 * @description - This function will make the service call to the backend and create an Location in back end for the event
 	 **/
 	createEventLocation: function () {
+        try{
 		var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSOS", {
 				"access": "online"
 			});
@@ -683,6 +836,9 @@ define({
 		objSvc.create(options,
 			this.createEventLocationSuccessCallback.bind(this),
 			this.createEventLocationFailureCallback.bind(this));
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -694,12 +850,15 @@ define({
 	 * @params {Object JSON } -success response from the back end
 	 **/
 	createEventLocationSuccessCallback: function (response) {
+        try{
 		if (this.bannerImage !== {}) {
 			this.createBannerImage();
 		} else {
 			this.createGalleryImage();
 		}
-
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -708,8 +867,12 @@ define({
 	 * @params {Object JSON } -Error response from the back end
 	 **/
 	createEventLocationFailureCallback: function (error) {
+        try{
 		kony.application.dismissLoadingScreen();
 		alert("Something went wrong. Please try later.");
+        }catch(err){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -717,8 +880,8 @@ define({
 	 * @description - This function will make the service call to the backend and create an banner in back end for the event
 	 **/
 	createBannerImage: function () {
-		if (this.bannerImage !== null && this.bannerImage !== {}
-			 && this.bannerImage !== "") {
+        try{
+		if (this.bannerImage !== null && this.bannerImage !== {} && this.bannerImage !== "") {
 			var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSOS", {
 					"access": "online"
 				});
@@ -734,6 +897,9 @@ define({
 		} else {
 			kony.print("Banner Image Not DEfined");
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -743,7 +909,11 @@ define({
 	 * @params {Object JSON } -success response from the back end
 	 **/
 	createBannerImageSuccessCallback: function (response) {
+        try{
 		this.createGalleryImage();
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -765,6 +935,7 @@ define({
 	 * if the gallery images length is 0, calls getsessiondata to get the created sessions from UI
 	 **/
 	createGalleryImage: function () {
+        try{
 		if (this.eventImages.length > 0) {
 			var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSOS", {
 					"access": "online"
@@ -781,6 +952,9 @@ define({
 		} else {
 			this.getSessionData();
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -791,6 +965,7 @@ define({
 	 * @params {Object JSON } -success response from the back end
 	 **/
 	createGalleryImageSuccessCallback: function (reponse) {
+       try{
 		this.currentEventImage++;
 		if (this.eventImages.length > this.currentEventImage) {
 			this.createGalleryImage();
@@ -798,6 +973,9 @@ define({
 			this.currentEventImage = 0;
 			this.getSessionData();
 		}
+       }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -806,25 +984,13 @@ define({
 	 * @params {Object JSON } -Error response from the back end
 	 **/
 	createGalleryImageFailureCallback: function () {
+        try{
 		kony.application.dismissLoadingScreen();
 		alert("Something went wrong while uploading images");
-	},
-
-	/**
-	 * @function showLoading
-	 * @description - This function call the kony loading API with custom skin to show loading indicator
-	 **/
-	showLoading: function () {
-		kony.application.showLoadingScreen("sknloading",
-			"",
-			constants.LOADING_SCREEN_POSITION_FULL_SCREEN,
-			true,
-			false, {
-			enableMenuKey: false,
-			enableBackKey: false,
-			progressIndicatorColor: "000000"
-		});
-		this.view.forceLayout();
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
+      
 	},
 
 	/**
@@ -833,11 +999,15 @@ define({
 	 * this function will navigate to sessions page
 	 **/
 	showSession: function () {
+        try{
 		this.setDateRangeForSessions();
 		this.view.flexScrollEvent.isVisible = false;
 		this.view.FlexScrollSession.isVisible = true;
 		kony.application.dismissLoadingScreen();
 		this.view.forceLayout();
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -845,6 +1015,7 @@ define({
 	 * @description - This function will set the valid start date and end date for sessions created dynamically
 	 **/
 	setDateRangeForSessions: function () {
+        try{
 		var widgets = this.view.FlexScrollSession.widgets();
 		for (var i = 0; i < widgets.length; i++) {
 			if (this.isSearchTextPresent(widgets[i].id, "session") && !this.isSearchTextPresent(widgets[i].id, "sessionFooter")) {
@@ -855,6 +1026,9 @@ define({
 					this.view.EndTime.getSelectedTime());
 			}
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -862,10 +1036,14 @@ define({
 	 * @description -  this function will navigate to Events basic info page
 	 **/
 	showEvent: function () {
+        try{
 		this.view.flexScrollEvent.isVisible = true;
 		this.view.FlexScrollSession.isVisible = false;
 		kony.application.dismissLoadingScreen();
 		this.view.forceLayout();
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -885,10 +1063,14 @@ define({
 	 * @description -  this function will call create session, footer, and set publish button top
 	 **/
 	createUI: function () {
+        try{
 		this.uniqueId++;
 		this.createSession(); // add sessiontemp component with unique id
 		this.createFooter(); // add  footer component with unique id
 		this.setPublish(); // set the publish button's top according to the created session height
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -896,7 +1078,8 @@ define({
 	 * @description -  this function will dynamically add the sessiontemp component dynamically in the form
 	 **/
 	createSession: function () {
-		var session = new Reusable.sessionTemp({
+        try{
+		var session = new com.konyenb.sessionTemp({
 				"clipBounds": true,
 				"height": "100%",
 				"id": "session" + (this.uniqueId),
@@ -911,7 +1094,9 @@ define({
 		this.lastTop = this.lastTop + 100;
 		this.view.FlexScrollSession.add(session);
 		this.view["session" + (this.uniqueId)].setEditData = "";
-
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -919,7 +1104,8 @@ define({
 	 * @description -  this function will dynamically add the sessionfooter component dynamically in the form
 	 **/
 	createFooter: function () {
-		var sessionFooter = new Reusable.SessionFooter({
+       	try{
+		var sessionFooter = new com.konyenb.SessionFooter({
 				"autogrowMode": kony.flex.AUTOGROW_NONE,
 				"clipBounds": true,
 				"height": "10%",
@@ -943,6 +1129,9 @@ define({
 			this.view.calEventEndDate.formattedDate,
 			this.view.startTime.getSelectedTime(),
 			this.view.EndTime.getSelectedTime());
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -950,7 +1139,11 @@ define({
 	 * @description -  this function will set the publish button top
 	 **/
 	setPublish: function () {
+        try{
 		this.view.flexPublishEvent.top = this.lastTop + "%";
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -959,6 +1152,7 @@ define({
 	 * form when the delete button is clicked
 	 **/
 	removeSession: function (eventObject) {
+        try{
 		var id = eventObject.parent.kmasterid; // get the footercomp id
 		var widgets = this.view.FlexScrollSession.widgets(); // get all the widgets list
 		var i;
@@ -995,6 +1189,9 @@ define({
 		}
 		this.lastTop = this.lastTop - 110; // update the last top value
 		this.view.forceLayout();
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1004,13 +1201,17 @@ define({
 	 * @param {searchText} - search text
 	 * @return {Boolean} - returns search result as boolean
 	 **/
-	isSearchTextPresent: function (value, searchText) {
+	isSearchTextPresent: function (value, searchText){
+        try{
 		var result = value.indexOf(searchText, 0);
 		if (result !== -1) {
 			return true;
 		} else {
 			return false;
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 	overAllSessionData: [],
 
@@ -1020,10 +1221,11 @@ define({
 	 * @return {Array} - returns overall session data as an array
 	 **/
 	getSessionDataFromUI: function () {
+        try{
 		this.overAllSessionData = [];
 		var widgets = this.view.FlexScrollSession.widgets(); // get all the widgets
 		for (var i = 0; i < widgets.length; i++) {
-			// Gets data from sessiontemp component only not from the sesssion footer temp
+			// Gets data from sessiontemp component only not from the session footer temp
 			if (this.isSearchTextPresent(widgets[i].id, "session") && !this.isSearchTextPresent(widgets[i].id, "sessionFooter")) {
 				if (this.view[widgets[i].id].getData() !== undefined) { // get data() is the exposed method in the component to get the sesion data
 					this.overAllSessionData.push(JSON.parse(JSON.stringify(this.view[widgets[i].id].getData())));
@@ -1033,6 +1235,9 @@ define({
 			}
 		}
 		return this.overAllSessionData;
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1041,6 +1246,7 @@ define({
 	 * calls the service call accordingly
 	 **/
 	getSessionData: function () {
+        try{
 		if (this.getSessionDataFromUI() !== undefined) {
 			if (this.overAllSessionData.length > 0) {
 				if (this.isEditMode) { // if the session in edit mode calls getDataForUpdate to get the updated data
@@ -1057,14 +1263,18 @@ define({
 				}
 			}
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
-	 * @function publishEventSuccessCallback
+	 * @function boxUploadSuccess
 	 * @description - This function is teh success callback for box upload success
 	 * this function will parse the response of uploaded images
 	 **/
 	boxUploadSuccess: function (result, type) {
+        try{
 		var imagesSelected = [];
 		if (type === 1) {
 			this.view.lblUploadSuccess.height = "30%";
@@ -1088,7 +1298,7 @@ define({
 				var event_image = {};
 				event_image.image_url = result.results[j].download_url;
 				event_image.img_name = result.results[j].file_name;
-				event_image.del_Image = "removespeaker.png";
+				event_image.del_Image = EVENT_CONSTANS.IMAGES.REMOVESPEAKER;
 				var data = this.view.segGallery.data;
 				if (data.length > 0) {
 					for (var k = 0; k < data.length; k++) {
@@ -1106,6 +1316,9 @@ define({
 			}
 			this.setGalleryData(this.eventImages);
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1114,12 +1327,16 @@ define({
 	 * @context - {JSON} - JSON object from template controller which give seleted row index on click of del button of any row
 	 **/
 	removeGalleryImage: function (context) {
+       try{
 		this.view.segGallery.removeAt(context.rowIndex);
 		if (this.view.segGallery.data.length === 0) {
 			this.view.segGallery.isVisible = false;
 			this.view.forceLayout();
 		}
 		this.eventImages = this.view.segGallery.data; // re setting the data after deletion
+       }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1128,6 +1345,7 @@ define({
 	 * @data - {Array of JSONs} - array of images to be set
 	 **/
 	setGalleryData: function (data) {
+        try{
 		this.view.segGallery.isVisible = true;
 		this.view.segGallery.widgetDataMap = {
 			"lblBImage1": "img_name",
@@ -1135,6 +1353,9 @@ define({
 		};
 		this.view.segGallery.setData(data);
 		this.view.forceLayout();
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/*** session Back End operations Start***/
@@ -1154,7 +1375,7 @@ define({
 	createSessiononBk: function () {
 		try {
 			if (this.overAllSessionData.length) {
-				this.showLoading();
+				showLoading(this);
 				var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSOS", {
 						"access": "online"
 					});
@@ -1188,6 +1409,7 @@ define({
 	 * @param {Object} - response from the backend
 	 **/
 	createSessiononBkSuccessCallback: function (response) {
+        try{
 		this.sessionId = response.event_session_id;
 		if (this.overAllSessionData[this.sessionCount].speakers.length > 0) {
 			this.speakerCount = 0;
@@ -1200,6 +1422,9 @@ define({
 				this.publishEvent();
 			}
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	// failure call back for create session
@@ -1242,6 +1467,7 @@ define({
 	 * @param {Object} - response from the backend
 	 **/
 	createSpeakerOnBkSuccessCallback: function (reponse) {
+        try{
 		this.speakerCount++;
 		if (this.overAllSessionData[this.sessionCount].speakers.length > this.speakerCount) {
 			// calling create speaker if the speaker present for the session
@@ -1256,6 +1482,9 @@ define({
 				this.publishEvent();
 			}
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }          
 	},
 
 	// failure call back for create speakers
@@ -1269,6 +1498,7 @@ define({
 	 * @description - This function will update the event's isdisabled property to 0 marking event as published
 	 **/
 	publishEvent: function () {
+      try{
 		var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSOS", {
 				"access": "online"
 			});
@@ -1284,6 +1514,9 @@ define({
 		objSvc.update(options,
 			this.publishEventSuccessCallback.bind(this),
 			this.publishEventFailureCallback.bind(this));
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1292,11 +1525,16 @@ define({
 	 * this function will make navigation to frmAllEvents to list the created event
 	 **/
 	publishEventSuccessCallback: function (response) {
+      try{
 		this.overAllSessionData = [];
+		this.sendPushNotification();
 		var nav = new kony.mvc.Navigation("frmAllEvents");
 		nav.navigate();
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
-
+  
 	// Failure call back of publish event
 	publishEventFailureCallback: function (error) {
 		kony.application.dismissLoadingScreen();
@@ -1313,6 +1551,7 @@ define({
 	 * @param {JSON object} - selected event detail
 	 **/
 	setEventForEdit: function (response) {
+        try{
 		this.eventBkendData = {};
 		this.event_id = response.event_id; //storing selected event_id
 		this.location_id = response.location[0].location_id; //storing selected location id
@@ -1337,30 +1576,21 @@ define({
 		else {
 			this.view.txtEventLDesc.text = "";
 		}
-
+        var dateFromServer = new Date(response.start_date);
+        var localDate =  new Date(dateFromServer.getTime()-dateFromServer.getTimezoneOffset()*60*1000);
+		var date_com = (localDate.toLocaleDateString()).split("/");
+        var time = (localDate.toTimeString()).split(" ")[0];
 		//Setting Start Date
-		var date_com,
-		time;
-		if (response.start_date.indexOf("T") !== -1) {
-			date_com = ((response.start_date).split("T")[0]).split("-");
-			time = (((response.start_date).split("T")[1]).split("+"))[0];
-		} else {
-			date_com = ((response.start_date).split(" ")[0]).split("-");
-			time = ((response.start_date).split(" ")[1])
-		}
-
-		this.view.calEventStartDate.dateComponents = [date_com[2], date_com[1], date_com[0]];
+		this.view.calEventStartDate.dateComponents = [date_com[1], date_com[0], date_com[2]];
 		this.view.startTime.TimeValue = time.slice(0, 5);
-
+         
+        dateFromServer = new Date(response.end_date);
+        localDate =  new Date(dateFromServer.getTime()-dateFromServer.getTimezoneOffset()*60*1000);
+        date_com = (localDate.toLocaleDateString()).split("/");
+        time = (localDate.toTimeString()).split(" ")[0];
+          
 		//Setting End Date
-		if (response.end_date.indexOf("T") !== -1) {
-			date_com = ((response.end_date).split("T")[0]).split("-");
-			time = (((response.end_date).split("T")[1]).split("+"))[0];
-		} else {
-			date_com = ((response.end_date).split(" ")[0]).split("-");
-			time = ((response.end_date).split(" ")[1]);
-		}
-		this.view.calEventEndDate.dateComponents = [date_com[2], date_com[1], date_com[0]];
+		this.view.calEventEndDate.dateComponents = [date_com[1], date_com[0], date_com[2]];
 		this.view.calEventEndDate.validStartDate = this.view.calEventStartDate.dateComponents;
 		this.view.EndTime.TimeValue = time.slice(0, 5);
 
@@ -1400,6 +1630,9 @@ define({
 
 		//setting controller variable to store event data;
 		this.eventBkendData.eventData = JSON.parse(JSON.stringify(this.getEventData()));
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1408,6 +1641,7 @@ define({
 	 * @param {JSON object} - selected event detail
 	 **/
 	setBannerImage: function (response) {
+        try{
 		this.bannerImageBk = {};
 		this.bannerImage = {};
 		if (response.event_banner_id !== undefined) {
@@ -1419,6 +1653,9 @@ define({
 			this.bannerImageBk.banner_url = response.banner_url;
 			this.bannerImage = JSON.parse(JSON.stringify(this.bannerImageBk));
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1427,12 +1664,16 @@ define({
 	 * @param {Array JSON object} - selected event images
 	 **/
 	setGalleryDataForEdit: function (eventImages) {
+      try{
 		for (var i = 0; i < eventImages.length; i++) {
-			eventImages[i].del_Image = "removespeaker.png";
+			eventImages[i].del_Image = EVENT_CONSTANS.IMAGES.REMOVESPEAKER;
 		}
 		this.eventImagesFromBk = eventImages;
 		this.eventImages = JSON.parse(JSON.stringify(this.eventImagesFromBk));
 		this.setGalleryData(this.eventImages);
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	//Fetching updated event data
@@ -1441,6 +1682,7 @@ define({
 	 * @description - This function will fetch updated gallery images and banner image
 	 **/
 	getImageToCreate: function () {
+        try{
 		var i;
 		this.imagesToCreate = [];
 		this.imagesToDel = [];
@@ -1480,6 +1722,9 @@ define({
 				this.getUpdatedBannerImage(); //fetch banner image if there is no change in the gallery image
 			}
 		}
+        }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1487,6 +1732,7 @@ define({
 	 * @description - This function will fetch deleted gallery images
 	 **/
 	getDeletedImages: function () {
+      try{
 		for (var key in this.eventImagesFromBk) {
 			var isDeleted = this.isImageIdPresent("event_image_id", this.eventImagesFromBk[key].event_image_id, this.eventImages);
 			if (isDeleted === undefined) {
@@ -1496,6 +1742,9 @@ define({
 			}
 		}
 		this.delete ("event_images", this.getUpdatedBannerImage, this.imagesToDel);
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1503,6 +1752,7 @@ define({
 	 * @description - This function will check whether the value is present in edited data
 	 **/
 	isImageIdPresent: function (key, value, editedData) {
+      try{
 		for (var i = 0; i < editedData.length; i++) {
 			if (editedData[i][key] === undefined) {
 				continue;
@@ -1512,6 +1762,9 @@ define({
 			}
 		}
 		return;
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1519,6 +1772,7 @@ define({
 	 * @description - This function will fetch the updated banner image
 	 **/
 	getUpdatedBannerImage: function () {
+      try{
 		if (this.bannerImageBk.banner_url !== this.bannerImage.banner_url) {
 			this.bannerImageBk.img_name = this.bannerImage.img_name;
 			this.bannerImageBk.banner_url = this.bannerImage.banner_url;
@@ -1526,11 +1780,18 @@ define({
 		} else {
 			this.getEditedEvent();
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	//success callback for images
 	eventImagesSuccessCommon: function () {
+      try{
 		this.getEditedEvent(); // calling editedevent function to fetch the updated event
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1538,6 +1799,7 @@ define({
 	 * @description - This function will fetch the edited event details
 	 **/
 	getEditedEvent: function () {
+      try{
 		this.finalUpdatedEventData = [];
 		var editedEventData = this.getEventData();
 		if (editedEventData !== undefined) {
@@ -1551,6 +1813,9 @@ define({
 		} else {
 			this.getupdatedLocation(); //calls getupdatedLocation to get the updated location details
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1560,6 +1825,7 @@ define({
 	 * @param {JSON} - eventEt - event data from UI
 	 **/
 	checkEventAndGetUpdateList: function (eventBk, eventEt) {
+      try{
 		var event = {};
 		var isChange = false;
 		for (var key in eventBk) {
@@ -1574,6 +1840,9 @@ define({
 		} else {
 			return;
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1582,6 +1851,7 @@ define({
 	 * if there is any change in the location data , calls setLocationOnMap to fetch the lat long details
 	 **/
 	getupdatedLocation: function () {
+      try{
 		this.finalUpdatedLocationData = [];
 		var editedLocationData = "";
 		if (this.getEventType() === 2) {
@@ -1604,6 +1874,9 @@ define({
 		} else {
 			this.updateLocationSuccessDataCallback();
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 	/**
 	 * @function checkLocationAndGetUpdatedData
@@ -1612,6 +1885,7 @@ define({
 	 * @param {JSON} - eventEt - event data from UI
 	 **/
 	checkLocationAndGetUpdatedData: function (eventBk, eventEt) {
+      try{
 		var location = {};
 		var isChange = false;
 		var key;
@@ -1638,18 +1912,29 @@ define({
 		} else {
 			return;
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	//updated location's lat long call back
 	updatedLocCallback: function (response) {
+      try{
 		this.finalUpdatedLocationData[0].latitude = response.loc_lat;
 		this.finalUpdatedLocationData[0].longitude = response.loc_lng;
 		this.update("location", this.updateLocationSuccessDataCallback, this.finalUpdatedLocationData);
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	//update success callback for location
 	updateLocationSuccessDataCallback: function () {
+      try{
 		this.getSessionData(); // calls getsessiondata to fetch the updated session details
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**Session Edit Operations Start***/
@@ -1661,11 +1946,15 @@ define({
 	 * isLoadFromServer = false means this is firsttime the user is navigating to session page
 	 **/
 	openSessionInEditMode: function () {
+      try{
 		if (this.isLoadedFromServer) {
 			this.doTabActions("btnsessions"); // set the tab button to be highlighted to session
 		} else {
 			this.getSchedule(); // get the sessions scheduled for the session
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1690,7 +1979,7 @@ define({
 					"$filter": "event_id eq " + "'" + this.event_id + "' and ((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))"
 				}
 			};
-			this.showLoading();
+			showLoading(this);
 			if (kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)) {
 				objectInstance.fetch(options, this.scheduleSuccess.bind(this), this.scheduleFailure.bind(this));
 			} else {
@@ -1711,8 +2000,12 @@ define({
 	 * @param {JSON} - response from the backend
 	 **/
 	scheduleSuccess: function (response) {
+      try{
 		kony.application.dismissLoadingScreen();
 		this.groupSessionAndSpeker(processSessionAndPresenters(response));
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1731,6 +2024,7 @@ define({
 	 * @param {array JSON} - response from the backend
 	 **/
 	groupSessionAndSpeker: function (response) {
+      try{
 		var currentSessionId = null;
 		var sessionSpeaker = [];
 		var i = 0;
@@ -1774,6 +2068,9 @@ define({
 		}
 		this.sesssionDataFromBK = sessionSpeaker;
 		this.createSessionForEdit(sessionSpeaker);
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1782,6 +2079,7 @@ define({
 	 * @param {array JSON} - sessions and associated speakers
 	 **/
 	createSessionForEdit: function (sessionSpeaker) {
+      try{
 		this.view.FlexScrollSession.removeAll();
 		this.lastTop = 0;
 		if (sessionSpeaker.length) {
@@ -1810,6 +2108,9 @@ define({
 		}
 		this.isLoadedFromServer = true; //setting the loadfromserver true, since for the first time it is loaded
 		this.doTabActions("btnSession"); // highlight the session tab and navigate to session page
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1817,6 +2118,7 @@ define({
 	 * @description - this function will dynamically create a add new session button
 	 **/
 	createDefaultAddSessionButton: function () {
+      try{
 		var btnAddNewSessionDefault = new kony.ui.Button({
 				"focusSkin": "CopydefBtnNormal0gafb081126cd49",
 				"height": "5%",
@@ -1836,6 +2138,9 @@ define({
 				"paddingInPixel": false
 			}, {});
 		this.view.FlexScrollSession.add(btnAddNewSessionDefault);
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1844,11 +2149,15 @@ define({
 	 * this function will add first sessiontemp component to the form
 	 **/
 	createDefaultSession: function () {
+      try{
 		this.view.FlexScrollSession.remove(this.view.btnAddNewSessionDefault);
 		this.view.FlexScrollSession.remove(this.view.flexPublishEvent);
 		this.uniqueId = 1;
 		this.lastTop = 110;
 		this.createFirstSession();
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 	newSpeakers: [], // controller varible to store new speakers
 	updateSpeakers: [], // controller variable to store updates speakers
@@ -1860,6 +2169,7 @@ define({
 	 * @param {sessionDataEt} - edited session data
 	 **/
 	getDataForUpdate: function (sessionDataEt) {
+      try{
 		var updateArray = [];
 		var delArray = [];
 		var newArray = [];
@@ -1894,6 +2204,9 @@ define({
 			this.editFinalResults.sessions_created = sessionDataEt;
 			this.createSpeakersOnlyCallback();
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1903,6 +2216,7 @@ define({
 	 * @param {session_id} - the session id
 	 **/
 	isSessionIdPresent: function (sessionDataEt, session_id) {
+      try{
 		for (var i = 0; i < sessionDataEt.length; i++) {
 			if (sessionDataEt[i].session.session_id === undefined) {
 				continue;
@@ -1911,7 +2225,10 @@ define({
 				return sessionDataEt[i];
 			}
 		}
-		return;
+		return
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1921,6 +2238,7 @@ define({
 	 * @param {sessionDataEt} - edited session data
 	 **/
 	getNewSessions: function (sessionDataEt) {
+      try{
 		var newArray = [];
 		for (var i = 0; i < sessionDataEt.length; i++) {
 			if (sessionDataEt[i].session.session_id === undefined) {
@@ -1928,6 +2246,9 @@ define({
 			}
 		}
 		return newArray;
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1936,6 +2257,7 @@ define({
 	 * @param {sessionDataEt} - edited session data
 	 **/
 	getNewSpeakersForSession: function (speakersEt) {
+      try{
 		for (var i = 0; i < speakersEt.length; i++) {
 			if (speakersEt[i].presenter_id === undefined) {
 				speakersEt[i].session_id = this.session_id;
@@ -1943,6 +2265,9 @@ define({
 				this.newSpeakers.push(speakersEt[i]);
 			}
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1952,7 +2277,7 @@ define({
 	 * @param {sessionDataEt} - edited session data
 	 **/
 	getUpdatedSpeakers: function (speakersFromBk, speakersEt) {
-
+	  try{
 		if (speakersFromBk.length > 0) {
 			if (speakersEt.length === 0) {
 				for (var speaker of speakersFromBk) {
@@ -1976,6 +2301,9 @@ define({
 				}
 			}
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -1985,6 +2313,7 @@ define({
 	 * @param {presenter_id} - the presenter id
 	 **/
 	isSpeakerIdPresent: function (presenter_id, speakersEt) {
+      try{
 		for (var i = 0; i < speakersEt.length; i++) {
 			if (speakersEt[i].presenter_id === undefined) {
 				continue;
@@ -1994,6 +2323,9 @@ define({
 			}
 		}
 		return;
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2004,6 +2336,7 @@ define({
 	 * @param {sessionFromBk} - presenterList From Backend
 	 **/
 	checkAndAddSessionToUpdateList: function (sessionFromBk, sessionDataEt) {
+      try{
 		var session = {};
 		var isChange = false;
 		for (var key in sessionFromBk) {
@@ -2018,6 +2351,9 @@ define({
 		} else {
 			return;
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 
 	},
 
@@ -2029,6 +2365,7 @@ define({
 	 * @param {speakerBk} - presenterList From Backend
 	 **/
 	checkAndAddSpeakerToUpdateList: function (speakerBk, speakerEt) {
+      try{
 		var speaker = {};
 		var isChange = false;
 		for (var key in speakerBk) {
@@ -2043,6 +2380,9 @@ define({
 		} else {
 			return;
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	///Recursive operations for update delete create
@@ -2102,12 +2442,16 @@ define({
 	 * @delCallBack - controller variable stores the callback function for delete
 	 **/
 	deleteRecursiveCommonSuccessCallback: function (success) {
+      try{
 		this.delCount++;
 		if (this.delCount < this.dataToDelete.length) {
 			this.deleteRecursiveCommon();
 		} else {
 			this.delCallBack();
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2158,12 +2502,16 @@ define({
 	 * @updateCallback - controller variable stores the callback function for delete
 	 **/
 	updateRecursiveCommonSuccessCallback: function () {
+      try{
 		this.updateCount++;
 		if (this.updateCount < this.dataToUpdate.length) {
 			this.updateRecursiveCommon();
 		} else {
 			this.updateCallback();
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2208,12 +2556,16 @@ define({
 	 * @updateCallback - controller variable stores the callback function for delete
 	 **/
 	createRecursiveCommonSuccessCallback: function (reponse) {
+      try{
 		this.createCount++;
 		if (this.dataToCreate.length > this.createCount) {
 			this.createRecursiveCommon();
 		} else {
 			this.createCallback();
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2233,12 +2585,16 @@ define({
 	 * @param {Array of JSON - data} - data to delete
 	 **/
 	delete : function (object, callback, data) {
-		this.showLoading();
+      try{
+		showLoading(this);
 		this.delCount = 0;
 		this.delObjectName = object;
 		this.delCallBack = callback;
 		this.dataToDelete = data;
 		this.deleteRecursiveCommon();
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2249,12 +2605,16 @@ define({
 	 * @param {Array of JSON - data} - data to update
 	 **/
 	update: function (object, callback, data) {
-		this.showLoading();
+      try{
+		showLoading(this);
 		this.updateCount = 0;
 		this.updateObjName = object;
 		this.updateCallback = callback;
 		this.dataToUpdate = data;
 		this.updateRecursiveCommon();
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2265,12 +2625,16 @@ define({
 	 * @param {Array of JSON - data} - data to create
 	 **/
 	create: function (object, callback, data) {
-		this.showLoading();
+      try{
+		showLoading(this);
 		this.createCount = 0;
 		this.createObjName = object;
 		this.createCallback = callback;
 		this.dataToCreate = data;
 		this.createRecursiveCommon();
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2279,7 +2643,11 @@ define({
 	 * This function will call delete operation for presenter
 	 **/
 	deleteSessionsCallback: function () {
+      try{
 		this.delete ("presenter", this.deleteSpeakersCallback, this.delSpeakers);
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2288,7 +2656,11 @@ define({
 	 * This function will call update operation for sessions in edit mode
 	 **/
 	deleteSpeakersCallback: function () {
+      try{
 		this.update("event_sessions", this.updateSessionsCallback, this.editFinalResults.sessions_updated);
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2297,7 +2669,11 @@ define({
 	 * This function will call update operation for speakers in edit mode
 	 **/
 	updateSessionsCallback: function () {
+      try{
 		this.update("presenter", this.updateSpeakersCallback, this.updateSpeakers);
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2306,7 +2682,11 @@ define({
 	 * This function will call create operation for speakers in edit mode
 	 **/
 	updateSpeakersCallback: function () {
+      try{
 		this.create("presenter", this.createSpeakersOnlyCallback, this.newSpeakers);
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2315,10 +2695,14 @@ define({
 	 * This function will call createSessioninbk operation for sessions in edit mode
 	 **/
 	createSpeakersOnlyCallback: function () {
+       try{
 		this.sessionCount = 0;
 		this.speakerCount = 0;
 		this.overAllSessionData = this.editFinalResults.sessions_created;
 		this.createSessiononBk();
+       }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2327,6 +2711,7 @@ define({
 	 * @param {String} - id - button Id
 	 **/
 	doTabActions: function (id) {
+      try{
 		if (id == "btnBasic") {
 			this.view.EventsHeader.lblundSes.skin = "sknheaderlblLineNormal";
 			this.view.EventsHeader.btnSessions.skin = "sknbtnheadernormal";
@@ -2338,6 +2723,9 @@ define({
 			this.view.EventsHeader.lblstep2.skin = "sknlblstepsel";
 			this.validateAndShowSession();
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2345,6 +2733,7 @@ define({
 	 * @description - this function will validate event data and navigate to session page
 	 **/
 	validateAndShowSession: function () {
+      try{
 		if (this.getEventData() !== undefined) {
 			if (this.getSelectedLocationType() === 2) {
 				if (this.getAddressData() !== undefined) {
@@ -2356,6 +2745,9 @@ define({
 				}
 			}
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2366,12 +2758,16 @@ define({
 	 * if it is in create mode, then calls onClickProceed
 	 **/
 	publishEventAndSessions: function () {
+      try{
 		if (this.getSessionDataFromUI() !== undefined) {
 			if (!this.isEditMode)
 				this.onClickProceed();
 			else
 				this.getImageToCreate();
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2382,6 +2778,7 @@ define({
 	 * @param {function} - call back function
 	 **/
 	askForConfirmation: function (message, title, callback) {
+      try{
 		var pspConfig = {
 			"iconPosition": constants.ALERT_CONTENT_ALIGN_CENTER,
 			"contentAlignment": constants.ALERT_ICON_POSITION_LEFT
@@ -2400,6 +2797,9 @@ define({
 			if (response)
 				callback();
 		}
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2407,8 +2807,12 @@ define({
 	 * @description - this function will navigate to frmManageUser
 	 **/
 	navigateToManageUser: function () {
+      try{
 		var nav = new kony.mvc.Navigation("frmManageUser");
 		nav.navigate();
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
 
 	/**
@@ -2416,8 +2820,38 @@ define({
 	 * @description - this function will navigate to frmAllEvents
 	 **/
 	navigateToAllEventsPage: function () {
+      try{
 		var navObj = new kony.mvc.Navigation("frmAllEvents");
 		navObj.navigate();
+      }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
 	},
+  	
+    /**
+	 * @function sendPushNotification
+	 * @description - this function will prepare the payload for pushnotification and calls custom login functio 
+     * to get the calims token
+	 **/
+    sendPushNotification : function(){
+       try{
+        var pushConfig = {};
+        var eventName = this.view.txtEventName.text;
+		pushConfig.event_id = this.event_id;
+        pushConfig.appId = KNYMobileFabric.messagingsvc.appId;
+  		if(this.isEditMode){
+          pushConfig.title = "Event Update: "+eventName;
+          pushConfig.msg = eventName+" has been updated. Tap to view";
+          pushConfig.ksid = [];
+        }else{
+          pushConfig.title = "New Event: "+eventName;
+          pushConfig.msg = eventName+" has been Created. Tap to view";
+          pushConfig.ksid = [];
+        }
+      doCustomLogin(pushConfig);
+       }catch(error){
+          kony.print("Create EventController"+JSON.stringify(error));
+        }
+	}
 
 });

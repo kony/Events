@@ -13,8 +13,13 @@ define({
    * @private
    */
   onNavigate:function(){
+    try{
     this.view.menuItem.setSelectedFlex(3);
     this.view.flxEventDetailContainer.setVisibility(false);
+    this.displayEventViewAndShare(0,0);
+    }catch(error){
+      kony.print("FrmManageUser Controller"+JSON.stringify(error));
+    }
   },
   /**
    * @function getAllEvent
@@ -23,13 +28,12 @@ define({
    */
   getAllEvent:function(){
     this.setProfile();
-    this.showLoading();
+    showLoading(this);
     try{
       var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSOS", {
         "access": "online"
       });
       var dataObject = new kony.sdk.dto.DataObject("event");
-      //var odataUrl = "$filter=isdisabled eq '0'";
       var odataUrl = "$select=event_id,name";
       dataObject.odataUrl = odataUrl;
       var options = {
@@ -50,10 +54,13 @@ define({
    * @param{JSON} response
    */
   eventFetchSuccessCallback:function(response){
+    try{
     this.dismissLoading();
     this.eventList=response.records;
-    //alert(JSON.stringify(response.records));
     this.mapEventToListBox(response.records);
+    }catch(error){
+      kony.print("FrmManageUser Controller"+JSON.stringify(error));
+    }
   },
   /**
    * @function eventFetchFailureCallback
@@ -72,6 +79,7 @@ define({
    * @param{JSONArray} eventList
    */
   mapEventToListBox:function(eventList){
+    try{
     var masterDataList=[];
     masterDataList.push(["-1", "Select Event"]);
     if(eventList===undefined||eventList===null||eventList.length===0){
@@ -87,6 +95,9 @@ define({
     }
     this.view.listBoxEvent.masterData=masterDataList;
     this.view.listBoxEvent.selectedKey="-1";
+    }catch(error){
+      kony.print("FrmManageUser Controller"+JSON.stringify(error));
+    }
   },
   /**
    * @function populateEvent
@@ -94,6 +105,7 @@ define({
    * @private
    */
   populateEvent:function(){
+    try{
     if(this.eventList===null)return;
     var slectedKey=this.view.listBoxEvent.selectedKey;
     if(slectedKey==="-1"){
@@ -101,6 +113,10 @@ define({
       return;
     }
     this.fetchEventDetailsWithID(slectedKey);
+    this.getShareAndView(slectedKey);
+    }catch(error){
+      kony.print("FrmManageUser Controller"+JSON.stringify(error));
+    }
   },
   /**
    * @function fetchEventDetailsWithID
@@ -114,7 +130,7 @@ define({
       var controllerScope=this;
       var client = kony.sdk.getCurrentInstance();
       var intgService;
-      this.showLoading();
+      showLoading(this);
       intgService = client.getIntegrationService("EventsOrchService");
       intgService.invokeOperation("getEventWithRegisteredUser",{},{"$filter":"event_id eq "+eventID+" and ((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))"},
                                   this.fetchEventDetailsWithIDSuccessCallBack.bind(this),
@@ -131,9 +147,13 @@ define({
    * @param{JSON} response
    */
   fetchEventDetailsWithIDSuccessCallBack:function(response){
+    try{
     this.dismissLoading();
     this.selectedEvent=response;
     this.setEvent(response);
+    }catch(error){
+      kony.print("FrmManageUser Controller"+JSON.stringify(error));
+    }
   },
   /**
    * @function fetchEventDetailsWithIDFailureCallBack
@@ -145,38 +165,7 @@ define({
     this.dismissLoading();
     kony.print(JSON.stringify(error));
   },
-  /*fetchEventAndUser:function(){
-    try{
-      var self=this;
-      var client = kony.sdk.getCurrentInstance();
-      var intgService;
-      this.showLoading();
-      intgService = client.getIntegrationService("EventStorageObjectService");
-      intgService.invokeOperation("getEventWithRegisteredUser",{},{},
-                                  function(response){
-        var result=parseEventRegistration(response);
-        self.eventList=result;
-        var masterDataList=[];
-        var masterDataObj=[];
-        masterDataList.push(["-1", "Select Event"]);
-        for(var i=0;i<result.length;i++){
-          masterDataObj=[];
-          masterDataObj.push(i);
-          masterDataObj.push(result[i].event_id+" - "+result[i].name);
-          masterDataList.push(masterDataObj);
-        }
-        self.view.listBoxEvent.masterData=masterDataList;
-        self.view.listBoxEvent.selectedKey="-1";
-        self.dismissLoading();
-      },function(error){
-        self.dismissLoading();
-        kony.print("Error while invokig orchestration service: "+JSON.stringify(error));
-      });
-    }catch(excp){
-      self.dismissLoading();
-      kony.print(JSON.stringify(excp));
-    }
-  },*/
+ 
   /**
    * @function setEvent
    * @description function to display the selected event in the form.
@@ -184,21 +173,17 @@ define({
    * @param{JSON} record
    */
   setEvent:function(record){
+    try{
     if(this.eventList===null)return;
     this.view.lblEventTitle.text=checkValue(record.event[0].name);
     var registeredUser=record.event_registration;
-    var bannerURL=record.event_banners;//[0].banner_url;
+    var bannerURL=record.event_banners;
     if(bannerURL.length>0){
       this.view.imgEventBanner.src=bannerURL[0]["banner_url"];
     }else{
       this.view.imgEventBanner.src="event01.jpg";
     }
     this.view.lblRegisteredUserCount.text=checkValue(registeredUser.length);
-   /* if(checkValue(registeredUser.length)===0){
-      this.view.flxUserContainer.setVisibility(false);
-      this.view.flxLoading.setVisibility(false);
-      this.view.flxNoUser.setVisibility(true);
-    }*/
     this.view.lblEventDescCategoryText.text=getEventCategory(record.event[0].event_category);
     if(record.event[0].event_type==="1"){
       this.view.lblEventDescLocationText.text="online";
@@ -212,12 +197,14 @@ define({
     }else{
       this.view.lblEventDescLocationText.text="Info not available";
     }
-    //this.view.lblEventDescLocationText.text=getEventType(selectedEvent.event_type);
     var dateRange=getDateRange(record.event[0].start_date, record.event[0].end_date);
     this.view.lblEventDescDateText.text=dateRange;
     this.view.flxEventDetailContainer.setVisibility(true);
     this.view.forceLayout();
     this.getUsers(record.event_registration);
+    }catch(error){
+      kony.print("FrmManageUser Controller"+JSON.stringify(error));
+    }
   },
   /**
    * @function getUsers
@@ -245,13 +232,12 @@ define({
         "access": "online"
       });
       var dataObject = new kony.sdk.dto.DataObject("users");
-      //var odataUrl = "$filter=isdisabled eq '0'";
       var odataUrl = "$filter="+filterParam+" ";
       dataObject.odataUrl = odataUrl;
       var options = {
         "dataObject": dataObject
       };
-      this.showLoading();
+      showLoading(this);
       objSvc.fetch(options,
                    this.userFetchSuccessCallBack.bind(this),
                    this.userFetchFailureCallBack.bind(this));
@@ -267,10 +253,13 @@ define({
    * @param{JSON} response
    */
   userFetchSuccessCallBack:function(response){
+    try{
     this.dismissLoading();
-    //alert(response.records);
     this.eventSubscriber=response.records;
     this.setSubscriber();
+    }catch(error){
+      kony.print("FrmManageUser Controller"+JSON.stringify(error));
+    }
   },
   /**
    * @function userFetchFailureCallBack
@@ -288,6 +277,7 @@ define({
    * @private
    */
   setSubscriber:function(){
+    try{
     var subscribers=this.eventSubscriber;
     if(subscribers===null||subscribers===undefined)return;
     if(subscribers.length===0){
@@ -327,11 +317,18 @@ define({
     this.view.segUserList.removeAll();
     this.view.segUserList.addAll(segDataList);
     this.view.flxLoading.setVisibility(false);
+    }catch(error){
+      kony.print("FrmManageUser Controller"+JSON.stringify(error));
+    }
   },
   
   getConfirmation:function(){
+    try{
     var isConfirmed=false;
     return isConfirmed;
+    }catch(error){
+      kony.print("FrmManageUser Controller"+JSON.stringify(error));
+    }
   },
   /**
    * @function deRegisterUser
@@ -340,7 +337,7 @@ define({
    * @param{string} selecteditems
    */
   deRegisterUser:function(selecteditems){
-    debugger;
+    try{
     var userId=selecteditems.lblUserId;
     this.selectedUserIdToDelete=userId;
     var rowIndex=selecteditems["rowIndex"];
@@ -355,8 +352,10 @@ define({
         }
       }
       this.deleteUserRegistration(registrationId);
-      //alert("registrationId for the userId "+userId+" is "+registrationId);
     }
+    }catch(error){
+      kony.print("FrmManageUser Controller"+JSON.stringify(error));
+    }    
   },
   /**
    * @function deleteUserRegistration
@@ -411,75 +410,7 @@ define({
   deleteUserRegistrationFailureCallBack:function(error){
     alert("Unable to unsubscribe!");
   },
-  
-  /*onPostShow:function(){
-    //  this.view.forceLayout();
-    alert("in post show");
-    var elems = document.querySelectorAll("input[kwidgettype='Button']");
-    for (var i = 0, iMax = elems.length; i < iMax; i++) {
-      elems[i].style.cursor = 'pointer';
-      elems[i].style.outline = "none";
-
-    } 
-    this.fetchEventAndUser();
-    return;
-    var segObj={};
-    var segDataList=[];
-    for(var i=0;i<10;i++){
-      segObj={};
-      segObj["lblIndex"]=i+1;
-      segObj["lblUserName"]="Brite Sreedharan";
-      segObj["lblEmail"]="brite.sreedharan@kony.com";
-      if(i%2===0){
-        segObj["flxTempUser"]={"skin":"sknFlxWhiteBG"};
-      }else{
-        segObj["flxTempUser"]={"skin":"sknFlxLightBlueBG"};
-      }
-      segObj["lblVerticalLine0"]=" ";
-      segObj["lblVerticalLine1"]=" ";
-      segObj["lblVerticalLine2"]=" ";
-      segObj["lblVerticalLine3"]=" ";
-      segObj["btnEdit"]={"text":"Edit"};
-      segObj["btnDone"]={"text":"Done"};
-      segObj["imgRemoveIcon"]={"src":"delete_icon.png"};
-      segDataList.push(segObj);
-    }
-    this.view.segUserList.removeAll();
-    this.view.segUserList.addAll(segDataList);
-    debugger;
-    var result=parseEventRegistration(record);
-    this.eventList=result;
-    var masterDataList=[];
-    var masterDataObj=[];
-    masterDataList.push(["-1", "Select Event"]);
-    for(var i=0;i<result.length;i++){
-      masterDataObj=[];
-      masterDataObj.push(i);
-      masterDataObj.push(result[i].event_id+" - "+result[i].name);
-      masterDataList.push(masterDataObj);
-    }
-    this.view.listBoxEvent.masterData=masterDataList;
-    this.view.listBoxEvent.selectedKey="-1";
-  },*/
-  
-  /**
-   * @function showLoading
-   * @description function to show the loading screen.
-   * @private
-   */
-  showLoading : function(){
-    kony.application.showLoadingScreen("sknloading",
-                                       "",
-                                       constants.LOADING_SCREEN_POSITION_FULL_SCREEN, 
-                                       true,
-                                       false,
-                                       {
-      enableMenuKey: false,
-      enableBackKey: false,
-      progressIndicatorColor: "000000"
-    });
-    this.view.forceLayout();
-  },
+ 
   /**
    * @function dismissLoading
    * @description function to dismiss the loading screen.
@@ -489,31 +420,6 @@ define({
     kony.application.dismissLoadingScreen();
     this.view.forceLayout();
   },
-  /*deRegisterUser2:function(registrationId){
-    alert("in deRegisterUser2 ");
-    var objSvc = kony.sdk.getCurrentInstance().getObjectService("EventsSOS", {
-      "access": "online"
-    });
-    var dataObject = new kony.sdk.dto.DataObject("event_registration");
-    dataObject.setRecord(registrationId);
-    var options = {
-      "dataObject": dataObject
-    };
-    try{
-      objSvc.deleteRecord(options,
-                          this.deleteSuccessCallBack.bind(this),
-                          this.deleteFailureCallBack.bind(this)); 
-    }catch(excp){
-      kony.print("Exception occured while deregistering user:"+excp(excp));
-    }
-
-  },
-  deleteSuccessCallBack:function(response){
-    alert("in deRegisterUser2 ");
-  },
-  deleteFailureCallBack:function(response){
-    alert("in deRegisterUser2 ");
-  },*/
   /**
    * @function navigateToAllEvents
    * @description function to navigate to AllEvents form.
@@ -529,8 +435,8 @@ define({
    * @private
    */
    setProfile : function(){
-    if(userAttributes!==undefined && userAttributes !==null && userAttributes !== {}){
-      this.view.dashboard.text = userAttributes.firstname;
+    if(glbUserAttributes!==undefined && glbUserAttributes !==null && glbUserAttributes !== {}){
+      this.view.dashboard.text = glbUserAttributes.firstname;
       this.view.dashboard.Title = "";
     }
    },
@@ -542,6 +448,70 @@ define({
   navigateToCreateEvent : function(){
     var nav = new kony.mvc.Navigation("frmCreateEvent");
     nav.navigate();
+  },
+  
+    /**
+	 * @function getShareAndView
+	 * @description - this function will fetch the metric results from back by event_id
+     * @param - {Number - event_id}
+	 **/
+  getShareAndView : function(eventID){
+    try{
+      var sdkClient = new kony.sdk.getCurrentInstance();
+      var objectInstance = sdkClient.getObjectService("EventsSOS", {"access": "online"});
+      if (objectInstance === null || objectInstance === undefined) {
+        alert("Please connect app to MF");
+        return;
+      }
+      var dataObject = new kony.sdk.dto.DataObject("event_metrics");
+      var options = {
+        "dataObject": dataObject,
+        "headers": {},
+        "queryParams": {"$filter": "event_id eq " + "'" + eventID + "' and ((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))"}
+      };
+     // kony.application.showLoadingScreen("", "", constants.LOADING_SCREEN_POSITION_ONLY_CENTER, true, true, {});
+      if (kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY)) {
+        objectInstance.fetch(options, this.getShareAndViewSuccess.bind(this), this.getShareAndViewFailure.bind(this));
+      } else {
+        //kony.application.dismissLoadingScreen();
+        alert("No Network connected");
+      }
+    }catch(e){
+     // kony.application.dismissLoadingScreen();
+      kony.print("Exception occured while getting events: "+e.message);
+      alert("Exception occured while getting events: "+e.message);
+    }
+  },
+  
+     /**
+	 * @function getShareAndViewSuccess
+	 * @description - this function is the sucess call back of the getShareAndView
+     * this functio will filter the event share and view to get the count
+     * @response - {Array - response from backend}
+	 **/
+  getShareAndViewSuccess : function(response){
+    var viewCount = 0;
+    var shareCount = 0; 
+    if(response.records.length>0){
+      shareCount = response.records.filter((obj) => obj.action === "share").length;
+      viewCount =  response.records.filter((obj) => obj.action === "view").length;
+    }
+    this.displayEventViewAndShare(viewCount,shareCount);
+  },
+       /**
+	 * @function getShareAndViewFailure
+	 * @description - this function is the error call back of the getShareAndView
+     * @error - {Object - error response from backend}
+	 **/
+  getShareAndViewFailure : function(error){
+    kony.print("Something Went wrong");
+  },
+     /**
+	 * @function displayEventViewAndShare
+	 * @description - this function will do the UI actions for share and view
+	 **/
+  displayEventViewAndShare : function(views,shares){
+    this.view.lblViewedEventCount.text = views;
+    this.view.lblSharedEventCount.text = shares;
   }
-
 });

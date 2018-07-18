@@ -1,5 +1,4 @@
 define({
-    //Type your controller code here 
     event: null,
     /**
      * @function onNavigate
@@ -8,13 +7,17 @@ define({
      * @param {JSON} data
      */
     onNavigate: function(data) {
-        debugger;
         try {
-            if (data === undefined || (data.origin !== undefined || data.origin === "loginBack")) return;
+            if (data === undefined || (data.origin !== undefined && data.origin === "loginBack")) return;
+            if (data.origin !== undefined && data.origin == "push") {
+                this.fromPush = true;
+            } else {
+                this.fromPush = false;
+            }
             this.resetImageData();
             this.event = data.event_data;
             this.sharingData = "";
-            this.sharingData = data.sharingData[0];
+            this.sharingData = data.event_data;
             this.setImageData(data.imageData);
             if (this.event.isRegister !== undefined && (this.event.isRegister === true || this.event.isRegister === "1")) {
                 this.view.flxFooter.isVisible = false;
@@ -22,10 +25,6 @@ define({
                 this.view.flxFooter.isVisible = true;
             }
             var width = kony.os.deviceInfo().screenWidth;
-            // alert(deviceWidth/3);
-            //this.view.inTransitionConfig={"transitionDuration":"3","transitionEffect":"transitionMoveIn","transitionDirection":"topCenter"};
-            //this.view.outTransitionConfig={};
-            this.view.flxInfoItem0.width = ("" + (deviceWidth / 3) - 10) + "dp";
             this.view.flxInfoItem0.height = ("" + (deviceWidth / 3) - 10) + "dp";
             this.view.flxInfoItem1.width = ("" + (deviceWidth / 3) - 10) + "dp";
             this.view.flxInfoItem1.height = ("" + (deviceWidth / 3) - 10) + "dp";
@@ -55,7 +54,6 @@ define({
                 this.view.lblInfoItemTitle12.text = "";
                 this.view.flxInfoItem1.onClick = null;
             }
-            //this.view.imgMain.src="event01.jpg";
             if (this.event.banner_url !== undefined && this.event.banner_url !== null) {
                 this.view.imgMain.src = this.event.banner_url;
             } else {
@@ -76,10 +74,7 @@ define({
      * @private
      */
     shareEvent: function() {
-        //alert("widget: "+JSON.stringify(widget));
         var selectedItem = this.sharingData;
-        //var selectedItem=data["widgetInfo"]["selectedRowItems"][0];
-        //alert("data: "+JSON.stringify(data["widgetInfo"]["selectedRowItems"][0]));
         this.view.imageBannerSS.src = selectedItem.banner_url;
         this.view.rchTextDateSS.text = selectedItem.date;
         this.view.rchtxtMonthSS.text = selectedItem.month;
@@ -88,15 +83,14 @@ define({
         this.view.lblCategorySS.text = selectedItem.categoryname;
         this.view.imageTypeIconSS.src = selectedItem.imageTypeIcon;
         this.view.lblEventTypeSS.text = selectedItem.addressLine1;
-        kony.image.createImageFromSnapShot(this.view.flexEventSS);
         try {
             var img = kony.image.createImageFromSnapShot(this.view.flexEventSS);
             var imageRawBytes = img.getImageAsRawBytes();
             var base64 = kony.convertToBase64(imageRawBytes);
-            //this.view.img2.base64=base64;
-            this.view.socialSharing.setContent("iVBOR");
+            //this.view.socialSharing.setContent("iVBOR");
             this.view.socialSharing.setContent(base64);
             this.view.socialSharing.checkDeviceInfo();
+            sendMetric(this.event.event_id, "share");
         } catch (e) {
             kony.print("Exception occured while sharing event: " + JSON.stringify(e));
         }
@@ -109,11 +103,6 @@ define({
     ShowLocationOnMap: function() {
         try {
             var navigationObj = new kony.mvc.Navigation("frmLocation");
-            /*var locData={
-              lat:17.4272931,
-              lon:78.3871002,
-              address:"Phoenix Hyderabad",
-            };*/
             var eventLoc = {};
             eventLoc["lat"] = this.event.latitude;
             eventLoc["lon"] = this.event.longitude;

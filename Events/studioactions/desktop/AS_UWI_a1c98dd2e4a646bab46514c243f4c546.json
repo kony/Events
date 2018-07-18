@@ -1,0 +1,20 @@
+{
+    "AS_UWI_a1c98dd2e4a646bab46514c243f4c546": {
+        "id": "AS_UWI_a1c98dd2e4a646bab46514c243f4c546",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "name": "currentTime",
+            "datatype": "collection"
+        }, {
+            "name": "nextSlot",
+            "datatype": "collection"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_onSelection_cb685a9b18054fc89ecfbf8957aebeef",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.startTimeOnSelection();",
+            "callbackType": null
+        }]
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "classname": "event",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "b7e1f1f1dd7c4676b8948e1fa3bb00d3",
+                    "paramList": [
+                        {
+                            "name": "eventDetail"
+                        }
+                    ],
+                    "propertyKey": "setEvent",
+                    "pw": {
+                        "displayName": "setEvent",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d4e3a9ff6a0b401bb742719e5a6394d9",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "fd25488c22e64026b953867dbf555018",
+                    "paramList": [
+                        {
+                            "name": "event"
+                        }
+                    ],
+                    "propertyIndex": 1,
+                    "propertyKey": "onRemove",
+                    "pw": {
+                        "displayName": "onRemove",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d4e3a9ff6a0b401bb742719e5a6394d9",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "c4b14a7e88064672b0ea6f0affa0ff80",
+                    "paramList": [
+                        {
+                            "name": "event"
+                        }
+                    ],
+                    "propertyIndex": 1,
+                    "propertyKey": "onEdit",
+                    "pw": {
+                        "displayName": "onEdit",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d4e3a9ff6a0b401bb742719e5a6394d9",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "e9fd66f5f5834bacba69a44852d20919",
+                    "paramList": [
+                        {
+                            "name": "event"
+                        }
+                    ],
+                    "propertyIndex": 1,
+                    "propertyKey": "onView",
+                    "pw": {
+                        "displayName": "onView",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d4e3a9ff6a0b401bb742719e5a6394d9",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konyenb",
+    "version": "1.0.0"
+}

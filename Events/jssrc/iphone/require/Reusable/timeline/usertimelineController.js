@@ -296,6 +296,7 @@ define(function() {
             };
             this.view.segTimeLine.setData(data);
             this.view.flexSegTimeLineMain.isVisible = true;
+            this.view.forceLayout();
             kony.print("End setDataToSegment TimeLineController");
         },
         /**

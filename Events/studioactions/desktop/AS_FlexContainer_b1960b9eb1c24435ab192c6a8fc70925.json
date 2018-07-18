@@ -1,0 +1,24 @@
+{
+    "AS_FlexContainer_b1960b9eb1c24435ab192c6a8fc70925": {
+        "id": "AS_FlexContainer_b1960b9eb1c24435ab192c6a8fc70925",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLogin",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d53a0c41005b46e9b1d5de20f80e6adb"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__dadc488da497418980b8063c42220d64",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.showPassword();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

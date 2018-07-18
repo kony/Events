@@ -41,7 +41,7 @@
     "desktopweb": {
         "needAppMenu": false
     },
-    "device": "iPhone7PlusZoomed",
+    "device": "GalaxyS8",
     "displayorientation": 1,
     "enabledforidletimeout": false,
     "id": "frmSearch",
@@ -95,13 +95,13 @@
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
-    "platform": "iphone",
-    "prevDevice": "GalaxyS8",
-    "prevPlatform": "android",
+    "platform": "android",
+    "prevDevice": "iPhone7PlusZoomed",
+    "prevPlatform": "iphone",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,
-    "shellCSS": "iOS_iPhone7PlusZoomed",
+    "shellCSS": "and_GalaxyS8",
     "snapgridsize": 10,
     "snaptogrid": true,
     "spaan": {

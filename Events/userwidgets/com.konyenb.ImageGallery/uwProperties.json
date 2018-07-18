@@ -1,0 +1,113 @@
+{
+    "classname": "ImageGallery",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "ef40317f21f94c6c870e0d24565ec3ee",
+                    "paramList": [
+                        {
+                            "name": "imageList"
+                        }
+                    ],
+                    "propertyKey": "setImage",
+                    "pw": {
+                        "displayName": "setImage",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "bcb96f7b9a0e4a469e903500542796e9",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "dd7db18a5b624cfbbb68980b232ec6b6",
+                    "paramList": [
+                        {
+                            "name": "folderID"
+                        }
+                    ],
+                    "propertyKey": "getImages",
+                    "pw": {
+                        "displayName": "getImages",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "bcb96f7b9a0e4a469e903500542796e9",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "c7535dd780244899aec38000246bda7a",
+                    "paramList": [
+                        {
+                            "name": "folderID"
+                        }
+                    ],
+                    "propertyKey": "getFolders",
+                    "pw": {
+                        "displayName": "getFolders",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "bcb96f7b9a0e4a469e903500542796e9",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "null",
+                    "group": "General",
+                    "kuid": "h2e6b1346174468e935f3199c083e130",
+                    "originalPropertyKey": "appUserID",
+                    "propertyIndex": 1,
+                    "propertyKey": "appUserID",
+                    "pw": {
+                        "displayName": "App User ID",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "bcb96f7b9a0e4a469e903500542796e9",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "0",
+                    "group": "General",
+                    "kuid": "a44dd7addd6c47d7afa0c7e9c1b8242f",
+                    "originalPropertyKey": "rootFolderID",
+                    "propertyIndex": 2,
+                    "propertyKey": "rootFolderID",
+                    "pw": {
+                        "displayName": "Root Folder ID",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "bcb96f7b9a0e4a469e903500542796e9",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konyenb",
+    "version": "1.0.0"
+}

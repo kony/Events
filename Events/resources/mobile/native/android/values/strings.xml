@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"><![CDATA[Events]]></string>
+    <string name="search_hint">Search</string>
+    <string name="search_label">Search</string>
+</resources>

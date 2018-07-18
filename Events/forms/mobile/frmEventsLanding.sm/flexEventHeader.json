@@ -38,7 +38,7 @@
     "children": [
         "lblHeaderTitle",
         "flexSearch",
-        "CopyflexSearch0ee7683a6a43f44"
+        "flexHamburger"
     ],
     "clipbounds": true,
     "containerweight": 100,

@@ -11,12 +11,19 @@ define({
     AS_FlexContainer_fd26169aa27a4ee4a8aae7a4d9b1800b: function AS_FlexContainer_fd26169aa27a4ee4a8aae7a4d9b1800b(eventobject) {
         var self = this;
         var ntf = new kony.mvc.Navigation("frmEventsLanding");
-        ntf.navigate();
+        ntf.navigate({
+            "origin": "searchback"
+        });
     },
     /** onTextChange defined for txtSearch **/
     AS_TextField_f32a139024244acabf5ab1bcd58134d5: function AS_TextField_f32a139024244acabf5ab1bcd58134d5(eventobject, changedtext) {
         var self = this;
         this.searchByEventName(this.view.txtSearch.text);
+    },
+    /** onClick defined for btnCross **/
+    AS_Button_dd3f28cf76c144eebe912d9b12af17a7: function AS_Button_dd3f28cf76c144eebe912d9b12af17a7(eventobject) {
+        var self = this;
+        this.clearTextBox();
     },
     /** onRowClick defined for segSearchResult **/
     AS_Segment_f95f8e10bc5b4b9ba646159507c5da98: function AS_Segment_f95f8e10bc5b4b9ba646159507c5da98(eventobject, sectionNumber, rowNumber) {

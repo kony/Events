@@ -120,7 +120,7 @@ define("frmEventDetails", function() {
                 "padding": [0, 0, 0, 0],
                 "paddingInPixel": false
             }, {});
-            var socialSharing = new com.konysa.socialSharing({
+            var socialSharing = new com.konyenb.socialSharing({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "bottom": 0,
                 "centerX": "50%",
@@ -156,14 +156,14 @@ define("frmEventDetails", function() {
             }, {}, {});
             flxEventImage.setDefaultUnit(kony.flex.DP);
             var imgMain = new kony.ui.Image2({
-                "centerX": "50%",
+                "centerX": "49.97%",
                 "height": "100%",
                 "id": "imgMain",
                 "imageWhenFailed": "eventsdef.png",
                 "imageWhileDownloading": "eventsdef.png",
                 "isVisible": true,
                 "skin": "slImage",
-                "src": "eventsdef.png",
+                "src": "https://app.box.com/shared/static/dlckxc9fxe2nit9e7iuv46oog8xblh6o.jpg",
                 "top": "0dp",
                 "width": "100%",
                 "zIndex": 1
@@ -756,13 +756,15 @@ define("frmEventDetails", function() {
             }, {}, {});
             flexItem0.setDefaultUnit(kony.flex.DP);
             var imgItem0 = new kony.ui.Image2({
-                "centerX": "50%",
-                "centerY": "50%",
+                "centerX": "50.00%",
+                "centerY": "50.19%",
                 "height": "100%",
                 "id": "imgItem0",
+                "imageWhenFailed": "eventske.png",
+                "imageWhileDownloading": "eventske.png",
                 "isVisible": true,
                 "skin": "slImage",
-                "src": "event06.jpg",
+                "src": "eventske.png",
                 "width": "100%",
                 "zIndex": 1
             }, {
@@ -786,10 +788,12 @@ define("frmEventDetails", function() {
             }, {}, {});
             flexItem1.setDefaultUnit(kony.flex.DP);
             var imgItem1 = new kony.ui.Image2({
-                "centerX": "50%",
-                "centerY": "50%",
+                "centerX": "49.81%",
+                "centerY": "50.00%",
                 "height": "100%",
                 "id": "imgItem1",
+                "imageWhenFailed": "eventske.png",
+                "imageWhileDownloading": "eventske.png",
                 "isVisible": true,
                 "skin": "slImage",
                 "src": "event01.jpg",
@@ -820,6 +824,8 @@ define("frmEventDetails", function() {
                 "centerY": "50%",
                 "height": "100%",
                 "id": "imgItem2",
+                "imageWhenFailed": "eventske.png",
+                "imageWhileDownloading": "eventske.png",
                 "isVisible": true,
                 "skin": "slImage",
                 "src": "event02.jpg",
@@ -850,6 +856,8 @@ define("frmEventDetails", function() {
                 "centerY": "50%",
                 "height": "100%",
                 "id": "imgItem3",
+                "imageWhenFailed": "eventske.png",
+                "imageWhileDownloading": "eventske.png",
                 "isVisible": true,
                 "skin": "slImage",
                 "src": "event03.jpg",
@@ -880,6 +888,8 @@ define("frmEventDetails", function() {
                 "centerY": "50%",
                 "height": "100%",
                 "id": "imgItem4",
+                "imageWhenFailed": "eventske.png",
+                "imageWhileDownloading": "eventske.png",
                 "isVisible": true,
                 "skin": "slImage",
                 "src": "event04.jpeg",
@@ -1035,6 +1045,7 @@ define("frmEventDetails", function() {
                 "id": "imageBannerSS",
                 "isVisible": true,
                 "left": "0%",
+                "onDownloadComplete": controller.AS_Image_e7df0d8001944b98b3f1f479014c10b8,
                 "src": "event01.jpg",
                 "top": "0%",
                 "width": "100%",
@@ -1321,6 +1332,7 @@ define("frmEventDetails", function() {
             "id": "frmEventDetails",
             "layoutType": kony.flex.FREE_FORM,
             "needAppMenu": false,
+            "postShow": controller.AS_Form_g3e541c7a3fa403592d6d2969f0ced88,
             "skin": "sknFrmBGGradient"
         }, {
             "displayOrientation": constants.FORM_DISPLAY_ORIENTATION_PORTRAIT,

@@ -255,7 +255,9 @@ function skinsInit() {
     headerBackIconSkin = "headerBackIconSkin";
     headerButtonBackSkin = "headerButtonBackSkin";
     headerButtonClearSkin = "headerButtonClearSkin";
+    headerCancelIconSkin = "headerCancelIconSkin";
     headerContainerSknMaster = "headerContainerSknMaster";
+    headerDoneIconSkin = "headerDoneIconSkin";
     headerIconCartSkin = "headerIconCartSkin";
     headerPlusIconSkin = "headerPlusIconSkin";
     headerTitleSkinMaster = "headerTitleSkinMaster";
@@ -265,6 +267,7 @@ function skinsInit() {
     seg2Normal = "seg2Normal";
     sknbtnBack = "sknbtnBack";
     sknbtnClose = "sknbtnClose";
+    sknbtncrossicon = "sknbtncrossicon";
     sknbtndone = "sknbtndone";
     sknBtnEdit = "sknBtnEdit";
     sknBtnEventDescRemove = "sknBtnEventDescRemove";
@@ -411,6 +414,7 @@ function skinsInit() {
     skntxterror = "skntxterror";
     skntxtnormal = "skntxtnormal";
     slCalendar = "slCalendar";
+    slCamera = "slCamera";
     slCheckBoxGroup = "slCheckBoxGroup";
     slDynamicNotificationForm = "slDynamicNotificationForm";
     slFbox = "slFbox";

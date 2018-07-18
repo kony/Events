@@ -20,7 +20,7 @@
         0
     ],
     "_skin_": "s88b56ff724d41ba810874734ecc8df4",
-    "_src_": "eventsdef.png",
+    "_src_": "https://app.box.com/shared/static/dlckxc9fxe2nit9e7iuv46oog8xblh6o.jpg",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -32,7 +32,7 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "49.97%"
     },
     "containerweight": 100,
     "context": {
@@ -47,7 +47,7 @@
     "imagewhenfailed": "eventsdef.png",
     "imagewhiledownloading": "eventsdef.png",
     "info": null,
-    "invokedProperty": "imageWhenFailed",
+    "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "hbb8d9d8f66345158fb516d4d016e47c",
