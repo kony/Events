@@ -31,5 +31,8 @@ var EVENT_CONSTANS = {
   },
   SKINS : {
     
+  },
+  KMS : {
+	SENDERID : ""
   }
 };
