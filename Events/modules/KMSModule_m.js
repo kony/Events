@@ -36,7 +36,7 @@ function registerKMS() {
 		//#ifdef android
 		KMSPROP.osType = "androidgcm";
 		var configRegister = {
-			senderid: "150665757263"
+			senderid: EVENT_CONSTANS.KMS.SENDERID
 		};
 		//#endif
 		//#ifdef iphone
