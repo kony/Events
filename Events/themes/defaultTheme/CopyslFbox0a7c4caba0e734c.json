@@ -9,6 +9,23 @@
   "border_style": "custom",
   "border_type": 0,
   "border_width": 1,
+  "desktopweb": {
+    "bottom_left_border_color": "f0f1f3ff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "f0f1f3ff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "customCSS": "box-shadow: -1px 3px 6px #000000,1px 3px 6px #000000;\nbackground-color: #f0f1f3;\nborder-radius:100px;",
+    "isCustomCSSEnabled": true,
+    "isForked": true,
+    "top_left_border_color": "f0f1f3ff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "f0f1f3ff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
+  },
   "ipad": {
     "font_name": "Helvetica",
     "isForked": true,
@@ -39,7 +56,9 @@
   },
   "kuid": "s902bbb2407f4a448af33037cc11d9eb",
   "spaan": {
+    "customCSS": "box-shadow: -1px 3px 6px #000000,1px 3px 6px #000000;\nbackground-color: #f0f1f3;\nborder-radius:100px;",
     "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -51,7 +70,9 @@
     }
   },
   "spaandroidtablet": {
+    "customCSS": "box-shadow: -1px 3px 6px #000000,1px 3px 6px #000000;\nbackground-color: #f0f1f3;\nborder-radius:100px;",
     "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -63,7 +84,9 @@
     }
   },
   "spabb": {
+    "customCSS": "box-shadow: -1px 3px 6px #000000,1px 3px 6px #000000;\nbackground-color: #f0f1f3;\nborder-radius:100px;",
     "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -75,7 +98,9 @@
     }
   },
   "spaip": {
+    "customCSS": "box-shadow: -1px 3px 6px #000000,1px 3px 6px #000000;\nbackground-color: #f0f1f3;\nborder-radius:100px;",
     "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -87,7 +112,9 @@
     }
   },
   "spaipad": {
+    "customCSS": "box-shadow: -1px 3px 6px #000000,1px 3px 6px #000000;\nbackground-color: #f0f1f3;\nborder-radius:100px;",
     "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -99,7 +126,9 @@
     }
   },
   "spawindowstablet": {
+    "customCSS": "box-shadow: -1px 3px 6px #000000,1px 3px 6px #000000;\nbackground-color: #f0f1f3;\nborder-radius:100px;",
     "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -111,7 +140,9 @@
     }
   },
   "spawinphone8": {
+    "customCSS": "box-shadow: -1px 3px 6px #000000,1px 3px 6px #000000;\nbackground-color: #f0f1f3;\nborder-radius:100px;",
     "font_name": "Helvetica",
+    "isCustomCSSEnabled": true,
     "isForked": true,
     "shadow": {
       "br": 0,

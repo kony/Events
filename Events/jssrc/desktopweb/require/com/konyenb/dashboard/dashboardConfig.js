@@ -1,7 +1,7 @@
 define(function() {
     return {
         "properties": [{
-            "name": "text",
+            "name": "username",
             "enumerable": true,
             "configurable": false,
             "writable": true
@@ -15,8 +15,28 @@ define(function() {
             "enumerable": true,
             "configurable": false,
             "writable": true
+        }, {
+            "name": "isUsernameVisible",
+            "enumerable": true,
+            "configurable": false,
+            "writable": true
+        }, {
+            "name": "isProfileVisible",
+            "enumerable": true,
+            "configurable": false,
+            "writable": true
+        }, {
+            "name": "profileSrc",
+            "enumerable": true,
+            "configurable": false,
+            "writable": true
+        }, {
+            "name": "isLoginVisible",
+            "enumerable": true,
+            "configurable": false,
+            "writable": true
         }],
         "apis": [],
-        "events": []
+        "events": ["btnLoginClick"]
     }
 });

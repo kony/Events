@@ -138,6 +138,7 @@ define(function() {
           }
         };
         var mfURL = KNYMobileFabric.integsvc.BoxService.url;
+        var uploadURL = mfURL + "/UploadFilesInFolder";
         xhr.open("POST", uploadURL, true);
         xhr.send(params);
       }catch(e){

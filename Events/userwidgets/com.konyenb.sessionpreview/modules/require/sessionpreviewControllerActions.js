@@ -2,9 +2,9 @@ define({
     /*
       This is an auto generated file and any modifications to it may result in corruption of the action sequence.
     */
-    /** postShow defined for sessionpreview **/
-    AS_FlexContainer_da8b622bc77544e6868db44d5528a8c2: function AS_FlexContainer_da8b622bc77544e6868db44d5528a8c2(eventobject) {
+    /** preShow defined for sessionpreview **/
+    AS_FlexContainer_daaf8378dc624fb5ba8f274ecdc698dd: function AS_FlexContainer_daaf8378dc624fb5ba8f274ecdc698dd(eventobject) {
         var self = this;
-        this.createSegment();
+        this.setData();
     }
 });

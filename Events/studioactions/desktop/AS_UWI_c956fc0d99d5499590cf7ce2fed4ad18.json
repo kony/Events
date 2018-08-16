@@ -1,0 +1,24 @@
+{
+    "AS_UWI_c956fc0d99d5499590cf7ce2fed4ad18": {
+        "id": "AS_UWI_c956fc0d99d5499590cf7ce2fed4ad18",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmAllEvents",
+            "type": "forms",
+            "platform": "",
+            "KUID": "cf1fac0c5aa548d89c9d119620fa7dcd"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__dba4cb0eb59b48a483af245ef588fe87",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.registerToEvent();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

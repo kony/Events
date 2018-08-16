@@ -32,7 +32,7 @@ define({
             this.doTabActions("btnBasic"); //set the tabs to highlight basic info
             this.view.EventsHeader.btnBasic.onClick = function(eventobject) {
                 this.doTabActions(eventobject.id);
-            };
+            }.bind(this);
             if (param !== undefined && param.editMode !== undefined && param.editMode === true) {
                 this.isEditMode = true;
                 this.isLoadedFromServer = false;
@@ -216,8 +216,8 @@ define({
      **/
     setProfile: function() {
         try {
-            if (glbUserAttributes !== undefined && glbUserAttributes !== null && glbUserAttributes !== {}) {
-                this.view.dashboard.text = glbUserAttributes.firstname;
+            if (glbProfile !== undefined && glbProfile !== null && glbProfile !== {}) {
+                this.view.dashboard.username = glbProfile.first_name;
                 this.view.dashboard.Title = "";
             }
         } catch (error) {

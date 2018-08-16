@@ -2,22 +2,137 @@
     "classname": "eventpreview",
     "definitions": {
         "apis": {
-            "custom": [],
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "bba93510975f4db2b94a0afb9a98957b",
+                    "paramList": [
+                        {
+                            "name": "eventDetails"
+                        }
+                    ],
+                    "propertyKey": "setEventDetails",
+                    "pw": {
+                        "displayName": "setEventDetails",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "dd3e464d49224bbdb27551db33059f75",
+                    "type": "event"
+                }
+            ],
             "passthrough": []
         },
         "events": {
             "custom": [],
-            "passthrough": []
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "g381be23d45740c6b282c7bebec203ba",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 1,
+                    "propertyKey": "onPrevBack",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onPrevBack",
+                        "srcWidget": "FlexEventPreviewBack",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "c30194728dc24fd0b83c3685661b3346"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "aa166bda3840486cbe76c128a17ff4ff",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 2,
+                    "propertyKey": "onTopRegisterClick",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onTopRegisterClick",
+                        "srcWidget": "btnRegister",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "db3e186ec15241deb6b920cea620ed02"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "ccfc8ae15ba049ab83a6b1c2b1808ddb",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 3,
+                    "propertyKey": "onBottomRegisterClick",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onBottomRegisterClick",
+                        "srcWidget": "btnRegisterBottom",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "e2c365202c834bb4ab655dd92829e638"
+                }
+            ]
         },
         "groups": {
-            "apis": [],
+            "apis": [
+                "General"
+            ],
             "events": [],
             "properties": [],
             "widgets": []
         },
         "properties": {
             "custom": [],
-            "passthrough": []
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "ad85c423667b4085a3fe383ff33e6fc4",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 1,
+                    "propertyKey": "isTopRegisterVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "topRegisterButtonVisibility",
+                        "srcWidget": "btnRegister",
+                        "toolTip": "Hides/shows the widget in the screen",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "db3e186ec15241deb6b920cea620ed02"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "cb4351e57ce34901ab058c26324bd2ff",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 2,
+                    "propertyKey": "isBottomRegisterVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "bottomRegisterButtonVisibility",
+                        "srcWidget": "btnRegisterBottom",
+                        "toolTip": "Hides/shows the widget in the screen",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "e2c365202c834bb4ab655dd92829e638"
+                }
+            ]
         },
         "widgets": {
             "expose": [],

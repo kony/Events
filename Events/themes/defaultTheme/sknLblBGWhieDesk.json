@@ -1,0 +1,101 @@
+{
+  "android": {
+    "font_name": "default",
+    "font_size": 0,
+    "isForked": false
+  },
+  "androidwearos": {
+    "font_size": 0,
+    "isForked": false
+  },
+  "background_color": "c9c9c9ff",
+  "bg_type": "one",
+  "border_color": "424242ff",
+  "border_style": "plain",
+  "border_type": 0,
+  "border_width": 0,
+  "desktopweb": {
+    "font_name": "Helvetica",
+    "font_size": 0,
+    "isForked": false
+  },
+  "fontSizeInPx": false,
+  "font_color": "33333300",
+  "font_name": "Helvetica",
+  "font_size": 0,
+  "font_style": "normal",
+  "font_weight": "normal",
+  "ipad": {
+    "font_name": "Helvetica",
+    "font_size": 0,
+    "isForked": false
+  },
+  "iphone": {
+    "font_name": "Helvetica",
+    "font_size": 0,
+    "isForked": false
+  },
+  "isDefaultSkin": false,
+  "kiosk": {
+    "font_name": "None",
+    "font_size": 0,
+    "isForked": false
+  },
+  "kuid": "s9a7044e0efc42a0ba52d714747af82b",
+  "spaan": {
+    "font_name": "Helvetica",
+    "font_size": 0,
+    "isForked": false
+  },
+  "spaandroidtablet": {
+    "font_name": "Helvetica",
+    "font_size": 0,
+    "isForked": false
+  },
+  "spabb": {
+    "font_name": "Helvetica",
+    "font_size": 0,
+    "isForked": false
+  },
+  "spaip": {
+    "font_name": "Helvetica",
+    "font_size": 0,
+    "isForked": false
+  },
+  "spaipad": {
+    "font_name": "Helvetica",
+    "font_size": 0,
+    "isForked": false
+  },
+  "spawindowstablet": {
+    "font_name": "Helvetica",
+    "font_size": 0,
+    "isForked": false
+  },
+  "spawinphone8": {
+    "font_name": "Helvetica",
+    "font_size": 0,
+    "isForked": false
+  },
+  "tabrcandroid": {
+    "font_name": "default",
+    "font_size": 0,
+    "isForked": false
+  },
+  "wType": "Label",
+  "watchos": {
+    "font_name": "System",
+    "font_size": 0,
+    "isForked": false
+  },
+  "windows8": {
+    "font_name": "None",
+    "font_size": 0,
+    "isForked": false
+  },
+  "winphone8": {
+    "font_name": "None",
+    "font_size": 0,
+    "isForked": false
+  }
+}

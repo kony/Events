@@ -1,4 +1,3 @@
-//Type your code here
 var glbDeviceWidth;
 var glbDayString = {
 	"0": "Sunday",

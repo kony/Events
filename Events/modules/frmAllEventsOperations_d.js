@@ -19,8 +19,17 @@
  				"width": "322dp"
  			}, {}, {});
  		event.setEvent(eventObj);
- 		event.onRemove = context.onEventRemove;
- 		event.onEdit = context.onEventEdit;
+        if(EVENT_CONSTANS.MODE.USERROLE === EVENT_CONSTANS.USERROLE.ADMIN){
+          event.onRemove = context.onEventRemove;
+ 		  event.onEdit = context.onEventEdit;
+          event.isRemoveVisible = true;
+          event.isEditVisible = true;
+          event.isRegisteredVisible = false;
+        }else if(EVENT_CONSTANS.MODE.USERROLE === EVENT_CONSTANS.USERROLE.CONSUMER){
+          event.isRemoveVisible = false;
+          event.isEditVisible = false;
+          event.isRegisteredVisible =eventObj.isRegister
+        }
         event.onView = context.onViewEvent;
  		return event;
  	} catch (err) {

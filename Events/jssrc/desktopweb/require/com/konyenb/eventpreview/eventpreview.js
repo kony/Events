@@ -46,6 +46,7 @@ define(function() {
             "isVisible": true,
             "layoutType": kony.flex.FREE_FORM,
             "left": "5%",
+            "onClick": controller.AS_onPrevBack_c30194728dc24fd0b83c3685661b3346,
             "skin": "CopyslFbox0gbeaa8667c7e49",
             "top": "26dp",
             "width": "30dp",
@@ -139,7 +140,7 @@ define(function() {
             "isVisible": true,
             "left": "9.00%",
             "skin": "CopydefLabel0i8c4d1a19c1841",
-            "text": "Webinar Event Upgrade",
+            "text": "Unpacking V8 SP2",
             "top": "28.57%",
             "width": "50%",
             "zIndex": 5
@@ -160,7 +161,7 @@ define(function() {
             "isVisible": true,
             "left": "9.01%",
             "skin": "CopydefLabel0b298171997e943",
-            "text": "Conference",
+            "text": "Speaker Series",
             "width": "50%",
             "zIndex": 5
         }, {
@@ -178,7 +179,7 @@ define(function() {
         var flexEventBannerRounded = new kony.ui.FlexContainer({
             "autogrowMode": kony.flex.AUTOGROW_NONE,
             "clipBounds": true,
-            "height": "60%",
+            "height": "70%",
             "id": "flexEventBannerRounded",
             "isVisible": true,
             "layoutType": kony.flex.FREE_FORM,
@@ -229,16 +230,14 @@ define(function() {
         }, {});
         flexDateRange.setDefaultUnit(kony.flex.DP);
         var lblDateRange = new kony.ui.Label({
-            "centerX": "47%",
-            "centerY": "50%",
-            "height": "100%",
+            "height": "20%",
             "id": "lblDateRange",
             "isVisible": true,
-            "left": "34dp",
+            "left": "0%",
             "skin": "CopydefLabel0g1c75e5a27044e",
-            "text": "01 - 02 AUG 2018",
-            "top": "50dp",
-            "width": "70%",
+            "text": " 03 - 05 ",
+            "top": "30%",
+            "width": "100%",
             "zIndex": 1
         }, {
             "containerWeight": 100,
@@ -251,7 +250,51 @@ define(function() {
             "vExpand": false,
             "widgetAlignment": constants.WIDGET_ALIGN_CENTER
         }, {});
-        flexDateRange.add(lblDateRange);
+        var lblMonthYear = new kony.ui.Label({
+            "bottom": "30%",
+            "centerY": "60%",
+            "height": "20%",
+            "id": "lblMonthYear",
+            "isVisible": true,
+            "left": "0%",
+            "skin": "CopydefLabel0g1c75e5a27044e",
+            "text": "JUL 2018",
+            "width": "100%",
+            "zIndex": 1
+        }, {
+            "containerWeight": 100,
+            "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+            "hExpand": true,
+            "margin": [1, 1, 1, 1],
+            "marginInPixel": false,
+            "padding": [0, 0, 0, 0],
+            "paddingInPixel": false,
+            "vExpand": false,
+            "widgetAlignment": constants.WIDGET_ALIGN_CENTER
+        }, {});
+        var rchDateRange = new kony.ui.RichText({
+            "centerY": "50%",
+            "id": "rchDateRange",
+            "isVisible": false,
+            "left": "0%",
+            "linkSkin": "defRichTextLink",
+            "skin": "CopydefRichTextNormal0i1aa0f10098b4b",
+            "text": " 03 - 05 <br> JUL 2018",
+            "top": "0%",
+            "width": "100%",
+            "zIndex": 1
+        }, {
+            "containerWeight": 100,
+            "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+            "hExpand": true,
+            "margin": [0, 0, 0, 0],
+            "marginInPixel": false,
+            "padding": [0, 0, 0, 0],
+            "paddingInPixel": false,
+            "vExpand": false,
+            "widgetAlignment": constants.WIDGET_ALIGN_CENTER
+        }, {});
+        flexDateRange.add(lblDateRange, lblMonthYear, rchDateRange);
         flexEventBannerRounded.add(imageBanner, flexDateRange);
         var flexEventDetailsPreview = new kony.ui.FlexContainer({
             "autogrowMode": kony.flex.AUTOGROW_HEIGHT,
@@ -261,20 +304,19 @@ define(function() {
             "layoutType": kony.flex.FLOW_VERTICAL,
             "left": "5%",
             "skin": "slFbox",
-            "top": "78%",
+            "top": "88%",
             "width": "65%",
             "zIndex": 1
         }, {
             "containerWeight": 100
         }, {});
         flexEventDetailsPreview.setDefaultUnit(kony.flex.DP);
-        var rchtxtDescriptionPrev = new kony.ui.RichText({
-            "id": "rchtxtDescriptionPrev",
+        var lblDesc = new kony.ui.Label({
+            "id": "lblDesc",
             "isVisible": true,
             "left": "0%",
-            "linkSkin": "defRichTextLink",
-            "skin": "CopydefRichTextNormal0a86e6d2fa26549",
-            "text": "Join Kony experts on July 18, 2018, as we walk you through developing a rich interactive solution using Kony App Platform. We recently released an Events application as a sample which has Mobile and Desktop web capabilities. It can be used by any organization to announce events to its customers, members, and/or employees.\nThe Events application leverages a range of features offered by Kony App Platform. We will cover the different aspects of design and give you a detail of the features utilized to develop the application. Some of the key features we’ll cover include:",
+            "skin": "CopydefLabel0hf758c59295641",
+            "text": "Join Kony experts on July 18, 2018, as we walk you through developing a rich interactive solution using Kony App Platform. We recently released an Events application as a sample which has Mobile and Desktop web capabilities. It can be used by any organization to announce events to its customers, members, and/or employees.The Events application leverages a range of features offered by Kony App Platform. We will cover the different aspects of design and give you a detail of the features utilized to develop the application. Some of the key features we’ll cover include:  Components Different types of backend services Reporting Integration with external systems like Linkedin.com Push notifications",
             "top": "0dp",
             "width": "80%",
             "zIndex": 1
@@ -282,7 +324,7 @@ define(function() {
             "containerWeight": 100,
             "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
             "hExpand": true,
-            "margin": [0, 0, 0, 0],
+            "margin": [1, 1, 1, 1],
             "marginInPixel": false,
             "padding": [0, 0, 0, 0],
             "paddingInPixel": false,
@@ -292,8 +334,9 @@ define(function() {
         var btnShowMore = new kony.ui.Button({
             "height": "30dp",
             "id": "btnShowMore",
-            "isVisible": true,
+            "isVisible": false,
             "left": "0%",
+            "onClick": controller.AS_Button_cdb25ed7935b4398948c269e15e17292,
             "skin": "CopydefBtnNormal0if54e203b4dc47",
             "text": "Show more",
             "top": "5dp",
@@ -354,7 +397,7 @@ define(function() {
             "clipBounds": true,
             "height": "87dp",
             "id": "flexItem0",
-            "isVisible": true,
+            "isVisible": false,
             "layoutType": kony.flex.FREE_FORM,
             "left": "0dp",
             "skin": "sknFlxEventRoundedCorner",
@@ -564,7 +607,7 @@ define(function() {
             "imageWhileDownloading": "eventske.png",
             "isVisible": true,
             "skin": "slImage",
-            "src": "event04.jpeg",
+            "src": "event05.jpg",
             "width": "100%",
             "zIndex": 1
         }, {
@@ -581,7 +624,7 @@ define(function() {
             "clipBounds": true,
             "height": "100%",
             "id": "flexRemainingImageCount",
-            "isVisible": true,
+            "isVisible": false,
             "layoutType": kony.flex.FREE_FORM,
             "left": "0%",
             "skin": "CopyslFbox0fc77a92784cb45",
@@ -617,7 +660,100 @@ define(function() {
         flexRemainingImageCount.add(lblRemaingImageCount);
         flexItem5.add(imgItem5, flexRemainingImageCount);
         flxGalleryCompConatiner.add(flexItem0, flexItem1, flexItem2, flexItem3, flexItem4, flexItem5);
-        flexEventDetailsPreview.add(rchtxtDescriptionPrev, btnShowMore, lblGalleryTitle, flxGalleryCompConatiner);
+        var lblSessionTitleDet = new kony.ui.Label({
+            "height": "30dp",
+            "id": "lblSessionTitleDet",
+            "isVisible": true,
+            "left": "0dp",
+            "skin": "CopydefLabel0b3bed0bd70c444",
+            "text": "Event Sessions",
+            "top": "10dp",
+            "width": "50%",
+            "zIndex": 1
+        }, {
+            "containerWeight": 100,
+            "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
+            "hExpand": true,
+            "margin": [1, 1, 1, 1],
+            "marginInPixel": false,
+            "padding": [0, 0, 0, 0],
+            "paddingInPixel": false,
+            "vExpand": false,
+            "widgetAlignment": constants.WIDGET_ALIGN_CENTER
+        }, {});
+        var flexSessionsandSpeakers = new kony.ui.FlexContainer({
+            "autogrowMode": kony.flex.AUTOGROW_HEIGHT,
+            "clipBounds": true,
+            "id": "flexSessionsandSpeakers",
+            "isVisible": true,
+            "layoutType": kony.flex.FLOW_VERTICAL,
+            "left": "0%",
+            "skin": "slFbox",
+            "top": "0dp",
+            "width": "80%",
+            "zIndex": 2
+        }, {
+            "containerWeight": 100
+        }, {});
+        flexSessionsandSpeakers.setDefaultUnit(kony.flex.DP);
+        var sessionpreview = new com.konyenb.sessionpreview({
+            "autogrowMode": kony.flex.AUTOGROW_HEIGHT,
+            "clipBounds": true,
+            "id": "sessionpreview",
+            "isVisible": true,
+            "layoutType": kony.flex.FREE_FORM,
+            "left": "0dp",
+            "masterType": constants.MASTER_TYPE_USERWIDGET,
+            "skin": "sknFlexBorderDesk00a0dd",
+            "top": "5dp",
+            "width": "100%"
+        }, {
+            "containerWeight": 0
+        }, {});
+        sessionpreview.onClick = controller.AS_onPrevBack_c30194728dc24fd0b83c3685661b3346;
+        flexSessionsandSpeakers.add(sessionpreview);
+        var btnRegisterBottom = new kony.ui.Button({
+            "focusSkin": "CopydefBtnNormal0ed0a68b2c3ae44",
+            "height": "40dp",
+            "id": "btnRegisterBottom",
+            "isVisible": true,
+            "left": "0%",
+            "onClick": controller.AS_onBottomRegisterClick_e2c365202c834bb4ab655dd92829e638,
+            "skin": "CopydefBtnNormal0ed0a68b2c3ae44",
+            "text": "REGISTER",
+            "top": "20dp",
+            "width": "25%",
+            "zIndex": 2
+        }, {
+            "containerWeight": 100,
+            "contentAlignment": constants.CONTENT_ALIGN_CENTER,
+            "displayText": true,
+            "hExpand": true,
+            "margin": [6, 6, 6, 6],
+            "marginInPixel": false,
+            "padding": [0, 0, 0, 0],
+            "paddingInPixel": false,
+            "vExpand": false,
+            "widgetAlignment": constants.WIDGET_ALIGN_CENTER
+        }, {});
+        var FlexContainer0h9e3b693ead144 = new kony.ui.FlexContainer({
+            "autogrowMode": kony.flex.AUTOGROW_NONE,
+            "clipBounds": true,
+            "height": "80dp",
+            "id": "FlexContainer0h9e3b693ead144",
+            "isVisible": true,
+            "layoutType": kony.flex.FREE_FORM,
+            "left": "0dp",
+            "skin": "slFbox",
+            "top": "0dp",
+            "width": "100%",
+            "zIndex": 2
+        }, {
+            "containerWeight": 100
+        }, {});
+        FlexContainer0h9e3b693ead144.setDefaultUnit(kony.flex.DP);
+        FlexContainer0h9e3b693ead144.add();
+        flexEventDetailsPreview.add(lblDesc, btnShowMore, lblGalleryTitle, flxGalleryCompConatiner, lblSessionTitleDet, flexSessionsandSpeakers, btnRegisterBottom, FlexContainer0h9e3b693ead144);
         var flexEventDateTimeMapPrev = new kony.ui.FlexContainer({
             "autogrowMode": kony.flex.AUTOGROW_HEIGHT,
             "clipBounds": true,
@@ -626,7 +762,7 @@ define(function() {
             "layoutType": kony.flex.FLOW_VERTICAL,
             "left": "60%",
             "skin": "slFbox",
-            "top": "78%",
+            "top": "88%",
             "width": "35%",
             "zIndex": 1
         }, {
@@ -639,6 +775,7 @@ define(function() {
             "id": "btnRegister",
             "isVisible": true,
             "left": "0%",
+            "onClick": controller.AS_onTopRegisterClick_db3e186ec15241deb6b920cea620ed02,
             "skin": "CopydefBtnNormal0ed0a68b2c3ae44",
             "text": "REGISTER",
             "top": "0dp",
@@ -695,8 +832,8 @@ define(function() {
             "id": "lblDateValuePrev",
             "isVisible": true,
             "left": "0%",
-            "skin": "CopydefLabel0ge2f18c6310f4f",
-            "text": "12 Aug - 14 Aug, 2018",
+            "skin": "CopydefLabel0e422706dca9048",
+            "text": "03 Jul - 05 Jul, 2018",
             "top": "2dp",
             "width": "100%",
             "zIndex": 1
@@ -732,7 +869,7 @@ define(function() {
             "isVisible": true,
             "left": "0%",
             "skin": "CopydefLabel0j1a869fdd62a41",
-            "text": "Location",
+            "text": "Online Event",
             "top": "0dp",
             "width": "100%",
             "zIndex": 1
@@ -752,7 +889,7 @@ define(function() {
             "isVisible": true,
             "left": "0%",
             "skin": "CopydefLabel0ge2f18c6310f4f",
-            "text": "Convention center",
+            "text": "https://kony.webex.com/mw3300/mywebex",
             "top": "2dp",
             "width": "100%",
             "zIndex": 1
@@ -773,7 +910,7 @@ define(function() {
             "clipBounds": true,
             "height": "400dp",
             "id": "flexGoogleMap",
-            "isVisible": true,
+            "isVisible": false,
             "layoutType": kony.flex.FREE_FORM,
             "left": "0dp",
             "skin": "CopyslFbox0af461fdac55b40",

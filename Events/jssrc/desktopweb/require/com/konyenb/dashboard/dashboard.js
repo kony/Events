@@ -104,29 +104,62 @@ define(function() {
             "zIndex": 5
         }, {}, {});
         flexProfile.setDefaultUnit(kony.flex.DP);
+        flexProfile.add();
         var flexProfilePhotoANdTitle = new kony.ui.FlexContainer({
             "autogrowMode": kony.flex.AUTOGROW_NONE,
-            "centerX": "50%",
-            "centerY": "50%",
+            "centerY": "50.00%",
             "clipBounds": true,
             "height": "100%",
             "id": "flexProfilePhotoANdTitle",
             "isVisible": true,
             "layoutType": kony.flex.FLOW_HORIZONTAL,
-            "left": "210px",
+            "right": "2%",
             "skin": "slFbox",
             "top": "0dp",
-            "width": "100%",
+            "width": "15%",
             "zIndex": 5
         }, {}, {});
         flexProfilePhotoANdTitle.setDefaultUnit(kony.flex.DP);
+        var btnUser = new kony.ui.Button({
+            "centerY": "50%",
+            "focusSkin": "sknBtn333110AL",
+            "height": "100%",
+            "id": "btnUser",
+            "isVisible": true,
+            "left": "50%",
+            "onClick": controller.AS_btnLoginClick_e7025cff34c0420b9769292fe0f3792d,
+            "skin": "sknBtn333110AL",
+            "text": "Login",
+            "top": "29dp",
+            "width": "30%",
+            "zIndex": 1
+        }, {
+            "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_RIGHT,
+            "displayText": true,
+            "padding": [0, 0, 0, 0],
+            "paddingInPixel": false
+        }, {});
+        var lblUserName = new kony.ui.Label({
+            "centerY": "50%",
+            "height": "100%",
+            "id": "lblUserName",
+            "isVisible": false,
+            "left": "0%",
+            "skin": "lblUserName",
+            "text": "Vigneshewaran",
+            "width": kony.flex.USE_PREFFERED_SIZE,
+            "zIndex": 1
+        }, {
+            "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_RIGHT,
+            "padding": [0, 0, 0, 0],
+            "paddingInPixel": false
+        }, {});
         var imgProfile = new kony.ui.Image2({
-            "centerX": "50%",
             "centerY": "50%",
             "height": "35dp",
             "id": "imgProfile",
-            "isVisible": true,
-            "left": "5px",
+            "isVisible": false,
+            "left": "5%",
             "skin": "slImage",
             "src": "profile_1.png",
             "top": "0%",
@@ -137,23 +170,8 @@ define(function() {
             "padding": [0, 0, 0, 0],
             "paddingInPixel": false
         }, {});
-        var lblUserName = new kony.ui.Label({
-            "centerY": "50%",
-            "id": "lblUserName",
-            "isVisible": true,
-            "left": "10px",
-            "skin": "lblUserName",
-            "text": "John Mathew",
-            "width": kony.flex.USE_PREFFERED_SIZE,
-            "zIndex": 1
-        }, {
-            "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_RIGHT,
-            "padding": [0, 0, 0, 0],
-            "paddingInPixel": false
-        }, {});
-        flexProfilePhotoANdTitle.add(imgProfile, lblUserName);
-        flexProfile.add(flexProfilePhotoANdTitle);
-        dashboard.add(flxMenuIcon, lblDashboard, flxNotificationIcon, flexProfile);
+        flexProfilePhotoANdTitle.add(btnUser, lblUserName, imgProfile);
+        dashboard.add(flxMenuIcon, lblDashboard, flxNotificationIcon, flexProfile, flexProfilePhotoANdTitle);
         return dashboard;
     }
 })

@@ -9,6 +9,7 @@ define(function() {
             "isVisible": true,
             "layoutType": kony.flex.FLOW_VERTICAL,
             "left": "0dp",
+            "onClick": controller.AS_FlexContainer_dfc085c89ad2463a95577ed737bff289,
             "skin": "sknFlxEventRoot",
             "top": "0dp",
             "width": "310dp"
@@ -44,7 +45,22 @@ define(function() {
             "padding": [0, 0, 0, 0],
             "paddingInPixel": false
         }, {});
-        flxBannerContainer.add(imgEventLogo);
+        var imageRegister = new kony.ui.Image2({
+            "height": "20%",
+            "id": "imageRegister",
+            "isVisible": true,
+            "left": "0%",
+            "skin": "slImage",
+            "src": "register.png",
+            "top": "70%",
+            "width": "30%",
+            "zIndex": 4
+        }, {
+            "imageScaleMode": constants.IMAGE_SCALE_MODE_FIT_TO_DIMENSIONS,
+            "padding": [0, 0, 0, 0],
+            "paddingInPixel": false
+        }, {});
+        flxBannerContainer.add(imgEventLogo, imageRegister);
         var flxEventDesc = new kony.ui.FlexContainer({
             "autogrowMode": kony.flex.AUTOGROW_NONE,
             "centerX": "50%",

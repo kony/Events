@@ -35,12 +35,14 @@
     "allboxes": [],
     "autogrowmode": 1,
     "canUpdateUI": true,
-    "children": [],
+    "children": [
+        "flexDateandStrip",
+        "segSessionandSpeaker"
+    ],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "sessionpreview",
-    "ide_postShow": "AS_FlexContainer_da8b622bc77544e6868db44d5528a8c2",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

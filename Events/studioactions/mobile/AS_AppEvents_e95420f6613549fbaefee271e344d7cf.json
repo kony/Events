@@ -12,10 +12,7 @@
             "type": "INVOKE_FUNCTION",
             "sequenceKUID": "setDeepLink",
             "display": "setDeepLink",
-            "inputparams": [{
-                "name": "params",
-                "value": " eventobject"
-            }],
+            "inputparams": [],
             "parentId": null,
             "callbackType": null,
             "disabled": null,

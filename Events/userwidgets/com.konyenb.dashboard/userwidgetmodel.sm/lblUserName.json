@@ -3,12 +3,12 @@
     "DNDConfig": null,
     "__parentReadjusting__": false,
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
-        "value": "10px"
+        "value": "0%"
     },
     "_margin_": [
         1,
@@ -23,7 +23,7 @@
         0
     ],
     "_skin_": "s5a5491794eb4bfd900b8548f137348c",
-    "_text_": "John Mathew",
+    "_text_": "Vigneshewaran",
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -58,7 +58,7 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "e5e43ad2903c4321b7ebe2442d3079d8",
     "name": "kony.ui.Label",
     "parent": "flexProfilePhotoANdTitle",

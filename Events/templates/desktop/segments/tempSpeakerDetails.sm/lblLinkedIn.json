@@ -22,15 +22,15 @@
         0,
         0
     ],
-    "_skin_": "s87b3a1532494032ba871cc1568388ac",
+    "_skin_": "scc72c0872334473b5b5efd9f2a30097",
     "_text_": "LinkedIn Profile",
     "_top_": {
         "type": "string",
-        "value": "2%"
+        "value": "5%"
     },
     "_width_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "100%"
     },
     "_wrapping_": 2,
     "canUpdateUI": true,

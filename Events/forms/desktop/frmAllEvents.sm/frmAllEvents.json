@@ -39,7 +39,6 @@
     "canUpdateUI": true,
     "canvasWidth": 1400,
     "children": [
-        "menuItem0",
         "flxRoot",
         "eventpreview"
     ],

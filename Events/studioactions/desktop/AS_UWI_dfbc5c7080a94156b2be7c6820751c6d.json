@@ -1,0 +1,21 @@
+{
+    "AS_UWI_dfbc5c7080a94156b2be7c6820751c6d": {
+        "id": "AS_UWI_dfbc5c7080a94156b2be7c6820751c6d",
+        "type": "ACTION_SEQUENCE",
+        "params": [],
+        "contextObj": {
+            "name": "frmAllEvents",
+            "type": "forms",
+            "platform": "",
+            "KUID": "cf1fac0c5aa548d89c9d119620fa7dcd"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__f4f464b795c34522b2c332f0824cac0c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if(EVENT_CONSTANS.MODE.USERROLE == EVENT_CONSTANS.USERROLE.ADMIN){\n  this.view.menuItem.setSelectedFlex(1);\n  this.getEventsData();\n}else{\n  this.currentMode = EVENT_CONSTANS.MODE.ALLEVENTS;\n  this.getEventsData();\n}",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

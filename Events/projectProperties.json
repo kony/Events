@@ -29,14 +29,14 @@
             "baseId": "0c818b02-aef0-4d3c-867f-4b502a7f651e",
             "version": "1.0"
         },
-        "d8f8a609-7106-413f-b3e4-c30187ab0fb9": {
-            "baseId": "03f66857-0b90-4260-a089-1dd8d580b8ba",
-            "id": "03f66857-0b90-4260-a089-1dd8d580b8ba",
-            "version": "1.0"
-        },
         "d4fe4750-d157-422d-9238-fcd0a737bb73": {
             "id": "81ec5886-f0e5-47f5-9ce2-58a939a5d1f6",
             "baseId": "81ec5886-f0e5-47f5-9ce2-58a939a5d1f6",
+            "version": "1.0"
+        },
+        "d8f8a609-7106-413f-b3e4-c30187ab0fb9": {
+            "baseId": "03f66857-0b90-4260-a089-1dd8d580b8ba",
+            "id": "03f66857-0b90-4260-a089-1dd8d580b8ba",
             "version": "1.0"
         }
     },
@@ -268,6 +268,5 @@
     "wap_ip_fontsize": "12",
     "category": "app",
     "createdVizVersion": "8.1.12",
-    "desktopstartupformkey": "d53a0c41005b46e9b1d5de20f80e6adb",
-    "export.type": "studioviz"
+    "desktopstartupformkey": "cf1fac0c5aa548d89c9d119620fa7dcd"
 }

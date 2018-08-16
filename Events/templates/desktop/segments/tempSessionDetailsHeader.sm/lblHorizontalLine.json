@@ -4,7 +4,7 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "1dp"
+        "value": "1px"
     },
     "_left_": {
         "type": "string",
@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "sefa74e6be5b4389b059b96c909e2655",
+    "_skin_": "s9a7044e0efc42a0ba52d714747af82b",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -30,10 +30,14 @@
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "95%"
     },
     "_wrapping_": 2,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,

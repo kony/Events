@@ -20,7 +20,7 @@
         0
     ],
     "_skin_": "s88b56ff724d41ba810874734ecc8df4",
-    "_src_": "userthumbnail03.jpg",
+    "_src_": "profile.png",
     "_width_": {
         "type": "string",
         "value": "80dp"
@@ -38,13 +38,12 @@
     "containerweight": 100,
     "context": {
         "channel": "desktop",
-        "formID": "tempSpeakerDetails",
         "platform": "desktopweb",
         "templateType": "segments",
         "topLevelBox": null
     },
     "id": "imgSpeaker",
-    "imagescalemode": 1,
+    "imagescalemode": 0,
     "info": null,
     "invokedProperty": "src",
     "iscustomlayout": false,

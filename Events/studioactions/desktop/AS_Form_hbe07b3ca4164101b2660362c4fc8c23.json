@@ -16,7 +16,7 @@
         "actions": [{
             "id": "ADD_SNIPPET__f27fc949986c46959854c35e944950a5",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.getEventsData();\ntry{\n  kony.application.destroyForm(\"frmCreateEvent\");\n}catch(err){\n  kony.print(err);\n}",
+            "codeSnippet": "postshow();\ntry{\n  kony.application.destroyForm(\"frmCreateEvent\");\n}catch(err){\n  kony.print(err);\n}",
             "parentId": null,
             "callbackType": null
         }]

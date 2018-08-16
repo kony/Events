@@ -2,23 +2,14 @@
     "classname": "sessionpreview",
     "definitions": {
         "apis": {
-            "custom": [],
-            "passthrough": []
-        },
-        "events": {
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "h00d581f04114e01a3b0aa746e02ef97",
-                    "paramList": [
-                        {
-                            "name": "height"
-                        }
-                    ],
-                    "propertyIndex": 1,
-                    "propertyKey": "dolayoutCb",
+                    "kuid": "f1ad45120f4b4e70be4edd0de573d398",
+                    "paramList": [],
+                    "propertyKey": "setData",
                     "pw": {
-                        "displayName": "dolayoutCb",
+                        "displayName": "setData",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
                     "srcWgtKUID": "dfc34fb39fa54874a47d24756a51831e",
@@ -27,8 +18,14 @@
             ],
             "passthrough": []
         },
+        "events": {
+            "custom": [],
+            "passthrough": []
+        },
         "groups": {
-            "apis": [],
+            "apis": [
+                "General"
+            ],
             "events": [],
             "properties": [],
             "widgets": []

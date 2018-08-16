@@ -75,6 +75,9 @@ define("frmManageUser", function() {
                 "width": "100%"
             }, {}, {});
             dashboard.iconVisibility = false;
+            dashboard.isLoginVisible = false;
+            dashboard.isProfileVisible = true;
+            dashboard.isUsernameVisible = true;
             var flxInfoItemContainer = new kony.ui.FlexContainer({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,

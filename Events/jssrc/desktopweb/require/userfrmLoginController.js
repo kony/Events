@@ -42,9 +42,12 @@ define({
     userStoreLoginSuccss: function(response) {
         try {
             this.disableError();
+            glbIsLoggedIn = true;
+            EVENT_CONSTANS.MODE.USERROLE = EVENT_CONSTANS.USERROLE.ADMIN;
             this.userStoreAuth.getProfile(false, function(result) {
+                glbProfile = {};
                 kony.application.dismissLoadingScreen();
-                glbUserAttributes = result.profile_attributes;
+                glbProfile.first_name = result.profile_attributes.firstname;
                 var navToCreateEvent = new kony.mvc.Navigation("frmAllEvents");
                 navToCreateEvent.navigate();
             }, function(error) {
@@ -112,5 +115,5 @@ define({
         } catch (err) {
             kony.print("frmLogin Controller" + JSON.stringify(err));
         }
-    }
+    },
 });

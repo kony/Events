@@ -75,6 +75,12 @@
 	        var sessionListWithPresenters = [];
 	        for (var i = 0; i < response.records[0].event_sessions.length; i++) {
 	            var session = response.records[0].event_sessions[i];
+	            session.start_time = dateFormatting.getTimeinAMPMformat(session.session_start_date);
+	            session.end_time = dateFormatting.getTimeinAMPMformat(session.session_end_date);
+	            session.Day = glbDayString[dateFormatting.getDay(session.session_end_date)];
+	            session.year = dateFormatting.getYear(session.session_start_date);
+	            session.date = dateFormatting.getDate(session.session_start_date);
+	            session.month = dateFormatting.getMonth(session.session_start_date);
 	            session.session_start_date = getLocalDate(session.session_start_date); //session.session_start_date.replace(" ", 'T');
 	            session.session_end_date = getLocalDate(session.session_end_date); //session.session_end_date.replace(" ", 'T');
 	            if (response.records[0].presenter !== undefined && response.records[0].presenter.length > 0) {
@@ -137,6 +143,7 @@
 	            var d;
 	            var monthArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 	            d = localDate = new Date(date);
+	            localDate = new Date(d.getTime() - d.getTimezoneOffset() * 60 * 1000);
 	            return monthArray[localDate.getMonth()];
 	        } catch (err) {
 	            kony.print("Orchestration service response processsing" + JSON.stringify(err));
@@ -153,6 +160,7 @@
 	            var localDate;
 	            var d;
 	            d = localDate = new Date(date);
+	            localDate = new Date(d.getTime() - d.getTimezoneOffset() * 60 * 1000);
 	            return localDate.getDate();
 	        } catch (err) {
 	            kony.print("Orchestration service response processsing" + JSON.stringify(err));
@@ -169,7 +177,26 @@
 	            var localDate;
 	            var d;
 	            d = localDate = new Date(date);
+	            localDate = new Date(d.getTime() - d.getTimezoneOffset() * 60 * 1000);
 	            return localDate.getFullYear();
+	        } catch (err) {
+	            kony.print("Orchestration service response processsing" + JSON.stringify(err));
+	        }
+	    },
+	    /**
+	     * @member of  frmEventsLandingController.js
+	     * @function getDay
+	     * @description - util function to the day
+	     * @param {String } - valid Date
+	     * @return {String} - return day
+	     **/
+	    getDay: function(date) {
+	        try {
+	            var localDate;
+	            var d;
+	            d = localDate = new Date(date);
+	            localDate = new Date(d.getTime() - d.getTimezoneOffset() * 60 * 1000);
+	            return localDate.getDay();
 	        } catch (err) {
 	            kony.print("Orchestration service response processsing" + JSON.stringify(err));
 	        }
@@ -186,6 +213,7 @@
 	            var localDate;
 	            var date;
 	            date = localDate = new Date(ufdate)
+	            localDate = new Date(date.getTime() - date.getTimezoneOffset() * 60 * 1000);
 	            var hours = localDate.getHours();
 	            var minutes = localDate.getMinutes();
 	            var ampm = hours >= 12 ? 'PM' : 'AM';

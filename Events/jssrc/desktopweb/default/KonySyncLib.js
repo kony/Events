@@ -1,5 +1,5 @@
 // -- SDK File : KonySyncLib.js 
-//  --Generated On Thu Jun 21 18:41:55 IST 2018******************* 
+//  --Generated On Fri Jul 27 00:07:11 IST 2018******************* 
 //  **************** Start jsonWriter.js*******************
 if (typeof(kony.sync) === "undefined") {
     kony.sync = {};

@@ -438,8 +438,8 @@ define({
      * @private
      */
     setProfile: function() {
-        if (glbUserAttributes !== undefined && glbUserAttributes !== null && glbUserAttributes !== {}) {
-            this.view.dashboard.text = glbUserAttributes.firstname;
+        if (glbProfile !== undefined && glbProfile !== null && glbProfile !== {}) {
+            this.view.dashboard.username = glbProfile.first_name;
             this.view.dashboard.Title = "";
         }
     },

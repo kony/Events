@@ -25,12 +25,6 @@ define({
             "classname": "event",
             "name": "com.konyenb.event"
         });
-        kony.mvc.registry.add("com.konyenb.eventpreview", "eventpreview", "eventpreviewController");
-        kony.application.registerMaster({
-            "namespace": "com.konyenb",
-            "classname": "eventpreview",
-            "name": "com.konyenb.eventpreview"
-        });
         kony.mvc.registry.add("com.konyenb.EventsHeader", "EventsHeader", "EventsHeaderController");
         kony.application.registerMaster({
             "namespace": "com.konyenb",
@@ -97,6 +91,12 @@ define({
             "classname": "TimePicker",
             "name": "com.konyenb.TimePicker"
         });
+        kony.mvc.registry.add("com.konyenb.eventpreview", "eventpreview", "eventpreviewController");
+        kony.application.registerMaster({
+            "namespace": "com.konyenb",
+            "classname": "eventpreview",
+            "name": "com.konyenb.eventpreview"
+        });
         kony.mvc.registry.add("flexHamManuMain", "flexHamManuMain", "flexHamManuMainController");
         kony.mvc.registry.add("flxTempUser", "flxTempUser", "flxTempUserController");
         kony.mvc.registry.add("Flex0f0f365ad7e374e", "Flex0f0f365ad7e374e", "Flex0f0f365ad7e374eController");
@@ -108,11 +108,10 @@ define({
         kony.mvc.registry.add("frmCreateEvent", "frmCreateEvent", "frmCreateEventController");
         kony.mvc.registry.add("frmLogin", "frmLogin", "frmLoginController");
         kony.mvc.registry.add("frmManageUser", "frmManageUser", "frmManageUserController");
-        kony.mvc.registry.add("frmPreview", "frmPreview", "frmPreviewController");
         setAppBehaviors();
     },
     postAppInitCallBack: function(eventObj) {},
     appmenuseq: function() {
-        new kony.mvc.Navigation("frmLogin").navigate();
+        new kony.mvc.Navigation("frmAllEvents").navigate();
     }
 });

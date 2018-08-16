@@ -33,13 +33,18 @@
     },
     "_width_": {
         "type": "string",
-        "value": "82.50%"
+        "value": "81%"
     },
     "autogrowmode": 0,
     "canUpdateUI": true,
     "clipbounds": true,
     "containerweight": 0,
-    "data": {},
+    "data": {
+        "ide_btnLoginClick": "AS_UWI_e62a0a2b80e441cea46a5884a162f139",
+        "isProfileVisible": true,
+        "isUsernameVisible": false,
+        "username": "Login"
+    },
     "id": "dashboard",
     "info": null,
     "iscustomlayout": false,

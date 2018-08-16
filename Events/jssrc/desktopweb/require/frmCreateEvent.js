@@ -11,7 +11,7 @@ define("frmCreateEvent", function() {
                 "height": "77%",
                 "horizontalScrollIndicator": true,
                 "id": "flexScrollEvent",
-                "isVisible": false,
+                "isVisible": true,
                 "layoutType": kony.flex.FREE_FORM,
                 "left": "17.50%",
                 "pagingEnabled": false,
@@ -1392,6 +1392,11 @@ define("frmCreateEvent", function() {
                 "width": "82.50%"
             }, {}, {});
             dashboard.iconVisibility = false;
+            dashboard.isLoginVisible = false;
+            dashboard.isProfileVisible = true;
+            dashboard.isUsernameVisible = true;
+            dashboard.profileSrc = "profile_1.png";
+            dashboard.username = "Vigneshewaran";
             var EventsHeader = new com.konyenb.EventsHeader({
                 "clipBounds": true,
                 "height": "11.10%",

@@ -38,8 +38,6 @@
     "children": [
         "flexEventLogo",
         "lblUnderLineLogo",
-        "flexProfile",
-        "lblUnderLineProfile",
         "flexAllNewEvent",
         "lblUnderLineHam",
         "flxCreateNewEvent",
@@ -50,8 +48,7 @@
         "lblLine4",
         "flxMyCalendar",
         "lblLine5",
-        "flxSetting",
-        "SegOptions"
+        "flxSetting"
     ],
     "clipbounds": true,
     "containerweight": 100,

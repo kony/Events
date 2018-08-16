@@ -4,7 +4,7 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "8%"
+        "value": "10%"
     },
     "_left_": {
         "type": "string",
@@ -22,11 +22,11 @@
         0,
         0
     ],
-    "_skin_": "sf654e86b74e4ca2b54d64795116cd4b",
-    "_text_": "Sign in to your account",
+    "_skin_": "se9c5aefa4de428596216bdf4b92e0ee",
+    "_text_": "Admin Login",
     "_top_": {
         "type": "string",
-        "value": "10%"
+        "value": "2%"
     },
     "_width_": {
         "type": "string",
@@ -62,7 +62,7 @@
     "isvisible": true,
     "kuid": "d5ca4a95b6b741759ec246ece3b5766d",
     "name": "kony.ui.Label",
-    "parent": "flexLoginCred",
+    "parent": "flexLoginCredAdmin",
     "pf": "frmLogin",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

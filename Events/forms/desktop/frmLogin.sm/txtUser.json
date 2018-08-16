@@ -4,7 +4,7 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "13%"
+        "value": "15%"
     },
     "_left_": {
         "type": "string",
@@ -27,7 +27,7 @@
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "6%"
+        "value": "7%"
     },
     "_width_": {
         "type": "string",
@@ -55,7 +55,7 @@
     "kuid": "cf9627de224046e6b4beeadbc5407889",
     "mode": "A",
     "name": "kony.ui.TextBox2",
-    "parent": "flexLoginCred",
+    "parent": "flexLoginCredAdmin",
     "pf": "frmLogin",
     "placeholderskin": "sb8dde3d47e14d2ea48fa74c481ad489",
     "retaincontentalignment": false,

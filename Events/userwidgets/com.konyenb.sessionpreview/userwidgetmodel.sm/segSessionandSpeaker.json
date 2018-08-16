@@ -1,0 +1,280 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_data_": [
+        {},
+        {},
+        {}
+    ],
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "20%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "autogrowmode": 1,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "12",
+    "desktop": {
+        "_data_": [
+            [
+                {
+                    "lblEventAddress": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Convention Center, Hyderabad"
+                    },
+                    "lblEventDateTime": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Monday, 10 AM-5 PM"
+                    },
+                    "lblHorizontalLine": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
+                    }
+                },
+                [
+                    {
+                        "imgSpeaker": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "userthumbnail03.jpg"
+                        },
+                        "lblDesignation": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "Cheif Creative Officer, Google"
+                        },
+                        "lblLinkedIn": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "LinkedIn Profile"
+                        },
+                        "lblSpeakerName": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "Speaker Name"
+                        }
+                    },
+                    {
+                        "imgSpeaker": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "userthumbnail03.jpg"
+                        },
+                        "lblDesignation": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "Cheif Creative Officer, Google"
+                        },
+                        "lblLinkedIn": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "LinkedIn Profile"
+                        },
+                        "lblSpeakerName": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "Speaker Name"
+                        }
+                    },
+                    {
+                        "imgSpeaker": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "userthumbnail03.jpg"
+                        },
+                        "lblDesignation": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "Cheif Creative Officer, Google"
+                        },
+                        "lblLinkedIn": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "LinkedIn Profile"
+                        },
+                        "lblSpeakerName": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "Speaker Name"
+                        }
+                    }
+                ]
+            ],
+            [
+                {
+                    "lblEventAddress": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Convention Center, Hyderabad"
+                    },
+                    "lblEventDateTime": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Monday, 10 AM-5 PM"
+                    },
+                    "lblHorizontalLine": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": ""
+                    }
+                },
+                [
+                    {
+                        "imgSpeaker": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "userthumbnail03.jpg"
+                        },
+                        "lblDesignation": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "Cheif Creative Officer, Google"
+                        },
+                        "lblLinkedIn": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "LinkedIn Profile"
+                        },
+                        "lblSpeakerName": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "Speaker Name"
+                        }
+                    },
+                    {
+                        "imgSpeaker": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "userthumbnail03.jpg"
+                        },
+                        "lblDesignation": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "Cheif Creative Officer, Google"
+                        },
+                        "lblLinkedIn": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "LinkedIn Profile"
+                        },
+                        "lblSpeakerName": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "Speaker Name"
+                        }
+                    },
+                    {
+                        "imgSpeaker": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "userthumbnail03.jpg"
+                        },
+                        "lblDesignation": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "Cheif Creative Officer, Google"
+                        },
+                        "lblLinkedIn": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "LinkedIn Profile"
+                        },
+                        "lblSpeakerName": {
+                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                            "text": "Speaker Name"
+                        }
+                    }
+                ]
+            ]
+        ],
+        "rowTemplateId": "fd9061d7bfd54e2789120026c285d53c",
+        "rowtemplate": "flexSegSpeakerRoot",
+        "sectionHeaderTemplateId": "de1f0a1650634b1b9f1c1b6c5357d5b2",
+        "sectionheadertemplate": "flxSegSpeakerRoot",
+        "widgetdatamap": {
+            "flexSegSpeakerRoot": "flexSegSpeakerRoot",
+            "flxEventAddress": "flxEventAddress",
+            "flxImageContainer": "flxImageContainer",
+            "flxSegSpeakerRoot": "flxSegSpeakerRoot",
+            "flxSegSpeakerRootContainer": "flxSegSpeakerRootContainer",
+            "flxSpeakerDetail": "flxSpeakerDetail",
+            "imgSpeaker": "imgSpeaker",
+            "lblDesignation": "lblDesignation",
+            "lblEventAddress": "lblEventAddress",
+            "lblEventDateTime": "lblEventDateTime",
+            "lblHorizontalLine": "lblHorizontalLine",
+            "lblLinkedIn": "lblLinkedIn",
+            "lblSpeakerName": "lblSpeakerName"
+        }
+    },
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": true,
+    "id": "segSessionandSpeaker",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "df6fb753454240a0b367dc6a9f565245",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "sessionpreview",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowcounter": 2,
+    "rowfocusskin": "s234679bdd6c4e21aa50fbc817fb0fb4",
+    "rowskin": "s510421f1e3c46d8b70889888f894f08",
+    "rowtemplate": null,
+    "screenlevelwidget": false,
+    "seccounter": 1,
+    "sectionheaderskin": "s081a294e53e4f7d91e5a3359d6ba7af",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorcolor": "aaaaaa00",
+    "separatorrequired": false,
+    "separatorthickness": 1,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flexSegSpeakerRoot": "flexSegSpeakerRoot",
+        "flxEventAddress": "flxEventAddress",
+        "flxImageContainer": "flxImageContainer",
+        "flxSegSpeakerRoot": "flxSegSpeakerRoot",
+        "flxSegSpeakerRootContainer": "flxSegSpeakerRootContainer",
+        "flxSpeakerDetail": "flxSpeakerDetail",
+        "imgSpeaker": "imgSpeaker",
+        "lblDesignation": "lblDesignation",
+        "lblEventAddress": "lblEventAddress",
+        "lblEventDateTime": "lblEventDateTime",
+        "lblHorizontalLine": "lblHorizontalLine",
+        "lblLinkedIn": "lblLinkedIn",
+        "lblSpeakerName": "lblSpeakerName"
+    },
+    "zindex": 1
+}

@@ -3,8 +3,8 @@
     "DNDConfig": null,
     "__parentReadjusting__": false,
     "_height_": {
-        "type": "string",
-        "value": "10%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
@@ -62,7 +62,7 @@
     "isvisible": true,
     "kuid": "cf7991c14e414c5087ae807318d18bc8",
     "name": "kony.ui.Label",
-    "parent": "flexLoginCred",
+    "parent": "flexLoginCredAdmin",
     "pf": "frmLogin",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

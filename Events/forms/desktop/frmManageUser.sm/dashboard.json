@@ -41,7 +41,10 @@
     "containerweight": 0,
     "data": {
         "Title": "",
-        "iconVisibility": false
+        "iconVisibility": false,
+        "isLoginVisible": false,
+        "isProfileVisible": true,
+        "isUsernameVisible": true
     },
     "id": "dashboard",
     "info": null,

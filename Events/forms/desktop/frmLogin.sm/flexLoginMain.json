@@ -3,7 +3,7 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "70%"
+        "value": "85%"
     },
     "_left_": {
         "type": "string",
@@ -30,7 +30,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "38%"
+        "value": "45%"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -45,7 +45,9 @@
     },
     "children": [
         "flexLoginEventLogo",
-        "flexLoginCred"
+        "flexLoginLinkedIn",
+        "FlexContainer0b412427d56964f",
+        "flexLoginCredAdmin"
     ],
     "clipbounds": true,
     "containerweight": 100,

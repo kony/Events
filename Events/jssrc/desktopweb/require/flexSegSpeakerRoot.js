@@ -4,7 +4,7 @@ define("flexSegSpeakerRoot", function() {
             "autogrowMode": kony.flex.AUTOGROW_NONE,
             "clipBounds": true,
             "focusSkin": "sknFlxBorderBlue",
-            "height": "120dp",
+            "height": "85dp",
             "id": "flexSegSpeakerRoot",
             "isVisible": true,
             "layoutType": kony.flex.FLOW_HORIZONTAL,
@@ -18,14 +18,14 @@ define("flexSegSpeakerRoot", function() {
             "autogrowMode": kony.flex.AUTOGROW_NONE,
             "centerY": "50%",
             "clipBounds": true,
-            "height": "80dp",
+            "height": "60dp",
             "id": "flxImageContainer",
             "isVisible": true,
             "layoutType": kony.flex.FREE_FORM,
             "left": "5%",
             "skin": "sknflexContainerCircularDesk",
             "top": "7%",
-            "width": "80dp",
+            "width": "60dp",
             "zIndex": 1
         }, {}, {});
         flxImageContainer.setDefaultUnit(kony.flex.DP);
@@ -36,11 +36,11 @@ define("flexSegSpeakerRoot", function() {
             "id": "imgSpeaker",
             "isVisible": true,
             "skin": "slImage",
-            "src": "userthumbnail03.jpg",
+            "src": "profile.png",
             "width": "80dp",
             "zIndex": 1
         }, {
-            "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
+            "imageScaleMode": constants.IMAGE_SCALE_MODE_FIT_TO_DIMENSIONS,
             "padding": [0, 0, 0, 0],
             "paddingInPixel": false
         }, {});
@@ -63,10 +63,10 @@ define("flexSegSpeakerRoot", function() {
             "id": "lblSpeakerName",
             "isVisible": true,
             "left": "0dp",
-            "skin": "sknLblSpeakerName",
+            "skin": "sknLblSpeakerNameDsk",
             "text": "Speaker Name",
             "textStyle": {},
-            "top": "20%",
+            "top": "5%",
             "width": "100%",
             "zIndex": 1
         }, {
@@ -78,7 +78,7 @@ define("flexSegSpeakerRoot", function() {
             "id": "lblDesignation",
             "isVisible": true,
             "left": "0dp",
-            "skin": "sknLblDesignation",
+            "skin": "sknLblDesignationDesk",
             "text": "Cheif Creative Officer, Google",
             "textStyle": {},
             "top": "2%",
@@ -93,11 +93,11 @@ define("flexSegSpeakerRoot", function() {
             "id": "lblLinkedIn",
             "isVisible": true,
             "left": "0dp",
-            "skin": "sknLblLinkedIn",
+            "skin": "sknLblLinkedInDesk",
             "text": "LinkedIn Profile",
             "textStyle": {},
-            "top": "2%",
-            "width": kony.flex.USE_PREFFERED_SIZE,
+            "top": "5%",
+            "width": "100%",
             "zIndex": 1
         }, {
             "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,

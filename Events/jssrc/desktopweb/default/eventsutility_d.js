@@ -1,5 +1,8 @@
-var glbHeight = "";
 var glbUserAttributes = {};
+var glbLoggedUserId = "";
+var glbProfile = "";
+var glbIsLoggedIn = false;
+var glbEventIdToRegister = "";
 /**
  * @function postshow
  * @description - This function will remove the outline border and change the

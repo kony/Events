@@ -44,7 +44,7 @@
     "id": "flexGoogleMap",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "c5ed101ebaa6462697d471672cb9d15a",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",

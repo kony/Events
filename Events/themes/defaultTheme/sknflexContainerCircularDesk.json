@@ -23,11 +23,11 @@
   },
   "background_color": "ffffffff",
   "bg_type": "one",
-  "border_color": "00a0dd00",
+  "border_color": "00a0ddff",
   "border_radius": 100,
   "border_style": "custom",
   "border_type": 0,
-  "border_width": 3,
+  "border_width": 1,
   "desktopweb": {
     "font_name": "Helvetica"
   },

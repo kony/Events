@@ -11,5 +11,10 @@ define({
     AS_Button_ae1ced44a04e45db98e67a006c9c9c2e: function AS_Button_ae1ced44a04e45db98e67a006c9c9c2e(eventobject) {
         var self = this;
         this.onEditHandler();
+    },
+    /** onClick defined for event **/
+    AS_FlexContainer_dfc085c89ad2463a95577ed737bff289: function AS_FlexContainer_dfc085c89ad2463a95577ed737bff289(eventobject) {
+        var self = this;
+        this.onViewHandler();
     }
 });

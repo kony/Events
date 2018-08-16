@@ -29,7 +29,9 @@
     "displayorientation": 3,
     "enabledforidletimeout": false,
     "globalUserWidgetRefs": [
-        "u0edc46c40354c26a35eb2c8a69b50e8"
+        "u0edc46c40354c26a35eb2c8a69b50e8",
+        "ue317454e3404ee0bdfba65f375ec52c",
+        "uee3d461d2a4414ba02d593a1185d180"
     ],
     "id": "userwidgetmodel",
     "info": null,

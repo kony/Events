@@ -22,11 +22,11 @@
         0,
         0
     ],
-    "_skin_": "s27ec3ea4a3343cd89319606697d8e69",
+    "_skin_": "s9009a19cd354ce7aeec4ebf6150a1b7",
     "_text_": "Speaker Name",
     "_top_": {
         "type": "string",
-        "value": "20%"
+        "value": "5%"
     },
     "_width_": {
         "type": "string",

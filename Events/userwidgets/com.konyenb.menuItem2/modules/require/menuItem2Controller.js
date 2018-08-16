@@ -25,7 +25,7 @@ define(function() {
         case 3:
           this._selectedFlex.skin = "slFbox";
           this.view.flxManageUser.skin = "sknFlxMenuClick";
-          this._selectedFlex = this.view.flxCreateNewEvent;
+          this._selectedFlex = this.view.flxManageUser;
           break;
         default :
           kony.print("Not Valid");

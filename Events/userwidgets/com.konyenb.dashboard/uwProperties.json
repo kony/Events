@@ -7,7 +7,26 @@
         },
         "events": {
             "custom": [],
-            "passthrough": []
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "b9b86a803184483c988f0d4d4e7ad7fd",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 1,
+                    "propertyKey": "btnLoginClick",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "btnLoginClick",
+                        "srcWidget": "btnUser",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "e7025cff34c0420b9769292fe0f3792d"
+                }
+            ]
         },
         "groups": {
             "apis": [],
@@ -24,12 +43,12 @@
                     "kuid": "jbb3abd22b2a4131bcac0887f6885f0f",
                     "originalPropertyKey": "text",
                     "propertyIndex": 1,
-                    "propertyKey": "text",
+                    "propertyKey": "username",
                     "pw": {
                         "access": "readwrite",
                         "category": "look",
                         "dependentKeysKUIDs": null,
-                        "displayName": "text",
+                        "displayName": "username",
                         "srcWidget": "lblUserName",
                         "type": "string",
                         "uiRepresentation": "Label-Textbox",
@@ -74,22 +93,97 @@
                         "wType": "Label"
                     },
                     "srcWgtKUID": "h9b74d611db148b9ac1003777fc5a69f"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "a5f52119e6094bb0b4e4110e63618006",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 4,
+                    "propertyKey": "isUsernameVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "usernameVisibility",
+                        "srcWidget": "lblUserName",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "e5e43ad2903c4321b7ebe2442d3079d8"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "j1929ac334574d4b9d6d489369da626a",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 5,
+                    "propertyKey": "isProfileVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "profileVisibility",
+                        "srcWidget": "imgProfile",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "g33a166576574db891c7ab3666346e24"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "ae1a960245db41fd9ac6e7abeaa2d3eb",
+                    "originalPropertyKey": "src",
+                    "propertyIndex": 6,
+                    "propertyKey": "profileSrc",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "profileSrc",
+                        "srcWidget": "imgProfile",
+                        "type": "string",
+                        "uiConfig": {
+                            "Button": {
+                                "dataRetrieverId": "Imagelist",
+                                "dataUpdaterId": "Imagelist",
+                                "popupId": "Imagelist",
+                                "type": "ImageEditBtn"
+                            },
+                            "Label": {}
+                        },
+                        "uiRepresentation": "Label-Label-Button",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "g33a166576574db891c7ab3666346e24"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "dcf86cae4cf14db2a557f0830c209948",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 7,
+                    "propertyKey": "isLoginVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "loginVisibility",
+                        "srcWidget": "btnUser",
+                        "toolTip": "Hides/shows the widget in the screen",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "e7025cff34c0420b9769292fe0f3792d"
                 }
             ]
         },
         "widgets": {
-            "expose": [
-                {
-                    "kuid": "j4be0792c2cb4aa29658eacc8d0aedf5",
-                    "propertyKey": "lblUserName",
-                    "srcWgtKUID": "e5e43ad2903c4321b7ebe2442d3079d8"
-                },
-                {
-                    "kuid": "e12d429a2ab94ed6a272b8b762bbbcb7",
-                    "propertyKey": "imgProfile",
-                    "srcWgtKUID": "g33a166576574db891c7ab3666346e24"
-                }
-            ],
+            "expose": [],
             "passthrough": []
         }
     },

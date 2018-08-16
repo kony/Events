@@ -88,7 +88,67 @@
         },
         "properties": {
             "custom": [],
-            "passthrough": []
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "h82ad33e145b4230a407d848c5eccf35",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 1,
+                    "propertyKey": "isRemoveVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "removeVisibility",
+                        "srcWidget": "btnRemove",
+                        "toolTip": "Hides/shows the widget in the screen",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "haf8db231380410c8c3c73155c9454f7"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "cd6311f016054798b8e688fecddb9acd",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 2,
+                    "propertyKey": "isEditVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "editVisibility",
+                        "srcWidget": "btnEdit",
+                        "toolTip": "Hides/shows the widget in the screen",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "db0b28cabb234547a4448b1073845f97"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "b8c589c401a6463b9c8590cd4ed690ca",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 3,
+                    "propertyKey": "isRegisteredVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "registerVisibility",
+                        "srcWidget": "imageRegister",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "f9104ffbad5b44b6a51e808d0c236896"
+                }
+            ]
         },
         "widgets": {
             "expose": [],

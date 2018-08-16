@@ -2,6 +2,11 @@ define({
     /*
       This is an auto generated file and any modifications to it may result in corruption of the action sequence.
     */
+    /** onClick defined for Button0iea9656067e447 **/
+    AS_Button_a80651fce1e64f739c85ba5d18a05842: function AS_Button_a80651fce1e64f739c85ba5d18a05842(eventobject) {
+        var self = this;
+        Events.consumerLogin.doLinkedInLogin(EVENT_CONSTANS.MODE.LOGIN);
+    },
     /** onDone defined for txtPassWord **/
     AS_TextField_e9a76156f7f1447e9dc2972f0c5aee44: function AS_TextField_e9a76156f7f1447e9dc2972f0c5aee44(eventobject, changedtext) {
         var self = this;
@@ -13,7 +18,12 @@ define({
         this.showPassword();
     },
     /** onClick defined for btnSubmit **/
-    AS_Button_gd61d69e5d5942138d6f15e55f2ce490: function AS_Button_gd61d69e5d5942138d6f15e55f2ce490(eventobject) {
+    AS_Button_gac375ae9f3f437da23efcb0f25b67c4: function AS_Button_gac375ae9f3f437da23efcb0f25b67c4(eventobject) {
+        var self = this;
+        this.doUserStoreLogin(this.view.txtUser.text, this.view.txtPassWord.text);
+    },
+    /** onClick defined for CopybtnSubmit0c9d6fc6fd9c449 **/
+    AS_Button_c7383094e1434f0e9b8fe1d38e25d41f: function AS_Button_c7383094e1434f0e9b8fe1d38e25d41f(eventobject) {
         var self = this;
         this.doUserStoreLogin(this.view.txtUser.text, this.view.txtPassWord.text);
     }

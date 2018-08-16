@@ -13,7 +13,7 @@
         "actions": [{
             "id": "ADD_SNIPPET__af94a9b85b1e48c9a4e45f8823584891",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.navigateToFormCreateNewEvent();",
+            "codeSnippet": "if(EVENT_CONSTANS.MODE.USERROLE == EVENT_CONSTANS.USERROLE.ADMIN){\n  this.navigateToFormCreateNewEvent();\n}else{\n  if(glbIsLoggedIn){\n     this.currentMode = EVENT_CONSTANS.MODE.MYEVENTS;\n     this.getEventsData();\n  }else{\n   Events.consumerLogin.doLinkedInLogin(EVENT_CONSTANS.MODE.MYEVENTS)\n  }\n \n}\n",
             "parentId": null,
             "callbackType": null
         }]

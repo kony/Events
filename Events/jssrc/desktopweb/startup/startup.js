@@ -4,13 +4,10 @@ var appConfig = {
     appName: "Events",
     appVersion: "1.0.0",
     platformVersion: null,
-    serverIp: "10.0.75.1",
-    serverPort: "80",
-    secureServerPort: "443",
     isturlbase: "http://sawin1.konylabs.net:9090/services",
     isMFApp: true,
-    appKey: "e8d9b55f376dac46aed193668da7765f",
-    appSecret: "5881335e142f488cec08ba2319a56ee8",
+    appKey: "fed6eca22ce41cb65ce35b95b1bfa027",
+    appSecret: "be89dedc60c9ff050ddfd553db0a1ab3",
     serviceUrl: "http://sawin1.konylabs.net:9090/authService/100000002/appconfig",
     svcDoc: {
         "selflink": "http://sawin1.konylabs.net:9090/authService/100000002/appconfig",
@@ -20,7 +17,7 @@ var appConfig = {
             }
         },
         "messagingsvc": {
-            "appId": "a92d5080-735c-42c8-8587-9af024074296",
+            "appId": "4018e31d-24ac-4a74-a660-7d1db8e67e70",
             "url": "http://sawin1.konylabs.net:9090/kpns/api/v1"
         },
         "integsvc": {
@@ -30,7 +27,7 @@ var appConfig = {
             "BoxService": "http://sawin1.konylabs.net:9090/services/BoxService",
             "accountlogin": "http://sawin1.konylabs.net:9090/services/accountlogin"
         },
-        "appId": "a92d5080-735c-42c8-8587-9af024074296",
+        "appId": "4018e31d-24ac-4a74-a660-7d1db8e67e70",
         "identity_features": {
             "reporting_params_header_allowed": true
         },
@@ -41,6 +38,12 @@ var appConfig = {
         },
         "baseId": "81ec5886-f0e5-47f5-9ce2-58a939a5d1f6",
         "login": [{
+            "mandatory_fields": [],
+            "alias": "customAccountLogin",
+            "type": "basic",
+            "prov": "customAccountLogin",
+            "url": "http://sawin1.konylabs.net:9090/authService/100000002"
+        }, {
             "alias": "linkedIdentityLogin",
             "type": "oauth2",
             "prov": "linkedIdentityLogin",
@@ -49,17 +52,6 @@ var appConfig = {
             "alias": "userstore",
             "type": "basic",
             "prov": "userstore",
-            "url": "http://sawin1.konylabs.net:9090/authService/100000002"
-        }, {
-            "alias": "testProvider",
-            "type": "basic",
-            "prov": "testProvider",
-            "url": "http://sawin1.konylabs.net:9090/authService/100000002"
-        }, {
-            "mandatory_fields": [],
-            "alias": "customAccountLogin",
-            "type": "basic",
-            "prov": "customAccountLogin",
             "url": "http://sawin1.konylabs.net:9090/authService/100000002"
         }],
         "services_meta": {
@@ -111,7 +103,6 @@ var appConfig = {
     eventTypes: ["FormEntry", "Error", "Crash"],
     url: "http://sawin1.konylabs.net:9090/authService/100000002/appconfig",
     secureurl: "http://sawin1.konylabs.net:9090/authService/100000002/appconfig",
-    middlewareContext: "Events"
 };
 sessionID = "";
 
@@ -142,7 +133,7 @@ function themeCallBack() {
         kony.application.setApplicationInitializationEvents({
             init: applicationController.appInit,
             showstartupform: function() {
-                var startForm = new kony.mvc.Navigation("frmLogin");
+                var startForm = new kony.mvc.Navigation("frmAllEvents");
                 startForm.navigate();
             }
         });

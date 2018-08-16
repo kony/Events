@@ -4,10 +4,27 @@ var pushConfig = {};
  * @description - this function will call the customAccountLogin to get the claims token
  **/
 function doCustomLogin(pushPayload) {
+    // 	try {
+    // 		pushConfig = pushPayload;
+    // 		var customAuth = KNYMobileFabric.getIdentityService("customAccountLogin");
+    // 		customAuth.login({},
+    // 			getSubscribers,
+    // 			function (error) {
+    // 			kony.print("Something went wrong in cusom login" + JSON.stringify(error));
+    // 		});
+    // 	} catch (error) {
+    // 		alert("something went wrong please try later");
+    // 	}
     try {
         pushConfig = pushPayload;
         var customAuth = KNYMobileFabric.getIdentityService("customAccountLogin");
-        customAuth.login({}, getSubscribers, function(error) {
+        customAuth.login({}, function() {
+            customAuth.getSecurityAttributes(function(response) {
+                kony.print();
+            }, function(err) {
+                kony.print();
+            })
+        }, function(error) {
             kony.print("Something went wrong in cusom login" + JSON.stringify(error));
         });
     } catch (error) {
@@ -24,9 +41,12 @@ function getSubscribers() {
         intObj.invokeOperation("getAllSubscribers", {}, {
             "appid": pushConfig.appId
         }, function(response) {
-            kony.print(JSON.stringify(response.subscribers));
-            pushConfig.ksid = response.subscribers;
-            sendPushNotification(pushConfig);
+            if (response.subscribers !== undefined) {
+                pushConfig.ksid = response.subscribers;
+                sendPushNotification(pushConfig);
+            } else {
+                kony.print("No Subscribers found");
+            }
         }, function(error) {
             kony.print("Something Went Wrong " + JSON.stringify(error));
         });

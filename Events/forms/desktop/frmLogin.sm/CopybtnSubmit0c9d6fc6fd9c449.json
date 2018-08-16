@@ -1,0 +1,54 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "10%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s7626bcae9f642748253e90e1e83e449",
+    "_text_": "CANCEL",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "30%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s7626bcae9f642748253e90e1e83e449",
+    "id": "CopybtnSubmit0c9d6fc6fd9c449",
+    "ide_onClick": "AS_Button_c7383094e1434f0e9b8fe1d38e25d41f",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "d82bb43c82fd49c988e338f7d85edbad",
+    "name": "kony.ui.Button",
+    "onclick": "AS_Button_h6db9ecbd776435ea976fd9cc7c0e167",
+    "parent": "FlexContainer0bc72c113df624d",
+    "pf": "frmLogin",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 2
+}

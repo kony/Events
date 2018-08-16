@@ -40,10 +40,14 @@
         "value": "50%"
     },
     "children": [
-        "imgEventLogo"
+        "imgEventLogo",
+        "imageRegister"
     ],
     "clipbounds": true,
     "containerweight": 100,
+    "desktopweb": {
+        "psp": {}
+    },
     "enablescrolling": true,
     "id": "flxBannerContainer",
     "info": null,

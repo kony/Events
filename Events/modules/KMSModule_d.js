@@ -28,9 +28,13 @@ function getSubscribers() {
 			"appid": pushConfig.appId
 		},
 			function (response) {
-			kony.print(JSON.stringify(response.subscribers));
-			pushConfig.ksid = response.subscribers;
-			sendPushNotification(pushConfig);
+			if(response.subscribers!==undefined){
+              pushConfig.ksid = response.subscribers;
+			  sendPushNotification(pushConfig);
+            }else{
+              kony.print("No Subscribers found");
+            }
+			
 		},
 			function (error) {
 			kony.print("Something Went Wrong " + JSON.stringify(error));

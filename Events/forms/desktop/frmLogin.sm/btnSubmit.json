@@ -4,11 +4,11 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "12%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "15%"
     },
     "_margin_": [
         6,
@@ -26,11 +26,11 @@
     "_text_": "SUBMIT",
     "_top_": {
         "type": "string",
-        "value": "12%"
+        "value": "0%"
     },
     "_width_": {
         "type": "string",
-        "value": "25%"
+        "value": "30%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -38,14 +38,14 @@
     "displaytext": true,
     "focusskin": "s7626bcae9f642748253e90e1e83e449",
     "id": "btnSubmit",
-    "ide_onClick": "AS_Button_gd61d69e5d5942138d6f15e55f2ce490",
+    "ide_onClick": "AS_Button_gac375ae9f3f437da23efcb0f25b67c4",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "a3f23bfb3ec2466cb98bb04766853089",
     "name": "kony.ui.Button",
     "onclick": "AS_Button_h6db9ecbd776435ea976fd9cc7c0e167",
-    "parent": "flexLoginCred",
+    "parent": "FlexContainer0bc72c113df624d",
     "pf": "frmLogin",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

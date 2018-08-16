@@ -20,7 +20,8 @@ var EVENT_CONSTANS = {
         SEARCHBACK: "searchback",
         PROFILE: "profile",
         DETAILS: "details",
-        PUSH: "push"
+        PUSH: "push",
+        USERROLE: "consumer"
     },
     IMAGES: {
         ONLINEIMAGE: "onlineicon.png",
@@ -29,5 +30,12 @@ var EVENT_CONSTANS = {
         MAPICONSMALL: "mapsmallicon.png",
         REMOVESPEAKER: "removespeaker.png"
     },
-    SKINS: {}
+    SKINS: {},
+    KMS: {
+        SENDERID: ""
+    },
+    USERROLE: {
+        ADMIN: "admin",
+        CONSUMER: "consumer"
+    }
 };

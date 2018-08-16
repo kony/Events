@@ -4,11 +4,11 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "20%"
     },
     "_left_": {
         "type": "string",
-        "value": "34dp"
+        "value": "0%"
     },
     "_margin_": [
         1,
@@ -23,14 +23,14 @@
         0
     ],
     "_skin_": "sc6bd00eb97145c38e59e4040af2d94b",
-    "_text_": "01 - 02 AUG 2018",
+    "_text_": " 03 - 05 ",
     "_top_": {
         "type": "string",
-        "value": "50dp"
+        "value": "30%"
     },
     "_width_": {
         "type": "string",
-        "value": "70%"
+        "value": "100%"
     },
     "_wrapping_": 2,
     "android": {
@@ -40,14 +40,6 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "47%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
     "contentalignment": 5,
     "id": "lblDateRange",

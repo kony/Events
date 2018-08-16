@@ -14,14 +14,15 @@ define("flxSegSpeakerRoot", function() {
         }, {}, {});
         flxSegSpeakerRoot.setDefaultUnit(kony.flex.DP);
         var lblHorizontalLine = new kony.ui.Label({
-            "height": "1dp",
+            "centerX": "50%",
+            "height": "1px",
             "id": "lblHorizontalLine",
             "isVisible": true,
             "left": "0dp",
-            "skin": "sknLblBGWhie",
+            "skin": "sknLblBGWhieDesk",
             "textStyle": {},
             "top": "0dp",
-            "width": "100%",
+            "width": "95%",
             "zIndex": 1
         }, {
             "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
@@ -62,7 +63,7 @@ define("flxSegSpeakerRoot", function() {
             "id": "lblEventAddress",
             "isVisible": true,
             "left": "3%",
-            "skin": "sknLblEventAddress",
+            "skin": "sknLblEventAddressDesk",
             "text": "Convention Center, Hyderabad",
             "textStyle": {},
             "top": "20%",
@@ -77,7 +78,7 @@ define("flxSegSpeakerRoot", function() {
             "id": "lblEventDateTime",
             "isVisible": true,
             "left": "3%",
-            "skin": "sknLblEventDayTime",
+            "skin": "sknLblEventDayTimeDesk",
             "text": "Monday, 10 AM-5 PM",
             "textStyle": {},
             "top": "4%",

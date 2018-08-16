@@ -40,7 +40,9 @@
         "value": "50%"
     },
     "children": [
-        "lblDateRange"
+        "lblDateRange",
+        "lblMonthYear",
+        "rchDateRange"
     ],
     "clipbounds": true,
     "containerweight": 100,

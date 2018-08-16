@@ -43,6 +43,7 @@
     "containerweight": 100,
     "enablescrolling": true,
     "id": "event",
+    "ide_onClick": "AS_FlexContainer_dfc085c89ad2463a95577ed737bff289",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

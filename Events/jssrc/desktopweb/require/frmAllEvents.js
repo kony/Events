@@ -2,21 +2,6 @@ define("frmAllEvents", function() {
     return function(controller) {
         function addWidgetsfrmAllEvents() {
             this.setDefaultUnit(kony.flex.DP);
-            var menuItem0 = new com.konyenb.menuItem({
-                "clipBounds": true,
-                "height": "100%",
-                "id": "menuItem0",
-                "isVisible": false,
-                "layoutType": kony.flex.FREE_FORM,
-                "left": "0dp",
-                "masterType": constants.MASTER_TYPE_USERWIDGET,
-                "skin": "slFbox",
-                "top": "0dp",
-                "width": "17.50%"
-            }, {}, {});
-            menuItem0.onAllEventClick = controller.AS_UWI_ac1751fe9c6546df9407d49e802d7e33;
-            menuItem0.onCreateEventClick = controller.AS_UWI_e717d50a84e04347896e78d480753327;
-            menuItem0.onManageUserClick = controller.AS_UWI_cdcd79bb413e4c3e9e80b00fbec8a067;
             var flxRoot = new kony.ui.FlexContainer({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
@@ -42,8 +27,12 @@ define("frmAllEvents", function() {
                 "masterType": constants.MASTER_TYPE_USERWIDGET,
                 "skin": "CopysknFlxEventWhite0caa649ffd3e440",
                 "top": "0dp",
-                "width": "82.50%"
+                "width": "81%"
             }, {}, {});
+            dashboard.isProfileVisible = true;
+            dashboard.isUsernameVisible = false;
+            dashboard.username = "Login";
+            dashboard.btnLoginClick = controller.AS_UWI_e62a0a2b80e441cea46a5884a162f139;
             var flexHeader = new kony.ui.FlexContainer({
                 "autogrowMode": kony.flex.AUTOGROW_NONE,
                 "clipBounds": true,
@@ -137,6 +126,12 @@ define("frmAllEvents", function() {
                 "top": "0dp",
                 "width": "19.03%"
             }, {}, {});
+            menuItem.option1Image = false;
+            menuItem.option2Image = false;
+            menuItem.option2Text = "My Events";
+            menuItem.option3Image = false;
+            menuItem.option3Text = "Upcoming Events";
+            menuItem.onAllEventClick = controller.AS_UWI_dfbc5c7080a94156b2be7c6820751c6d;
             menuItem.onCreateEventClick = controller.AS_UWI_adeed8e1d39b4373a27b49bf6b80f3ac;
             menuItem.onManageUserClick = controller.AS_UWI_e40b934c488e4b548933e1a493e4506d;
             flxRoot.add(dashboard, flexHeader, flxEventLIstContainer, menuItem);
@@ -144,15 +139,18 @@ define("frmAllEvents", function() {
                 "clipBounds": true,
                 "height": "90%",
                 "id": "eventpreview",
-                "isVisible": false,
+                "isVisible": true,
                 "layoutType": kony.flex.FREE_FORM,
-                "left": "19%",
+                "left": "100%",
                 "masterType": constants.MASTER_TYPE_USERWIDGET,
                 "skin": "CopysknFlxScroll",
                 "top": "10%",
                 "width": "81%"
             }, {}, {});
-            this.add(menuItem0, flxRoot, eventpreview);
+            eventpreview.onBottomRegisterClick = controller.AS_UWI_d9b367ff0aba4a24b1c475adcafd588b;
+            eventpreview.onPrevBack = controller.AS_UWI_d7309e7096ef4c69b257a8cb0b5fb023;
+            eventpreview.onTopRegisterClick = controller.AS_UWI_c956fc0d99d5499590cf7ce2fed4ad18;
+            this.add(flxRoot, eventpreview);
         };
         return [{
             "addWidgets": addWidgetsfrmAllEvents,
@@ -168,6 +166,7 @@ define("frmAllEvents", function() {
             "padding": [0, 0, 0, 0],
             "paddingInPixel": false
         }, {
+            "onDeviceBack": controller.AS_Form_f4846a2d4d6342d5b65a424619ff391d,
             "retainScrollPosition": false
         }]
     }

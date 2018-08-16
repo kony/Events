@@ -44,7 +44,7 @@
     "id": "flexRemainingImageCount",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "ef5f13c8be2140c3a4faec3201b03235",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",

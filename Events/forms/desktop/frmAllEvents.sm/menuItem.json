@@ -39,10 +39,16 @@
     "clipbounds": true,
     "containerweight": 0,
     "data": {
+        "ide_onAllEventClick": "AS_UWI_dfbc5c7080a94156b2be7c6820751c6d",
         "ide_onCreateEventClick": "AS_UWI_adeed8e1d39b4373a27b49bf6b80f3ac",
         "ide_onManageUserClick": "AS_UWI_e40b934c488e4b548933e1a493e4506d",
         "onCreateEventClick": "AS_UWI_adeed8e1d39b4373a27b49bf6b80f3ac",
-        "onManageUserClick": "AS_UWI_e40b934c488e4b548933e1a493e4506d"
+        "onManageUserClick": "AS_UWI_e40b934c488e4b548933e1a493e4506d",
+        "option1Image": false,
+        "option2Image": false,
+        "option2Text": "My Events",
+        "option3Image": false,
+        "option3Text": "Upcoming Events"
     },
     "id": "menuItem",
     "info": null,

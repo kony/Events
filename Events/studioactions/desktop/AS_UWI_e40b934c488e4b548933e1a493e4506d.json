@@ -13,7 +13,7 @@
         "actions": [{
             "id": "ADD_SNIPPET__e063a3baf5d249f2b1aeb29da019ff16",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.navigateToManageUser();",
+            "codeSnippet": "if(EVENT_CONSTANS.MODE.USERROLE == EVENT_CONSTANS.USERROLE.ADMIN){\n  this.navigateToManageUser();\n}else{\n  this.currentMode = EVENT_CONSTANS.MODE.UPCOMMINGEVENTS;\n  this.getEventsData();\n}",
             "parentId": null,
             "callbackType": null
         }]

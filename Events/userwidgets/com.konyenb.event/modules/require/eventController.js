@@ -52,6 +52,12 @@ define(function() {
           location=event["location"][0]["cityname"];
         }
       }
+      if(location == "Online"){
+        event["location_processed"] = event["location"][0]["location"];
+      }else{
+        event["location_processed"] = location;
+      }
+      
       this.view.lblEventDescLocationText.text=location;
       this.setImages(event["event_images"]);
       konysa.logger.trace("----------Exiting setEvent function---------", konysa.logger.FUNCTION_ENTRY);

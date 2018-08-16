@@ -1,0 +1,17 @@
+{
+    "AS_Button_gac375ae9f3f437da23efcb0f25b67c4": {
+        "id": "AS_Button_gac375ae9f3f437da23efcb0f25b67c4",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_f252da1afb2f4f22bdde5eadecdb9435",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.doUserStoreLogin(this.view.txtUser.text,this.view.txtPassWord.text);",
+            "callbackType": null
+        }]
+    }
+}

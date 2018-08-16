@@ -31,10 +31,5 @@ define({
     AS_FlexContainer_i147b740346b4812948872c3910b1502: function AS_FlexContainer_i147b740346b4812948872c3910b1502(eventobject) {
         var self = this;
         this.getSettings();
-    },
-    /** onRowClick defined for SegOptions **/
-    AS_Segment_ade71abaef944d1684c7397098a54f7d: function AS_Segment_ade71abaef944d1684c7397098a54f7d(eventobject, sectionNumber, rowNumber) {
-        var self = this;
-        this.onMenuClick();
     }
 });

@@ -1,5 +1,5 @@
 /*
- * kony-sdk-ide Version 8.2.9
+ * kony-sdk-ide Version 8.2.14
  */
 /**
  * Kony namespace
@@ -167,7 +167,7 @@ kony.sdk.isInitialized = false;
 kony.sdk.currentInstance = null;
 kony.sdk.isLicenseUrlAvailable = true;
 kony.sdk.constants = kony.sdk.constants || {};
-kony.sdk.version = "8.2.9";
+kony.sdk.version = "8.2.14";
 kony.sdk.logger = new konyLogger();
 kony.sdk.logsdk = new konySdkLogger();
 kony.sdk.syncService = null;
@@ -977,13 +977,9 @@ kony.sdk.prototype.getConfigurationService = function() {
  * @classdesc Configuration service instance for fetching client app properties.
  */
 function ConfigurationService(konyRef) {
-    var selfLinkUrl = konyRef.mainRef.config.selflink;
-    kony.sdk.logsdk.debug("Self link url fetched from service doc is :" + selfLinkUrl);
-    var serverUrl = getServerUrl(selfLinkUrl);
-    if (serverUrl == -1) {
-        throw new Exception(Errors.CONFIGURATION_URL_FAILURE, "Error in configuration url");
-    }
-    var configUrl = serverUrl + kony.sdk.GET_CLIENT_PROPERTY_URL;
+    var istUrl = konyRef.mainRef.config.reportingsvc.session.split("/IST")[0];
+    kony.sdk.logsdk.debug("IST url fetched from service doc is :" + istUrl);
+    var configUrl = istUrl + kony.sdk.GET_CLIENT_PROPERTY_URL;
     kony.sdk.logsdk.debug("Configuration url formed is :" + configUrl);
     var networkProvider = new konyNetworkProvider();
     /**
@@ -1040,7 +1036,7 @@ kony.sdk.GET_SECURITY_ATTRIBUTES = "getSecurityAttributes";
 kony.sdk.GET_USER_ATTRIBUTES = "getUserAttributes";
 kony.sdk.GET_USER_DATA = "getUserData";
 kony.sdk.GET_PROFILE = "getProfile";
-kony.sdk.GET_CLIENT_PROPERTY_URL = "services/metadata/configurations/client/properties";
+kony.sdk.GET_CLIENT_PROPERTY_URL = "/metadata/configurations/client/properties";
 kony.sdk.INTEGRITY_ALGORITHM = "SHA256";
 kony.sdk.INTEGRITY_HEADER = "X-Kony-Integrity";
 kony.sdk.REMOVE_INTEGRITY_CHECK = "removeIntegrityCheck";
@@ -1694,7 +1690,8 @@ function IdentityService(konyRef, rec) {
                             if (options && options["success_url"]) {
                                 //Validating to check the existence of param "success_url".
                                 // if found after login success we will redirect to the url specified in param "success_url".
-                                oauthOptions["success_url"] = options["success_url"];
+                                //decoding and encoding, to handle the case where in the user himself is giving us the encoded value.
+                                oauthOptions["success_url"] = encodeURIComponent(decodeURIComponent(options["success_url"]));
                             }
                         }
                         OAuthHandler(_serviceUrl, _providerName, mainRef.appKey, loginHelper, _type, oauthOptions, isMFVersionCompatible);
@@ -7249,23 +7246,6 @@ stripTrailingCharacter = function(str, character) {
     }
     return str;
 };
-getServerUrl = function(selfLinkUrl) {
-    var index = thirdOccurence(selfLinkUrl, '/');
-    if (index == -1) {
-        return -1;
-    } else {
-        return selfLinkUrl.substr(0, index);
-    }
-}
-
-function thirdOccurence(str, character) {
-    var i, count = 0;
-    for (i = 0; i < str.length; i++) {
-        if (str.charAt(i) == character) count++;
-        if (count == 3) return i + 1;
-    }
-    return -1;
-}
 var Constants = {
     APP_KEY_HEADER: "X-Kony-App-Key",
     APP_SECRET_HEADER: "X-Kony-App-Secret",
@@ -7402,14 +7382,20 @@ kony.sdk.formatSuccessResponse = function(data) {
     return data;
 }
 kony.sdk.isJson = function(str) {
-        try {
-            JSON.parse(str);
-        } catch (e) {
-            return false;
-        }
-        return true;
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
     }
-    //private method to identify whether session/token expired or not based on error code
+    return true;
+}
+kony.sdk.util.getString = function(val) {
+    if (!kony.sdk.isNullOrUndefined(val) && (val.toString()).toLocaleLowerCase() !== "null") {
+        return val.toString();
+    }
+    return "";
+};
+//private method to identify whether session/token expired or not based on error code
 kony.sdk.isSessionOrTokenExpired = function(mfcode) {
         if (mfcode && (mfcode === "Auth-5" || mfcode === "Auth-6" || mfcode === "Gateway-31" || mfcode === "Gateway-33" || mfcode === "Gateway-35" || mfcode === "Gateway-36" || mfcode === "Auth-46" || mfcode === "Auth-55")) {
             return true;
@@ -8121,7 +8107,7 @@ function konyNetworkProvider() {
         if (!kony.sdk.isNullOrUndefined(kony.sdk.currentInstance)) {
             url = kony.sdk.currentInstance.appendGlobalParams(url, headers, params);
         }
-        return konyNetHttpRequestSync(url, param, headers);
+        return konyNetHttpRequestSync(url, params, headers);
     };
     this.get = function(url, params, headers, successCallback, failureCallback, konyContentType, options) {
         if (kony.sdk.util.isNullOrEmptyString(url)) {
@@ -8377,7 +8363,6 @@ function konyNetHttpRequestSync(url, params, headers) {
     } else {
         httpRequest.setRequestHeader("Content-Type", "application/json");
     }
-    //httpRequest.onReadyStateChange = localRequestCallback;
     httpRequest.send(paramsTable);
     var response = null;
     var status = Number(httpRequest.status.toString());
@@ -9480,7 +9465,7 @@ function IntegrationService(konyRef, serviceName) {
             // Check to find if the service is public or not, in case of public service anonymous login is not required.
             invokeOperationRetryHandler();
         } else {
-            kony.sdk.claimsRefresh(invokeOperationRetryHandler, failureCallback);
+            kony.sdk.claimsAndProviderTokenRefresh(invokeOperationRetryHandler, failureCallback);
         }
     }
 
@@ -9490,6 +9475,7 @@ function IntegrationService(konyRef, serviceName) {
             // retry should be done.
         } else {
             if (errorResponse["httpStatusCode"] && errorResponse["httpStatusCode"] === 401) {
+                kony.sdk.logsdk.debug("### IntegrationService::retryServiceCall received 401 from fabric, trying to refresh backend token");
                 return true;
             }
         }

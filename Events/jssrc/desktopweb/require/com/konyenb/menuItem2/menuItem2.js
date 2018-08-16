@@ -72,81 +72,6 @@ define(function() {
             "padding": [0, 0, 0, 0],
             "paddingInPixel": false
         }, {});
-        var flexProfile = new kony.ui.FlexContainer({
-            "autogrowMode": kony.flex.AUTOGROW_NONE,
-            "centerX": "50%",
-            "clipBounds": true,
-            "height": "66px",
-            "id": "flexProfile",
-            "isVisible": false,
-            "layoutType": kony.flex.FREE_FORM,
-            "skin": "slFbox",
-            "top": "2px",
-            "width": "90%",
-            "zIndex": 5
-        }, {}, {});
-        flexProfile.setDefaultUnit(kony.flex.DP);
-        var flexProfilePhotoANdTitle = new kony.ui.FlexContainer({
-            "autogrowMode": kony.flex.AUTOGROW_NONE,
-            "centerY": "50%",
-            "clipBounds": true,
-            "height": "100%",
-            "id": "flexProfilePhotoANdTitle",
-            "isVisible": true,
-            "layoutType": kony.flex.FLOW_HORIZONTAL,
-            "left": "0dp",
-            "skin": "slFbox",
-            "top": "0dp",
-            "width": "100%",
-            "zIndex": 5
-        }, {}, {});
-        flexProfilePhotoANdTitle.setDefaultUnit(kony.flex.DP);
-        var imgProfile = new kony.ui.Image2({
-            "centerY": "50%",
-            "height": "35dp",
-            "id": "imgProfile",
-            "isVisible": true,
-            "left": "5px",
-            "skin": "slImage",
-            "src": "profile_1.png",
-            "top": "0%",
-            "width": "35dp",
-            "zIndex": 1
-        }, {
-            "imageScaleMode": constants.IMAGE_SCALE_MODE_MAINTAIN_ASPECT_RATIO,
-            "padding": [0, 0, 0, 0],
-            "paddingInPixel": false
-        }, {});
-        var lblUserName = new kony.ui.Label({
-            "centerY": "50%",
-            "id": "lblUserName",
-            "isVisible": true,
-            "left": "10px",
-            "skin": "lblUserName",
-            "text": "John Mathew",
-            "width": "82%",
-            "zIndex": 1
-        }, {
-            "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-            "padding": [0, 0, 0, 0],
-            "paddingInPixel": false
-        }, {});
-        flexProfilePhotoANdTitle.add(imgProfile, lblUserName);
-        flexProfile.add(flexProfilePhotoANdTitle);
-        var lblUnderLineProfile = new kony.ui.Label({
-            "bottom": "2px",
-            "height": "1dp",
-            "id": "lblUnderLineProfile",
-            "isVisible": false,
-            "left": "0%",
-            "skin": "sknheaderlblLine",
-            "width": "100%",
-            "zIndex": 5
-        }, {
-            "contentAlignment": constants.CONTENT_ALIGN_MIDDLE_LEFT,
-            "padding": [0, 0, 0, 0],
-            "paddingInPixel": false
-        }, {});
         var flexAllNewEvent = new kony.ui.FlexContainer({
             "autogrowMode": kony.flex.AUTOGROW_NONE,
             "centerX": "50%",
@@ -504,53 +429,7 @@ define(function() {
             "paddingInPixel": false
         }, {});
         flxSetting.add(imgSetting, lblSetting);
-        var SegOptions = new kony.ui.SegmentedUI2({
-            "autogrowMode": kony.flex.AUTOGROW_NONE,
-            "data": [{
-                "imgIcon": "alleventsicon.png",
-                "lblText": "All Events",
-                "lblUnderLineHam": " "
-            }, {
-                "imgIcon": "neweventicon.png",
-                "lblText": "Create New Events",
-                "lblUnderLineHam": " "
-            }],
-            "groupCells": false,
-            "height": "75%",
-            "id": "SegOptions",
-            "isVisible": false,
-            "left": "5%",
-            "needPageIndicator": true,
-            "onRowClick": controller.AS_Segment_ade71abaef944d1684c7397098a54f7d,
-            "pageOffDotImage": "pageoffdot_2.png",
-            "pageOnDotImage": "pageondot_2.png",
-            "retainSelection": true,
-            "rowFocusSkin": "Copyseg0e11ad42646774a",
-            "rowSkin": "Copyseg0ac11cef0a7d248",
-            "rowTemplate": "flexHamManuMain",
-            "sectionHeaderSkin": "sliPhoneSegmentHeader",
-            "selectionBehavior": constants.SEGUI_DEFAULT_BEHAVIOR,
-            "separatorColor": "aaaaaa00",
-            "separatorRequired": true,
-            "separatorThickness": 0,
-            "showScrollbars": false,
-            "top": "0%",
-            "viewType": constants.SEGUI_VIEW_TYPE_TABLEVIEW,
-            "widgetDataMap": {
-                "flexHamImgLable": "flexHamImgLable",
-                "flexHamManuMain": "flexHamManuMain",
-                "flexHamMenu": "flexHamMenu",
-                "imgIcon": "imgIcon",
-                "lblText": "lblText",
-                "lblUnderLineHam": "lblUnderLineHam"
-            },
-            "width": "90%",
-            "zIndex": 5
-        }, {
-            "padding": [0, 0, 0, 0],
-            "paddingInPixel": false
-        }, {});
-        flexCreateEventMain.add(flexEventLogo, lblUnderLineLogo, flexProfile, lblUnderLineProfile, flexAllNewEvent, lblUnderLineHam, flxCreateNewEvent, lblUnderLineHam2, flxManageUser, lblLine3, flxNotification, lblLine4, flxMyCalendar, lblLine5, flxSetting, SegOptions);
+        flexCreateEventMain.add(flexEventLogo, lblUnderLineLogo, flexAllNewEvent, lblUnderLineHam, flxCreateNewEvent, lblUnderLineHam2, flxManageUser, lblLine3, flxNotification, lblLine4, flxMyCalendar, lblLine5, flxSetting);
         menuItem2.add(flexCreateEventMain);
         return menuItem2;
     }

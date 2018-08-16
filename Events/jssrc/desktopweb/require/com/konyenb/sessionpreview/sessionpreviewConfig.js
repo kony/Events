@@ -1,7 +1,7 @@
 define(function() {
     return {
         "properties": [],
-        "apis": [],
-        "events": ["dolayoutCb"]
+        "apis": ["setData"],
+        "events": []
     }
 });
