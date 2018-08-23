@@ -16,7 +16,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_ide_onClick_i04b52c17f194d98aa05ff3ed7df8aad",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.doUserStoreLogin(this.view.txtUser.text,this.view.txtPassWord.text);",
+            "codeSnippet": "var nav = new kony.mvc.Navigation(\"frmAllEvents\");\nnav.navigate();",
             "callbackType": null
         }]
     }

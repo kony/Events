@@ -25,8 +25,8 @@
     "wap_bb480_fontsize": "17",
     "kfAppInfo": {
         "90508382-0b7b-4825-b4f6-3cf5a2ffed31": {
-            "id": "0c818b02-aef0-4d3c-867f-4b502a7f651e",
-            "baseId": "0c818b02-aef0-4d3c-867f-4b502a7f651e",
+            "id": "8977f94b-e652-4158-ac72-9444b02e0756",
+            "baseId": "8977f94b-e652-4158-ac72-9444b02e0756",
             "version": "1.0"
         },
         "d4fe4750-d157-422d-9238-fcd0a737bb73": {
@@ -50,6 +50,7 @@
     "isMVC": true,
     "enableactionbar": false,
     "watchos_shortlooknotificationicon_42": "",
+    "desktopstartupformkey": "cf1fac0c5aa548d89c9d119620fa7dcd",
     "wap_android480_fontsize": "16",
     "mastersProperties": {
         "mastersVersion": "2.0.0"
@@ -256,7 +257,9 @@
     "winmobileguidkey": "",
     "APPLICATION_THEME": "default",
     "ide_appEvents": {
-        "desktop": {},
+        "desktop": {
+            "appservice": "AS_AppEvents_e38834025b794d44b1debb08918c3e47"
+        },
         "mobile": {
             "postappinit": "AS_AppEvents_fa5813076af84c45af9009238c9e57c5",
             "preappinit": "AS_AppEvents_idf0829f55594ed2be1b3d9985ec14a4",
@@ -268,5 +271,5 @@
     "wap_ip_fontsize": "12",
     "category": "app",
     "createdVizVersion": "8.1.12",
-    "desktopstartupformkey": "cf1fac0c5aa548d89c9d119620fa7dcd"
+    "export.type": "studioviz"
 }

@@ -106,7 +106,6 @@ define({
    }catch(error){
       kony.print("FormLogin Controller"+JSON.stringify(error));
     }
- 
   },
    
   /**

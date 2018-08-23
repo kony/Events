@@ -40,7 +40,7 @@
         "txtAddressLine2",
         "txtCity",
         "lblGoogleMapPreview",
-        "FlexContainer0e2eaae99897443"
+        "flexMapMain"
     ],
     "clipbounds": true,
     "containerweight": 100,

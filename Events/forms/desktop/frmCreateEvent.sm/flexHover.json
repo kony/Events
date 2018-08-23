@@ -36,7 +36,7 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "Label0eebf4c4230814f"
+        "lblPreview"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -50,7 +50,7 @@
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "onclick": "AS_FlexContainer_d5bbb647492d4bc6a5468f85eccfbc1f",
-    "parent": "FlexContainer0e2eaae99897443",
+    "parent": "flexMapMain",
     "pf": "frmCreateEvent",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

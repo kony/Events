@@ -37,7 +37,6 @@
     "canUpdateUI": true,
     "children": [
         "lblHeaderTitle",
-        "flexSearch",
         "flexBack"
     ],
     "clipbounds": true,

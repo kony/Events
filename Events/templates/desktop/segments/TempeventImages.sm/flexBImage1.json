@@ -56,7 +56,7 @@
     "kuid": "ea5c7b4cf3654a8b9127401e3233e48f",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
-    "parent": "Flex0fc1bf48b31084b",
+    "parent": "flexEventImagesMain",
     "pf": "TempeventImages",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

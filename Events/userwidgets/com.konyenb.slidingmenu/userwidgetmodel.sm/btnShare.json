@@ -47,7 +47,7 @@
     "isvisible": false,
     "kuid": "g47e1661f90642bba0b680a15c2353d5",
     "name": "kony.ui.Button",
-    "parent": "FlexContainer0e4681d0bdef643",
+    "parent": "flexBottomActions",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

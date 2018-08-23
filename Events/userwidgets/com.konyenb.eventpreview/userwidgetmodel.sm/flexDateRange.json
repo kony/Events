@@ -41,8 +41,7 @@
     },
     "children": [
         "lblDateRange",
-        "lblMonthYear",
-        "rchDateRange"
+        "lblMonthYear"
     ],
     "clipbounds": true,
     "containerweight": 100,

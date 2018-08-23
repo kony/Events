@@ -129,7 +129,7 @@
     "rowTemplateId": "b324c3a070ea4af18835e4bb969d4533",
     "rowcounter": 0,
     "rowfocusskin": "s234679bdd6c4e21aa50fbc817fb0fb4",
-    "rowskin": "s27272767b6f4da1a755eae56e3a954e",
+    "rowskin": "s510421f1e3c46d8b70889888f894f08",
     "rowtemplate": "tempMainFlexEventList",
     "screenlevelwidget": false,
     "seccounter": 0,
@@ -172,6 +172,6 @@
         "rchtxtMonth": "rchtxtMonth",
         "tempMainFlexEventList": "tempMainFlexEventList"
     },
-    "widgetskin": "s34b6304d421495eb47e4c4a5981a58b",
+    "widgetskin": "s510421f1e3c46d8b70889888f894f08",
     "zindex": 1
 }

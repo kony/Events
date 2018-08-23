@@ -58,7 +58,7 @@
     <string name="notify_push_msg_title_from_payload">true</string>
     
     <!-- Key to be used to pick the notification title. comma(,) separated keys can be provided & first available key is used -->
-    <string name="notify_push_msg_title_keys">title</string>
+    <string name="notify_push_msg_title_keys">title,gcm.notification.title</string>
     
     <!-- Description to be used for new push message notifications if "desc_from_payload" disabled -->
     <string name="notify_push_msg_default_desc"></string>
@@ -68,7 +68,7 @@
     <string name="notify_push_msg_desc_from_payload">true</string>
     
     <!-- Key to be used to pick the notification description. comma(,) separated keys can be provided & first available key is used -->
-    <string name="notify_push_msg_desc_keys">content</string>
+    <string name="notify_push_msg_desc_keys">content,gcm.notification.body</string>
     
     <!-- Boolean flag to enable/disable sound for push message notification -->
     <string name="notify_push_msg_sound">true</string>

@@ -35,7 +35,6 @@
     "allboxes": [],
     "canUpdateUI": true,
     "children": [
-        "lblTitle",
         "flxImage",
         "flxScThumbImage"
     ],

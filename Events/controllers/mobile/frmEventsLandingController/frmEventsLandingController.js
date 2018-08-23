@@ -9,7 +9,7 @@ define({
 	segmentData: [],
 	user_event_data: [],
 
-	/**
+	/**reloadFromServer
 	 * @member of  frmEventsLandingController.js
 	 * @function onNavigate
 	 * @param params - The params from navigate Object

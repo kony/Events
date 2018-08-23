@@ -36,8 +36,8 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "Label0i4961a177e6340",
-        "Button0iea9656067e447"
+        "lblConsumerLogin",
+        "btnLinkedInLogin"
     ],
     "clipbounds": true,
     "containerweight": 100,

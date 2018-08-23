@@ -27,7 +27,7 @@ define({
         var self = this;
         this.currentRowIndex = rowIndex;
     },
-    /** onClick defined for CopybtnClose0d8585f7b8db84b **/
+    /** onClick defined for btnClose2 **/
     AS_Button_jd849cc0c27f429486a5152ba4bb2d0e: function AS_Button_jd849cc0c27f429486a5152ba4bb2d0e(eventobject) {
         var self = this;
         this.onDeviceClickFormForm();

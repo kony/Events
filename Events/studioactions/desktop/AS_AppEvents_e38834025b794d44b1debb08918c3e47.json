@@ -1,0 +1,18 @@
+{
+    "AS_AppEvents_e38834025b794d44b1debb08918c3e47": {
+        "id": "AS_AppEvents_e38834025b794d44b1debb08918c3e47",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__bbffffcf02af462a88417cfb13a435da",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if(eventobject.launchparams.formId == \"frmAllEvents\"){\n  return \"frmAllEvents\";\n}else if(eventobject.launchparams.formId == \"frmCreateEvent\"){\n  return \"frmCreateEvent\";\n}",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

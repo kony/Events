@@ -16,7 +16,7 @@
         "actions": [{
             "id": "ADD_SNIPPET__gd03777acb0b4c229c8cde1ba281a741",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "sendMetric(this.event.event_id,\"view\");",
+            "codeSnippet": "if(this.event!==undefined && this.event.event_id!==undefined){\n\tsendMetric(this.event.event_id,\"view\");  \n}\n",
             "parentId": null,
             "callbackType": null
         }]

@@ -26,7 +26,7 @@ function setAllCallbacks() {
 		kony.print("KMS Module" + JSON.stringify(err));
 	}
 }
-/*
+/**
  * @function registerKMS
  * this function will register the divice for GMS console and APS console using
  * register API
@@ -116,10 +116,14 @@ function regFailureCallback(errormsg) {
 function onlinePushNotificationCallback(msg) {
 	try {
 		kony.print("Message " + JSON.stringify(msg));
-		kony.print("online Message: " + msg["content"]);
-		var message = msg["content"];
-		var title = msg["title"]
-			var pspConfig = {};
+        var message = msg["content"];
+		var title = msg["title"];
+        if(msg.hasOwnProperty("gcm.notification.body")){
+          message = msg["gcm.notification.body"];
+         title = msg["gcm.notification.title"];
+        }
+	
+		var pspConfig = {};
 		var alert = kony.ui.Alert({
 				"message": message.split('.')[0],
 				"alertType": constants.ALERT_TYPE_CONFIRMATION,

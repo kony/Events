@@ -84,7 +84,7 @@
     "rowcounter": 0,
     "rowfocusskin": "s234679bdd6c4e21aa50fbc817fb0fb4",
     "rowskin": "sb1e268a7624437e871a8fa23a6ca32e",
-    "rowtemplate": "Flex0fc1bf48b31084b",
+    "rowtemplate": "flexEventImagesMain",
     "screenlevelwidget": false,
     "seccounter": 0,
     "sectionheaderskin": "s081a294e53e4f7d91e5a3359d6ba7af",
@@ -103,10 +103,10 @@
     "wType": "Segment",
     "widgetalignment": 5,
     "widgetdatamap": {
-        "Flex0fc1bf48b31084b": "Flex0fc1bf48b31084b",
         "ImgDelBImage1": "ImgDelBImage1",
         "flexBImage1": "flexBImage1",
         "flexDelBImage1": "flexDelBImage1",
+        "flexEventImagesMain": "flexEventImagesMain",
         "lblBImage1": "lblBImage1"
     },
     "zindex": 2

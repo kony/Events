@@ -55,7 +55,7 @@
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "onclick": "AS_FlexContainer_h9d84228cbcc4122906dcba6c077a2e5",
-    "parent": "Flex0fc1bf48b31084b",
+    "parent": "flexEventImagesMain",
     "pf": "TempeventImages",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

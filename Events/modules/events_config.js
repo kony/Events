@@ -34,7 +34,7 @@ var EVENT_CONSTANS = {
     
   },
   KMS : {
-    SENDERID : ""
+    SENDERID : "150665757263"
   },
   USERROLE : {
     ADMIN : "admin",

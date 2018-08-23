@@ -159,7 +159,7 @@ define({
 	},
 	/**
 	 * @function navigateToFormCreateNewEvent
-	 * @description This function is used to navigate to form CreateNewEvent.
+	 * @description This functioncheckUserRoleandGetData is used to navigate to form CreateNewEvent.
 	 * @private
 	 */
 	navigateToFormCreateNewEvent: function () {
@@ -406,7 +406,9 @@ define({
 				eventList = this.getEventsBetweenTwoDates(eventList, this.getDate(0), this.getDate(6), false);
 				break;
 			default:
-				kony.print("Invalid Case");
+				this.setDashBoardTitle(EVENT_CONSTANS.TITLE.ALLEVENTS);
+				this.view.menuItem.setSelectedFlex(1);
+				eventList = this.getEventsBetweenTwoDates(eventList, this.getDate(0), this.getDate(6), true);
 			}
 			if (glbIsLoggedIn === true) {
 				eventList = this.mergeUserEvents(eventList);
@@ -594,8 +596,9 @@ define({
 				},
 					pspConfig);
 			function handleAlert(response) {
-				if (response)
-					Events.consumerLogin.registerEvent();
+				if (response){
+                  Events.consumerLogin.doLinkedInLogin(EVENT_CONSTANS.MODE.REGISTER);
+                }
 			}
 
 		}

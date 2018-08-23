@@ -49,7 +49,7 @@
     "kuid": "beb25c3e1e4843c29714aa8bf7466fd6",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
-    "parent": "CopyflexDate0f477e9bc156043",
+    "parent": "flexEndDate",
     "pf": "frmCreateEvent",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

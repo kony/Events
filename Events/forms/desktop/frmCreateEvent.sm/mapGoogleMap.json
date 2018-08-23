@@ -46,7 +46,7 @@
     "mapsrc": "non-native",
     "name": "kony.ui.Map",
     "onclick": "AS_Map_dc29fc7eec7d4303adf9fbc8adfe586d",
-    "parent": "FlexContainer0e2eaae99897443",
+    "parent": "flexMapMain",
     "pf": "frmCreateEvent",
     "provider": "google",
     "retaincontentalignment": false,

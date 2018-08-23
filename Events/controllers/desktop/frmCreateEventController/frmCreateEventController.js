@@ -198,13 +198,13 @@ define({
 			}, {}, {});
 		flexPublishEvent.setDefaultUnit(kony.flex.DP);
 		var btnPublish = new kony.ui.Button({
-				"focusSkin": "CopydefBtnNormal0ed0a68b2c3ae44",
+				"focusSkin": "sknBtnfffBR1AL100",
 				"height": "50%",
 				"id": "btnPublish",
 				"isVisible": true,
 				"left": "4.00%",
 				"onClick": this.publishEventAndSessions,
-				"skin": "CopydefBtnNormal0ed0a68b2c3ae44",
+				"skin": "sknBtnfffBR1AL100",
 				"text": "PUBLISH EVENT",
 				"top": "0.00%",
 				"width": "20%",
@@ -2120,12 +2120,12 @@ define({
 	createDefaultAddSessionButton: function () {
       try{
 		var btnAddNewSessionDefault = new kony.ui.Button({
-				"focusSkin": "CopydefBtnNormal0gafb081126cd49",
+				"focusSkin": "sknBtnAB80",
 				"height": "5%",
 				"id": "btnAddNewSessionDefault",
 				"isVisible": true,
 				"left": "2.50%",
-				"skin": "CopydefBtnNormal0gafb081126cd49",
+				"skin": "sknBtnAB80",
 				"text": "Add New Session",
 				"top": "2%",
 				"width": "10%",

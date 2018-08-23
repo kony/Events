@@ -273,7 +273,7 @@ Events.consumerLogin = {
 					"access": "online"
 				});
 			var dataObject = new kony.sdk.dto.DataObject("event_registration");
-			var odataUrl = "$filter=event_id eq '" + this.naviData.event_id + "' and user_id eq '" + kony.store.getItem("userId") + "' and ((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))";
+			var odataUrl = "$filter=event_id eq '" + glbEventIdToRegister + "' and user_id eq '" + kony.store.getItem("userId") + "' and ((SoftDeleteFlag ne true) or (SoftDeleteFlag eq null))";
 			dataObject.odataUrl = odataUrl;
 			var options = {
 				"dataObject": dataObject

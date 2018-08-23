@@ -23,7 +23,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sc8ef35af05342fd999e02e1c3d8405f",
+    "_skin_": "sd1421164da64fc0aea0355e19e3a7a4",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -37,7 +37,7 @@
     "canUpdateUI": true,
     "children": [
         "lblViewedEventCount",
-        "CopylblSharedEvent0i77bbd31420541"
+        "lblEventView"
     ],
     "clipbounds": true,
     "containerweight": 100,

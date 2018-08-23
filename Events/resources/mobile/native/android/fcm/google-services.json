@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "150665757263",
+    "firebase_url": "https://samplegcm-29513.firebaseio.com",
+    "project_id": "samplegcm-29513",
+    "storage_bucket": "samplegcm-29513.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150665757263:android:9e7a8b10b14ce613",
+        "android_client_info": {
+          "package_name": "com.kony.Events"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150665757263-qhsv2m8ai4rrcul3js8012miab05d00d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg0CGtSdEXSI8zByxCpXPi86xX69hoSXI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

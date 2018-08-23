@@ -42,7 +42,7 @@
     "children": [
         "txtPassWord",
         "txtPasswordShow",
-        "FlexContainer0hd0cb1df7f1b45"
+        "flexShowHidePass"
     ],
     "clipbounds": true,
     "containerweight": 100,

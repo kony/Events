@@ -28,9 +28,7 @@
     "device": "GalaxyS8",
     "displayorientation": 3,
     "enabledforidletimeout": false,
-    "globalUserWidgetRefs": [
-        "u502ac6308774924a75acac55fae45ee"
-    ],
+    "globalUserWidgetRefs": [],
     "id": "userwidgetmodel",
     "info": null,
     "initdone": false,

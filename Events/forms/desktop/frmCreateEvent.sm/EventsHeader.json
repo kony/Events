@@ -49,20 +49,6 @@
                 "wType": "FlexContainer"
             }
         },
-        "FlexContainer0b6eb885d5c014c": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "jf0eefa6f6854f4c90f28679d7089fbe",
-                "srcKUID": "fcebc5a572c144f596e3414266566bf2",
-                "wType": "FlexContainer"
-            },
-            "right": {
-                "Default": {
-                    "type": "string",
-                    "value": "-2.10%"
-                }
-            }
-        },
         "LblTitle": {
             "__events__": {},
             "__info__": {
@@ -123,6 +109,20 @@
                 "Default": {
                     "type": "string",
                     "value": "98%"
+                }
+            }
+        },
+        "flexOperations": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "jf0eefa6f6854f4c90f28679d7089fbe",
+                "srcKUID": "fcebc5a572c144f596e3414266566bf2",
+                "wType": "FlexContainer"
+            },
+            "right": {
+                "Default": {
+                    "type": "string",
+                    "value": "-2.10%"
                 }
             }
         },

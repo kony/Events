@@ -46,7 +46,7 @@
     "children": [
         "flexLoginEventLogo",
         "flexLoginLinkedIn",
-        "FlexContainer0b412427d56964f",
+        "flexSeperator",
         "flexLoginCredAdmin"
     ],
     "clipbounds": true,

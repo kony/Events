@@ -38,7 +38,7 @@
     "children": [
         "LblTitle",
         "lblUnderLineEventMain",
-        "FlexContainer0b6eb885d5c014c"
+        "flexOperations"
     ],
     "clipbounds": true,
     "containerweight": 100,

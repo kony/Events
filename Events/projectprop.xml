@@ -149,7 +149,7 @@
     <attributes name="wp10pfxkey" value=""/>
     <attributes name="ACCESS_CHECKIN_PROPERTIES" value="false"/>
     <attributes name="MOUNT_FORMAT_FILESYSTEMS" value="false"/>
-    <attributes name="lastmodifiedtime" value="1534424694125"/>
+    <attributes name="lastmodifiedtime" value="1535013396904"/>
     <attributes name="ipad_notificationicon_1x_20" value=""/>
     <attributes name="iphone_spotlighticon_2x_40" value=""/>
     <attributes name="wp10microphone" value="false"/>
@@ -362,7 +362,7 @@
     <attributes name="enablefcmpushnotifications" value="false"/>
     <attributes name="ANDROIDWEAR_FORCE_BACK" value="false"/>
     <attributes name="bb10urlscheme" value=""/>
-    <attributes name="apppackagekey" value="com.orgname.Events"/>
+    <attributes name="apppackagekey" value="com.kony.Events"/>
     <attributes name="andtargetsdkkey" value="5.1.1 (22)"/>
     <attributes name="win8bgagentclassname" value=""/>
     <attributes name="wp81sdescriptionkey" value="Sample Test Application"/>
@@ -507,7 +507,7 @@
     <attributes name="enablesearchbar" value="false"/>
     <attributes name="tcandroid480basefontsize" value="16"/>
     <attributes name="WRITE_SETTINGS" value="false"/>
-    <attributes name="cloud_account_guid" value="d4fe4750-d157-422d-9238-fcd0a737bb73"/>
+    <attributes name="cloud_account_guid" value="90508382-0b7b-4825-b4f6-3cf5a2ffed31"/>
     <attributes name="statusBarHidden" value="false"/>
     <attributes name="andmaxsdkkey" value="None"/>
     <attributes name="wp10chat" value="false"/>
@@ -665,7 +665,7 @@
     <attributes name="spamanifestjson" value=""/>
     <attributes name="remoteSystem" value="false"/>
     <attributes name="win8toastcapablekey" value="Not set"/>
-    <attributes name="fabric_runtime_app_version" value="Default"/>
+    <attributes name="fabric_runtime_app_version" value=""/>
     <attributes name="UseSQLCipherFIPSandwear" value="false"/>
     <attributes name="SET_PROCESS_LIMIT" value="false"/>
     <attributes name="wp10contacts" value="false"/>
@@ -681,7 +681,7 @@
     <attributes name="windowsmapkey" value=""/>
     <attributes name="bb10keystorepassword" value=""/>
     <attributes name="enableResponsive" value="false"/>
-    <attributes name="cloud_account_id" value="100000002"/>
+    <attributes name="cloud_account_id" value="100005088"/>
     <attributes name="Enterprise_Authentication" value="true"/>
     <attributes name="BATTERY_STATS" value="false"/>
     <attributes name="useWatchCommunicationApis" value="false"/>
